@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>谈天说地or自我展示 on VRC轻音会社</title>
-        <link>http://localhost:1313/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0or%E8%87%AA%E6%88%91%E5%B1%95%E7%A4%BA/</link>
+        <link>https://vrclmcl.asia/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0or%E8%87%AA%E6%88%91%E5%B1%95%E7%A4%BA/</link>
         <description>Recent content in 谈天说地or自我展示 on VRC轻音会社</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>ltyytn</copyright><atom:link href="http://localhost:1313/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0or%E8%87%AA%E6%88%91%E5%B1%95%E7%A4%BA/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>ltyytn</copyright><atom:link href="https://vrclmcl.asia/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0or%E8%87%AA%E6%88%91%E5%B1%95%E7%A4%BA/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

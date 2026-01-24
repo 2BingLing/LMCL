@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on VRC轻音会社</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://vrclmcl.asia/post/</link>
         <description>Recent content in Posts on VRC轻音会社</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>ltyytn</copyright>
-        <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>第二次活动合照</title>
-        <link>http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</link>
+        <link>https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</link>
         <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2.png" alt="Featured image of post 第二次活动合照" /&gt;&lt;h1 id=&#34;第二次活动合照&#34;&gt;第二次活动合照
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
+        <guid>https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</guid>
+        <description>&lt;img src="https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2.png" alt="Featured image of post 第二次活动合照" /&gt;&lt;h1 id=&#34;第二次活动合照&#34;&gt;第二次活动合照
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
 	width=&#34;972&#34;
 	height=&#34;547&#34;
-	srcset=&#34;http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_6286585890fae977.png 480w, http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_2670bbaf7c717763.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_6286585890fae977.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_2670bbaf7c717763.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;合照&#34;
@@ -28,10 +28,10 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_8941a0cb37a0daad.png 480w, http://localhost:1313/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_16fdcf33d2d502b6.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_8941a0cb37a0daad.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_16fdcf33d2d502b6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清&#34;
@@ -55,11 +55,11 @@
         </item>
         <item>
         <title>第一期轻音会</title>
-        <link>http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/</link>
+        <link>https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/</link>
         <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human.png" alt="Featured image of post 第一期轻音会" /&gt;&lt;h1 id=&#34;第一期轻音会动选入歌曲&#34;&gt;第一期轻音会动选入歌曲！
+        <guid>https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/</guid>
+        <description>&lt;img src="https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human.png" alt="Featured image of post 第一期轻音会" /&gt;&lt;h1 id=&#34;第一期轻音会动选入歌曲&#34;&gt;第一期轻音会动选入歌曲！
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;曲名：&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1t24y1N7wt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -80,10 +80,10 @@
 &lt;p&gt;ps：发布的信息都经过当事人同意，如果选中投稿，不喜欢太复杂可以只刊登歌曲名字。（图片点开更高清）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human_hu_38a2abc9b43ac2c4.png 480w, http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human_hu_42b734aa1cf1480f.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human_hu_38a2abc9b43ac2c4.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%9C%9F%E8%BD%BB%E9%9F%B3%E4%BC%9A/human_hu_42b734aa1cf1480f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;小韩&#34;
@@ -98,16 +98,16 @@
         </item>
         <item>
         <title>第一次活动合照</title>
-        <link>http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</link>
+        <link>https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</link>
         <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png" alt="Featured image of post 第一次活动合照" /&gt;&lt;h1 id=&#34;第一次活动合照&#34;&gt;第一次活动合照
+        <guid>https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/</guid>
+        <description>&lt;img src="https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png" alt="Featured image of post 第一次活动合照" /&gt;&lt;h1 id=&#34;第一次活动合照&#34;&gt;第一次活动合照
 &lt;/h1&gt;&lt;p&gt;点开更高清！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_693373abe3fc9b25.png 480w, http://localhost:1313/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_e40bff414bbafa73.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_693373abe3fc9b25.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_e40bff414bbafa73.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;合照&#34;
@@ -127,11 +127,11 @@
         </item>
         <item>
         <title>群组推荐之往世乐土</title>
-        <link>http://localhost:1313/p/wslt/</link>
+        <link>https://vrclmcl.asia/p/wslt/</link>
         <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/wslt/</guid>
-        <description>&lt;img src="http://localhost:1313/p/wslt/h.png" alt="Featured image of post 群组推荐之往世乐土" /&gt;&lt;h1 id=&#34;往世乐土&#34;&gt;往世乐土
+        <guid>https://vrclmcl.asia/p/wslt/</guid>
+        <description>&lt;img src="https://vrclmcl.asia/p/wslt/h.png" alt="Featured image of post 群组推荐之往世乐土" /&gt;&lt;h1 id=&#34;往世乐土&#34;&gt;往世乐土
 &lt;/h1&gt;&lt;h2 id=&#34;群组简介&#34;&gt;群组简介
 &lt;/h2&gt;&lt;p&gt;（该群组主要面向VRCHAT以及喜欢崩坏三游戏玩家，加入我们，一起愉快的玩耍吧~）&lt;/p&gt;
 &lt;p&gt;在这幽邃的地下，第一文明纪元最后十三位融合战士的记忆被封存于此。如今，这里又迎来一位新的访客。&lt;/p&gt;
@@ -173,7 +173,7 @@
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Q：群组里十三位融合战士都有对应的玩家存在吗?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A：融合战士十三位，是有的，但是呢每个人喜欢的角色不同所以可能是凑不齐，因为大家平常都有点忙，可能，你就是说，五百多个人还是能凑的出来的臭，但是呢，因为这样啊，那样的问题，上学上班啊，生活问题啊，上线时间不一样，所以可能凑不齐这十三个人&lt;/p&gt;
+&lt;p&gt;A：融合战士十三位，是有的，但是呢每个人喜欢的角色不同所以可能是凑不齐，因为大家平常都有点忙，可能，你就是说，五百多个人还是能凑的出来的，但是呢，因为这样啊，那样的问题，上学上班啊，生活问题啊，上线时间不一样，所以可能凑不齐这十三个人&lt;/p&gt;
 &lt;p&gt;Q：嘎嘎！期待十三位融合战士重新聚集的时候！&lt;/p&gt;
 &lt;p&gt;Q：啊，我们再次来到下一位选手啊~&lt;u&gt;慈父 chat ！&lt;/u&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -213,10 +213,10 @@
 &lt;p&gt;&lt;del&gt;鸟为什么会飞到底是什么啊？&lt;/del&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;宣传海报&#34;&gt;宣传海报
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/wslt/le.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/wslt/le.png&#34;
 	width=&#34;970&#34;
 	height=&#34;1297&#34;
-	srcset=&#34;http://localhost:1313/p/wslt/le_hu_ceb2079fee05d6c4.png 480w, http://localhost:1313/p/wslt/le_hu_8d707a20f868722a.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/wslt/le_hu_ceb2079fee05d6c4.png 480w, https://vrclmcl.asia/p/wslt/le_hu_8d707a20f868722a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;海报展示&#34;
@@ -231,11 +231,11 @@
         </item>
         <item>
         <title>群组推荐之限定红茶</title>
-        <link>http://localhost:1313/p/xdhc/</link>
+        <link>https://vrclmcl.asia/p/xdhc/</link>
         <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/xdhc/</guid>
-        <description>&lt;img src="http://localhost:1313/p/xdhc/red.png" alt="Featured image of post 群组推荐之限定红茶" /&gt;&lt;h1 id=&#34;限定红茶&#34;&gt;限定红茶
+        <guid>https://vrclmcl.asia/p/xdhc/</guid>
+        <description>&lt;img src="https://vrclmcl.asia/p/xdhc/red.png" alt="Featured image of post 群组推荐之限定红茶" /&gt;&lt;h1 id=&#34;限定红茶&#34;&gt;限定红茶
 &lt;/h1&gt;&lt;h2 id=&#34;群组简介&#34;&gt;群组简介
 &lt;/h2&gt;&lt;p&gt;「限定·红茶」是一家以&lt;strong&gt;沉浸式互动与舞台表演&lt;/strong&gt;为核心的红茶馆。我们以&lt;strong&gt;优雅、温馨&lt;/strong&gt;与专业为理念，汇聚风格各异的&lt;strong&gt;女仆与表演者&lt;/strong&gt;，为来访的每一位客人打造&lt;strong&gt;独特而难忘&lt;/strong&gt;的体验。限定红茶&lt;strong&gt;诚挚欢迎&lt;/strong&gt;所有玩家的加入。&lt;/p&gt;
 &lt;h2 id=&#34;群组活动照片&#34;&gt;群组活动照片
@@ -320,10 +320,10 @@
 &lt;p&gt;​	这个群组真的给人一种独特的感觉，喜欢红茶氛围的可以关注一下嘎！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;宣传海报&#34;&gt;宣传海报
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/xdhc/red.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/xdhc/red.png&#34;
 	width=&#34;1280&#34;
 	height=&#34;1707&#34;
-	srcset=&#34;http://localhost:1313/p/xdhc/red_hu_ef4e16b7ae8c7c5c.png 480w, http://localhost:1313/p/xdhc/red_hu_eab77203a6290d83.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/xdhc/red_hu_ef4e16b7ae8c7c5c.png 480w, https://vrclmcl.asia/p/xdhc/red_hu_eab77203a6290d83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;海报展示&#34;

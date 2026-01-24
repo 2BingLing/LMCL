@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>神秘相册 on VRC轻音会社</title>
-        <link>http://localhost:1313/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/</link>
+        <link>https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/</link>
         <description>Recent content in 神秘相册 on VRC轻音会社</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>ltyytn</copyright><atom:link href="http://localhost:1313/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>ltyytn</copyright><atom:link href="https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
