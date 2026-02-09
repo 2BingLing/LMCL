@@ -63,7 +63,79 @@
         counter-reset: song-counter; /* 初始化计数器 */
         background: #fafafa;
         min-height: 100px;
-    &#34;&gt;     
+    &#34;&gt;  
+        &lt;li class=&#34;ranking-item&#34; 
+            data-src=&#34;https://music.163.com/song/media/outer/url?id=2670460852.mp3&#34; 
+            data-title=&#34;Tender&#34; 
+            data-artist=&#34;Seredris&#34;
+            style=&#34;
+                display: flex; 
+                align-items: center; 
+                padding: 20px 0; 
+                border-bottom: 1px dashed #eee; 
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            &#34;&gt;
+            &lt;div style=&#34;
+                width: 60px; 
+                height: 60px; 
+                line-height: 60px; 
+                text-align: center; 
+                font-size: 28px; 
+                font-weight: bold; 
+                margin-right: 20px; 
+                border-radius: 50%; 
+                background: linear-gradient(135deg, #6b8fd9 80%, #c9a62f 10%); 
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter; /* 每个 li 计数器 +1 */
+            &#34;&gt;
+                &lt;span style=&#34;position: relative; z-index: 1;&#34;&gt;
+                    &lt;span style=&#34;font-family: sans-serif;&#34;&gt;#&lt;/span&gt;
+                    &lt;span style=&#34;font-weight: bold;&#34;&gt;
+                        &lt;span style=&#34;opacity: 0; position: absolute;&#34;&gt;0&lt;/span&gt; 
+                        &lt;script type=&#34;text/javascript&#34;&gt;
+                        &lt;/script&gt;
+                    &lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;song-info&#34; style=&#34;flex: 1;&#34;&gt;
+                &lt;div style=&#34;
+                    font-size: 18px; 
+                    color: #1a1a1a; 
+                    margin-bottom: 5px; 
+                    font-weight: 600;
+                &#34;&gt;Tender&lt;/div&gt;
+                &lt;div style=&#34;
+                    font-size: 14px; 
+                    color: #666;
+                &#34;&gt;Lawrence Walther / Tibeauthetraveler&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
+                &lt;button class=&#34;play-trigger&#34; style=&#34;
+                    background: #6b8fd9; 
+                    color: white; 
+                    border: none; 
+                    padding: 10px 15px; 
+                    border-radius: 8px; 
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;播放&lt;/button&gt;
+                &lt;a href=&#34;https://music.163.com/#/song?id=2670460852&#34; target=&#34;_blank&#34; style=&#34;
+                    background: transparent; 
+                    color: #6b8fd9; 
+                    border: 1px solid #6b8fd9; 
+                    padding: 10px 15px; 
+                    border-radius: 8px; 
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;详情&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34; 
             data-src=&#34;https://music.163.com/song/media/outer/url?id=1372188635.mp3&#34; 
             data-title=&#34;Daylight（日光）&#34; 
@@ -87,7 +159,7 @@
                 font-weight: bold; 
                 margin-right: 20px; 
                 border-radius: 50%; 
-                background: linear-gradient(135deg, #6b8fd9 80%, #c9a62f 10%); 
+                background: linear-gradient(135deg, #DEB887 0%, #F08080 90%); 
                 color: white;
                 flex-shrink: 0;
                 counter-increment: song-counter; /* 每个 li 计数器 +1 */
@@ -150,7 +222,7 @@
                 font-weight: bold; 
                 margin-right: 20px; 
                 border-radius: 50%; 
-                background: linear-gradient(135deg, #C0C0C0 0%, #a9a9a9 100%); 
+                background: linear-gradient(135deg, #C0C0C0 10%, #a9a9a9 90%); 
                 color: white;
                 flex-shrink: 0;
                 counter-increment: song-counter;
@@ -427,7 +499,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/script&gt;
 &lt;h2 id=&#34;网易云直链播放乱序&#34;&gt;网易云直链播放（乱序）
 &lt;/h2&gt;&lt;hr&gt;
-&lt;div class=&#34;outter-card&#34; style=&#34;     width: 100%;      max-width: 900px;      margin: 50px auto;      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);     -webkit-backdrop-filter: blur(12px);     border-radius: 24px;      border: 1px solid rgba(255, 255, 255, 0.5);     box-shadow:          0 12px 30px rgba(107, 143, 217, 0.2),         0 4px 12px rgba(0, 0, 0, 0.08);     overflow: hidden;     position: relative; &#34;&gt;     &lt;!-- 装饰性背景光晕 --&gt;     &lt;div style=&#34;         position: absolute;         top: -60%;         right: -40%;         width: 120%;         height: 120%;         background: radial-gradient(circle, rgba(107, 143, 217, 0.15) 0%, transparent 70%);         transform: rotate(15deg);         pointer-events: none;         z-index: 0;     &#34;&gt;&lt;/div&gt;      &lt;div style=&#34;         background: linear-gradient(135deg, #8a6bff, #4a6fa5);          color: white;          padding: 32px 40px;          text-align: center;         position: relative;         z-index: 2;         border-bottom: 1px solid rgba(255,255,255,0.2);     &#34;&gt;         &lt;h2 style=&#34;             margin: 0;              font-size: 34px;              font-weight: 700;              letter-spacing: 1px;             text-shadow: 0 2px 4px rgba(0,0,0,0.2);         &#34;&gt;🎵 网易云 · 乱序歌单&lt;/h2&gt;         &lt;p style=&#34;             margin: 12px 0 0;              font-size: 16px;              opacity: 0.95;             font-weight: 400;         &#34;&gt;官方播放器&lt;/p&gt;     &lt;/div&gt;          &lt;div class=&#34;playlist-embeds&#34; style=&#34;         padding: 30px 40px 40px;          background: transparent;         position: relative;         z-index: 2;         display: flex;         flex-direction: column;         gap: 24px;     &#34;&gt;         &lt;!-- 第一首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1372188635&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;          &lt;!-- 第二首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1992712131&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;     &lt;/div&gt; &lt;/div&gt;
+&lt;div class=&#34;outter-card&#34; style=&#34;     width: 100%;      max-width: 900px;      margin: 50px auto;      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);     -webkit-backdrop-filter: blur(12px);     border-radius: 24px;      border: 1px solid rgba(255, 255, 255, 0.5);     box-shadow:          0 12px 30px rgba(107, 143, 217, 0.2),         0 4px 12px rgba(0, 0, 0, 0.08);     overflow: hidden;     position: relative; &#34;&gt;     &lt;!-- 装饰性背景光晕 --&gt;     &lt;div style=&#34;         position: absolute;         top: -60%;         right: -40%;         width: 120%;         height: 120%;         background: radial-gradient(circle, rgba(107, 143, 217, 0.15) 0%, transparent 70%);         transform: rotate(15deg);         pointer-events: none;         z-index: 0;     &#34;&gt;&lt;/div&gt;      &lt;div style=&#34;         background: linear-gradient(135deg, #8a6bff, #4a6fa5);          color: white;          padding: 32px 40px;          text-align: center;         position: relative;         z-index: 2;         border-bottom: 1px solid rgba(255,255,255,0.2);     &#34;&gt;         &lt;h2 style=&#34;             margin: 0;              font-size: 34px;              font-weight: 700;              letter-spacing: 1px;             text-shadow: 0 2px 4px rgba(0,0,0,0.2);         &#34;&gt;🎵 网易云 · 乱序歌单&lt;/h2&gt;         &lt;p style=&#34;             margin: 12px 0 0;              font-size: 16px;              opacity: 0.95;             font-weight: 400;         &#34;&gt;官方播放器&lt;/p&gt;     &lt;/div&gt;          &lt;div class=&#34;playlist-embeds&#34; style=&#34;         padding: 30px 40px 40px;          background: transparent;         position: relative;         z-index: 2;         display: flex;         flex-direction: column;         gap: 24px;     &#34;&gt;         &lt;!-- 第一首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1372188635&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;          &lt;!-- 第二首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1992712131&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;   &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=2670460852&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;    &lt;/div&gt; &lt;/div&gt;
 </description>
         </item>
         

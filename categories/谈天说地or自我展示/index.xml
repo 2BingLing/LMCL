@@ -544,7 +544,7 @@ cards.forEach(card =&gt; observer.observe(card));
 &lt;audio id=&#34;flip-sound&#34; src=&#34;https://vrclmcl.asia/sounds/flip.mp3&#34; preload=&#34;auto&#34;&gt;&lt;/audio&gt;
 &lt;script&gt;
 (function() {
-  const DEBUG_MODE = false;
+  const DEBUG_MODE = true;
   const AUTO_TRIGGER = true;
   const STORAGE_KEY = &#39;qb1&#39;;
   if (!DEBUG_MODE &amp;&amp; localStorage.getItem(STORAGE_KEY) === &#39;true&#39;) {
