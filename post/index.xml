@@ -975,7 +975,7 @@ cards.forEach(card =&gt; observer.observe(card));
     👉 前往本期轻音会
   &lt;/a&gt;
 &lt;/div&gt;
-&lt;h1 id=&#34;第四次活动合照&#34;&gt;第四次活动合照
+&lt;h1 id=&#34;第五次活动合照&#34;&gt;第五次活动合照
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fihd/human5.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
@@ -1447,7 +1447,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
         &lt;li class=&#34;ranking-item&#34; 
             data-src=&#34;https://music.163.com/song/media/outer/url?id=2670460852.mp3&#34; 
             data-title=&#34;Tender&#34; 
-            data-artist=&#34;Seredris&#34;
+            data-artist=&#34;Lawrence Walther / Tibeauthetraveler&#34;
             style=&#34;
                 display: flex; 
                 align-items: center; 
