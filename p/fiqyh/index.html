@@ -1018,5 +1018,514 @@
     }());
 </script>
 
+  	 
+<div id="ltyy-float-root"></div>
+<script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<style>
+   
+  #ltyy-float-root {
+    position: fixed !important; top: 30px !important; right: 30px !important;
+    z-index: 2147483647 !important; font-family: 'Microsoft YaHei', sans-serif;
+  }
+  .lty-fab {
+    width: 50px; height: 50px; border-radius: 50%; background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid #eef2f7; transition: all 0.3s; overflow: hidden;
+  }
+  .lty-fab:hover { transform: translateY(-2px); border-color: #6b8fd9; }
+  .lty-fab img { width: 100%; height: 100%; object-fit: cover; }
+  .lty-fab-icon { font-size: 24px; color: #6b8fd9; }
+
+  .lty-menu {
+    position: absolute; top: 65px; right: 0; width: 240px;
+    background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px);
+    border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    padding: 20px; text-align: center; opacity: 0;
+    transform: translateY(-10px) scale(0.95); pointer-events: none;
+    transition: all 0.3s; border: 1px solid rgba(230, 236, 245, 0.8);
+    z-index: 2147483647 !important;
+  }
+  .lty-menu.active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+  
+  .lty-username { 
+    font-weight: 700; color: #333; margin: 0 0 20px; font-size: 15px; 
+    padding-bottom: 15px; border-bottom: 1px solid #f0f2f5; word-break: break-all;
+  }
+
+  .lty-actions { display: flex; flex-direction: column; gap: 10px; }
+  .lty-btn-action {
+    width: 100%; padding: 10px; border: none; border-radius: 10px;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .lty-btn-upload { background: #f0f4f8; color: #556070; }
+  .lty-btn-edit { background: #e3f2fd; color: #1976d2; }
+  .lty-btn-logout { background: #fff0f0; color: #d93025; }
+  .lty-btn-action:hover { transform: translateY(-1px); filter: brightness(0.95); }
+
+  .lty-modal-overlay {
+    position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(30, 40, 60, 0.6); backdrop-filter: blur(6px);
+    z-index: 2147483646 !important; display: flex; justify-content: center; align-items: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .lty-modal-overlay.active { opacity: 1; pointer-events: auto; }
+  .lty-modal {
+    background: white; width: 360px; padding: 35px; border-radius: 24px;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.2); text-align: center;
+    transform: translateY(30px); transition: all 0.4s; position: relative;
+    max-height: 90vh; overflow-y: auto;
+  }
+  .lty-modal-overlay.active .lty-modal { transform: translateY(0); }
+  
+  .lty-title { font-size: 22px; color: #6b8fd9; margin: 0 0 20px; font-weight: 800; }
+  .lty-input {
+    width: 100%; padding: 12px; margin-bottom: 12px; border: 2px solid #eef2f7;
+    border-radius: 12px; font-size: 14px; box-sizing: border-box; background: #f9fafb;
+  }
+  .lty-input:focus { outline: none; border-color: #6b8fd9; background: white; }
+  
+  .lty-btn-main {
+    width: 100%; padding: 12px; background: linear-gradient(135deg, #6b8fd9, #a8c7e8);
+    color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer;
+    margin-top: 10px;
+  }
+  .lty-btn-secondary {
+    width: 100%; padding: 10px; background: #f0f2f5; color: #555;
+    border: none; border-radius: 12px; font-weight: 600; cursor: pointer;
+    margin-top: 8px; font-size: 13px;
+  }
+  .lty-close {
+    position: absolute; top: 15px; right: 20px; font-size: 24px;
+    color: #cbd5e0; cursor: pointer;
+  }
+  .lty-tab-group { display: flex; gap: 10px; margin-bottom: 15px; }
+  .lty-tab { flex: 1; padding: 8px; font-size: 13px; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; background: #fff; }
+  .lty-tab.active { background: #e3f2fd; border-color: #6b8fd9; color: #6b8fd9; font-weight: bold; }
+  .lty-hidden { display: none; }
+</style>
+
+<script>
+(function() {
+  
+  const SUPABASE_URL = 'https://rhnhuxykupumluhmwvlo.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_rCyLOweRttAZ293c25hbGA_H1k4iuU0';
+
+  
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+    db: { schema: 'app' }
+  });
+
+  const root = document.getElementById('ltyy-float-root');
+  
+  let currentUser = null;
+  let userProfile = null;
+  let modalType = 'login';
+
+  
+  async function ensureProfile(user) {
+    if (!user) return null;
+    
+    
+    const { data: existing, error: fetchError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', user.id)
+      .maybeSingle();
+    
+    if (fetchError) {
+      console.error('检查用户资料失败:', fetchError);
+      return null;
+    }
+    
+    if (existing) return existing;
+    
+    
+    const defaultProfile = {
+      id: user.id,
+      email: user.email,
+      username: user.email?.split('@')[0] || '新用户',
+      avatar_url: null,
+      is_banned: false,
+      created_at: new Date().toISOString()
+    };
+    
+    const { data: inserted, error: insertError } = await supabase
+      .from('profiles')
+      .insert(defaultProfile)
+      .select()
+      .single();
+    
+    if (insertError) {
+      console.error('创建用户资料失败:', insertError);
+      return defaultProfile; 
+    }
+    
+    return inserted;
+  }
+
+  async function loadProfile() {
+    if (!currentUser) {
+      userProfile = null;
+      return;
+    }
+    userProfile = await ensureProfile(currentUser);
+  }
+
+  
+  function renderLoggedOut() {
+    root.innerHTML = `<div class="lty-fab" onclick="openModal('login')" title="登录">🎵</div>`;
+  }
+
+  function renderLoggedIn() {
+    const name = userProfile?.username || (currentUser?.email?.split('@')[0]) || '轻音成员';
+    const avatar = userProfile?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b8fd9&color=fff&size=128`;
+    
+    root.innerHTML = `
+      <div class="lty-fab" onclick="toggleMenu()" title="${name}">
+        <img src="${avatar}" alt="Avatar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b8fd9&color=fff'">
+      </div>
+      <div class="lty-menu" id="lty-menu">
+        <div class="lty-username">${name}</div>
+        <div class="lty-actions">
+          <button class="lty-btn-action lty-btn-upload" onclick="openModal('avatarSelect')">
+            <span>📷</span> 更换头像
+          </button>
+          <button class="lty-btn-action lty-btn-edit" onclick="openModal('editProfile')">
+            <span>✏️</span> 修改资料
+          </button>
+          <button class="lty-btn-action lty-btn-logout" onclick="handleLogout()">
+            <span>🚪</span> 退出登录
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  
+  window.toggleMenu = () => {
+    const menu = document.getElementById('lty-menu');
+    if (menu) menu.classList.toggle('active');
+  };
+
+  window.closeModal = () => {
+    const el = document.getElementById('lty-modal-overlay');
+    if (el) {
+      el.classList.remove('active');
+      setTimeout(() => el.remove(), 300);
+    }
+  };
+
+  window.openModal = async (type) => {
+    modalType = type;
+    document.getElementById('lty-menu')?.classList.remove('active');
+    
+    if ((type === 'editProfile' || type === 'avatarSelect') && !userProfile) {
+      await loadProfile();
+      if (!userProfile) {
+        alert('无法加载用户资料，请刷新页面重试。');
+        return;
+      }
+    }
+
+    const old = document.getElementById('lty-modal-overlay');
+    if (old) old.remove();
+
+    let content = '';
+    
+    if (type === 'login' || type === 'register') {
+      const isLogin = type === 'login';
+      content = `
+        <h3 class="lty-title">${isLogin ? '欢迎回来' : '加入轻音会社'}</h3>
+        <input type="email" id="lty-email" class="lty-input" placeholder="邮箱" autocomplete="email">
+        <input type="password" id="lty-pass" class="lty-input" placeholder="密码 (≥6位)" autocomplete="${isLogin ? 'current-password' : 'new-password'}">
+        <button class="lty-btn-main" onclick="submitAuth()">${isLogin ? '登录' : '注册'}</button>
+        <p style="margin-top:15px; font-size:13px; color:#888;">
+          ${isLogin ? '没账号？' : '有账号？'} 
+          <span style="color:#6b8fd9; cursor:pointer; font-weight:bold;" onclick="openModal('${isLogin ? 'register' : 'login'}')">${isLogin ? '去注册' : '去登录'}</span>
+        </p>
+      `;
+    } else if (type === 'editProfile') {
+      const currentName = userProfile?.username || '';
+      content = `
+        <h3 class="lty-title">修改资料</h3>
+        <label style="display:block; text-align:left; font-size:12px; color:#666; margin-bottom:5px;">用户名</label>
+        <input type="text" id="edit-username" class="lty-input" value="${currentName.replace(/"/g, '&quot;')}" placeholder="输入新用户名">
+        <button class="lty-btn-main" onclick="updateUsername()">保存修改</button>
+        <button class="lty-btn-secondary" onclick="closeModal()">取消</button>
+      `;
+    } else if (type === 'avatarSelect') {
+      content = `
+        <h3 class="lty-title">更换头像</h3>
+        <div class="lty-tab-group">
+          <div class="lty-tab active" onclick="switchAvatarTab('upload', this)">本地上传</div>
+          <div class="lty-tab" onclick="switchAvatarTab('link', this)">外链图片</div>
+        </div>
+        
+        <div id="tab-upload">
+          <input type="file" id="file-input" accept="image/*" style="display:none" onchange="uploadAvatarFile(this)">
+          <button class="lty-btn-main" onclick="document.getElementById('file-input').click()">选择图片文件</button>
+          <p style="font-size:12px; color:#999; margin-top:10px;">支持 JPG, PNG, WEBP (最大 1MB)</p>
+        </div>
+
+        <div id="tab-link" class="lty-hidden">
+          <input type="url" id="link-input" class="lty-input" placeholder="https://example.com/avatar.jpg">
+          <button class="lty-btn-main" onclick="updateAvatarLink()">使用外链</button>
+        </div>
+        
+        <button class="lty-btn-secondary" style="margin-top:20px;" onclick="closeModal()">取消</button>
+      `;
+    }
+
+    const html = `
+      <div class="lty-modal-overlay active" id="lty-modal-overlay" onclick="if(event.target===this) closeModal()">
+        <div class="lty-modal">
+          <span class="lty-close" onclick="closeModal()">&times;</span>
+          ${content}
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', html);
+  };
+
+  window.switchAvatarTab = (tabName, btn) => {
+    document.querySelectorAll('.lty-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const uploadTab = document.getElementById('tab-upload');
+    const linkTab = document.getElementById('tab-link');
+    if (tabName === 'upload') {
+      uploadTab.classList.remove('lty-hidden');
+      linkTab.classList.add('lty-hidden');
+    } else {
+      uploadTab.classList.add('lty-hidden');
+      linkTab.classList.remove('lty-hidden');
+    }
+  };
+
+  
+  window.submitAuth = async () => {
+    const email = document.getElementById('lty-email').value.trim();
+    const pass = document.getElementById('lty-pass').value.trim();
+    if (!email || !pass) return alert('请填写完整');
+    
+    const btn = document.querySelector('.lty-btn-main');
+    const oldText = btn.innerText;
+    btn.innerText = '...';
+    btn.disabled = true;
+
+    try {
+      if (modalType === 'register') {
+        const { error } = await supabase.auth.signUp({ email, password: pass });
+        if (error) throw error;
+        alert('注册成功！请验证邮箱后登录。');
+        closeModal();
+      } else {
+        const { error, data } = await supabase.auth.signInWithPassword({ email, password: pass });
+        if (error) throw error;
+        
+        currentUser = data.user;
+        await loadProfile();  
+        renderLoggedIn();
+        closeModal();
+      }
+    } catch (e) {
+      alert('认证失败：' + e.message);
+    } finally {
+      btn.innerText = oldText;
+      btn.disabled = false;
+    }
+  };
+
+  window.handleLogout = async () => {
+    if (!confirm('确定退出登录？')) return;
+    await supabase.auth.signOut();
+    currentUser = null;
+    userProfile = null;
+    renderLoggedOut();
+  };
+
+  
+  window.updateUsername = async () => {
+    if (!userProfile) {
+      alert('用户资料未加载，请刷新页面重试。');
+      return;
+    }
+
+    const newUsername = document.getElementById('edit-username').value.trim();
+    if (!newUsername) return alert('用户名不能为空');
+    if (newUsername === userProfile.username) {
+      alert('用户名未改变');
+      closeModal();
+      return;
+    }
+
+    const btn = document.querySelector('.lty-btn-main');
+    btn.innerText = '保存中...';
+    btn.disabled = true;
+
+    try {
+      const { error } = await supabase
+        .from('profiles')
+        .update({ username: newUsername })
+        .eq('id', currentUser.id);
+      
+      if (error) {
+        if (error.code === '23505') alert('该用户名已被占用，请换一个。');
+        else throw error;
+      } else {
+        userProfile.username = newUsername;
+        alert('用户名修改成功！');
+        renderLoggedIn();
+        closeModal();
+      }
+    } catch (e) {
+      alert('修改失败: ' + e.message);
+      console.error(e);
+    } finally {
+      btn.innerText = '保存修改';
+      btn.disabled = false;
+    }
+  };
+
+  
+  window.uploadAvatarFile = async (input) => {
+    const file = input.files[0];
+    if (!file) return;
+    if (file.size > 1024 * 1024) return alert('文件不能超过 1MB');
+    await processAvatarUpload(file);
+  };
+
+  window.updateAvatarLink = async () => {
+    const url = document.getElementById('link-input').value.trim();
+    if (!url) return alert('请输入链接');
+    if (!url.startsWith('http')) return alert('链接必须以 http 或 https 开头');
+    await updateAvatarUrlInDb(url);
+  };
+
+  async function processAvatarUpload(file) {
+    const btn = document.querySelector('.lty-btn-main');
+    if (btn) {
+      btn.innerText = '上传中...';
+      btn.disabled = true;
+    }
+
+    try {
+      
+      if (userProfile?.avatar_url && userProfile.avatar_url.includes('/avatars/')) {
+        try {
+          const urlObj = new URL(userProfile.avatar_url);
+          const pathParts = urlObj.pathname.split('/');
+          const bucketIndex = pathParts.indexOf('avatars');
+          if (bucketIndex !== -1 && pathParts[bucketIndex + 1]) {
+            const oldFileName = pathParts.slice(bucketIndex + 1).join('/');
+            await supabase.storage.from('avatars').remove([oldFileName]);
+          }
+        } catch (e) {
+          console.warn('删除旧头像失败（可忽略）:', e);
+        }
+      }
+
+      
+      const ext = file.name.split('.').pop();
+      const fileName = `${currentUser.id}_${Date.now()}.${ext}`;
+      
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(fileName, file, { upsert: true });
+      
+      if (uploadError) {
+        console.error('上传错误:', uploadError);
+        if (uploadError.message.includes('bucket')) {
+          alert('存储桶 "avatars" 未创建，请在 Supabase Storage 中创建公开桶 "avatars"。');
+        } else {
+          throw uploadError;
+        }
+        return;
+      }
+
+      const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(fileName);
+      await updateAvatarUrlInDb(publicUrl);
+
+    } catch (e) {
+      alert('上传失败: ' + e.message);
+      console.error(e);
+    } finally {
+      if (btn) {
+        btn.innerText = '选择图片文件';
+        btn.disabled = false;
+      }
+      closeModal();
+    }
+  }
+
+  async function updateAvatarUrlInDb(url) {
+    if (!userProfile) {
+      alert('用户资料未加载，无法保存头像。');
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase
+        .from('profiles')
+        .update({ avatar_url: url })
+        .eq('id', currentUser.id)
+        .select();
+
+      if (error) {
+        console.error('更新数据库失败:', error);
+        throw new Error(error.message || '更新数据库失败');
+      }
+
+      if (!data || data.length === 0) {
+        throw new Error('未找到用户记录，请重试');
+      }
+
+      userProfile.avatar_url = url;
+      renderLoggedIn();
+      alert('头像更新成功！✨');
+      closeModal();
+    } catch (e) {
+      alert('保存失败: ' + e.message);
+      console.error(e);
+    }
+  }
+
+  
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('lty-menu');
+    const fab = document.querySelector('.lty-fab');
+    if (menu && !menu.contains(e.target) && (!fab || !fab.contains(e.target))) {
+      menu.classList.remove('active');
+    }
+  });
+
+  
+  (async function init() {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      currentUser = session.user;
+      await loadProfile();
+      renderLoggedIn();
+    } else {
+      renderLoggedOut();
+    }
+
+    supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_IN' && session) {
+        currentUser = session.user;
+        await loadProfile();
+        renderLoggedIn();
+      } else if (event === 'SIGNED_OUT') {
+        currentUser = null;
+        userProfile = null;
+        renderLoggedOut();
+      }
+    });
+  })();
+
+})();
+</script>
     </body>
 </html>
