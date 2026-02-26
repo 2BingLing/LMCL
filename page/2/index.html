@@ -1040,6 +1040,13 @@
   .lty-tab { flex: 1; padding: 8px; font-size: 13px; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; background: #fff; }
   .lty-tab.active { background: #e3f2fd; border-color: #6b8fd9; color: #6b8fd9; font-weight: bold; }
   .lty-hidden { display: none; }
+
+   
+  @media (max-width: 768px) {
+    #ltyy-float-root {
+      top: 80px !important;  
+    }
+  }
 </style>
 
 <script>
@@ -1115,12 +1122,14 @@
   }
 
   function renderLoggedIn() {
-    const name = userProfile?.username || (currentUser?.email?.split('@')[0]) || '轻音成员';
+    
+    const name = userProfile ? (userProfile.username || '轻音成员') : '加载中...';
+    
     const avatar = userProfile?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b8fd9&color=fff&size=128`;
     
     root.innerHTML = `
       <div class="lty-fab" onclick="toggleMenu()" title="${name}">
-        <img src="${avatar}" alt="Avatar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b8fd9&color=fff'">
+        <img src="${avatar}" alt="Avatar">
       </div>
       <div class="lty-menu" id="lty-menu">
         <div class="lty-username">${name}</div>
@@ -1129,7 +1138,7 @@
             <span>📷</span> 更换头像
           </button>
           <button class="lty-btn-action lty-btn-edit" onclick="openModal('editProfile')">
-            <span>✏️</span> 修改资料
+            <span✏️</span> 修改资料
           </button>
           <button class="lty-btn-action lty-btn-logout" onclick="handleLogout()">
             <span>🚪</span> 退出登录
