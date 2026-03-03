@@ -620,6 +620,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 
 <article class="has-image">
+    <a href="/p/sehd/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.vrclmcl.asia/LMCL/2026/03/03/human7.png" loading="lazy" data-key="sehd" data-hash="https://img.vrclmcl.asia/LMCL/2026/03/03/human7.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第七次活动合照</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/sihd/">
         
         
@@ -685,30 +704,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="article-details">
             <h2 class="article-title">第四次活动合照</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/trhd/">
-        
-        
-            <div class="article-image">
-                <img src="/p/trhd/human1.f6129a75776b586d3d83fa25f87df8b2_hu_9e5e170ded1bbc2a.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 第三次活动合照"
-                        data-key="trhd" 
-                        data-hash="md5-9hKadXdrWG09g/ol&#43;H34sg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第三次活动合照</h2>
         </div>
     </a>
 </article>
@@ -1022,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>📷</span> 更换头像
           </button>
           <button class="lty-btn-action lty-btn-edit" onclick="openModal('editProfile')">
-            <span✏️</span> 修改资料
+            <span>✏️</span> 修改资料
           </button>
           <button class="lty-btn-action lty-btn-logout" onclick="handleLogout()">
             <span>🚪</span> 退出登录
@@ -1137,6 +1132,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('lty-email').value.trim();
     const pass = document.getElementById('lty-pass').value.trim();
     if (!email || !pass) return alert('请填写完整');
+
+    
+    if (modalType === 'register' && pass.length < 6) {
+      return alert('密码长度不能少于6位');
+    }
     
     const btn = document.querySelector('.lty-btn-main');
     const oldText = btn.innerText;
@@ -1145,13 +1145,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       if (modalType === 'register') {
-        const { error } = await supabase.auth.signUp({ email, password: pass });
-        if (error) throw error;
-        alert('注册成功！请验证邮箱后登录。');
+        
+        const { data: existingProfile, error: checkError } = await supabase
+          .from('profiles')
+          .select('email')
+          .eq('email', email)
+          .maybeSingle();
+        
+        if (checkError) throw new Error('检查邮箱失败：' + checkError.message);
+        
+        if (existingProfile) {
+          throw new Error('该邮箱已注册，请直接登录');
+        }
+
+        const { error, data } = await supabase.auth.signUp({ email, password: pass });
+        if (error) {
+          
+          throw new Error('注册失败：' + error.message);
+        }
+        alert('注册邮件已发送，请查收完成验证。');
         closeModal();
       } else {
         const { error, data } = await supabase.auth.signInWithPassword({ email, password: pass });
-        if (error) throw error;
+        if (error) {
+          
+          if (error.message.includes('Invalid login credentials')) {
+            throw new Error('邮箱或密码错误');
+          } else if (error.message.includes('Email not confirmed')) {
+            throw new Error('邮箱未验证，请先验证邮箱');
+          } else {
+            throw new Error('登录失败：' + error.message);
+          }
+        }
         
         currentUser = data.user;
         await loadProfile();  
@@ -1159,7 +1184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal();
       }
     } catch (e) {
-      alert('认证失败：' + e.message);
+      alert(e.message);
     } finally {
       btn.innerText = oldText;
       btn.disabled = false;

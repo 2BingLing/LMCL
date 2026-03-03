@@ -10,7 +10,7 @@
 <meta property='og:description' content="日常公告">
 <meta property='og:url' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/'>
 <meta property='og:site_name' content='VRC轻音会社'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-02-21T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-02-28T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' />
 <meta name="twitter:title" content="Category: 公告 - VRC轻音会社">
 <meta name="twitter:description" content="日常公告"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/index.xml">
@@ -306,7 +306,7 @@
                     <a href="/archives/#2026">
                         
                             <span class="year">2026</span>
-                            <span class="count">20</span>
+                            <span class="count">21</span>
                         
                     </a> 
                 </div>
@@ -333,7 +333,7 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/categories/%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/" class="font_size_9">
+            <a href="/categories/%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/" class="font_size_10">
                 活动合照
             </a>
         
@@ -800,7 +800,7 @@
             <span>📷</span> 更换头像
           </button>
           <button class="lty-btn-action lty-btn-edit" onclick="openModal('editProfile')">
-            <span✏️</span> 修改资料
+            <span>✏️</span> 修改资料
           </button>
           <button class="lty-btn-action lty-btn-logout" onclick="handleLogout()">
             <span>🚪</span> 退出登录
@@ -915,6 +915,11 @@
     const email = document.getElementById('lty-email').value.trim();
     const pass = document.getElementById('lty-pass').value.trim();
     if (!email || !pass) return alert('请填写完整');
+
+    
+    if (modalType === 'register' && pass.length < 6) {
+      return alert('密码长度不能少于6位');
+    }
     
     const btn = document.querySelector('.lty-btn-main');
     const oldText = btn.innerText;
@@ -923,13 +928,38 @@
 
     try {
       if (modalType === 'register') {
-        const { error } = await supabase.auth.signUp({ email, password: pass });
-        if (error) throw error;
-        alert('注册成功！请验证邮箱后登录。');
+        
+        const { data: existingProfile, error: checkError } = await supabase
+          .from('profiles')
+          .select('email')
+          .eq('email', email)
+          .maybeSingle();
+        
+        if (checkError) throw new Error('检查邮箱失败：' + checkError.message);
+        
+        if (existingProfile) {
+          throw new Error('该邮箱已注册，请直接登录');
+        }
+
+        const { error, data } = await supabase.auth.signUp({ email, password: pass });
+        if (error) {
+          
+          throw new Error('注册失败：' + error.message);
+        }
+        alert('注册邮件已发送，请查收完成验证。');
         closeModal();
       } else {
         const { error, data } = await supabase.auth.signInWithPassword({ email, password: pass });
-        if (error) throw error;
+        if (error) {
+          
+          if (error.message.includes('Invalid login credentials')) {
+            throw new Error('邮箱或密码错误');
+          } else if (error.message.includes('Email not confirmed')) {
+            throw new Error('邮箱未验证，请先验证邮箱');
+          } else {
+            throw new Error('登录失败：' + error.message);
+          }
+        }
         
         currentUser = data.user;
         await loadProfile();  
@@ -937,7 +967,7 @@
         closeModal();
       }
     } catch (e) {
-      alert('认证失败：' + e.message);
+      alert(e.message);
     } finally {
       btn.innerText = oldText;
       btn.disabled = false;
