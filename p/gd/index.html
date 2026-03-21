@@ -365,7 +365,7 @@
         </a>
 
         
-        <a href="/p/sehd/" style="
+        <a href="/p/eihd/" style="
             display: flex;
             align-items: center;
             justify-content: center;
@@ -537,6 +537,78 @@
         min-height: 100px;
     ">  
         <li class="ranking-item" 
+            data-src="https://music.163.com/song/media/outer/url?id=2658529736.mp3" 
+            data-title="这是个音乐游戏！！" 
+            data-artist="NewPiano"
+            style="
+                display: flex; 
+                align-items: center; 
+                padding: 20px 0; 
+                border-bottom: 1px dashed #eee; 
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            ">
+            <div style="
+                width: 60px; 
+                height: 60px; 
+                line-height: 60px; 
+                text-align: center; 
+                font-size: 28px; 
+                font-weight: bold; 
+                margin-right: 20px; 
+                border-radius: 50%; 
+                background: linear-gradient(135deg, #6b8fd9 80%, #c9a62f 10%); 
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter; /* 每个 li 计数器 +1 */
+            ">
+                <span style="position: relative; z-index: 1;">
+                    <span style="font-family: sans-serif;">#</span>
+                    <span style="font-weight: bold;">
+                        <span style="opacity: 0; position: absolute;">0</span> 
+                        <script type="text/javascript">
+                        </script>
+                    </span>
+                </span>
+            </div>
+            <div class="song-info" style="flex: 1;">
+                <div style="
+                    font-size: 18px; 
+                    color: #1a1a1a; 
+                    margin-bottom: 5px; 
+                    font-weight: 600;
+                ">这是个音乐游戏！！</div>
+                <div style="
+                    font-size: 14px; 
+                    color: #666;
+                ">NewPiano</div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="play-trigger" style="
+                    background: #6b8fd9; 
+                    color: white; 
+                    border: none; 
+                    padding: 10px 15px; 
+                    border-radius: 8px; 
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">播放</button>
+                <a href="https://music.163.com/#/song?id=2658529736" target="_blank" style="
+                    background: transparent; 
+                    color: #6b8fd9; 
+                    border: 1px solid #6b8fd9; 
+                    padding: 10px 15px; 
+                    border-radius: 8px; 
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">详情</a>
+            </div>
+        </li>
+        <li class="ranking-item" 
             data-src="https://music.163.com/song/media/outer/url?id=1455706958.mp3" 
             data-title="Genshin Impact Main Theme" 
             data-artist="陈致逸 / HOYO-MiX /风与异乡人"
@@ -559,7 +631,7 @@
                 font-weight: bold; 
                 margin-right: 20px; 
                 border-radius: 50%; 
-                background: linear-gradient(135deg, #6b8fd9 80%, #c9a62f 10%); 
+                background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 90%); 
                 color: white;
                 flex-shrink: 0;
                 counter-increment: song-counter; /* 每个 li 计数器 +1 */
@@ -1115,7 +1187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <h2 id="网易云直链播放乱序">网易云直链播放（乱序）
 </h2><hr>
-<div class="outter-card" style="     width: 100%;      max-width: 900px;      margin: 50px auto;      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);     -webkit-backdrop-filter: blur(12px);     border-radius: 24px;      border: 1px solid rgba(255, 255, 255, 0.5);     box-shadow:          0 12px 30px rgba(107, 143, 217, 0.2),         0 4px 12px rgba(0, 0, 0, 0.08);     overflow: hidden;     position: relative; ">     <!-- 装饰性背景光晕 -->     <div style="         position: absolute;         top: -60%;         right: -40%;         width: 120%;         height: 120%;         background: radial-gradient(circle, rgba(107, 143, 217, 0.15) 0%, transparent 70%);         transform: rotate(15deg);         pointer-events: none;         z-index: 0;     "></div>      <div style="         background: linear-gradient(135deg, #8a6bff, #4a6fa5);          color: white;          padding: 32px 40px;          text-align: center;         position: relative;         z-index: 2;         border-bottom: 1px solid rgba(255,255,255,0.2);     ">         <h2 style="             margin: 0;              font-size: 34px;              font-weight: 700;              letter-spacing: 1px;             text-shadow: 0 2px 4px rgba(0,0,0,0.2);         ">🎵 网易云 · 乱序歌单</h2>         <p style="             margin: 12px 0 0;              font-size: 16px;              opacity: 0.95;             font-weight: 400;         ">官方播放器</p>     </div>          <div class="playlist-embeds" style="         padding: 30px 40px 40px;          background: transparent;         position: relative;         z-index: 2;         display: flex;         flex-direction: column;         gap: 24px;     ">         <!-- 第一首歌 iframe -->         <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1372188635&auto=0&height=66"                 style="display: block;">             </iframe>         </div>          <!-- 第二首歌 iframe -->         <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1992712131&auto=0&height=66"                 style="display: block;">             </iframe>         </div>   <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=2670460852&auto=0&height=66"                 style="display: block;">             </iframe>         </div>  <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=419594806&auto=0&height=66"                 style="display: block;">             </iframe>         </div> <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1455706958&auto=0&height=66"                 style="display: block;">             </iframe>         </div>      </div> </div>
+<div class="outter-card" style="     width: 100%;      max-width: 900px;      margin: 50px auto;      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);     -webkit-backdrop-filter: blur(12px);     border-radius: 24px;      border: 1px solid rgba(255, 255, 255, 0.5);     box-shadow:          0 12px 30px rgba(107, 143, 217, 0.2),         0 4px 12px rgba(0, 0, 0, 0.08);     overflow: hidden;     position: relative; ">     <!-- 装饰性背景光晕 -->     <div style="         position: absolute;         top: -60%;         right: -40%;         width: 120%;         height: 120%;         background: radial-gradient(circle, rgba(107, 143, 217, 0.15) 0%, transparent 70%);         transform: rotate(15deg);         pointer-events: none;         z-index: 0;     "></div>      <div style="         background: linear-gradient(135deg, #8a6bff, #4a6fa5);          color: white;          padding: 32px 40px;          text-align: center;         position: relative;         z-index: 2;         border-bottom: 1px solid rgba(255,255,255,0.2);     ">         <h2 style="             margin: 0;              font-size: 34px;              font-weight: 700;              letter-spacing: 1px;             text-shadow: 0 2px 4px rgba(0,0,0,0.2);         ">🎵 网易云 · 乱序歌单</h2>         <p style="             margin: 12px 0 0;              font-size: 16px;              opacity: 0.95;             font-weight: 400;         ">官方播放器</p>     </div>          <div class="playlist-embeds" style="         padding: 30px 40px 40px;          background: transparent;         position: relative;         z-index: 2;         display: flex;         flex-direction: column;         gap: 24px;     ">         <!-- 第一首歌 iframe -->         <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1372188635&auto=0&height=66"                 style="display: block;">             </iframe>         </div>          <!-- 第二首歌 iframe -->         <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1992712131&auto=0&height=66"                 style="display: block;">             </iframe>         </div>   <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=2670460852&auto=0&height=66"                 style="display: block;">             </iframe>         </div>  <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=419594806&auto=0&height=66"                 style="display: block;">             </iframe>         </div> <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=1455706958&auto=0&height=66"                 style="display: block;">             </iframe>         </div>   <div style="             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         " onmouseenter="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 24px rgba(0,0,0,0.12)';"            onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.08)';">             <iframe                  frameborder="no"                  border="0"                  marginwidth="0"                  marginheight="0"                  width="100%"                  height="86"                  src="//music.163.com/outchain/player?type=2&id=2658529736&auto=0&height=66"                 style="display: block;">             </iframe>         </div>         </div> </div>
 
 </section>
 
