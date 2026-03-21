@@ -58,7 +58,7 @@
   border-radius: 16px;
   box-shadow: 0 2px 5px rgba(107,143,217,0.4);
   animation: pulseBadge 2s infinite;
-&#34;&gt;@十年岁月无 · 轻音会&lt;/span&gt;
+&#34;&gt;@往世乐土 · 轻音会&lt;/span&gt;
 &lt;style&gt;
 @keyframes pulseBadge {
   0%, 100% { transform: scale(1); }
