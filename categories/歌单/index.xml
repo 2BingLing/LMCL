@@ -713,6 +713,86 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
     });
 });
 &lt;/script&gt;
+&lt;style&gt;
+@media only screen and (max-width: 768px) {
+    /* 卡片整体适配 */
+    .outter-card {
+        margin: 20px auto !important;
+        border-radius: 12px !important;
+ }
+.outter-card &gt; div:first-child {
+    padding: 20px !important;
+}
+.outter-card &gt; div:first-child p:first-child {
+    font-size: 24px !important;
+}
+.ranking-list {
+    padding: 15px !important;
+}
+.ranking-item {
+    flex-wrap: wrap;
+    padding: 15px 0 !important;
+}
+.ranking-item &gt; div:first-child {
+    width: 45px !important;
+    height: 45px !important;
+    line-height: 45px !important;
+    font-size: 20px !important;
+    margin-right: 12px !important;
+}
+.song-info {
+    flex: 1;
+    min-width: 0;
+    margin-right: 10px;
+}
+.song-info &gt; div:first-child {
+    font-size: 15px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.song-info &gt; div:last-child {
+    font-size: 12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ranking-item &gt; div:last-child {
+    width: 100%;
+    margin-top: 12px;
+    justify-content: center;
+}
+.play-trigger,
+.ranking-item a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+}
+#music-player {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 12px 15px !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+#music-player &gt; div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+#song-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#progress-bar {
+    width: 100% !important;
+    order: 4;
+}
+#volume-control {
+    width: 60px !important;
+}}&lt;/style&gt;
 &lt;h2 id=&#34;网易云直链播放乱序&#34;&gt;网易云直链播放（乱序）
 &lt;/h2&gt;&lt;hr&gt;
 &lt;div class=&#34;outter-card&#34; style=&#34;     width: 100%;      max-width: 900px;      margin: 50px auto;      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);     -webkit-backdrop-filter: blur(12px);     border-radius: 24px;      border: 1px solid rgba(255, 255, 255, 0.5);     box-shadow:          0 12px 30px rgba(107, 143, 217, 0.2),         0 4px 12px rgba(0, 0, 0, 0.08);     overflow: hidden;     position: relative; &#34;&gt;     &lt;!-- 装饰性背景光晕 --&gt;     &lt;div style=&#34;         position: absolute;         top: -60%;         right: -40%;         width: 120%;         height: 120%;         background: radial-gradient(circle, rgba(107, 143, 217, 0.15) 0%, transparent 70%);         transform: rotate(15deg);         pointer-events: none;         z-index: 0;     &#34;&gt;&lt;/div&gt;      &lt;div style=&#34;         background: linear-gradient(135deg, #8a6bff, #4a6fa5);          color: white;          padding: 32px 40px;          text-align: center;         position: relative;         z-index: 2;         border-bottom: 1px solid rgba(255,255,255,0.2);     &#34;&gt;         &lt;h2 style=&#34;             margin: 0;              font-size: 34px;              font-weight: 700;              letter-spacing: 1px;             text-shadow: 0 2px 4px rgba(0,0,0,0.2);         &#34;&gt;🎵 网易云 · 乱序歌单&lt;/h2&gt;         &lt;p style=&#34;             margin: 12px 0 0;              font-size: 16px;              opacity: 0.95;             font-weight: 400;         &#34;&gt;官方播放器&lt;/p&gt;     &lt;/div&gt;          &lt;div class=&#34;playlist-embeds&#34; style=&#34;         padding: 30px 40px 40px;          background: transparent;         position: relative;         z-index: 2;         display: flex;         flex-direction: column;         gap: 24px;     &#34;&gt;         &lt;!-- 第一首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1372188635&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;          &lt;!-- 第二首歌 iframe --&gt;         &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1992712131&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;   &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=2670460852&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;  &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=419594806&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt; &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=1455706958&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;   &lt;div style=&#34;             border-radius: 16px;             overflow: hidden;             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);             transition: transform 0.3s ease, box-shadow 0.3s ease;             background: white;         &#34; onmouseenter=&#34;this.style.transform=&#39;translateY(-4px)&#39;; this.style.boxShadow=&#39;0 10px 24px rgba(0,0,0,0.12)&#39;;&#34;            onmouseleave=&#34;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 6px 16px rgba(0,0,0,0.08)&#39;;&#34;&gt;             &lt;iframe                  frameborder=&#34;no&#34;                  border=&#34;0&#34;                  marginwidth=&#34;0&#34;                  marginheight=&#34;0&#34;                  width=&#34;100%&#34;                  height=&#34;86&#34;                  src=&#34;//music.163.com/outchain/player?type=2&amp;id=2658529736&amp;auto=0&amp;height=66&#34;                 style=&#34;display: block;&#34;&gt;             &lt;/iframe&gt;         &lt;/div&gt;         &lt;/div&gt; &lt;/div&gt;
