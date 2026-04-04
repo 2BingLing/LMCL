@@ -10,7 +10,7 @@
 <meta property='og:description' content="这是什么奇奇怪怪的东西？">
 <meta property='og:url' content='https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/'>
 <meta property='og:site_name' content='VRC轻音会社'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-04-03T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/logo%E5%9B%BE%E6%A0%87.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-04-04T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/logo%E5%9B%BE%E6%A0%87.png' />
 <meta name="twitter:title" content="Category: 神秘相册 - VRC轻音会社">
 <meta name="twitter:description" content="这是什么奇奇怪怪的东西？"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/logo%E5%9B%BE%E6%A0%87.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://vrclmcl.asia/categories/%E5%A5%87%E6%80%AA%E7%9B%B8%E5%86%8C/index.xml">
@@ -113,7 +113,7 @@
         
         
         
-        <li >
+        <li  >
             <a href='/' >
                 
                 
@@ -133,7 +133,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/about/' >
                 
                 
@@ -145,7 +145,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/human/' >
                 
                 
@@ -164,7 +164,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/p/gd/' >
                 
                 
@@ -176,7 +176,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/archives/' >
                 
                 
@@ -196,7 +196,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/search/' >
                 
                 
@@ -215,7 +215,7 @@
         </li>
         
         
-        <li >
+        <li  >
             <a href='/friend/' >
                 
                 
@@ -230,6 +230,23 @@
 
                 
                 <span>友情群组</span>
+            </a>
+        </li>
+        
+        
+        <li   data-mobile-only="true" >
+            <a href='/apps/vote/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+  <path d="M12 2v2"/>
+</svg>
+
+                
+                <span>投票系统</span>
             </a>
         </li>
         
@@ -260,6 +277,13 @@
             </ol>
         </li>
     </ol>
+<style>
+@media (min-width: 769px) {
+    .left-sidebar .menu li[data-mobile-only="true"] {
+        display: none !important;
+    }
+}
+</style>
 </aside>
 
     <aside class="sidebar right-sidebar sticky">
@@ -466,6 +490,99 @@
         </a>
     </div>
 </div>
+
+<div class="vote-widget-container">
+    <a href="/apps/vote/" class="vote-cta">
+        <span>轻音投票</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+    </a>
+</div>
+
+<style>
+.vote-widget-container {
+    width: 100%;
+    max-width: 280px;
+    margin: 16px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.vote-cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.vote-cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.vote-cta span {
+    position: relative;
+    font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.vote-cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.vote-cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.vote-cta:hover svg {
+    transform: translateX(0);
+}
+
+.vote-cta:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .vote-widget-container {
+        max-width: 100%;
+        margin: 12px 0;
+    }
+    
+    .vote-cta span {
+        font-size: 16px;
+    }
+}
+</style>
+
             
         
     </aside>
