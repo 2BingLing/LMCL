@@ -978,6 +978,7 @@
 <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 (function() {
+ 
   const SUPABASE_URL = 'https://rhnhuxykupumluhmwvlo.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_rCyLOweRttAZ293c25hbGA_H1k4iuU0';
 
@@ -1000,7 +1001,21 @@
   function getDeviceId() {
     let id = localStorage.getItem('vote_device_id');
     if (!id) {
-      id = 'dev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      const fingerprint = [
+        navigator.userAgent || '',
+        navigator.language || '',
+        screen.width + 'x' + screen.height,
+        screen.colorDepth || '',
+        new Date().getTimezoneOffset(),
+        !!window.sessionStorage,
+        !!window.localStorage,
+        navigator.hardwareConcurrency || ''
+      ].join('|');
+      const hash = fingerprint.split('').reduce((a, b) => {
+        a = ((a << 5) - a) + b.charCodeAt(0);
+        return a & a;
+      }, 0);
+      id = 'dev_' + Math.abs(hash).toString(36) + '_' + Date.now().toString(36) + '_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('vote_device_id', id);
     }
     return id;
@@ -1297,9 +1312,10 @@
       const avatarHtml = c.avatar_url 
         ? `<img src="${escapeHtml(c.avatar_url)}" alt="${escapeHtml(c.name)}" class="vote-avatar-img">`
         : '<div class="vote-avatar-placeholder">👤</div>';
+      const safeId = escapeHtml(c.id);
       html += `
         <div class="vote-candidate-card ${selectedCandidate?.id === c.id ? 'selected' : ''}" 
-             onclick="selectCandidate('${c.id}')">
+             data-candidate-id="${safeId}" onclick="selectCandidate(this.dataset.candidateId)">
           <div class="vote-avatar-wrap">${avatarHtml}</div>
           <h4>${escapeHtml(c.name)}</h4>
           <p>${escapeHtml(c.description || '暂无描述')}</p>
@@ -1361,6 +1377,7 @@
       `;
       candidates.forEach(c => {
         const count = voteCounts.find(v => v.id === c.id)?.vote_count || 0;
+        const safeId = escapeHtml(c.id);
         html += `
           <tr>
             <td>${c.id.substring(0, 8)}...</td>
@@ -1368,8 +1385,8 @@
             <td>${escapeHtml(c.description || '-')}</td>
             <td><span class="admin-badge success">${count} 票</span></td>
             <td class="actions">
-              <button class="vote-btn vote-btn-secondary vote-btn-small" onclick="openCandidateModal('${c.id}')">编辑</button>
-              <button class="vote-btn vote-btn-danger vote-btn-small" onclick="deleteCandidate('${c.id}')">删除</button>
+              <button class="vote-btn vote-btn-secondary vote-btn-small" data-id="${safeId}" onclick="openCandidateModal(this.dataset.id)">编辑</button>
+              <button class="vote-btn vote-btn-danger vote-btn-small" data-id="${safeId}" onclick="deleteCandidate(this.dataset.id)">删除</button>
             </td>
           </tr>
         `;
@@ -1452,28 +1469,16 @@
       return;
     }
 
+    if (vrcid.length < 2 || vrcid.length > 100) {
+      alert('VRC ID 长度应在 2-100 个字符之间');
+      return;
+    }
+
     const btn = document.getElementById('submit-vote-btn');
     btn.disabled = true;
     btn.textContent = '提交中...';
 
     try {
-      const { data: existingVote, error: checkError } = await supabase
-        .from('vote_records')
-        .select('id, vrcid')
-        .or(`vrcid.eq.${vrcid},device_id.eq.${deviceId}`)
-        .maybeSingle();
-
-      if (existingVote) {
-        if (existingVote.vrcid === vrcid) {
-          alert('该 VRC ID 已经投过票了，每人仅限一票！');
-        } else {
-          alert('该设备已经投过票了，每台设备仅限一票！');
-        }
-        btn.disabled = false;
-        btn.textContent = '✅ 确认投票';
-        return;
-      }
-
       const { error } = await supabase
         .from('vote_records')
         .insert({
@@ -1484,7 +1489,14 @@
 
       if (error) {
         if (error.code === '23505') {
-          alert('该 VRC ID 或设备已经投过票了！');
+          alert('该 VRC ID 或设备已经投过票了！每人仅限一票。');
+          hasVoted = true;
+          localStorage.setItem('vote_vrcid', vrcid);
+          loadVoteViewData();
+        } else if (error.code === '23503') {
+          alert('候选人不存在，请刷新页面后重试。');
+        } else if (error.code === '42501') {
+          alert('没有投票权限，请联系管理员。');
         } else {
           throw error;
         }
@@ -1516,6 +1528,7 @@
     const modal = document.createElement('div');
     modal.className = 'vote-modal-overlay';
     modal.id = 'candidate-modal';
+    const safeId = id ? escapeHtml(id) : '';
     modal.innerHTML = `
       <div class="vote-modal">
         <h3>${candidate ? '编辑候选人' : '添加候选人'}</h3>
@@ -1538,7 +1551,7 @@
         </div>
         <div class="vote-modal-actions">
           <button class="vote-btn vote-btn-secondary" onclick="closeCandidateModal()">取消</button>
-          <button class="vote-btn vote-btn-primary" onclick="saveCandidate('${id || ''}')">保存</button>
+          <button class="vote-btn vote-btn-primary" data-id="${safeId}" onclick="saveCandidate(this.dataset.id)">保存</button>
         </div>
       </div>
     `;
