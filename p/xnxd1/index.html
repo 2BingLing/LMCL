@@ -321,113 +321,308 @@
             
         
             
-                <div style="
-    width: 100%; 
-    max-width: 280px; 
-    margin: 16px auto 0; /* 居中 */
-    background: white; 
-    border-radius: 16px; 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    border: 1px solid #e0e6f0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-">
-    
-    <div style="
-        background: linear-gradient(110deg, #4a6fa5, #6b8fd9, #8a6bff); 
-        color: white; 
-        padding: 16px 0; 
-        text-align: center;
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        position: relative;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-        box-shadow: inset 0 -2px 4px rgba(0,0,0,0.1);
-    ">
-        🎉 本期亮点
-        
-        <div style="
-            position: absolute;
-            top: 8px;
-            right: 16px;
-            width: 6px;
-            height: 6px;
-            background: rgba(255,255,255,0.6);
-            border-radius: 50%;
-            box-shadow: 0 0 6px 2px rgba(255,255,255,0.5);
-        "></div>
-        <div style="
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-            width: 4px;
-            height: 4px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 50%;
-        "></div>
-    </div>
+                <div class="qyh-modern-nav">
+  <div class="qyh-nav-header">
+    <div class="qyh-nav-icon">✦</div>
+    <span class="qyh-nav-title">探索更多</span>
+  </div>
 
-    
-    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-        
-        <a href="/about/" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-            background: linear-gradient(135deg, #6b8fd9, #5a7bcf);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(107, 143, 217, 0.25);
-        " onmouseenter="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 10px rgba(107,143,217,0.35)';"
-           onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(107,143,217,0.25)';">
-            🎭 轻音会介绍
-        </a>
+  <div class="qyh-nav-list">
+    <a href="/about/" class="qyh-nav-item qyh-nav-item-primary">
+      <div class="qyh-nav-item-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      </div>
+      <div class="qyh-nav-item-content">
+        <div class="qyh-nav-item-title">关于我们</div>
+        <div class="qyh-nav-item-desc">了解轻音会社</div>
+      </div>
+      <div class="qyh-nav-arrow">→</div>
+    </a>
 
-        
-        <a href="/p/jiuhd/" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-            background: linear-gradient(135deg, #4a6fa5, #3d5ca0);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(74, 111, 165, 0.25);
-        " onmouseenter="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 10px rgba(74,111,165,0.35)';"
-           onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(74,111,165,0.25)';">
-            📅 本期轻音活动
-        </a>
+    <a href="/p/shihd/" class="qyh-nav-item qyh-nav-item-secondary">
+      <div class="qyh-nav-item-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </div>
+      <div class="qyh-nav-item-content">
+        <div class="qyh-nav-item-title">本期活动</div>
+        <div class="qyh-nav-item-desc">第十次活动合照</div>
+      </div>
+      <div class="qyh-nav-arrow">→</div>
+    </a>
 
-        
-        <a href="/p/gd/" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-            background: linear-gradient(135deg, #ff6b9d, #c44569);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(255, 107, 157, 0.25);
-        " onmouseenter="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 10px rgba(255,107,157,0.35)';"
-           onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(255,107,157,0.25)';">
-            🎵 轻音精选歌单
-        </a>
-    </div>
+    <a href="/p/gd/" class="qyh-nav-item qyh-nav-item-accent">
+      <div class="qyh-nav-item-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+      </div>
+      <div class="qyh-nav-item-content">
+        <div class="qyh-nav-item-title">轻音歌单</div>
+        <div class="qyh-nav-item-desc">轻音会获选曲目</div>
+      </div>
+      <div class="qyh-nav-arrow">→</div>
+    </a>
+  </div>
 </div>
+
+<style>
+.qyh-modern-nav {
+  width: 100%;
+  max-width: 320px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,249,255,0.92));
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(59,130,246,0.08),
+    0 2px 8px rgba(148,163,184,0.04);
+  overflow: hidden;
+  border: 1px solid rgba(59,130,246,0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+}
+
+.qyh-nav-header {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #38bdf8 100%);
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.qyh-nav-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.qyh-nav-header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.qyh-nav-icon {
+  font-size: 22px;
+  animation: navIconPulse 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes navIconPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+}
+
+.qyh-nav-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.qyh-nav-list {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qyh-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: white;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.qyh-nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.qyh-nav-item:hover {
+  transform: translateX(6px) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59,130,246,0.15);
+  border-color: rgba(59,130,246,0.2);
+}
+
+.qyh-nav-item:hover::before {
+  opacity: 1;
+}
+
+.qyh-nav-item-primary {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.qyh-nav-item-primary:hover {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.qyh-nav-item-primary::before {
+  background: linear-gradient(135deg, rgba(59,130,246,0.05), transparent);
+}
+
+.qyh-nav-item-secondary {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.qyh-nav-item-secondary:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.qyh-nav-item-secondary::before {
+  background: linear-gradient(135deg, rgba(71,85,105,0.04), transparent);
+}
+
+.qyh-nav-item-accent {
+  background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+  color: white;
+  border: 1px solid rgba(56,189,248,0.3);
+}
+
+.qyh-nav-item-accent:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+  box-shadow: 0 8px 28px rgba(2,132,199,0.35);
+  transform: translateX(6px) translateY(-2px);
+}
+
+.qyh-nav-item-accent::before {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+}
+
+.qyh-nav-item-accent .qyh-nav-item-title,
+.qyh-nav-item-accent .qyh-nav-item-desc,
+.qyh-nav-item-accent .qyh-nav-arrow,
+.qyh-nav-item-accent .qyh-nav-item-icon svg {
+  color: white;
+}
+
+.qyh-nav-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.qyh-nav-item-primary .qyh-nav-item-icon {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #0369a1;
+}
+
+.qyh-nav-item-secondary .qyh-nav-item-icon {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: #475569;
+}
+
+.qyh-nav-item-accent .qyh-nav-item-icon {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.qyh-nav-item:hover .qyh-nav-item-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.qyh-nav-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.qyh-nav-item-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin-bottom: 2px;
+  letter-spacing: 0.3px;
+}
+
+.qyh-nav-item-desc {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.qyh-nav-arrow {
+  font-size: 18px;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+.qyh-nav-item:hover .qyh-nav-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .qyh-modern-nav {
+    max-width: 100%;
+    margin: 16px auto;
+  }
+  
+  .qyh-nav-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  
+  .qyh-nav-item-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .qyh-nav-item-title {
+    font-size: 14px;
+  }
+  
+  .qyh-nav-item-desc {
+    font-size: 11px;
+  }
+}
+</style>
 
 <div class="vote-widget-container">
     <a href="/apps/vote/" class="vote-cta">
@@ -520,6 +715,7 @@
     }
 }
 </style>
+
 
             
         
@@ -871,6 +1067,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 
 <article class="has-image">
+    <a href="/p/shihd/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.vrclmcl.asia/LMCL/2026/05/12/datu.png" loading="lazy" data-key="shihd" data-hash="https://img.vrclmcl.asia/LMCL/2026/05/12/datu.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第十次活动合照</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/jiuhd/">
         
         
@@ -883,25 +1098,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="article-details">
             <h2 class="article-title">第九次活动合照</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/lsdp/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://img.vrclmcl.asia/LMCL/2026/04/09/bz1.png" loading="lazy" data-key="lsdp" data-hash="https://img.vrclmcl.asia/LMCL/2026/04/09/bz1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">「你从未离去」--落诗话剧社</h2>
         </div>
     </a>
 </article>
