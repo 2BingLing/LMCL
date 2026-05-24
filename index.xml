@@ -444,7 +444,7 @@
 }
 .qyh-winner-name {
   font-family: &#39;Noto Serif SC&#39;, serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 800;
   color: #7c2d12;
   margin-bottom: 10px;
@@ -896,7 +896,7 @@
 &lt;div class=&#34;qyh-intro-content&#34;&gt;
 &lt;div class=&#34;qyh-intro-title&#34;&gt;轻 音 会&lt;/div&gt;
 &lt;div class=&#34;qyh-intro-line&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;qyh-intro-sub&#34;&gt;枫叶飘落 · 温柔旋律入心间&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-sub&#34;&gt;樱花飘落 · 温柔旋律入心间&lt;/div&gt;
 &lt;div class=&#34;qyh-intro-hint&#34;&gt;✦ 点击任意处进入 ✦&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -945,7 +945,7 @@ setTimeout(function(){overlay.remove();},1300);
 &lt;div class=&#34;qyh-particles&#34; id=&#34;qyh-particles&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;qyh-hero-inner&#34;&gt;
 &lt;div class=&#34;qyh-hero-title&#34;&gt;✦ 第十期轻音会 ✦&lt;/div&gt;
-&lt;div class=&#34;qyh-hero-sub&#34;&gt;枫叶飘落 · 温柔旋律入心间&lt;/div&gt;
+&lt;div class=&#34;qyh-hero-sub&#34;&gt;樱花飘落 · 温柔旋律入心间&lt;/div&gt;
 &lt;div class=&#34;qyh-hero-line&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
