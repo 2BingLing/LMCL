@@ -1477,6 +1477,121 @@
         </li>
     </ol>
 </div>
+<div class="outter-card" style="
+    width: 100%; 
+    max-width: 900px; 
+    margin: 40px auto; 
+    background: white; 
+    border-radius: 20px; 
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+">
+    <div style="
+        background: linear-gradient(135deg, #f59e0b, #d97706); 
+        color: white; 
+        padding: 30px 40px; 
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    ">
+        <p style="margin: 0; font-size: 32px; font-weight: 600; position: relative; z-index: 1;">🎤 轻音会 · 人声榜单</p>
+        <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9; position: relative; z-index: 1;">
+            人声歌曲精选 | 每周更新（时间降序）
+        </p>
+        <div style="
+            position: absolute; 
+            top: -50%; 
+            left: -50%; 
+            width: 200%; 
+            height: 200%; 
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%); 
+            transform: rotate(30deg);
+            pointer-events: none;
+        "></div>
+    </div>
+    <ol class="ranking-list" style="
+        list-style: none; 
+        margin: 0; 
+        padding: 20px 40px; 
+        counter-reset: song-counter;
+        background: #fafafa;
+        min-height: 100px;
+    ">  
+        <li class="ranking-item"
+            data-src="https://music.163.com/song/media/outer/url?id=25723366.mp3"
+            data-title="雨のメッセージ"
+            data-artist="Lamp"
+            style="
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            ">
+            <div style="
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #ec4899 70%, #f472b6 30%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            ">
+                <span style="position: relative; z-index: 1;">
+                    <span style="font-family: sans-serif;">#</span>
+                    <span style="font-weight: bold;">
+                        <span style="opacity: 0; position: absolute;">0</span>
+                        <script type="text/javascript">
+                        </script>
+                    </span>
+                </span>
+            </div>
+            <div class="song-info" style="flex: 1;">
+                <div style="
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                ">雨のメッセージ</div>
+                <div style="
+                    font-size: 14px;
+                    color: #666;
+                ">Lamp</div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="play-trigger" style="
+                    background: #f59e0b;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">播放</button>
+                <a href="https://music.163.com/#/song?id=25723366" target="_blank" style="
+                    background: transparent;
+                    color: #f59e0b;
+                    border: 1px solid #f59e0b;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">详情</a>
+            </div>
+        </li>
+    </ol>
+</div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     function updateRankNumbers() {
