@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -377,6 +377,178 @@
             border-color: rgba(220, 53, 69, 0.6);
         }
 
+        .admin-toolbar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-danger-all {
+            padding: 8px 20px;
+            background: rgba(220, 53, 69, 0.15);
+            border: 1px solid rgba(220, 53, 69, 0.4);
+            border-radius: 8px;
+            color: #f8d7da;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .btn-danger-all:hover {
+            background: rgba(220, 53, 69, 0.3);
+            border-color: rgba(220, 53, 69, 0.6);
+        }
+
+        .btn-sm {
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid;
+            font-family: inherit;
+        }
+
+        .btn-edit {
+            background: rgba(13, 110, 253, 0.15);
+            border-color: rgba(13, 110, 253, 0.4);
+            color: #a8cfff;
+        }
+
+        .btn-edit:hover {
+            background: rgba(13, 110, 253, 0.3);
+            border-color: rgba(13, 110, 253, 0.6);
+        }
+
+        .btn-del {
+            background: rgba(220, 53, 69, 0.15);
+            border-color: rgba(220, 53, 69, 0.4);
+            color: #f8d7da;
+        }
+
+        .btn-del:hover {
+            background: rgba(220, 53, 69, 0.3);
+            border-color: rgba(220, 53, 69, 0.6);
+        }
+
+        .action-cell {
+            display: flex;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-box {
+            background: linear-gradient(180deg, #1a2332 0%, #1e3a5f 100%);
+            border: 1px solid rgba(135, 166, 196, 0.3);
+            border-radius: 16px;
+            padding: 28px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-title {
+            font-family: 'Ma Shan Zheng', serif;
+            font-size: 22px;
+            color: #f0e6d3;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .modal-field {
+            margin-bottom: 14px;
+        }
+
+        .modal-field label {
+            display: block;
+            font-size: 13px;
+            color: rgba(197, 218, 232, 0.7);
+            margin-bottom: 4px;
+        }
+
+        .modal-field input,
+        .modal-field textarea {
+            width: 100%;
+            padding: 8px 12px;
+            background: rgba(13, 27, 48, 0.6);
+            border: 1px solid rgba(135, 166, 196, 0.3);
+            border-radius: 8px;
+            color: #e8f4f8;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .modal-field input:focus,
+        .modal-field textarea:focus {
+            border-color: rgba(135, 166, 196, 0.6);
+        }
+
+        .modal-field textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .modal-field .checkbox-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 4px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .modal-btn {
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid;
+            font-family: inherit;
+        }
+
+        .modal-btn-cancel {
+            background: rgba(135, 166, 196, 0.1);
+            border-color: rgba(135, 166, 196, 0.3);
+            color: #c5dae8;
+        }
+
+        .modal-btn-cancel:hover {
+            background: rgba(135, 166, 196, 0.2);
+        }
+
+        .modal-btn-save {
+            background: rgba(40, 167, 69, 0.2);
+            border-color: rgba(40, 167, 69, 0.5);
+            color: #b8dfc7;
+        }
+
+        .modal-btn-save:hover {
+            background: rgba(40, 167, 69, 0.35);
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -704,6 +876,10 @@
                         </div>
                     </div>
 
+                    <div class="admin-toolbar">
+                        <button class="btn-danger-all" onclick="deleteAllRegistrations()">🗑️ 一键清空所有报名</button>
+                    </div>
+
                     <div style="overflow-x: auto;">
                         <table class="registrations-table" id="registrationsTable">
                             <thead>
@@ -716,6 +892,7 @@
                                     <th>参与投票</th>
                                     <th>备注</th>
                                     <th>报名时间</th>
+                                    <th>操作</th>
                                 </tr>
                             </thead>
                             <tbody id="tableBody">
@@ -1565,6 +1742,12 @@
                     <td><span class="badge ${reg.joinVoting ? 'badge-yes' : 'badge-no'}">${reg.joinVoting ? '是' : '否'}</span></td>
                     <td>${escapeHtml(reg.notes)}</td>
                     <td style="white-space: nowrap;">${reg.timeDisplay}</td>
+                    <td>
+                        <div class="action-cell">
+                            <button class="btn-sm btn-edit" onclick="openEditModal(${reg.id})">编辑</button>
+                            <button class="btn-sm btn-del" onclick="deleteRegistration(${reg.id})">删除</button>
+                        </div>
+                    </td>
                 </tr>
             `).join('');
         }
@@ -1574,6 +1757,116 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        function deleteRegistration(id) {
+            const registrations = getRegistrations();
+            const target = registrations.find(r => r.id === id);
+            if (!target) return;
+            if (!confirm(`确定删除 ${target.qqName}（${target.vrcId}）的报名吗？`)) return;
+            const filtered = registrations.filter(r => r.id !== id);
+            saveRegistrations(filtered);
+            loadAdminData();
+            showToast('已删除该条报名', 'success');
+        }
+
+        function deleteAllRegistrations() {
+            const registrations = getRegistrations();
+            if (registrations.length === 0) {
+                showToast('暂无报名数据', 'warning');
+                return;
+            }
+            if (!confirm(`确定清空全部 ${registrations.length} 条报名吗？此操作不可撤销！`)) return;
+            saveRegistrations([]);
+            loadAdminData();
+            showToast('已清空所有报名', 'success');
+        }
+
+        function openEditModal(id) {
+            const registrations = getRegistrations();
+            const reg = registrations.find(r => r.id === id);
+            if (!reg) return;
+
+            const overlay = document.createElement('div');
+            overlay.className = 'modal-overlay';
+            overlay.id = 'editModal';
+            overlay.innerHTML = `
+                <div class="modal-box">
+                    <div class="modal-title">✏️ 编辑报名信息</div>
+                    <div class="modal-field">
+                        <label>VRC ID</label>
+                        <input type="text" id="edit-vrcId" value="${escapeHtml(reg.vrcId)}">
+                    </div>
+                    <div class="modal-field">
+                        <label>QQ群内名称</label>
+                        <input type="text" id="edit-qqName" value="${escapeHtml(reg.qqName)}">
+                    </div>
+                    <div class="modal-field">
+                        <label>演出曲目</label>
+                        <input type="text" id="edit-songName" value="${escapeHtml(reg.songName)}">
+                    </div>
+                    <div class="modal-field">
+                        <label>歌曲时长</label>
+                        <input type="text" id="edit-songDuration" value="${escapeHtml(reg.songDuration)}">
+                    </div>
+                    <div class="modal-field">
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="edit-joinVoting" ${reg.joinVoting ? 'checked' : ''}>
+                            <label style="margin:0;color:#e8f4f8;">参与匿名投票环节</label>
+                        </div>
+                    </div>
+                    <div class="modal-field">
+                        <label>备注说明</label>
+                        <textarea id="edit-notes">${escapeHtml(reg.notes === '无' ? '' : reg.notes)}</textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="modal-btn modal-btn-cancel" onclick="closeEditModal()">取消</button>
+                        <button class="modal-btn modal-btn-save" onclick="saveEdit(${id})">保存</button>
+                    </div>
+                </div>
+            `;
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) closeEditModal();
+            });
+            document.body.appendChild(overlay);
+        }
+
+        function closeEditModal() {
+            const modal = document.getElementById('editModal');
+            if (modal) modal.remove();
+        }
+
+        function saveEdit(id) {
+            const vrcId = document.getElementById('edit-vrcId').value.trim();
+            const qqName = document.getElementById('edit-qqName').value.trim();
+            const songName = document.getElementById('edit-songName').value.trim();
+            const songDuration = document.getElementById('edit-songDuration').value.trim();
+            const joinVoting = document.getElementById('edit-joinVoting').checked;
+            const notes = document.getElementById('edit-notes').value.trim();
+
+            if (!vrcId || !qqName || !songName) {
+                showToast('必填项不能为空', 'error');
+                return;
+            }
+
+            const registrations = getRegistrations();
+            const index = registrations.findIndex(r => r.id === id);
+            if (index === -1) return;
+
+            registrations[index] = {
+                ...registrations[index],
+                vrcId,
+                qqName,
+                songName,
+                songDuration: songDuration || '未填写',
+                joinVoting,
+                notes: notes || '无'
+            };
+
+            saveRegistrations(registrations);
+            closeEditModal();
+            loadAdminData();
+            showToast('修改已保存', 'success');
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
