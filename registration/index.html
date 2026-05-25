@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1531,9 +1531,6 @@
             }
         }
 
-        // 数据存储键名
-        const STORAGE_KEY = 'zongxia_registrations';
-
         // 获取浏览器指纹
         function getBrowserFingerprint() {
             const canvas = document.createElement('canvas');
@@ -1546,26 +1543,44 @@
             return btoa(navigator.userAgent + canvasHash + screen.width + screen.height).slice(0, 64);
         }
 
-        // 获取已存储的报名数据
-        function getRegistrations() {
-            const data = localStorage.getItem(STORAGE_KEY);
-            return data ? JSON.parse(data) : [];
+        // 获取已存储的报名数据（从Supabase）
+        async function getRegistrations() {
+            if (!db) return [];
+            const { data, error } = await db
+                .from('registrations')
+                .select('*')
+                .order('created_at', { ascending: true });
+            if (error) {
+                console.error('读取报名数据失败:', error.message);
+                return [];
+            }
+            return (data || []).map(r => ({
+                id: r.id,
+                vrcId: r.vrc_id,
+                qqName: r.qq_name,
+                songName: r.song_name,
+                songDuration: r.song_duration,
+                joinVoting: r.join_voting,
+                notes: r.notes,
+                fingerprint: r.fingerprint,
+                timestamp: r.created_at,
+                timeDisplay: new Date(r.created_at).toLocaleString('zh-CN')
+            }));
         }
 
-        // 保存报名数据
-        function saveRegistrations(data) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-        }
-
-        // 检查是否已报名
-        function hasRegistered(vrcId) {
-            const registrations = getRegistrations();
+        // 检查是否已报名（通过Supabase RPC）
+        async function hasRegistered(vrcId) {
+            if (!db) return false;
             const fingerprint = getBrowserFingerprint();
-            
-            return registrations.some(r => 
-                r.vrcId.toLowerCase() === vrcId.toLowerCase() || 
-                r.fingerprint === fingerprint
-            );
+            const { data, error } = await db.rpc('check_registration_exists', {
+                p_vrc_id: vrcId,
+                p_fingerprint: fingerprint
+            });
+            if (error) {
+                console.error('检查报名状态失败:', error.message);
+                return false;
+            }
+            return !!data;
         }
 
         // Toast 提示
@@ -1597,27 +1612,28 @@
                 return;
             }
 
-            if (hasRegistered(vrcId)) {
+            if (await hasRegistered(vrcId)) {
                 showToast('您已经报过名了！每个ID只能报名一次。', 'warning');
                 return;
             }
 
-            const registration = {
-                id: Date.now(),
-                vrcId,
-                qqName,
-                songName,
-                songDuration: songDuration || '未填写',
-                joinVoting,
-                notes: notes || '无',
-                fingerprint: getBrowserFingerprint(),
-                timestamp: new Date().toISOString(),
-                timeDisplay: new Date().toLocaleString('zh-CN')
-            };
+            const fingerprint = getBrowserFingerprint();
 
-            const registrations = getRegistrations();
-            registrations.push(registration);
-            saveRegistrations(registrations);
+            const { error } = await db.from('registrations').insert({
+                vrc_id: vrcId,
+                qq_name: qqName,
+                song_name: songName,
+                song_duration: songDuration || '未填写',
+                join_voting: joinVoting,
+                notes: notes || '无',
+                fingerprint: fingerprint
+            });
+
+            if (error) {
+                console.error('报名失败:', error.message);
+                showToast('报名失败，请稍后重试', 'error');
+                return;
+            }
 
             showToast('报名成功！感谢您的参与 🎉', 'success');
             document.getElementById('registerForm').reset();
@@ -1707,8 +1723,8 @@
         }
 
         // 加载后台数据
-        function loadAdminData() {
-            const registrations = getRegistrations();
+        async function loadAdminData() {
+            const registrations = await getRegistrations();
 
             // 更新统计
             document.getElementById('totalCount').textContent = registrations.length;
@@ -1759,31 +1775,38 @@
             return div.innerHTML;
         }
 
-        function deleteRegistration(id) {
-            const registrations = getRegistrations();
+        async function deleteRegistration(id) {
+            const registrations = await getRegistrations();
             const target = registrations.find(r => r.id === id);
             if (!target) return;
             if (!confirm(`确定删除 ${target.qqName}（${target.vrcId}）的报名吗？`)) return;
-            const filtered = registrations.filter(r => r.id !== id);
-            saveRegistrations(filtered);
+            const { error } = await db.from('registrations').delete().eq('id', id);
+            if (error) {
+                showToast('删除失败', 'error');
+                return;
+            }
             loadAdminData();
             showToast('已删除该条报名', 'success');
         }
 
-        function deleteAllRegistrations() {
-            const registrations = getRegistrations();
+        async function deleteAllRegistrations() {
+            const registrations = await getRegistrations();
             if (registrations.length === 0) {
                 showToast('暂无报名数据', 'warning');
                 return;
             }
             if (!confirm(`确定清空全部 ${registrations.length} 条报名吗？此操作不可撤销！`)) return;
-            saveRegistrations([]);
+            const { error } = await db.from('registrations').delete().neq('id', 0);
+            if (error) {
+                showToast('清空失败', 'error');
+                return;
+            }
             loadAdminData();
             showToast('已清空所有报名', 'success');
         }
 
-        function openEditModal(id) {
-            const registrations = getRegistrations();
+        async function openEditModal(id) {
+            const registrations = await getRegistrations();
             const reg = registrations.find(r => r.id === id);
             if (!reg) return;
 
@@ -1836,7 +1859,7 @@
             if (modal) modal.remove();
         }
 
-        function saveEdit(id) {
+        async function saveEdit(id) {
             const vrcId = document.getElementById('edit-vrcId').value.trim();
             const qqName = document.getElementById('edit-qqName').value.trim();
             const songName = document.getElementById('edit-songName').value.trim();
@@ -1849,21 +1872,20 @@
                 return;
             }
 
-            const registrations = getRegistrations();
-            const index = registrations.findIndex(r => r.id === id);
-            if (index === -1) return;
-
-            registrations[index] = {
-                ...registrations[index],
-                vrcId,
-                qqName,
-                songName,
-                songDuration: songDuration || '未填写',
-                joinVoting,
+            const { error } = await db.from('registrations').update({
+                vrc_id: vrcId,
+                qq_name: qqName,
+                song_name: songName,
+                song_duration: songDuration || '未填写',
+                join_voting: joinVoting,
                 notes: notes || '无'
-            };
+            }).eq('id', id);
 
-            saveRegistrations(registrations);
+            if (error) {
+                showToast('保存失败', 'error');
+                return;
+            }
+
             closeEditModal();
             loadAdminData();
             showToast('修改已保存', 'success');
