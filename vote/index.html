@@ -578,14 +578,19 @@
             const vrcid=document.getElementById('vrcidInput').value.trim();
             if(!vrcid){showToast('请填写您的 VRC ID','warning');return;}
             if(vrcid.length<2||vrcid.length>100){showToast('VRC ID 长度应在 2-100 个字符之间','warning');return;}
+            if(!db){showToast('数据库未连接，请刷新页面重试','error');return;}
             const btn=document.getElementById('submitVoteBtn');btn.disabled=true;btn.textContent='提交中...';
             try{
                 const insertData={candidate_id:selectedCandidate.id,vrcid,device_id:deviceId};
                 if(hasEventId)insertData.event_id=EVENT_ID;
-                const{error}=await db.from('vote_records').insert(insertData);
+                const result=await Promise.race([
+                    db.from('vote_records').insert(insertData),
+                    new Promise((_,rej)=>setTimeout(()=>rej(new Error('请求超时，请检查网络后重试')),15000))
+                ]);
+                const{error}=result;
                 if(error){
                     if(error.code==='23505'){showToast('该 VRC ID 或设备已投过票！','warning');hasVoted=true;localStorage.setItem('zongxia_vote_vrcid',vrcid);renderVoteView();}
-                    else throw error;
+                    else{showToast('投票失败: '+error.message+(error.hint?' ('+error.hint+')':''),'error');}
                 }else{hasVoted=true;localStorage.setItem('zongxia_vote_vrcid',vrcid);showToast('投票成功！感谢您的参与 🎉','success');renderVoteView();}
             }catch(e){showToast('投票失败: '+e.message,'error');}finally{if(btn){btn.disabled=false;btn.textContent='确认投票';}}
         };
