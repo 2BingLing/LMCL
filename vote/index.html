@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粽夏夜之梦 · 投票系统</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Ma+Shan+Zheng&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: linear-gradient(180deg, #0d1b2a 0%, #1b3a4b 25%, #1a4a3a 50%, #0d2b2a 75%, #0a1f1a 100%);
+            min-height: 100vh; color: #e0f0e8; overflow-x: hidden; position: relative;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 0;
+        }
+        .night-sky { position: fixed; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+        .moon {
+            position: absolute; top: 6%; right: 12%; width: 100px; height: 100px;
+            background: radial-gradient(circle at 35% 35%, #fff9e6 0%, #f4e4c1 40%, #e8d4a8 70%, #d4c08e 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgba(255,249,230,0.5), 0 0 100px rgba(244,228,193,0.3), 0 0 150px rgba(232,212,168,0.15), inset -12px -8px 25px rgba(212,192,142,0.4);
+            animation: moonGlow 5s ease-in-out infinite alternate;
+        }
+        @keyframes moonGlow {
+            0% { box-shadow: 0 0 50px rgba(255,249,230,0.5), 0 0 100px rgba(244,228,193,0.3), inset -12px -8px 25px rgba(212,192,142,0.4); }
+            100% { box-shadow: 0 0 70px rgba(255,249,230,0.6), 0 0 130px rgba(244,228,193,0.4), inset -12px -8px 25px rgba(212,192,142,0.4); }
+        }
+        .star {
+            position: absolute; background: white; border-radius: 50%;
+            animation: starTwinkle var(--duration) ease-in-out infinite; animation-delay: var(--delay);
+        }
+        @keyframes starTwinkle { 0%,100%{opacity:.2;transform:scale(.8)} 50%{opacity:1;transform:scale(1.3)} }
+        .firefly {
+            position: absolute; width: 4px; height: 4px; background: #7dff8a; border-radius: 50%;
+            box-shadow: 0 0 8px #7dff8a, 0 0 16px rgba(125,255,138,0.4);
+            animation: fireflyFloat var(--dur) linear infinite; animation-delay: var(--delay);
+        }
+        @keyframes fireflyFloat {
+            0%{transform:translate(0,100vh) scale(0);opacity:0}
+            10%{opacity:1;transform:translate(var(--tx),calc(100vh - var(--ty))) scale(1)}
+            90%{opacity:.7} 100%{transform:translate(calc(var(--tx)*1.5),-20vh) scale(.5);opacity:0}
+        }
+        .lotus-leaf {
+            position: absolute; bottom: 0;
+            background: radial-gradient(ellipse, rgba(34,90,60,0.25) 0%, rgba(20,60,40,0.1) 60%, transparent 100%);
+            border-radius: 50%; pointer-events: none;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 80px 20px 60px; position: relative; z-index: 1; }
+        .header { text-align: center; margin-bottom: 50px; }
+        .main-title {
+            font-family: 'Ma Shan Zheng','Noto Serif SC',serif; font-size: clamp(36px,7vw,64px); font-weight: 900;
+            color: #f0e6d3; letter-spacing: 8px; margin-bottom: 12px;
+            text-shadow: 0 0 20px rgba(240,230,211,0.4), 0 0 40px rgba(240,230,211,0.2), 0 4px 12px rgba(0,0,0,0.4);
+            animation: titleFloat 4s ease-in-out infinite;
+        }
+        .main-title .hl { color: #7dff8a; text-shadow: 0 0 15px rgba(125,255,138,0.5), 0 0 30px rgba(125,255,138,0.3); }
+        @keyframes titleFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+        .subtitle {
+            font-size: clamp(13px,2vw,17px); color: rgba(200,230,210,0.85); letter-spacing: 6px;
+            padding: 10px 28px; display: inline-block; background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px); border-radius: 28px; border: 1px solid rgba(125,255,138,0.15);
+        }
+        .org-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+        .org-card {
+            background: linear-gradient(135deg, rgba(20,50,40,0.85), rgba(30,70,55,0.75));
+            backdrop-filter: blur(16px); border-radius: 20px; padding: 24px;
+            border: 1px solid rgba(125,255,138,0.2); text-align: center; transition: all 0.3s ease;
+        }
+        .org-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); border-color: rgba(125,255,138,0.35); }
+        .org-card h3 { font-family: 'Ma Shan Zheng',serif; font-size: 20px; color: #7dff8a; margin-bottom: 8px; letter-spacing: 2px; }
+        .org-card .org-full { font-size: 13px; color: rgba(200,230,210,0.7); margin-bottom: 10px; }
+        .org-card .qq-info { font-size: 13px; color: rgba(200,230,210,0.6); background: rgba(0,0,0,0.2); display: inline-block; padding: 4px 14px; border-radius: 12px; }
+        .card {
+            background: linear-gradient(135deg, rgba(15,40,35,0.88), rgba(25,60,50,0.78));
+            backdrop-filter: blur(20px); border-radius: 28px; padding: 48px;
+            border: 1px solid rgba(125,255,138,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05) inset, 0 2px 0 rgba(255,255,255,0.08) inset;
+            position: relative; overflow: hidden; margin-bottom: 32px;
+        }
+        .card::before {
+            content: ''; position: absolute; top: -50%; right: -30%; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(125,255,138,0.08) 0%, transparent 60%);
+            border-radius: 50%; pointer-events: none; animation: cardGlowA 8s ease-in-out infinite alternate;
+        }
+        .card::after {
+            content: ''; position: absolute; bottom: -40%; left: -20%; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(240,230,211,0.06) 0%, transparent 60%);
+            border-radius: 50%; pointer-events: none; animation: cardGlowB 10s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes cardGlowA { 0%{transform:scale(1) rotate(0);opacity:.5} 100%{transform:scale(1.3) rotate(15deg);opacity:1} }
+        @keyframes cardGlowB { 0%{transform:scale(1);opacity:.4} 100%{transform:scale(1.2) rotate(-10deg);opacity:.8} }
+        .card-content { position: relative; z-index: 1; }
+        .section-title {
+            font-family: 'Ma Shan Zheng',serif; font-size: 28px; color: #f0e6d3; margin-bottom: 24px;
+            text-align: center; letter-spacing: 3px; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .info-box {
+            background: rgba(0,0,0,0.2); border-radius: 14px; padding: 20px 24px; margin-bottom: 28px;
+            border: 1px solid rgba(125,255,138,0.12);
+        }
+        .info-box h4 { font-size: 15px; color: #7dff8a; margin-bottom: 10px; }
+        .info-box ul { list-style: none; padding: 0; }
+        .info-box li { font-size: 14px; color: rgba(200,230,210,0.75); padding: 4px 0 4px 18px; position: relative; line-height: 1.7; }
+        .info-box li::before { content: '🍃'; position: absolute; left: 0; font-size: 11px; }
+        .candidates-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 20px; margin-bottom: 30px; }
+        .candidate-card {
+            background: rgba(0,0,0,0.25); border-radius: 18px; padding: 28px 20px; text-align: center;
+            cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; position: relative;
+        }
+        .candidate-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-color: rgba(125,255,138,0.2); }
+        .candidate-card.selected { border-color: #7dff8a; background: linear-gradient(135deg, rgba(125,255,138,0.08), rgba(125,255,138,0.03)); }
+        .candidate-card.selected::after {
+            content: '✓'; position: absolute; top: 10px; right: 10px; width: 26px; height: 26px;
+            background: #7dff8a; color: #0d1b2a; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 14px; font-weight: bold;
+        }
+        .candidate-avatar {
+            width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 14px; overflow: hidden;
+            border: 3px solid rgba(125,255,138,0.3);
+            background: linear-gradient(135deg, rgba(20,50,40,0.8), rgba(30,70,55,0.6));
+            display: flex; align-items: center; justify-content: center;
+        }
+        .candidate-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .candidate-avatar .placeholder { font-size: 36px; }
+        .candidate-card h4 { font-size: 17px; color: #f0e6d3; margin-bottom: 8px; }
+        .candidate-card p { font-size: 13px; color: rgba(200,230,210,0.6); line-height: 1.5; }
+        .vote-form {
+            background: rgba(0,0,0,0.2); border-radius: 14px; padding: 24px; margin-top: 20px;
+            border: 1px solid rgba(125,255,138,0.1);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 14px; color: rgba(200,230,210,0.8); margin-bottom: 8px; font-weight: 600; }
+        .form-input {
+            width: 100%; padding: 14px 18px; background: rgba(10,25,20,0.75);
+            border: 1px solid rgba(125,255,138,0.25); border-radius: 12px; color: #e0f0e8;
+            font-size: 15px; font-family: inherit; transition: all 0.3s ease; outline: none;
+        }
+        .form-input:focus { border-color: rgba(125,255,138,0.5); background: rgba(10,25,20,0.9); box-shadow: 0 0 0 3px rgba(125,255,138,0.1); }
+        .form-input::placeholder { color: rgba(200,230,210,0.35); }
+        .submit-btn {
+            width: 100%; padding: 16px 36px;
+            background: linear-gradient(135deg, #1a5a3a 0%, #2a7a5a 50%, #3a8a6a 100%);
+            color: #f0e6d3; border: 1px solid rgba(125,255,138,0.35); border-radius: 14px;
+            font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275); letter-spacing: 3px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.3); position: relative; overflow: hidden;
+        }
+        .submit-btn::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(125,255,138,0.12), transparent);
+            transition: left 0.6s ease;
+        }
+        .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.4); border-color: rgba(125,255,138,0.5); }
+        .submit-btn:hover::before { left: 100%; }
+        .submit-btn:active { transform: translateY(-1px); }
+        .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .voted-card {
+            background: linear-gradient(135deg, rgba(125,255,138,0.08), rgba(125,255,138,0.03));
+            border: 2px solid rgba(125,255,138,0.3); border-radius: 18px; padding: 40px; text-align: center;
+        }
+        .voted-card .icon { font-size: 56px; margin-bottom: 16px; }
+        .voted-card h3 { color: #7dff8a; margin-bottom: 10px; font-size: 22px; }
+        .voted-card p { color: rgba(200,230,210,0.7); font-size: 14px; }
+        .admin-link { text-align: center; margin-top: 20px; }
+        .admin-link a { color: rgba(200,230,210,0.4); font-size: 13px; text-decoration: none; transition: all 0.3s ease; }
+        .admin-link a:hover { color: rgba(200,230,210,0.8); }
+        .admin-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(125,255,138,0.15);
+        }
+        .admin-title { font-family: 'Ma Shan Zheng',serif; font-size: 26px; color: #f0e6d3; letter-spacing: 2px; }
+        .back-btn {
+            padding: 10px 22px; background: rgba(125,255,138,0.1); border: 1px solid rgba(125,255,138,0.3);
+            border-radius: 10px; color: #7dff8a; font-size: 14px; cursor: pointer; transition: all 0.3s ease; font-family: inherit;
+        }
+        .back-btn:hover { background: rgba(125,255,138,0.2); border-color: rgba(125,255,138,0.5); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 16px; margin-bottom: 28px; }
+        .stat-card {
+            background: rgba(0,0,0,0.25); border: 1px solid rgba(125,255,138,0.15);
+            border-radius: 14px; padding: 20px; text-align: center;
+        }
+        .stat-number { font-size: 32px; font-weight: 900; color: #7dff8a; margin-bottom: 6px; }
+        .stat-label { font-size: 13px; color: rgba(200,230,210,0.6); }
+        .admin-toolbar { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+        .btn-tool { padding: 8px 18px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: all 0.2s ease; border: 1px solid; font-family: inherit; }
+        .btn-add { background: rgba(125,255,138,0.1); border-color: rgba(125,255,138,0.3); color: #7dff8a; }
+        .btn-add:hover { background: rgba(125,255,138,0.2); border-color: rgba(125,255,138,0.5); }
+        .btn-danger { background: rgba(220,53,69,0.12); border-color: rgba(220,53,69,0.35); color: #f8d7da; }
+        .btn-danger:hover { background: rgba(220,53,69,0.25); border-color: rgba(220,53,69,0.55); }
+        .btn-sm { padding: 4px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; transition: all 0.2s ease; border: 1px solid; font-family: inherit; }
+        .btn-edit { background: rgba(13,110,253,0.12); border-color: rgba(13,110,253,0.35); color: #a8cfff; }
+        .btn-edit:hover { background: rgba(13,110,253,0.25); }
+        .btn-del { background: rgba(220,53,69,0.12); border-color: rgba(220,53,69,0.35); color: #f8d7da; }
+        .btn-del:hover { background: rgba(220,53,69,0.25); }
+        .action-cell { display: flex; gap: 6px; white-space: nowrap; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .data-table th, .data-table td { padding: 14px; text-align: left; border-bottom: 1px solid rgba(125,255,138,0.1); font-size: 14px; }
+        .data-table th { background: rgba(0,0,0,0.3); color: rgba(200,230,210,0.8); font-weight: 700; font-size: 13px; }
+        .data-table td { color: #e0f0e8; }
+        .data-table tr:hover td { background: rgba(125,255,138,0.04); }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+        .badge-votes { background: rgba(125,255,138,0.12); color: #7dff8a; border: 1px solid rgba(125,255,138,0.25); }
+        .empty-state { text-align: center; padding: 50px 20px; color: rgba(200,230,210,0.5); }
+        .empty-icon { font-size: 56px; margin-bottom: 12px; opacity: 0.4; }
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 999999;
+            display: flex; align-items: center; justify-content: center; padding: 20px;
+        }
+        .modal-box {
+            background: linear-gradient(180deg, #0d1b2a, #1b3a4b); border: 1px solid rgba(125,255,138,0.25);
+            border-radius: 16px; padding: 28px; width: 100%; max-width: 500px; max-height: 90vh; overflow-y: auto;
+        }
+        .modal-title { font-family: 'Ma Shan Zheng',serif; font-size: 22px; color: #f0e6d3; margin-bottom: 20px; letter-spacing: 2px; }
+        .modal-field { margin-bottom: 14px; }
+        .modal-field label { display: block; font-size: 13px; color: rgba(200,230,210,0.65); margin-bottom: 4px; }
+        .modal-field input, .modal-field textarea {
+            width: 100%; padding: 8px 12px; background: rgba(10,25,20,0.6); border: 1px solid rgba(125,255,138,0.25);
+            border-radius: 8px; color: #e0f0e8; font-size: 14px; font-family: inherit; outline: none; transition: border-color 0.3s;
+        }
+        .modal-field input:focus, .modal-field textarea:focus { border-color: rgba(125,255,138,0.5); }
+        .modal-field textarea { resize: vertical; min-height: 60px; }
+        .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+        .modal-btn { padding: 8px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; border: 1px solid; font-family: inherit; }
+        .modal-btn-cancel { background: rgba(200,230,210,0.08); border-color: rgba(200,230,210,0.25); color: rgba(200,230,210,0.7); }
+        .modal-btn-cancel:hover { background: rgba(200,230,210,0.15); }
+        .modal-btn-save { background: rgba(125,255,138,0.15); border-color: rgba(125,255,138,0.4); color: #7dff8a; }
+        .modal-btn-save:hover { background: rgba(125,255,138,0.25); }
+        .login-prompt { text-align: center; padding: 50px 30px; }
+        .login-prompt-icon { font-size: 64px; margin-bottom: 20px; opacity: 0.5; }
+        .login-prompt-title { font-family: 'Ma Shan Zheng',serif; font-size: 26px; color: #f0e6d3; margin-bottom: 14px; }
+        .login-prompt-desc { font-size: 14px; color: rgba(200,230,210,0.6); margin-bottom: 28px; line-height: 1.8; }
+        .login-prompt-btn {
+            display: inline-block; padding: 12px 36px; background: linear-gradient(135deg, #1a5a3a, #2a7a5a);
+            color: #f0e6d3; border: 1px solid rgba(125,255,138,0.35); border-radius: 12px;
+            font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.3s ease;
+        }
+        .login-prompt-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+        .toast {
+            position: fixed; top: 24px; right: 24px; padding: 14px 26px; border-radius: 12px;
+            color: white; font-size: 14px; font-weight: 600; z-index: 10000;
+            animation: toastIn 0.4s ease, toastOut 0.4s ease 2.6s forwards;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.3); max-width: 380px;
+        }
+        .toast-success { background: linear-gradient(135deg, #155724, #1e7e34); border: 1px solid rgba(40,167,69,0.4); }
+        .toast-error { background: linear-gradient(135deg, #721c24, #a53434); border: 1px solid rgba(220,53,69,0.4); }
+        .toast-warning { background: linear-gradient(135deg, #856404, #a88919); border: 1px solid rgba(255,193,7,0.4); }
+        @keyframes toastIn { from{transform:translateX(100%);opacity:0} to{transform:translateX(0);opacity:1} }
+        @keyframes toastOut { to{transform:translateX(100%);opacity:0} }
+        .hidden { display: none !important; }
+        @media (max-width: 768px) {
+            .container { padding: 60px 16px 40px; }
+            .card { padding: 28px 20px; }
+            .main-title { letter-spacing: 4px; }
+            .org-cards { grid-template-columns: 1fr; }
+            .candidates-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .data-table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div id="ltyy-float-root"></div>
+    <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <div class="night-sky" id="nightSky"><div class="moon"></div></div>
+
+    <div id="votePage" class="container">
+        <header class="header">
+            <h1 class="main-title">谁将会是<span class="hl">"粽"</span>子选手！？</h1>
+            <p class="subtitle">粽夏夜之梦 · 匿名投票</p>
+        </header>
+        <div class="org-cards">
+            <div class="org-card">
+                <h3>🏮 轻音会社</h3>
+                <p class="org-full">VRC轻音会社 (LMCL)</p>
+                <span class="qq-info">QQ群：983271795</span>
+            </div>
+            <div class="org-card">
+                <h3>🎵 中文器乐社团</h3>
+                <p class="org-full">VRC中文器乐社团 (CIMS)</p>
+                <span class="qq-info">QQ群：870174397</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2 class="section-title">🗳️ 投票区</h2>
+                <div class="info-box">
+                    <h4>投票规则</h4>
+                    <ul>
+                        <li>每位用户仅限投一票，请谨慎选择</li>
+                        <li>投票时需填写 VRC ID 以核实身份（不公开）</li>
+                        <li>投票结果将在投票结束后公布</li>
+                        <li>每个浏览器和 VRC ID 只能投票一次</li>
+                    </ul>
+                </div>
+                <div id="candidatesArea"><div class="empty-state"><div class="empty-icon">⏳</div><p>正在加载候选人...</p></div></div>
+                <div id="voteFormArea"></div>
+                <div class="admin-link"><a href="#" onclick="checkAdminAndShow(event)">管理员入口</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adminPage" class="container hidden">
+        <header class="header">
+            <h1 class="main-title">谁将会是<span class="hl">"粽"</span>子选手！？</h1>
+            <p class="subtitle">后台管理</p>
+        </header>
+        <div class="card">
+            <div class="card-content">
+                <div id="notLoggedIn" class="login-prompt hidden">
+                    <div class="login-prompt-icon">🔒</div>
+                    <h3 class="login-prompt-title">需要管理员权限</h3>
+                    <p class="login-prompt-desc">请先使用右上角登录按钮登录<br>仅管理员可访问后台</p>
+                    <button class="login-prompt-btn" onclick="location.reload()">刷新页面</button>
+                </div>
+                <div id="adminContent">
+                    <div class="admin-header">
+                        <h2 class="admin-title">📋 投票管理</h2>
+                        <button class="back-btn" onclick="goBackToVote()">返回前台</button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"><div class="stat-number" id="statCandidates">0</div><div class="stat-label">候选人数</div></div>
+                        <div class="stat-card"><div class="stat-number" id="statTotalVotes">0</div><div class="stat-label">总投票数</div></div>
+                        <div class="stat-card"><div class="stat-number" id="statTodayVotes">0</div><div class="stat-label">今日投票</div></div>
+                    </div>
+                    <div class="admin-toolbar">
+                        <button class="btn-tool btn-add" onclick="openCandidateModal()">➕ 添加候选人</button>
+                        <button class="btn-tool btn-danger" onclick="resetAllVotes()">🗑️ 清空投票记录</button>
+                        <button class="btn-tool btn-danger" onclick="resetAll()">🔁 重置全部</button>
+                    </div>
+                    <h3 style="color:#7dff8a;font-size:16px;margin-bottom:10px;">👥 候选人管理</h3>
+                    <div style="overflow-x:auto;">
+                        <table class="data-table"><thead><tr><th>名称</th><th>描述</th><th>票数</th><th>操作</th></tr></thead><tbody id="candidatesBody"></tbody></table>
+                    </div>
+                    <div id="candidatesEmpty" class="empty-state hidden"><div class="empty-icon">🎤</div><p>暂无候选人，点击上方添加</p></div>
+                    <h3 style="color:#7dff8a;font-size:16px;margin:28px 0 10px;">📊 投票记录</h3>
+                    <div style="overflow-x:auto;">
+                        <table class="data-table"><thead><tr><th>VRC ID</th><th>投票对象</th><th>投票时间</th></tr></thead><tbody id="votesBody"></tbody></table>
+                    </div>
+                    <div id="votesEmpty" class="empty-state hidden"><div class="empty-icon">🗳️</div><p>暂无投票记录</p></div>
+                    <div style="text-align:center;margin-top:28px;"><a href="#" onclick="goBackToVote()" style="color:rgba(200,230,210,0.6);text-decoration:none;font-size:14px;">← 返回前台</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #ltyy-float-root { position:fixed!important;top:20px!important;right:20px!important;z-index:999998!important;font-family:'Microsoft YaHei',sans-serif; }
+        .lty-fab { width:50px;height:50px;border-radius:50%;background:rgba(15,40,35,0.9);box-shadow:0 4px 15px rgba(0,0,0,0.3);cursor:pointer;display:flex;align-items:center;justify-content:center;border:2px solid rgba(125,255,138,0.35);transition:all 0.3s;overflow:hidden; }
+        .lty-fab:hover { transform:translateY(-2px);border-color:#7dff8a; }
+        .lty-fab img { width:100%;height:100%;object-fit:cover; }
+        .lty-fab-icon { font-size:24px;color:#7dff8a; }
+        .lty-menu { position:absolute;top:65px;right:0;width:240px;background:rgba(15,40,35,0.98);backdrop-filter:blur(12px);border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.3);padding:20px;text-align:center;opacity:0;transform:translateY(-10px) scale(0.95);pointer-events:none;transition:all 0.3s;border:1px solid rgba(125,255,138,0.25);z-index:2147483647!important; }
+        .lty-menu.active { opacity:1;transform:translateY(0) scale(1);pointer-events:auto; }
+        .lty-username { font-weight:700;color:#f0e6d3;margin:0 0 20px;font-size:15px;padding-bottom:15px;border-bottom:1px solid rgba(125,255,138,0.15);word-break:break-all; }
+        .lty-actions { display:flex;flex-direction:column;gap:10px; }
+        .lty-btn-action { width:100%;padding:10px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px; }
+        .lty-btn-upload { background:rgba(10,25,20,0.8);color:rgba(200,230,210,0.8); }
+        .lty-btn-edit { background:rgba(30,70,55,0.8);color:#7dff8a; }
+        .lty-btn-logout { background:rgba(220,53,69,0.15);color:#f8d7da; }
+        .lty-btn-action:hover { transform:translateY(-1px);filter:brightness(1.1); }
+        .lty-modal-overlay { position:fixed!important;top:0;left:0;width:100vw;height:100vh;background:rgba(10,20,15,0.8);backdrop-filter:blur(6px);z-index:2147483646!important;display:flex;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity 0.3s; }
+        .lty-modal-overlay.active { opacity:1;pointer-events:auto; }
+        .lty-modal { background:linear-gradient(135deg,rgba(15,40,35,0.98),rgba(30,70,55,0.95));width:360px;padding:35px;border-radius:24px;box-shadow:0 25px 80px rgba(0,0,0,0.4);text-align:center;transform:translateY(30px);transition:all 0.4s;position:relative;max-height:90vh;overflow-y:auto;border:1px solid rgba(125,255,138,0.25); }
+        .lty-modal-overlay.active .lty-modal { transform:translateY(0); }
+        .lty-title { font-size:22px;color:#7dff8a;margin:0 0 20px;font-weight:800; }
+        .lty-input { width:100%;padding:12px;margin-bottom:12px;border:2px solid rgba(125,255,138,0.25);border-radius:12px;font-size:14px;box-sizing:border-box;background:rgba(10,25,20,0.8);color:#e0f0e8; }
+        .lty-input:focus { outline:none;border-color:#7dff8a;background:rgba(10,25,20,0.95); }
+        .lty-input::placeholder { color:rgba(200,230,210,0.35); }
+        .lty-btn-main { width:100%;padding:12px;background:linear-gradient(135deg,#1a5a3a,#2a7a5a);color:#f0e6d3;border:none;border-radius:12px;font-weight:bold;cursor:pointer;margin-top:10px; }
+        .lty-btn-secondary { width:100%;padding:10px;background:rgba(10,25,20,0.6);color:rgba(200,230,210,0.7);border:none;border-radius:12px;font-weight:600;cursor:pointer;margin-top:8px;font-size:13px; }
+        .lty-close { position:absolute;top:15px;right:20px;font-size:24px;color:rgba(200,230,210,0.5);cursor:pointer; }
+        .lty-tab-group { display:flex;gap:10px;margin-bottom:15px; }
+        .lty-tab { flex:1;padding:8px;font-size:13px;border:1px solid rgba(125,255,138,0.25);border-radius:8px;cursor:pointer;background:rgba(10,25,20,0.6);color:rgba(200,230,210,0.7); }
+        .lty-tab.active { background:rgba(30,70,55,0.8);border-color:#7dff8a;color:#7dff8a;font-weight:bold; }
+        .lty-hidden { display:none; }
+        @media (max-width:768px) { #ltyy-float-root { top:20px!important; } }
+    </style>
+
+    <script>
+    (function(){
+        const SUPABASE_URL='https://rhnhuxykupumluhmwvlo.supabase.co';
+        const SUPABASE_KEY='sb_publishable_rCyLOweRttAZ293c25hbGA_H1k4iuU0';
+        const _sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{db:{schema:'app'}});
+        window._supabaseClient=_sb;
+        const root=document.getElementById('ltyy-float-root');
+        let currentUser=null,userProfile=null,modalType='login';
+        window.authCurrentUser=currentUser;window.authUserProfile=userProfile;
+        function syncGlobalAuthState(){
+            window.authCurrentUser=currentUser;window.authUserProfile=userProfile;
+            if(typeof window.CustomEvent==='function') window.dispatchEvent(new CustomEvent('authStateChanged',{detail:{currentUser,userProfile,isLoggedIn:!!currentUser}}));
+        }
+        async function ensureProfile(user){
+            if(!user)return null;
+            const{data:existing,error:fe}=await _sb.from('profiles').select('*').eq('id',user.id).maybeSingle();
+            if(fe){console.error('检查用户资料失败:',fe);return null;}
+            if(existing)return existing;
+            const dp={id:user.id,email:user.email,username:user.email?.split('@')[0]||'新用户',avatar_url:null,is_banned:false,created_at:new Date().toISOString()};
+            const{data:ins,error:ie}=await _sb.from('profiles').insert(dp).select().single();
+            if(ie){console.error('创建用户资料失败:',ie);return dp;}
+            return ins;
+        }
+        async function loadProfile(){if(!currentUser){userProfile=null;syncGlobalAuthState();return;}userProfile=await ensureProfile(currentUser);syncGlobalAuthState();}
+        function renderLoggedOut(){root.innerHTML='<div class="lty-fab" onclick="openModal(\'login\')" title="登录">🍃</div>';}
+        function renderLoggedIn(){
+            const name=userProfile?(userProfile.username||'轻音成员'):'加载中...';
+            const avatar=userProfile?.avatar_url||`https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=1a5a3a&color=7dff8a&size=128`;
+            root.innerHTML=`<div class="lty-fab" onclick="toggleMenu()" title="${name}"><img src="${avatar}" alt="Avatar"></div><div class="lty-menu" id="lty-menu"><div class="lty-username">${name}</div><div class="lty-actions"><button class="lty-btn-action lty-btn-upload" onclick="openModal('avatarSelect')"><span>📷</span> 更换头像</button><button class="lty-btn-action lty-btn-edit" onclick="openModal('editProfile')"><span>✏️</span> 修改资料</button><button class="lty-btn-action lty-btn-logout" onclick="handleLogout()"><span>🚪</span> 退出登录</button></div></div>`;
+        }
+        window.toggleMenu=()=>{const m=document.getElementById('lty-menu');if(m)m.classList.toggle('active');};
+        window.closeModal=()=>{const el=document.getElementById('lty-modal-overlay');if(el){el.classList.remove('active');setTimeout(()=>el.remove(),300);}};
+        window.openModal=async(type)=>{
+            modalType=type;document.getElementById('lty-menu')?.classList.remove('active');
+            if((type==='editProfile'||type==='avatarSelect')&&!userProfile){await loadProfile();if(!userProfile){alert('无法加载用户资料');return;}}
+            const old=document.getElementById('lty-modal-overlay');if(old)old.remove();
+            let content='';
+            if(type==='login'||type==='register'){
+                const isL=type==='login';
+                content=`<h3 class="lty-title">${isL?'欢迎回来':'加入我们'}</h3><input type="email" id="lty-email" class="lty-input" placeholder="邮箱" autocomplete="email"><input type="password" id="lty-pass" class="lty-input" placeholder="密码 (≥6位)" autocomplete="${isL?'current-password':'new-password'}"><button class="lty-btn-main" onclick="submitAuth()">${isL?'登录':'注册'}</button><p style="margin-top:15px;font-size:13px;color:rgba(200,230,210,0.6);">${isL?'没账号？':'有账号？'}<span style="color:#7dff8a;cursor:pointer;font-weight:bold;" onclick="openModal('${isL?'register':'login'}')">${isL?'去注册':'去登录'}</span></p>`;
+            }else if(type==='editProfile'){
+                content=`<h3 class="lty-title">修改资料</h3><label style="display:block;text-align:left;font-size:12px;color:rgba(200,230,210,0.6);margin-bottom:5px;">用户名</label><input type="text" id="edit-username" class="lty-input" value="${(userProfile?.username||'').replace(/"/g,'&quot;')}" placeholder="输入新用户名"><button class="lty-btn-main" onclick="updateUsername()">保存修改</button><button class="lty-btn-secondary" onclick="closeModal()">取消</button>`;
+            }else if(type==='avatarSelect'){
+                content=`<h3 class="lty-title">更换头像</h3><div class="lty-tab-group"><div class="lty-tab active" onclick="switchAvatarTab('upload',this)">本地上传</div><div class="lty-tab" onclick="switchAvatarTab('link',this)">外链图片</div></div><div id="tab-upload"><input type="file" id="file-input" accept="image/*" style="display:none" onchange="uploadAvatarFile(this)"><button class="lty-btn-main" onclick="document.getElementById('file-input').click()">选择图片文件</button><p style="font-size:12px;color:rgba(200,230,210,0.5);margin-top:10px;">支持 JPG, PNG, WEBP (最大 1MB)</p></div><div id="tab-link" class="lty-hidden"><input type="url" id="link-input" class="lty-input" placeholder="https://example.com/avatar.jpg"><button class="lty-btn-main" onclick="updateAvatarLink()">使用外链</button></div><button class="lty-btn-secondary" style="margin-top:20px;" onclick="closeModal()">取消</button>`;
+            }
+            const html=`<div class="lty-modal-overlay active" id="lty-modal-overlay" onclick="if(event.target===this)closeModal()"><div class="lty-modal"><span class="lty-close" onclick="closeModal()">&times;</span>${content}</div></div>`;
+            document.body.insertAdjacentHTML('beforeend',html);
+        };
+        window.switchAvatarTab=(tn,btn)=>{document.querySelectorAll('.lty-tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('tab-upload').classList.toggle('lty-hidden',tn!=='upload');document.getElementById('tab-link').classList.toggle('lty-hidden',tn!=='link');};
+        window.submitAuth=async()=>{
+            const email=document.getElementById('lty-email').value.trim(),pass=document.getElementById('lty-pass').value.trim();
+            if(!email||!pass)return alert('请填写完整');
+            if(modalType==='register'&&pass.length<6)return alert('密码长度不能少于6位');
+            const btn=document.querySelector('.lty-btn-main'),ot=btn.innerText;btn.innerText='...';btn.disabled=true;
+            try{
+                if(modalType==='register'){
+                    const{data:ep}=await _sb.from('profiles').select('email').eq('email',email).maybeSingle();
+                    if(ep)throw new Error('该邮箱已注册，请直接登录');
+                    const{error}=await _sb.auth.signUp({email,password:pass});
+                    if(error)throw new Error('注册失败：'+error.message);
+                    alert('注册邮件已发送，请查收完成验证。');closeModal();
+                }else{
+                    const{error,data}=await _sb.auth.signInWithPassword({email,password:pass});
+                    if(error)throw new Error(error.message.includes('Invalid login credentials')?'邮箱或密码错误':error.message.includes('Email not confirmed')?'邮箱未验证':'登录失败：'+error.message);
+                    currentUser=data.user;await loadProfile();renderLoggedIn();closeModal();
+                }
+            }catch(e){alert(e.message);}finally{btn.innerText=ot;btn.disabled=false;}
+        };
+        window.handleLogout=async()=>{if(!confirm('确定退出登录？'))return;await _sb.auth.signOut();currentUser=null;userProfile=null;syncGlobalAuthState();renderLoggedOut();};
+        window.updateUsername=async()=>{
+            if(!userProfile)return alert('用户资料未加载');
+            const nu=document.getElementById('edit-username').value.trim();if(!nu)return alert('用户名不能为空');if(nu===userProfile.username){closeModal();return;}
+            const btn=document.querySelector('.lty-btn-main');btn.innerText='保存中...';btn.disabled=true;
+            try{const{error}=await _sb.from('profiles').update({username:nu}).eq('id',currentUser.id);if(error){if(error.code==='23505')alert('该用户名已被占用');else throw error;}else{userProfile.username=nu;alert('修改成功！');renderLoggedIn();closeModal();}}catch(e){alert('修改失败: '+e.message);}finally{btn.innerText='保存修改';btn.disabled=false;}
+        };
+        window.uploadAvatarFile=async(input)=>{const file=input.files[0];if(!file)return;if(file.size>1024*1024)return alert('文件不能超过 1MB');await processAvatarUpload(file);};
+        window.updateAvatarLink=async()=>{const url=document.getElementById('link-input').value.trim();if(!url)return alert('请输入链接');if(!url.startsWith('http'))return alert('链接必须以 http 或 https 开头');await updateAvatarUrlInDb(url);};
+        async function processAvatarUpload(file){
+            const btn=document.querySelector('.lty-btn-main');if(btn){btn.innerText='上传中...';btn.disabled=true;}
+            try{
+                if(userProfile?.avatar_url&&userProfile.avatar_url.includes('/avatars/')){try{const uo=new URL(userProfile.avatar_url);const pp=uo.pathname.split('/');const bi=pp.indexOf('avatars');if(bi!==-1&&pp[bi+1])await _sb.storage.from('avatars').remove([pp.slice(bi+1).join('/')]);}catch(e){}}
+                const ext=file.name.split('.').pop(),fn=`${currentUser.id}_${Date.now()}.${ext}`;
+                const{error:ue}=await _sb.storage.from('avatars').upload(fn,file,{upsert:true});if(ue)throw ue;
+                const{data:{publicUrl}}=_sb.storage.from('avatars').getPublicUrl(fn);await updateAvatarUrlInDb(publicUrl);
+            }catch(e){alert('上传失败: '+e.message);}finally{if(btn){btn.innerText='选择图片文件';btn.disabled=false;}closeModal();}
+        }
+        async function updateAvatarUrlInDb(url){
+            if(!userProfile)return alert('用户资料未加载');
+            try{const{data,error}=await _sb.from('profiles').update({avatar_url:url}).eq('id',currentUser.id).select();if(error)throw new Error(error.message||'更新失败');if(!data||data.length===0)throw new Error('未找到用户记录');userProfile.avatar_url=url;renderLoggedIn();alert('头像更新成功！');closeModal();}catch(e){alert('保存失败: '+e.message);}
+        }
+        document.addEventListener('click',(e)=>{const m=document.getElementById('lty-menu'),f=document.querySelector('.lty-fab');if(m&&!m.contains(e.target)&&(!f||!f.contains(e.target)))m.classList.remove('active');});
+        (async function init(){
+            const{data:{session}}=await _sb.auth.getSession();
+            if(session){currentUser=session.user;await loadProfile();renderLoggedIn();}else renderLoggedOut();
+            _sb.auth.onAuthStateChange(async(ev,s)=>{if(ev==='SIGNED_IN'&&s){currentUser=s.user;await loadProfile();renderLoggedIn();}else if(ev==='SIGNED_OUT'){currentUser=null;userProfile=null;renderLoggedOut();}});
+        })();
+    })();
+    </script>
+
+    <script>
+        const EVENT_ID='zongxia';
+        let currentUser=null,userProfile=null;
+        const db=window._supabaseClient;
+        let candidates=[],selectedCandidate=null,hasVoted=false,deviceId=null;
+
+        function syncFromAuthFloat(){
+            if(typeof window.authCurrentUser!=='undefined')currentUser=window.authCurrentUser;
+            if(typeof window.authUserProfile!=='undefined')userProfile=window.authUserProfile;
+        }
+        window.addEventListener('authStateChanged',()=>{
+            syncFromAuthFloat();
+            if(!document.getElementById('adminPage').classList.contains('hidden')){
+                if(!(userProfile&&userProfile.is_admin===true))goBackToVote();
+            }
+        });
+
+        function getDeviceId(){
+            let id=localStorage.getItem('zongxia_vote_device_id');
+            if(!id){
+                const fp=[navigator.userAgent||'',navigator.language||'',screen.width+'x'+screen.height,screen.colorDepth||'',new Date().getTimezoneOffset(),!!window.sessionStorage,!!window.localStorage,navigator.hardwareConcurrency||''].join('|');
+                const hash=fp.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a;},0);
+                id='dev_'+Math.abs(hash).toString(36)+'_'+Date.now().toString(36)+'_'+Math.random().toString(36).substr(2,9);
+                localStorage.setItem('zongxia_vote_device_id',id);
+            }
+            return id;
+        }
+
+        function initNightSky(){
+            const sky=document.getElementById('nightSky');
+            for(let i=0;i<70;i++){const s=document.createElement('div');s.className='star';const sz=Math.random()*2.5+0.8;s.style.width=sz+'px';s.style.height=sz+'px';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*65+'%';s.style.setProperty('--duration',(Math.random()*3+2)+'s');s.style.setProperty('--delay',Math.random()*3+'s');sky.appendChild(s);}
+            for(let i=0;i<18;i++){const f=document.createElement('div');f.className='firefly';f.style.left=Math.random()*100+'%';f.style.setProperty('--dur',(Math.random()*15+10)+'s');f.style.setProperty('--delay',(Math.random()*10)+'s');f.style.setProperty('--tx',(Math.random()*200-100)+'px');f.style.setProperty('--ty',(Math.random()*300+100)+'px');sky.appendChild(f);}
+            for(let i=0;i<4;i++){const l=document.createElement('div');l.className='lotus-leaf';l.style.left=(Math.random()*80+5)+'%';l.style.width=(Math.random()*120+140)+'px';l.style.height=(Math.random()*40+50)+'px';l.style.opacity=0.3+Math.random()*0.3;sky.appendChild(l);}
+        }
+
+        function showToast(msg,type='success'){const ex=document.querySelector('.toast');if(ex)ex.remove();const t=document.createElement('div');t.className=`toast toast-${type}`;t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),3000);}
+        function escapeHtml(t){if(!t)return'';const d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+
+        async function loadCandidates(){
+            if(!db)return;
+            const{data,error}=await db.from('vote_candidates').select('*').eq('event_id',EVENT_ID).order('created_at',{ascending:true});
+            if(!error&&data)candidates=data;
+        }
+
+        async function checkVoteStatus(){
+            if(!db)return;
+            deviceId=getDeviceId();
+            const savedVrcId=localStorage.getItem('zongxia_vote_vrcid');
+            const{data,error}=await db.from('vote_records').select('id,vrcid').eq('event_id',EVENT_ID).or(savedVrcId?`vrcid.eq.${savedVrcId},device_id.eq.${deviceId}`:`device_id.eq.${deviceId}`).maybeSingle();
+            if(!error&&data){hasVoted=true;if(data.vrcid&&!savedVrcId)localStorage.setItem('zongxia_vote_vrcid',data.vrcid);}
+            else{hasVoted=false;localStorage.removeItem('zongxia_vote_vrcid');}
+        }
+
+        async function renderVoteView(){
+            await loadCandidates();await checkVoteStatus();
+            const area=document.getElementById('candidatesArea'),formArea=document.getElementById('voteFormArea');
+            if(hasVoted){area.innerHTML='<div class="voted-card"><div class="icon">✅</div><h3>您已完成投票</h3><p>感谢您的参与！每人仅限投一票。</p></div>';formArea.innerHTML='';return;}
+            if(candidates.length===0){area.innerHTML='<div class="empty-state"><div class="empty-icon">🎤</div><p>暂无可投票的候选人</p></div>';formArea.innerHTML='';return;}
+            let html='<div class="candidates-grid">';
+            candidates.forEach(c=>{
+                const av=c.avatar_url?`<img src="${escapeHtml(c.avatar_url)}" alt="${escapeHtml(c.name)}">`:'<div class="placeholder">🎵</div>';
+                html+=`<div class="candidate-card ${selectedCandidate?.id===c.id?'selected':''}" onclick="selectCandidate('${escapeHtml(c.id)}')"><div class="candidate-avatar">${av}</div><h4>${escapeHtml(c.name)}</h4><p>${escapeHtml(c.description||'暂无描述')}</p></div>`;
+            });
+            html+='</div>';area.innerHTML=html;
+            if(selectedCandidate){formArea.innerHTML=`<div class="vote-form"><div class="form-group"><label class="form-label">您的 VRC ID *</label><input type="text" class="form-input" id="vrcidInput" placeholder="请输入您的 VRC ID" maxlength="100"></div><div style="text-align:center;"><button class="submit-btn" onclick="submitVote()" id="submitVoteBtn">确认投票</button></div></div>`;}
+            else formArea.innerHTML='';
+        }
+
+        window.selectCandidate=(id)=>{selectedCandidate=candidates.find(c=>c.id===id)||null;renderVoteView();};
+
+        window.submitVote=async()=>{
+            if(!selectedCandidate){showToast('请先选择候选人','warning');return;}
+            const vrcid=document.getElementById('vrcidInput').value.trim();
+            if(!vrcid){showToast('请填写您的 VRC ID','warning');return;}
+            if(vrcid.length<2||vrcid.length>100){showToast('VRC ID 长度应在 2-100 个字符之间','warning');return;}
+            const btn=document.getElementById('submitVoteBtn');btn.disabled=true;btn.textContent='提交中...';
+            try{
+                const{error}=await db.from('vote_records').insert({candidate_id:selectedCandidate.id,vrcid,device_id:deviceId,event_id:EVENT_ID});
+                if(error){
+                    if(error.code==='23505'){showToast('该 VRC ID 或设备已投过票！','warning');hasVoted=true;localStorage.setItem('zongxia_vote_vrcid',vrcid);renderVoteView();}
+                    else throw error;
+                }else{hasVoted=true;localStorage.setItem('zongxia_vote_vrcid',vrcid);showToast('投票成功！感谢您的参与 🎉','success');renderVoteView();}
+            }catch(e){showToast('投票失败: '+e.message,'error');}finally{if(btn){btn.disabled=false;btn.textContent='确认投票';}}
+        };
+
+        function goBackToVote(){event?.preventDefault();document.getElementById('votePage').classList.remove('hidden');document.getElementById('adminPage').classList.add('hidden');renderVoteView();}
+
+        async function checkAdminAndShow(e){
+            if(e)e.preventDefault();syncFromAuthFloat();
+            if(!currentUser){showToast('请先点击右上角🍃图标登录账号！','warning');if(db){const{data:{session}}=await db.auth.getSession();if(session){currentUser=session.user;await loadUserProfile();if(userProfile&&userProfile.is_admin===true){showAdminPage();return;}}}return;}
+            if(!userProfile)await loadUserProfile();
+            if(userProfile&&userProfile.is_admin===true)showAdminPage();
+            else showToast(userProfile?'权限不足，仅管理员可访问后台':'无法加载用户资料','error');
+        }
+
+        async function loadUserProfile(){if(!currentUser)return null;try{const{data,error}=await db.from('profiles').select('*').eq('id',currentUser.id).single();if(error)throw error;userProfile=data;return data;}catch(e){return null;}}
+
+        function showAdminPage(){document.getElementById('votePage').classList.add('hidden');document.getElementById('adminPage').classList.remove('hidden');document.getElementById('notLoggedIn').classList.add('hidden');document.getElementById('adminContent').classList.remove('hidden');loadAdminData();}
+
+        async function loadAdminData(){
+            await loadCandidates();
+            const{data:allVotes}=await db.from('vote_records').select('id,vrcid,created_at,candidate_id,vote_candidates(id,name)').eq('event_id',EVENT_ID).order('created_at',{ascending:false});
+            const votes=allVotes||[];
+            const{data:voteCounts}=await db.from('vote_candidates').select('id,name,vote_count').eq('event_id',EVENT_ID);
+            const counts=voteCounts||[];
+
+            document.getElementById('statCandidates').textContent=candidates.length;
+            document.getElementById('statTotalVotes').textContent=votes.length;
+            const today=new Date().toISOString().split('T')[0];
+            document.getElementById('statTodayVotes').textContent=votes.filter(v=>v.created_at?.startsWith(today)).length;
+
+            const cBody=document.getElementById('candidatesBody'),cEmpty=document.getElementById('candidatesEmpty');
+            if(candidates.length===0){cBody.innerHTML='';cEmpty.classList.remove('hidden');document.querySelector('#adminContent .data-table:first-of-type thead').style.display='none';}
+            else{
+                cEmpty.classList.add('hidden');document.querySelector('#adminContent .data-table:first-of-type thead').style.display='';
+                cBody.innerHTML=candidates.map(c=>{
+                    const cnt=counts.find(v=>v.id===c.id)?.vote_count||0;
+                    return `<tr><td>${escapeHtml(c.name)}</td><td>${escapeHtml(c.description||'-')}</td><td><span class="badge badge-votes">${cnt} 票</span></td><td><div class="action-cell"><button class="btn-sm btn-edit" onclick="openCandidateModal('${escapeHtml(c.id)}')">编辑</button><button class="btn-sm btn-del" onclick="deleteCandidate('${escapeHtml(c.id)}')">删除</button></div></td></tr>`;
+                }).join('');
+            }
+
+            const vBody=document.getElementById('votesBody'),vEmpty=document.getElementById('votesEmpty');
+            if(votes.length===0){vBody.innerHTML='';vEmpty.classList.remove('hidden');document.querySelector('#adminContent .data-table:last-of-type thead').style.display='none';}
+            else{
+                vEmpty.classList.add('hidden');document.querySelector('#adminContent .data-table:last-of-type thead').style.display='';
+                vBody.innerHTML=votes.slice(0,50).map(v=>`<tr><td>${escapeHtml(v.vrcid)}</td><td>${escapeHtml(v.vote_candidates?.name||'-')}</td><td>${new Date(v.created_at).toLocaleString('zh-CN')}</td></tr>`).join('');
+                if(votes.length>50)vBody.insertAdjacentHTML('afterend',`<p style="text-align:center;color:rgba(200,230,210,0.5);margin-top:8px;">显示前50条，共${votes.length}条</p>`);
+            }
+        }
+
+        window.openCandidateModal=async(id)=>{
+            let candidate=null;
+            if(id){const{data}=await db.from('vote_candidates').select('*').eq('id',id).single();candidate=data;}
+            const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.id='candidateModal';
+            overlay.innerHTML=`<div class="modal-box"><div class="modal-title">${candidate?'编辑候选人':'添加候选人'}</div><div class="modal-field"><label>名称 *</label><input type="text" id="modal-name" value="${candidate?escapeHtml(candidate.name):''}" placeholder="请输入候选人名称" maxlength="100"></div><div class="modal-field"><label>头像链接</label><input type="text" id="modal-avatar" value="${candidate?escapeHtml(candidate.avatar_url||''):''}" placeholder="头像图片URL（可选）"></div><div class="modal-field"><label>描述</label><textarea id="modal-desc" rows="3" placeholder="候选人描述">${candidate?escapeHtml(candidate.description||''):''}</textarea></div><div class="modal-actions"><button class="modal-btn modal-btn-cancel" onclick="closeCandidateModal()">取消</button><button class="modal-btn modal-btn-save" onclick="saveCandidate('${id||''}')">保存</button></div></div>`;
+            overlay.addEventListener('click',(e)=>{if(e.target===overlay)closeCandidateModal();});
+            document.body.appendChild(overlay);
+        };
+
+        window.closeCandidateModal=()=>{const m=document.getElementById('candidateModal');if(m)m.remove();};
+
+        window.saveCandidate=async(id)=>{
+            const name=document.getElementById('modal-name').value.trim(),desc=document.getElementById('modal-desc').value.trim(),avatar=document.getElementById('modal-avatar').value.trim();
+            if(!name)return showToast('请输入候选人名称','error');
+            try{
+                if(id){const{error}=await db.from('vote_candidates').update({name,description:desc,avatar_url:avatar}).eq('id',id);if(error)throw error;}
+                else{const{error}=await db.from('vote_candidates').insert({name,description:desc,avatar_url:avatar,event_id:EVENT_ID});if(error)throw error;}
+                closeCandidateModal();loadAdminData();showToast('保存成功','success');
+            }catch(e){showToast('保存失败: '+e.message,'error');}
+        };
+
+        window.deleteCandidate=async(id)=>{
+            if(!confirm('确定删除该候选人吗？此操作不可恢复！'))return;
+            try{const{error}=await db.from('vote_candidates').delete().eq('id',id);if(error)throw error;loadAdminData();showToast('已删除','success');}catch(e){showToast('删除失败: '+e.message,'error');}
+        };
+
+        window.resetAllVotes=async()=>{
+            if(!confirm('确定清空所有投票记录吗？此操作不可恢复！'))return;if(!confirm('再次确认：这将删除所有投票数据！'))return;
+            try{
+                const{error}=await db.from('vote_records').delete().eq('event_id',EVENT_ID);if(error)throw error;
+                const{error:ue}=await db.from('vote_candidates').update({vote_count:0}).eq('event_id',EVENT_ID);if(ue)throw ue;
+                localStorage.removeItem('zongxia_vote_vrcid');localStorage.removeItem('zongxia_vote_device_id');
+                deviceId=getDeviceId();hasVoted=false;showToast('投票记录已清空','success');loadAdminData();
+            }catch(e){showToast('清空失败: '+e.message,'error');}
+        };
+
+        window.resetAll=async()=>{
+            if(!confirm('确定重置全部数据吗？此操作不可恢复！'))return;if(!confirm('再次确认！'))return;if(!confirm('最后确认！'))return;
+            try{
+                const{error:ve}=await db.from('vote_records').delete().eq('event_id',EVENT_ID);if(ve)throw ve;
+                const{error:ce}=await db.from('vote_candidates').delete().eq('event_id',EVENT_ID);if(ce)throw ce;
+                localStorage.removeItem('zongxia_vote_vrcid');localStorage.removeItem('zongxia_vote_device_id');
+                deviceId=getDeviceId();hasVoted=false;showToast('已重置全部数据','success');loadAdminData();
+            }catch(e){showToast('重置失败: '+e.message,'error');}
+        };
+
+        document.addEventListener('DOMContentLoaded',async()=>{
+            initNightSky();syncFromAuthFloat();
+            if(!currentUser&&db){const{data:{session}}=await db.auth.getSession();if(session){currentUser=session.user;await loadUserProfile();}}
+            if(db){db.auth.onAuthStateChange(async(ev,s)=>{if(ev==='SIGNED_IN'&&s){currentUser=s.user;await loadUserProfile();if(!document.getElementById('adminPage').classList.contains('hidden')&&!(userProfile&&userProfile.is_admin===true))goBackToVote();}else if(ev==='SIGNED_OUT'){currentUser=null;userProfile=null;if(!document.getElementById('adminPage').classList.contains('hidden'))goBackToVote();}});}
+            renderVoteView();
+        });
+    </script>
+</body>
+</html>
