@@ -488,6 +488,7 @@
         let currentUser=null,userProfile=null;
         const db=window._supabaseClient;
         let candidates=[],selectedCandidate=null,hasVoted=false,deviceId=null;
+        let hasEventId=false;
 
         function syncFromAuthFloat(){
             if(typeof window.authCurrentUser!=='undefined')currentUser=window.authCurrentUser;
@@ -521,9 +522,21 @@
         function showToast(msg,type='success'){const ex=document.querySelector('.toast');if(ex)ex.remove();const t=document.createElement('div');t.className=`toast toast-${type}`;t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),3000);}
         function escapeHtml(t){if(!t)return'';const d=document.createElement('div');d.textContent=t;return d.innerHTML;}
 
+        async function detectEventId(){
+            if(!db)return false;
+            try{const{data,error}=await db.from('vote_candidates').select('event_id').limit(1);if(!error)return true;}catch(e){}
+            return false;
+        }
+
+        function cQuery(query,eventId){
+            return hasEventId?query.eq('event_id',eventId):query;
+        }
+
         async function loadCandidates(){
             if(!db)return;
-            const{data,error}=await db.from('vote_candidates').select('*').eq('event_id',EVENT_ID).order('created_at',{ascending:true});
+            let q=db.from('vote_candidates').select('*').order('created_at',{ascending:true});
+            q=cQuery(q,EVENT_ID);
+            const{data,error}=await q;
             if(!error&&data)candidates=data;
         }
 
@@ -531,7 +544,11 @@
             if(!db)return;
             deviceId=getDeviceId();
             const savedVrcId=localStorage.getItem('zongxia_vote_vrcid');
-            const{data,error}=await db.from('vote_records').select('id,vrcid').eq('event_id',EVENT_ID).or(savedVrcId?`vrcid.eq.${savedVrcId},device_id.eq.${deviceId}`:`device_id.eq.${deviceId}`).maybeSingle();
+            let q=db.from('vote_records').select('id,vrcid');
+            q=cQuery(q,EVENT_ID);
+            if(savedVrcId)q=q.or(`vrcid.eq.${savedVrcId},device_id.eq.${deviceId}`);
+            else q=q.eq('device_id',deviceId);
+            const{data,error}=await q.maybeSingle();
             if(!error&&data){hasVoted=true;if(data.vrcid&&!savedVrcId)localStorage.setItem('zongxia_vote_vrcid',data.vrcid);}
             else{hasVoted=false;localStorage.removeItem('zongxia_vote_vrcid');}
         }
@@ -560,7 +577,9 @@
             if(vrcid.length<2||vrcid.length>100){showToast('VRC ID 长度应在 2-100 个字符之间','warning');return;}
             const btn=document.getElementById('submitVoteBtn');btn.disabled=true;btn.textContent='提交中...';
             try{
-                const{error}=await db.from('vote_records').insert({candidate_id:selectedCandidate.id,vrcid,device_id:deviceId,event_id:EVENT_ID});
+                const insertData={candidate_id:selectedCandidate.id,vrcid,device_id:deviceId};
+                if(hasEventId)insertData.event_id=EVENT_ID;
+                const{error}=await db.from('vote_records').insert(insertData);
                 if(error){
                     if(error.code==='23505'){showToast('该 VRC ID 或设备已投过票！','warning');hasVoted=true;localStorage.setItem('zongxia_vote_vrcid',vrcid);renderVoteView();}
                     else throw error;
@@ -584,9 +603,13 @@
 
         async function loadAdminData(){
             await loadCandidates();
-            const{data:allVotes}=await db.from('vote_records').select('id,vrcid,created_at,candidate_id,vote_candidates(id,name)').eq('event_id',EVENT_ID).order('created_at',{ascending:false});
+            let vq=db.from('vote_records').select('id,vrcid,created_at,candidate_id,vote_candidates(id,name)').order('created_at',{ascending:false});
+            vq=cQuery(vq,EVENT_ID);
+            const{data:allVotes}=await vq;
             const votes=allVotes||[];
-            const{data:voteCounts}=await db.from('vote_candidates').select('id,name,vote_count').eq('event_id',EVENT_ID);
+            let cq=db.from('vote_candidates').select('id,name,vote_count');
+            cq=cQuery(cq,EVENT_ID);
+            const{data:voteCounts}=await cq;
             const counts=voteCounts||[];
 
             document.getElementById('statCandidates').textContent=candidates.length;
@@ -629,7 +652,7 @@
             if(!name)return showToast('请输入候选人名称','error');
             try{
                 if(id){const{error}=await db.from('vote_candidates').update({name,description:desc,avatar_url:avatar}).eq('id',id);if(error)throw error;}
-                else{const{error}=await db.from('vote_candidates').insert({name,description:desc,avatar_url:avatar,event_id:EVENT_ID});if(error)throw error;}
+                else{const insertData={name,description:desc,avatar_url:avatar};if(hasEventId)insertData.event_id=EVENT_ID;const{error}=await db.from('vote_candidates').insert(insertData);if(error)throw error;}
                 closeCandidateModal();loadAdminData();showToast('保存成功','success');
             }catch(e){showToast('保存失败: '+e.message,'error');}
         };
@@ -642,8 +665,8 @@
         window.resetAllVotes=async()=>{
             if(!confirm('确定清空所有投票记录吗？此操作不可恢复！'))return;if(!confirm('再次确认：这将删除所有投票数据！'))return;
             try{
-                const{error}=await db.from('vote_records').delete().eq('event_id',EVENT_ID);if(error)throw error;
-                const{error:ue}=await db.from('vote_candidates').update({vote_count:0}).eq('event_id',EVENT_ID);if(ue)throw ue;
+                let rq=db.from('vote_records').delete();rq=cQuery(rq,EVENT_ID);const{error}=await rq;if(error)throw error;
+                let uq=db.from('vote_candidates').update({vote_count:0});uq=cQuery(uq,EVENT_ID);const{error:ue}=await uq;if(ue)throw ue;
                 localStorage.removeItem('zongxia_vote_vrcid');localStorage.removeItem('zongxia_vote_device_id');
                 deviceId=getDeviceId();hasVoted=false;showToast('投票记录已清空','success');loadAdminData();
             }catch(e){showToast('清空失败: '+e.message,'error');}
@@ -652,15 +675,17 @@
         window.resetAll=async()=>{
             if(!confirm('确定重置全部数据吗？此操作不可恢复！'))return;if(!confirm('再次确认！'))return;if(!confirm('最后确认！'))return;
             try{
-                const{error:ve}=await db.from('vote_records').delete().eq('event_id',EVENT_ID);if(ve)throw ve;
-                const{error:ce}=await db.from('vote_candidates').delete().eq('event_id',EVENT_ID);if(ce)throw ce;
+                let vrq=db.from('vote_records').delete();vrq=cQuery(vrq,EVENT_ID);const{error:ve}=await vrq;if(ve)throw ve;
+                let crq=db.from('vote_candidates').delete();crq=cQuery(crq,EVENT_ID);const{error:ce}=await crq;if(ce)throw ce;
                 localStorage.removeItem('zongxia_vote_vrcid');localStorage.removeItem('zongxia_vote_device_id');
                 deviceId=getDeviceId();hasVoted=false;showToast('已重置全部数据','success');loadAdminData();
             }catch(e){showToast('重置失败: '+e.message,'error');}
         };
 
         document.addEventListener('DOMContentLoaded',async()=>{
-            initNightSky();syncFromAuthFloat();
+            initNightSky();
+            if(db)hasEventId=await detectEventId();
+            syncFromAuthFloat();
             if(!currentUser&&db){const{data:{session}}=await db.auth.getSession();if(session){currentUser=session.user;await loadUserProfile();}}
             if(db){db.auth.onAuthStateChange(async(ev,s)=>{if(ev==='SIGNED_IN'&&s){currentUser=s.user;await loadUserProfile();if(!document.getElementById('adminPage').classList.contains('hidden')&&!(userProfile&&userProfile.is_admin===true))goBackToVote();}else if(ev==='SIGNED_OUT'){currentUser=null;userProfile=null;if(!document.getElementById('adminPage').classList.contains('hidden'))goBackToVote();}});}
             renderVoteView();
