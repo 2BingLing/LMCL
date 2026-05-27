@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -341,6 +341,10 @@
 
         .admin-link a:hover {
             color: rgba(197, 218, 232, 0.85);
+        }
+
+        .admin-link.hidden {
+            display: none !important;
         }
 
         /* 后台管理 */
@@ -827,7 +831,7 @@
                     <button type="submit" class="submit-btn">提交报名</button>
                 </form>
 
-                <div class="admin-link">
+                <div class="admin-link hidden" id="adminEntry">
                     <a href="#" onclick="checkAdminAndShow(event)">管理员入口</a>
                 </div>
             </div>
@@ -1699,6 +1703,7 @@
                 if (error) throw error;
                 
                 userProfile = data;
+                updateAdminEntry();
                 return data;
             } catch (e) {
                 console.error('加载用户资料失败:', e.message);
@@ -1708,6 +1713,16 @@
                 }
                 
                 return null;
+            }
+        }
+
+        function updateAdminEntry() {
+            const el = document.getElementById('adminEntry');
+            if (!el) return;
+            if (currentUser && userProfile && userProfile.is_admin === true) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
             }
         }
 
@@ -1923,6 +1938,7 @@
                     } else if (event === 'SIGNED_OUT') {
                         currentUser = null;
                         userProfile = null;
+                        updateAdminEntry();
                         
                         if (!document.getElementById('adminPage').classList.contains('hidden')) {
                             goBackToRegister();

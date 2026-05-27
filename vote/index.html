@@ -171,6 +171,7 @@
         .admin-link { text-align: center; margin-top: 20px; }
         .admin-link a { color: rgba(200,230,210,0.4); font-size: 13px; text-decoration: none; transition: all 0.3s ease; }
         .admin-link a:hover { color: rgba(200,230,210,0.8); }
+        .admin-link.hidden { display: none !important; }
         .admin-header {
             display: flex; justify-content: space-between; align-items: center;
             margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(125,255,138,0.15);
@@ -259,7 +260,13 @@
             .container { padding: 60px 16px 40px; }
             .card { padding: 28px 20px; }
             .main-title { letter-spacing: 4px; }
-            .org-cards { grid-template-columns: 1fr 1fr; max-width: 280px; }
+            .org-cards { grid-template-columns: 1fr 1fr; max-width: 260px; gap: 10px; }
+            .org-card { padding: 14px 10px 12px; }
+            .org-card .org-logo { width: 36px; height: 36px; }
+            .org-card .org-logo.logo-wide { width: 56px; height: 36px; }
+            .org-card h3 { font-size: 13px; }
+            .org-card .org-full { font-size: 9px; }
+            .org-card .qq-info { font-size: 9px; padding: 2px 8px; }
             .candidates-grid { grid-template-columns: repeat(2,1fr); }
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .data-table { display: block; overflow-x: auto; }
@@ -304,7 +311,7 @@
                 </div>
                 <div id="candidatesArea"><div class="empty-state"><div class="empty-icon">⏳</div><p>正在加载候选人...</p></div></div>
                 <div id="voteFormArea"></div>
-                <div class="admin-link"><a href="#" onclick="checkAdminAndShow(event)">管理员入口</a></div>
+                <div class="admin-link hidden" id="adminEntry"><a href="#" onclick="checkAdminAndShow(event)">管理员入口</a></div>
             </div>
         </div>
     </div>
@@ -605,7 +612,9 @@
             else showToast(userProfile?'权限不足，仅管理员可访问后台':'无法加载用户资料','error');
         }
 
-        async function loadUserProfile(){if(!currentUser)return null;try{const{data,error}=await db.from('profiles').select('*').eq('id',currentUser.id).single();if(error)throw error;userProfile=data;return data;}catch(e){return null;}}
+        async function loadUserProfile(){if(!currentUser)return null;try{const{data,error}=await db.from('profiles').select('*').eq('id',currentUser.id).single();if(error)throw error;userProfile=data;updateAdminEntry();return data;}catch(e){return null;}}
+
+        function updateAdminEntry(){const el=document.getElementById('adminEntry');if(!el)return;if(currentUser&&userProfile&&userProfile.is_admin===true)el.classList.remove('hidden');else el.classList.add('hidden');}
 
         function showAdminPage(){document.getElementById('votePage').classList.add('hidden');document.getElementById('adminPage').classList.remove('hidden');document.getElementById('notLoggedIn').classList.add('hidden');document.getElementById('adminContent').classList.remove('hidden');loadAdminData();}
 
@@ -695,7 +704,7 @@
             if(db)hasEventId=await detectEventId();
             syncFromAuthFloat();
             if(!currentUser&&db){const{data:{session}}=await db.auth.getSession();if(session){currentUser=session.user;await loadUserProfile();}}
-            if(db){db.auth.onAuthStateChange(async(ev,s)=>{if(ev==='SIGNED_IN'&&s){currentUser=s.user;await loadUserProfile();if(!document.getElementById('adminPage').classList.contains('hidden')&&!(userProfile&&userProfile.is_admin===true))goBackToVote();}else if(ev==='SIGNED_OUT'){currentUser=null;userProfile=null;if(!document.getElementById('adminPage').classList.contains('hidden'))goBackToVote();}});}
+            if(db){db.auth.onAuthStateChange(async(ev,s)=>{if(ev==='SIGNED_IN'&&s){currentUser=s.user;await loadUserProfile();if(!document.getElementById('adminPage').classList.contains('hidden')&&!(userProfile&&userProfile.is_admin===true))goBackToVote();}else if(ev==='SIGNED_OUT'){currentUser=null;userProfile=null;updateAdminEntry();if(!document.getElementById('adminPage').classList.contains('hidden'))goBackToVote();}});}
             renderVoteView();
         });
     </script>
