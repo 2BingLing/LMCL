@@ -824,7 +824,7 @@
 </article>
 
     
-        <div class="article-list--compact links">
+        <div class="article-list--compact links" id="links-list">
     
         <article>
             <a href="/p/xdhc" target="_blank" rel="noopener">
@@ -953,21 +953,38 @@
         </article>
     
         <article>
-            <a href="" target="_blank" rel="noopener">
+            <a href="/p/" target="_blank" rel="noopener">
                 <div class="article-details">
-                    <h2 class="article-title">占位群组名称</h2>
+                    <h2 class="article-title">星愿领域</h2>
                     <footer class="article-time">
                         
-                            占位群组描述
+                            星愿领域是一个女仆咖啡厅活动、女仆爱好者交流的社团是侧重于女仆服务与vrc游玩陪伴的vrchat社团群体。欢迎每一位热爱咖啡喜欢女仆的朋友加入星愿,共同实现我们的星愿。q群：828210575
                         
                     </footer>
                 </div>
         
                 
+                    
+                    
+                    <div class="article-image">
+                        <img src="https://img.vrclmcl.asia/LMCL/2026/05/29/xylog.jpg" loading="lazy">
+                    </div>
+                
             </a>
         </article>
     
 </div>
+<script>
+(function(){
+    var list=document.getElementById('links-list');
+    if(!list)return;
+    var items=Array.from(list.children);
+    for(var i=items.length-1;i>0;i--){
+        var j=Math.floor(Math.random()*(i+1));
+        if(i!==j)list.insertBefore(items[i],items[j]);
+    }
+})();
+</script>
     
 
     
