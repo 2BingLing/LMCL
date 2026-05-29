@@ -1028,6 +1028,9 @@
     hasEventId = await detectEventId();
     await checkAuth();
     render();
+    if (currentView === 'vote') {
+      loadVoteViewData();
+    }
   }
 
   async function checkAuth() {
@@ -1042,11 +1045,14 @@
         currentUser = session.user;
         await loadProfile();
         render();
+        if (currentView === 'vote') loadVoteViewData();
+        else if (currentView === 'admin') loadAdminData();
       } else if (event === 'SIGNED_OUT') {
         currentUser = null;
         userProfile = null;
         isAdmin = false;
         render();
+        if (currentView === 'vote') loadVoteViewData();
       }
     });
   }
@@ -1087,7 +1093,7 @@
     const { data, error } = await q;
     
     if (!error && data) {
-      candidates = data;
+      candidates = hasEventId ? data.filter(c => c.event_id === LIGHT_EVENT_ID) : data;
     }
   }
 
@@ -1217,14 +1223,6 @@
               </div>
               <h4>VRC中文器乐社</h4>
               <p>VRC语音社团</p>
-              <a href="/friend/" class="vote-collab-link">了解详细</a>
-            </div>
-            <div class="vote-collab-card">
-              <div class="vote-collab-avatar">
-                <img src="https://ui-avatars.com/api/?name=XXX&background=e74c3c&color=fff&size=100" alt="占位社团">
-              </div>
-              <h4>占位社团名称</h4>
-              <p>占位社团描述</p>
               <a href="/friend/" class="vote-collab-link">了解详细</a>
             </div>
           </div>
@@ -1767,12 +1765,6 @@
   }
 
   init();
-
-  setTimeout(() => {
-    if (currentView === 'vote') {
-      loadVoteViewData();
-    }
-  }, 100);
 })();
 </script>
 
