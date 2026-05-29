@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -862,7 +862,10 @@
                 <div id="adminContent">
                     <div class="admin-header">
                         <h2 class="admin-title">📋 报名信息管理</h2>
-                        <button class="logout-btn" onclick="goBackToRegister()">返回前台</button>
+                        <div style="display:flex;gap:8px;">
+                            <button class="logout-btn" onclick="loadAdminData()" style="background:rgba(135,166,196,0.15);border-color:rgba(135,166,196,0.4);color:#87a6c4;">🔄 刷新</button>
+                            <button class="logout-btn" onclick="goBackToRegister()">返回前台</button>
+                        </div>
                     </div>
 
                     <div class="stats-grid" id="statsGrid">
