@@ -332,7 +332,10 @@
                 <div id="adminContent">
                     <div class="admin-header">
                         <h2 class="admin-title">📋 投票管理</h2>
-                        <button class="back-btn" onclick="goBackToVote()">返回前台</button>
+                        <div style="display:flex;gap:8px;">
+                            <button class="back-btn" onclick="loadAdminData()" style="background:rgba(125,255,138,0.15);color:#7dff8a;">🔄 刷新</button>
+                            <button class="back-btn" onclick="goBackToVote()">返回前台</button>
+                        </div>
                     </div>
                     <div class="stats-grid">
                         <div class="stat-card"><div class="stat-number" id="statCandidates">0</div><div class="stat-label">候选人数</div></div>

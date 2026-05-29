@@ -997,6 +997,8 @@
   let currentView = 'vote';
   let allVotes = [];
   let deviceId = null;
+  let hasEventId = false;
+  const LIGHT_EVENT_ID = 'default';
 
   function getDeviceId() {
     let id = localStorage.getItem('vote_device_id');
@@ -1023,6 +1025,7 @@
 
   async function init() {
     deviceId = getDeviceId();
+    hasEventId = await detectEventId();
     await checkAuth();
     render();
   }
@@ -1063,11 +1066,25 @@
     }
   }
 
+  async function detectEventId() {
+    try {
+      const { data, error } = await supabase.from('vote_candidates').select('event_id').limit(1);
+      if (!error) return true;
+    } catch (e) {}
+    return false;
+  }
+
+  function cQuery(query, eventId) {
+    return hasEventId ? query.eq('event_id', eventId) : query;
+  }
+
   async function loadCandidates() {
-    const { data, error } = await supabase
+    let q = supabase
       .from('vote_candidates')
       .select('*')
       .order('created_at', { ascending: true });
+    q = cQuery(q, LIGHT_EVENT_ID);
+    const { data, error } = await q;
     
     if (!error && data) {
       candidates = data;
@@ -1078,11 +1095,16 @@
     const savedVrcId = localStorage.getItem('vote_vrcid');
     const currentDeviceId = getDeviceId();
     
-    const { data, error } = await supabase
+    let q = supabase
       .from('vote_records')
-      .select('id, vrcid')
-      .or(`vrcid.eq.${savedVrcId || 'null'},device_id.eq.${currentDeviceId}`)
-      .maybeSingle();
+      .select('id, vrcid');
+    q = cQuery(q, LIGHT_EVENT_ID);
+    if (savedVrcId) {
+      q = q.or(`vrcid.eq.${savedVrcId},device_id.eq.${currentDeviceId}`);
+    } else {
+      q = q.eq('device_id', currentDeviceId);
+    }
+    const { data, error } = await q.maybeSingle();
     
     if (!error && data) {
       hasVoted = true;
@@ -1098,7 +1120,7 @@
   async function loadAllVotes() {
     if (!isAdmin) return;
     
-    const { data, error } = await supabase
+    let q = supabase
       .from('vote_records')
       .select(`
         id,
@@ -1108,6 +1130,8 @@
         vote_candidates(id, name, description)
       `)
       .order('created_at', { ascending: false });
+    q = cQuery(q, LIGHT_EVENT_ID);
+    const { data, error } = await q;
     
     if (!error && data) {
       allVotes = data;
@@ -1115,9 +1139,11 @@
   }
 
   async function getCandidateVoteCounts() {
-    const { data, error } = await supabase
+    let q = supabase
       .from('vote_candidates')
       .select('id, name, vote_count');
+    q = cQuery(q, LIGHT_EVENT_ID);
+    const { data, error } = await q;
     
     if (!error && data) {
       return data;
@@ -1187,19 +1213,19 @@
             </div>
             <div class="vote-collab-card">
               <div class="vote-collab-avatar">
-                <img src="https://ui-avatars.com/api/?name=WST&background=27ae60&color=fff&size=100" alt="往世乐土">
+                <img src="https://ui-avatars.com/api/?name=CIMS&background=27ae60&color=fff&size=100" alt="中文器乐社">
               </div>
-              <h4>中文歌友会</h4>
-              <p>VRC音乐社团</p>
-              <a href="/p/qytgwswslst/" class="vote-collab-link">了解详情</a>
+              <h4>VRC中文器乐社</h4>
+              <p>VRC语音社团</p>
+              <a href="/friend/" class="vote-collab-link">了解详细</a>
             </div>
             <div class="vote-collab-card">
               <div class="vote-collab-avatar">
-                <img src="https://ui-avatars.com/api/?name=XH&background=e74c3c&color=fff&size=100" alt="限定红茶">
+                <img src="https://ui-avatars.com/api/?name=XXX&background=e74c3c&color=fff&size=100" alt="占位社团">
               </div>
-              <h4>哈夫克</h4>
-              <p>VRC游戏社交社团</p>
-              <a href="/p/qztghc/" class="vote-collab-link">了解详情</a>
+              <h4>占位社团名称</h4>
+              <p>占位社团描述</p>
+              <a href="/friend/" class="vote-collab-link">了解详细</a>
             </div>
           </div>
         </div>
@@ -1479,13 +1505,15 @@
     btn.textContent = '提交中...';
 
     try {
+      const insertData = {
+        candidate_id: selectedCandidate.id,
+        vrcid: vrcid,
+        device_id: deviceId
+      };
+      if (hasEventId) insertData.event_id = LIGHT_EVENT_ID;
       const { error } = await supabase
         .from('vote_records')
-        .insert({
-          candidate_id: selectedCandidate.id,
-          vrcid: vrcid,
-          device_id: deviceId
-        });
+        .insert(insertData);
 
       if (error) {
         if (error.code === '23505') {
@@ -1577,6 +1605,12 @@
       return;
     }
 
+    const saveBtn = document.querySelector('#candidate-modal .vote-btn-primary');
+    if (saveBtn) {
+      saveBtn.disabled = true;
+      saveBtn.textContent = '保存中...';
+    }
+
     try {
       if (id) {
         const { error } = await supabase
@@ -1585,9 +1619,11 @@
           .eq('id', id);
         if (error) throw error;
       } else {
+        const insertData = { name, description: desc, avatar_url: avatar };
+        if (hasEventId) insertData.event_id = LIGHT_EVENT_ID;
         const { error } = await supabase
           .from('vote_candidates')
-          .insert({ name, description: desc, avatar_url: avatar });
+          .insert(insertData);
         if (error) throw error;
       }
       
@@ -1596,6 +1632,10 @@
     } catch (e) {
       alert('保存失败: ' + e.message);
       console.error(e);
+      if (saveBtn) {
+        saveBtn.disabled = false;
+        saveBtn.textContent = '保存';
+      }
     }
   };
 
@@ -1621,17 +1661,21 @@
     if (!confirm('再次确认：这将删除所有投票数据！')) return;
 
     try {
-      const { error } = await supabase
+      let vq = supabase
         .from('vote_records')
         .delete()
         .neq('id', '00000000-0000-0000-0000-000000000000');
+      vq = cQuery(vq, LIGHT_EVENT_ID);
+      const { error } = await vq;
       
       if (error) throw error;
 
-      const { error: updateError } = await supabase
+      let uq = supabase
         .from('vote_candidates')
         .update({ vote_count: 0 })
         .neq('id', '00000000-0000-0000-0000-000000000000');
+      uq = cQuery(uq, LIGHT_EVENT_ID);
+      const { error: updateError } = await uq;
       
       if (updateError) throw updateError;
 
@@ -1652,10 +1696,12 @@
     if (!confirm('再次确认：这将删除所有候选人及其投票数据！')) return;
 
     try {
-      const { error } = await supabase
+      let cq = supabase
         .from('vote_candidates')
         .delete()
         .neq('id', '00000000-0000-0000-0000-000000000000');
+      cq = cQuery(cq, LIGHT_EVENT_ID);
+      const { error } = await cq;
       
       if (error) throw error;
 
@@ -1677,17 +1723,21 @@
     if (!confirm('最后确认：确定要执行此操作吗？')) return;
 
     try {
-      const { error: voteError } = await supabase
+      let vrq = supabase
         .from('vote_records')
         .delete()
         .neq('id', '00000000-0000-0000-0000-000000000000');
+      vrq = cQuery(vrq, LIGHT_EVENT_ID);
+      const { error: voteError } = await vrq;
       
       if (voteError) throw voteError;
 
-      const { error: candidateError } = await supabase
+      let crq = supabase
         .from('vote_candidates')
         .delete()
         .neq('id', '00000000-0000-0000-0000-000000000000');
+      crq = cQuery(crq, LIGHT_EVENT_ID);
+      const { error: candidateError } = await crq;
       
       if (candidateError) throw candidateError;
 
