@@ -342,7 +342,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 }
 .qyh-winner-name {
   font-family: &#39;Noto Serif SC&#39;, serif;
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
   color: #1e1b4b;
   margin-bottom: 10px;
@@ -551,6 +551,167 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
   font-size: 14px;
 }
 
+.qyh-intro-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 999999;
+  background: linear-gradient(165deg, #0c1438 0%, #1e1b4b 20%, #312e81 40%, #4338ca 60%, #6366f1 80%, #a5b4fc 92%, #e0e7ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+.qyh-intro-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.qyh-intro-overlay::before {
+  content: &#39;&#39;;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url(&#34;data:image/svg+xml,%3Csvg viewBox=&#39;0 0 400 400&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Cfilter id=&#39;n&#39;%3E%3CfeTurbulence type=&#39;fractalNoise&#39; baseFrequency=&#39;0.8&#39; numOctaves=&#39;4&#39; stitchTiles=&#39;stitch&#39;/%3E%3C/filter%3E%3Crect width=&#39;100%25&#39; height=&#39;100%25&#39; filter=&#39;url(%23n)&#39; opacity=&#39;0.05&#39;/%3E%3C/svg%3E&#34;);
+  pointer-events: none;
+}
+.qyh-intro-notes {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.qyh-intro-note {
+  position: absolute;
+  font-size: 40px;
+  color: rgba(224,231,255,0.7);
+  text-shadow: 0 0 20px rgba(165,180,252,0.6), 0 0 40px rgba(99,102,241,0.4);
+  animation: noteFly var(--dur) linear infinite;
+  animation-delay: var(--delay);
+  opacity: 0;
+  z-index: 1;
+}
+@keyframes noteFly {
+  0% {
+    transform: translateX(110vw) translateY(0) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  8% { opacity: 1; }
+  50% {
+    transform: translateX(40vw) translateY(var(--sway)) rotate(180deg) scale(1);
+    opacity: 0.9;
+  }
+  92% { opacity: 0.8; }
+  100% {
+    transform: translateX(-20vw) translateY(calc(var(--sway) * -0.5)) rotate(360deg) scale(0.6);
+    opacity: 0;
+  }
+}
+.qyh-intro-sparkle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: introSparkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 8px rgba(224,231,255,0.8), 0 0 16px rgba(165,180,252,0.5);
+  z-index: 1;
+}
+@keyframes introSparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+.qyh-intro-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+.qyh-intro-title {
+  font-family: &#39;Noto Serif SC&#39;, &#39;Ma Shan Zheng&#39;, serif;
+  font-size: clamp(48px, 12vw, 120px);
+  font-weight: 900;
+  letter-spacing: 16px;
+  background: linear-gradient(135deg, #fff 0%, #e0e7ff 25%, #c7d2fe 50%, #a5b4fc 75%, #fff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: introShimmer 3s ease-in-out infinite, introScale 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  filter: drop-shadow(0 0 40px rgba(165,180,252,0.6)) drop-shadow(0 0 80px rgba(67,56,202,0.4));
+  opacity: 0;
+  transform: scale(0.3);
+}
+@keyframes introShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes introScale {
+  0% { opacity: 0; transform: scale(0.3); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.qyh-intro-sub {
+  font-family: &#39;Noto Serif SC&#39;, serif;
+  font-size: clamp(16px, 3vw, 28px);
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 10px;
+  margin-top: 20px;
+  animation: introFadeIn 1.5s ease forwards 1s;
+  opacity: 0;
+  text-shadow: 0 0 20px rgba(165,180,252,0.4);
+}
+@keyframes introFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.qyh-intro-hint {
+  margin-top: 50px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 6px;
+  animation: introFadeIn 1s ease forwards 1.8s, introHint 2s ease-in-out infinite 1.8s;
+}
+@keyframes introHint {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+.qyh-intro-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  margin: 24px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(165,180,252,0.5);
+  animation: introFadeIn 1s ease forwards 1.3s;
+  opacity: 0;
+}
+.qyh-intro-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; height: 300px;
+  border: 2px solid rgba(99,102,241,0.15);
+  border-radius: 50%;
+  animation: introRing 4s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+.qyh-intro-ring::after {
+  content: &#39;&#39;;
+  position: absolute;
+  top: -30px; left: -30px; right: -30px; bottom: -30px;
+  border: 1px solid rgba(165,180,252,0.1);
+  border-radius: 50%;
+  animation: introRing 5s ease-in-out infinite reverse;
+}
+@keyframes introRing {
+  0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.3; }
+  50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); opacity: 0.6; }
+}
+
 .qyh-cta-wrap {
   text-align: center;
   margin: 50px 0 30px;
@@ -574,6 +735,8 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 }
 
 @media (max-width: 768px) {
+  .qyh-intro-ring { width: 200px; height: 200px; }
+  .qyh-intro-note { font-size: 28px; }
   .qyh-hero-title { font-size: 36px; }
   .qyh-hero-sub { font-size: 14px; }
   .qyh-winner-card {
@@ -587,7 +750,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
     padding: 32px 24px;
   }
   .qyh-winner-name {
-    font-size: 26px;
+    font-size: 24px;
     flex-wrap: wrap;
   }
   .qyh-audio-panel {
@@ -596,6 +759,57 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
   }
 }
 &lt;/style&gt;
+&lt;div class=&#34;qyh-intro-overlay&#34; id=&#34;qyh-intro-overlay&#34;&gt;
+&lt;div class=&#34;qyh-intro-notes&#34; id=&#34;qyh-intro-notes&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-sparkle&#34; id=&#34;qyh-intro-sparkles&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-ring&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-content&#34;&gt;
+&lt;div class=&#34;qyh-intro-title&#34;&gt;轻 音 会&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-line&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-sub&#34;&gt;月光洒下 · 与星共舞一曲&lt;/div&gt;
+&lt;div class=&#34;qyh-intro-hint&#34;&gt;✦ 点击任意处进入 ✦&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function(){
+var overlay=document.getElementById(&#39;qyh-intro-overlay&#39;);
+var notesContainer=document.getElementById(&#39;qyh-intro-notes&#39;);
+var sparklesContainer=document.getElementById(&#39;qyh-intro-sparkles&#39;);
+var noteSymbols=[&#39;♪&#39;,&#39;♫&#39;,&#39;♬&#39;,&#39;♩&#39;];
+for(var i=0;i&lt;15;i++){
+var n=document.createElement(&#39;div&#39;);
+n.className=&#39;qyh-intro-note&#39;;
+n.innerHTML=noteSymbols[Math.floor(Math.random()*noteSymbols.length)];
+n.style.top=(10+Math.random()*80)+&#39;%&#39;;
+n.style.setProperty(&#39;--dur&#39;,(3+Math.random()*4)+&#39;s&#39;);
+n.style.setProperty(&#39;--delay&#39;,(Math.random()*5)+&#39;s&#39;);
+n.style.setProperty(&#39;--sway&#39;,(Math.random()*100-50)+&#39;px&#39;);
+n.style.fontSize=(28+Math.random()*30)+&#39;px&#39;;
+var hue=220+Math.random()*40;
+n.style.color=&#39;hsla(&#39;+hue+&#39;,80%,85%,0.7)&#39;;
+n.style.textShadow=&#39;0 0 20px hsla(&#39;+hue+&#39;,80%,75%,0.6), 0 0 40px hsla(&#39;+hue+&#39;,80%,65%,0.4)&#39;;
+notesContainer.appendChild(n);
+}
+for(var j=0;j&lt;40;j++){
+var s=document.createElement(&#39;div&#39;);
+s.className=&#39;qyh-intro-sparkle&#39;;
+s.style.left=Math.random()*100+&#39;%&#39;;
+s.style.top=Math.random()*100+&#39;%&#39;;
+s.style.setProperty(&#39;--dur&#39;,(1.5+Math.random()*3)+&#39;s&#39;);
+s.style.setProperty(&#39;--delay&#39;,(Math.random()*4)+&#39;s&#39;);
+var size=2+Math.random()*4;
+s.style.width=s.style.height=size+&#39;px&#39;;
+sparklesContainer.appendChild(s);
+}
+var entered=false;
+overlay.addEventListener(&#39;click&#39;,function(){
+if(entered)return;
+entered=true;
+overlay.classList.add(&#39;hidden&#39;);
+setTimeout(function(){overlay.remove();},1300);
+});
+})();
+&lt;/script&gt;
 &lt;div class=&#34;qyh-hero&#34;&gt;
 &lt;div class=&#34;qyh-hero-glass&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;qyh-particles&#34; id=&#34;qyh-particles&#34;&gt;&lt;/div&gt;
@@ -718,17 +932,32 @@ document.body.style.overflow=&#39;&#39;;
 var btn=document.getElementById(&#39;qyh-audio-float&#39;);
 var panel=document.getElementById(&#39;qyh-audio-panel&#39;);
 var audio=document.getElementById(&#39;qyh-audio-player&#39;);
-btn.addEventListener(&#39;click&#39;,function(){
-if(panel.style.display===&#39;block&#39;){
-panel.style.display=&#39;none&#39;;
-btn.textContent=&#39;▶&#39;;
-audio.pause();
+var played=false;
+function updateBtn(){btn.textContent=audio.paused?&#39;▶&#39;:&#39;⏸&#39;;}
+audio.addEventListener(&#39;ended&#39;,function(){audio.currentTime=0;audio.play().catch(function(){});});
+audio.addEventListener(&#39;error&#39;,function(){audio.load();setTimeout(function(){audio.play().catch(function(){});},1000);});
+btn.addEventListener(&#39;click&#39;,function(){if(audio.paused){audio.play().then(updateBtn).catch(function(){});}else{audio.pause();updateBtn();}});
+btn.addEventListener(&#39;mouseenter&#39;,function(){panel.style.display=&#39;block&#39;;});
+panel.addEventListener(&#39;mouseenter&#39;,function(){panel.style.display=&#39;block&#39;;});
+panel.addEventListener(&#39;mouseleave&#39;,function(){panel.style.display=&#39;none&#39;;});
+var startAudio=function(){
+  if(played)return;
+  played=true;
+  audio.play().then(function(){updateBtn();btn.textContent=&#39;⏸&#39;;}).catch(function(){
+    document.addEventListener(&#39;click&#39;,function once(){
+      audio.play().then(updateBtn).catch(function(){});
+      document.removeEventListener(&#39;click&#39;,once);
+    });
+  });
+};
+var introOverlay=document.getElementById(&#39;qyh-intro-overlay&#39;);
+if(introOverlay){
+  introOverlay.addEventListener(&#39;click&#39;,function(){
+    setTimeout(startAudio,800);
+  },{once:true});
 }else{
-panel.style.display=&#39;block&#39;;
-btn.textContent=&#39;⏸&#39;;
-audio.play().catch(function(){});
+  setTimeout(startAudio,1500);
 }
-});
 })();
 &lt;/script&gt;
 &lt;div class=&#34;qyh-cta-wrap&#34;&gt;
