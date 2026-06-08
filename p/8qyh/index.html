@@ -344,7 +344,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shiyhd/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shierhd/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -355,7 +355,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十一次活动合照</div>
+        <div class="qyh-nav-item-desc">第十二次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -654,11 +654,24 @@
       lighter: '#fed7aa',
       text: '#7c2d12',
       shadow: 'rgba(194,65,12,0.15)'
+    },
+    '11qyh': {
+      primary: '#312e81',
+      secondary: '#4338ca',
+      accent: '#6366f1',
+      light: '#e0e7ff',
+      lighter: '#c7d2fe',
+      text: '#1e1b4b',
+      shadow: 'rgba(99,102,241,0.15)'
     }
   };
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+    
+    if (path.includes('/11qyh/') || path.includes('第十一期轻音会')) {
+      return themes['11qyh'];
+    }
     
     if (path.includes('/10qyh/') || path.includes('第十期轻音会')) {
       return themes['10qyh'];
@@ -2105,6 +2118,25 @@ setTimeout(function(){audio.play().then(updateBtn).catch(function(){});},1500);
             
                 
 <article class="has-image">
+    <a href="/p/11qyh/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.vrclmcl.asia/LMCL/2026/06/08/shuzhao.png" loading="lazy" data-key="11qyh" data-hash="https://img.vrclmcl.asia/LMCL/2026/06/08/shuzhao.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第十一期轻音会</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/10qyh/">
         
         
@@ -2174,30 +2206,6 @@ setTimeout(function(){audio.play().then(updateBtn).catch(function(){});},1500);
 
         <div class="article-details">
             <h2 class="article-title">第六期轻音会</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/fiqyh/">
-        
-        
-            <div class="article-image">
-                <img src="/p/fiqyh/qyh5.afc293a1ea69a46132bb2555c29e23f0_hu_aa3bf7ca57351e89.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 第五期轻音会"
-                        data-key="fiqyh" 
-                        data-hash="md5-r8KToepppGEyuyVVwp4j8A==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第五期轻音会</h2>
         </div>
     </a>
 </article>
