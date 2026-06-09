@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1575,32 +1575,11 @@
             }));
         }
 
-        // 检查是否已报名（直接查询，vrc_id和fingerprint分别检查）
+        // 检查是否已报名（通过尝试insert利用数据库唯一约束判断）
+        // 前端不做预查询（RLS可能阻止匿名SELECT），依赖数据库约束防重复
         async function hasRegistered(vrcId) {
-            if (!db) return false;
-            const fingerprint = getBrowserFingerprint();
-            // 检查vrc_id是否已报名
-            const { data: byId, error: err1 } = await db
-                .from('registrations')
-                .select('id')
-                .eq('vrc_id', vrcId)
-                .limit(1);
-            if (err1) {
-                console.error('检查VRC ID失败:', err1.message);
-                return false;
-            }
-            if (byId && byId.length > 0) return true;
-            // 检查fingerprint是否已报名
-            const { data: byFp, error: err2 } = await db
-                .from('registrations')
-                .select('id')
-                .eq('fingerprint', fingerprint)
-                .limit(1);
-            if (err2) {
-                console.error('检查指纹失败:', err2.message);
-                return false;
-            }
-            return !!(byFp && byFp.length > 0);
+            // 不再预查询，直接返回false，由insert时的唯一约束报错来拦截
+            return false;
         }
 
         // Toast 提示
@@ -1632,11 +1611,6 @@
                 return;
             }
 
-            if (await hasRegistered(vrcId)) {
-                showToast('您已经报过名了！每个ID只能报名一次。', 'warning');
-                return;
-            }
-
             const fingerprint = getBrowserFingerprint();
 
             const { error } = await db.from('registrations').insert({
@@ -1650,8 +1624,13 @@
             });
 
             if (error) {
-                console.error('报名失败:', error.message);
-                showToast('报名失败，请稍后重试', 'error');
+                // 唯一约束冲突(23505)表示已报名
+                if (error.code === '23505') {
+                    showToast('您已经报过名了！每个ID只能报名一次。', 'warning');
+                } else {
+                    console.error('报名失败:', error.message);
+                    showToast('报名失败，请稍后重试', 'error');
+                }
                 return;
             }
 
