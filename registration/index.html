@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1624,8 +1624,10 @@
             });
 
             if (error) {
-                // 唯一约束冲突(23505)表示已报名
-                if (error.code === '23505') {
+                // 唯一约束冲突表示已报名（检查错误码或错误信息）
+                const isDuplicate = error.code === '23505' || 
+                    (error.message && error.message.includes('unique constraint'));
+                if (isDuplicate) {
                     showToast('您已经报过名了！每个ID只能报名一次。', 'warning');
                 } else {
                     console.error('报名失败:', error.message);
