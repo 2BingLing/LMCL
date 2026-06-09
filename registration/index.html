@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1624,13 +1624,14 @@
             });
 
             if (error) {
-                // 唯一约束冲突表示已报名（检查错误码或错误信息）
-                const isDuplicate = error.code === '23505' || 
-                    (error.message && error.message.includes('unique constraint'));
+                // 409冲突或唯一约束违反表示已报名
+                const isDuplicate = error.status === 409 || 
+                    error.code === '23505' || 
+                    (error.message && (error.message.includes('unique constraint') || error.message.includes('duplicate')));
                 if (isDuplicate) {
                     showToast('您已经报过名了！每个ID只能报名一次。', 'warning');
                 } else {
-                    console.error('报名失败:', error.message);
+                    console.error('报名失败:', error);
                     showToast('报名失败，请稍后重试', 'error');
                 }
                 return;
