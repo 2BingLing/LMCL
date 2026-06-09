@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1575,19 +1575,32 @@
             }));
         }
 
-        // 检查是否已报名（通过Supabase RPC）
+        // 检查是否已报名（直接查询，vrc_id和fingerprint分别检查）
         async function hasRegistered(vrcId) {
             if (!db) return false;
             const fingerprint = getBrowserFingerprint();
-            const { data, error } = await db.rpc('check_registration_exists', {
-                p_vrc_id: vrcId,
-                p_fingerprint: fingerprint
-            });
-            if (error) {
-                console.error('检查报名状态失败:', error.message);
+            // 检查vrc_id是否已报名
+            const { data: byId, error: err1 } = await db
+                .from('registrations')
+                .select('id')
+                .eq('vrc_id', vrcId)
+                .limit(1);
+            if (err1) {
+                console.error('检查VRC ID失败:', err1.message);
                 return false;
             }
-            return !!data;
+            if (byId && byId.length > 0) return true;
+            // 检查fingerprint是否已报名
+            const { data: byFp, error: err2 } = await db
+                .from('registrations')
+                .select('id')
+                .eq('fingerprint', fingerprint)
+                .limit(1);
+            if (err2) {
+                console.error('检查指纹失败:', err2.message);
+                return false;
+            }
+            return !!(byFp && byFp.length > 0);
         }
 
         // Toast 提示
