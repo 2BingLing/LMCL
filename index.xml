@@ -13,7 +13,7 @@
         <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
         
         <guid>https://vrclmcl.asia/p/12qyh/</guid>
-        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/06/14/hengtu.png" alt="Featured image of post 第十二期轻音会" /&gt;&lt;h1 id=&#34;第十二期轻音会&#34;&gt;第十二期轻音会
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/06/18/hengtu.png" alt="Featured image of post 第十二期轻音会" /&gt;&lt;h1 id=&#34;第十二期轻音会&#34;&gt;第十二期轻音会
 &lt;/h1&gt;&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400;700;900&amp;display=swap&#39;);
 
@@ -406,7 +406,7 @@
 .qyh-img-frame {
   position: relative;
   overflow: hidden;
-  background-image: url(&#39;https://img.vrclmcl.asia/LMCL/2026/06/14/shutu.png&#39;);
+  background-image: url(&#39;https://img.vrclmcl.asia/LMCL/2026/06/18/shutu.png&#39;);
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
@@ -931,7 +931,7 @@
 var overlay=document.getElementById(&#39;qyh-intro-overlay&#39;);
 var notesContainer=document.getElementById(&#39;qyh-intro-notes&#39;);
 var sparklesContainer=document.getElementById(&#39;qyh-intro-sparkles&#39;);
-var noteSymbols=[&#39;♪&#39;,&#39;♫&#39;,&#39;♬&#39;,&#39;♩&#39;];
+var noteSymbols=[&#39;💧&#39;,&#39;🌧&#39;,&#39;☔&#39;,&#39;✦&#39;,&#39;⋆&#39;,&#39;◌&#39;,&#39;°&#39;];
 for(var i=0;i&lt;15;i++){
 var n=document.createElement(&#39;div&#39;);
 n.className=&#39;qyh-intro-note&#39;;
@@ -1041,11 +1041,11 @@ container.appendChild(s);
 &lt;div class=&#34;qyh-winner-card&#34;&gt;
 &lt;div class=&#34;qyh-img-frame&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;qyh-winner-body&#34;&gt;
-&lt;div class=&#34;qyh-winner-name&#34;&gt;&lt;span class=&#34;qyh-name-highlight&#34;&gt;清风夜雨&lt;/span&gt; &lt;span class=&#34;qyh-winner-badge&#34;&gt;获选者&lt;/span&gt; &lt;span class=&#34;qyh-winner-creator&#34;&gt;✦ 创作者&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;qyh-winner-name&#34;&gt;&lt;span class=&#34;qyh-name-highlight&#34;&gt;清风夜雨&lt;/span&gt; &lt;span class=&#34;qyh-winner-badge&#34;&gt;获选者&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;qyh-winner-award&#34;&gt;第十二期轻音会 · 获选&lt;/div&gt;
 &lt;div class=&#34;qyh-quote-box&#34;&gt;
 &lt;div class=&#34;qyh-quote-label&#34;&gt;获选感言&lt;/div&gt;
-&lt;div class=&#34;qyh-quote-text&#34;&gt;&#34;待定&#34;&lt;/div&gt;
+&lt;div class=&#34;qyh-quote-text&#34;&gt;&#34;非常高兴能获得这次获奖，我也会继续投稿好听音乐分享给大家谢谢&#34;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;qyh-journey-box&#34;&gt;
 &lt;div class=&#34;qyh-journey-label&#34;&gt;投稿心路历程&lt;/div&gt;
@@ -1058,7 +1058,7 @@ container.appendChild(s);
 &lt;hr&gt;
 &lt;h2 id=&#34;详细大图&#34;&gt;详细大图
 &lt;/h2&gt;&lt;div class=&#34;qyh-clickable-img-wrap&#34; onclick=&#34;qyhOpenLightbox(this)&#34;&gt;
-&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/06/14/hengtu.png&#34; alt=&#34;第十二期轻音会&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/06/18/hengtu.png&#34; alt=&#34;第十二期轻音会&#34;&gt;
 &lt;/div&gt;
 &lt;p class=&#34;qyh-full-caption&#34;&gt;第十二期轻音会 · 点击图片可放大查看&lt;/p&gt;
 &lt;div style=&#34;text-align:center;margin-top:8px;&#34;&gt;
@@ -1095,7 +1095,7 @@ document.body.style.overflow=&#39;&#39;;
 &lt;div style=&#34;color:#94a3b8;&#34;&gt;Cécile Corbel · 第十二期轻音会获选曲目&lt;/div&gt;
 &lt;/div&gt;
 &lt;audio id=&#34;qyh-audio-player&#34; preload=&#34;auto&#34; loop style=&#34;width:100%;margin-bottom:10px;border-radius:8px;&#34;&gt;
-&lt;source src=&#34;https://music.163.com/song/media/outer/url?id=25723366.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;source src=&#34;https://music.163.com/song/media/outer/url?id=2071452224.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 &lt;div style=&#34;text-align:right;margin-top:8px;&#34;&gt;
 &lt;span onclick=&#34;document.getElementById(&#39;qyh-audio-panel&#39;).style.display=&#39;none&#39;;&#34; style=&#34;font-size:12px;color:#2563eb;background:none;border:none;cursor:pointer;padding:4px 10px;border-radius:6px;font-weight:600;&#34;&gt;收起&lt;/span&gt;
@@ -1116,6 +1116,7 @@ floatBtn.addEventListener(&#39;mouseenter&#39;,function(){panel.style.display=&#
 panel.addEventListener(&#39;mouseenter&#39;,function(){panel.style.display=&#39;block&#39;;});
 panel.addEventListener(&#39;mouseleave&#39;,function(){panel.style.display=&#39;none&#39;;});
 setTimeout(function(){audio.play().then(updateBtn).catch(function(){});},1500);
+window.qyhTryAutoPlay=function(){audio.play().then(updateBtn).catch(function(){});};
 })();
 &lt;/script&gt;
 </description>
