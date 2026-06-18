@@ -344,7 +344,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shierhd/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shisandhd/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -355,7 +355,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十二次活动合照</div>
+        <div class="qyh-nav-item-desc">第十三次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -663,16 +663,29 @@
       lighter: '#e2e8f0',
       text: '#1e293b',
       shadow: 'rgba(71,85,105,0.18)'
+    },
+    '12qyh': {
+      primary: '#0c1e3d',
+      secondary: '#1e3a5f',
+      accent: '#2563eb',
+      light: '#dbeafe',
+      lighter: '#bfdbfe',
+      text: '#0c1e3d',
+      shadow: 'rgba(37,99,235,0.18)'
     }
   };
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
-    
+
+    if (path.includes('/12qyh/') || path.includes('第十二期轻音会')) {
+      return themes['12qyh'];
+    }
+
     if (path.includes('/11qyh/') || path.includes('第十一期轻音会')) {
       return themes['11qyh'];
     }
-    
+
     if (path.includes('/10qyh/') || path.includes('第十期轻音会')) {
       return themes['10qyh'];
     }
@@ -929,6 +942,86 @@
         background: #fafafa;
         min-height: 100px;
     ">  
+        <li class="ranking-item"
+            data-src="https://music.163.com/song/media/outer/url?id=1500439504.mp3"
+            data-title="Take Me Hand"
+            data-artist="Cécile Corbel"
+            style="
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            ">
+            <div style="
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #0c1e3d 0%, #1e3a5f 50%, #2563eb 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            ">
+                <span style="position: relative; z-index: 1;">
+                    <span style="font-family: sans-serif;">#</span>
+                    <span style="font-weight: bold;">
+                        <span style="opacity: 0; position: absolute;">0</span>
+                        <script type="text/javascript">
+                        </script>
+                    </span>
+                </span>
+            </div>
+            <div class="song-info" style="flex: 1;">
+                <div style="
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                ">Take Me Hand <span style="
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #0c1e3d, #2563eb);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                ">✦ 第12期</span></div>
+                <div style="
+                    font-size: 14px;
+                    color: #666;
+                ">Cécile Corbel · 投稿：清风夜雨</div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="play-trigger" style="
+                    background: linear-gradient(135deg, #0c1e3d, #2563eb);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">播放</button>
+                <a href="https://music.163.com/#/song?id=1500439504" target="_blank" style="
+                    background: transparent;
+                    color: #2563eb;
+                    border: 1px solid #2563eb;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">详情</a>
+            </div>
+        </li>
         <li class="ranking-item"
             data-src="https://music.163.com/song/media/outer/url?id=2610793907.mp3"
             data-title="Sacred Play Secret Place"
