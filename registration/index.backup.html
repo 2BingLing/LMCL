@@ -1,9 +1,9 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中文夏日主题音乐节 · 演出报名系统</title>
+    <title>粽夏夜之梦 · 演出报名系统</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Ma+Shan+Zheng&display=swap');
 
@@ -15,13 +15,9 @@
 
         body {
             font-family: 'Noto Serif SC', serif;
-            background: 
-                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255, 140, 60, 0.35) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 15% 10%, rgba(255, 100, 50, 0.2) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 40% at 85% 10%, rgba(255, 180, 80, 0.2) 0%, transparent 60%),
-                linear-gradient(180deg, #0a0503 0%, #1a0a05 30%, #2a1408 60%, #1a0805 100%);
+            background: linear-gradient(180deg, #1a2332 0%, #1e3a5f 30%, #2d4a6f 60%, #1a365d 100%);
             min-height: 100vh;
-            color: #ffe5c0;
+            color: #e8f4f8;
             overflow-x: hidden;
             position: relative;
         }
@@ -41,92 +37,50 @@
             pointer-events: none;
             overflow: hidden;
             z-index: 0;
-            background: 
-                radial-gradient(ellipse 60% 40% at 20% 0%, rgba(255,120,80,0.25) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 35% at 80% 0%, rgba(255,180,90,0.22) 0%, transparent 60%),
-                radial-gradient(ellipse 70% 45% at 50% 0%, rgba(255,140,60,0.18) 0%, transparent 70%),
-                linear-gradient(180deg, #1a0a05 0%, #2d1408 30%, #1f0a05 100%);
         }
-
-        .stage-lights {
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 320px;
-            overflow: visible;
-            pointer-events: none;
-        }
-
-        .light-beam {
-            position: absolute;
-            top: -50px;
-            width: 120px;
-            height: 380px;
-            transform-origin: top center;
-            background: linear-gradient(180deg, 
-                rgba(255, 180, 100, 0.4) 0%,
-                rgba(255, 140, 80, 0.2) 30%,
-                rgba(255, 100, 50, 0.08) 70%,
-                transparent 100%);
-            filter: blur(8px);
-            animation: lightSway 6s ease-in-out infinite;
-        }
-
-        .light-1 { left: 20%; transform: rotate(-8deg); animation-delay: 0s; }
-        .light-2 { left: 40%; transform: rotate(-3deg); animation-delay: 1.5s; background: linear-gradient(180deg, rgba(255, 200, 120, 0.45) 0%, rgba(255, 160, 80, 0.2) 40%, transparent 100%); }
-        .light-3 { left: 60%; transform: rotate(3deg); animation-delay: 3s; }
-        .light-4 { left: 80%; transform: rotate(8deg); animation-delay: 4.5s; background: linear-gradient(180deg, rgba(255, 200, 120, 0.45) 0%, rgba(255, 160, 80, 0.2) 40%, transparent 100%); }
-
-        @keyframes lightSway {
-            0%, 100% { opacity: 0.7; transform: rotate(var(--rot, 0deg)) translateX(-8px); }
-            50% { opacity: 1; transform: rotate(var(--rot, 0deg)) translateX(8px); }
-        }
-
-        .light-1 { --rot: -8deg; }
-        .light-2 { --rot: -3deg; }
-        .light-3 { --rot: 3deg; }
-        .light-4 { --rot: 8deg; }
 
         .moon {
             position: absolute;
-            top: 0;
+            top: 8%;
             left: 50%;
             transform: translateX(-50%);
-            width: 100%;
-            height: 280px;
-            background: 
-                radial-gradient(ellipse 200px 60px at 30% 20%, rgba(255,100,80,0.5) 0%, transparent 70%),
-                radial-gradient(ellipse 180px 50px at 70% 30%, rgba(255,160,80,0.5) 0%, transparent 70%),
-                radial-gradient(ellipse 220px 70px at 50% 10%, rgba(255,200,120,0.4) 0%, transparent 70%);
-            border-radius: 0 0 50% 50% / 0 0 100% 100%;
-            filter: blur(20px);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 35% 35%, #fff9e6 0%, #f4e4c1 40%, #e8d4a8 70%, #d4c08e 100%);
+            border-radius: 50%;
+            box-shadow:
+                0 0 60px rgba(255, 249, 230, 0.6),
+                0 0 120px rgba(244, 228, 193, 0.4),
+                0 0 180px rgba(232, 212, 168, 0.2),
+                inset -15px -10px 30px rgba(212, 192, 142, 0.4);
+            animation: moonGlow 4s ease-in-out infinite alternate;
         }
 
         @keyframes moonGlow {
-            0%, 100% { opacity: 0.85; }
-            50% { opacity: 1; }
+            0% { box-shadow: 0 0 60px rgba(255, 249, 230, 0.6), 0 0 120px rgba(244, 228, 193, 0.4), inset -15px -10px 30px rgba(212, 192, 142, 0.4); }
+            100% { box-shadow: 0 0 80px rgba(255, 249, 230, 0.7), 0 0 150px rgba(244, 228, 193, 0.5), inset -15px -10px 30px rgba(212, 192, 142, 0.4); }
         }
 
         .star {
             position: absolute;
-            background: rgba(255, 220, 150, 0.9);
+            background: white;
             border-radius: 50%;
             animation: starTwinkle var(--duration) ease-in-out infinite;
             animation-delay: var(--delay);
-            box-shadow: 0 0 4px rgba(255, 220, 150, 0.8);
         }
 
         @keyframes starTwinkle {
-            0%, 100% { opacity: 0.4; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.3); }
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
         .firefly {
             position: absolute;
-            width: 5px;
-            height: 5px;
-            background: #ffb866;
+            width: 4px;
+            height: 4px;
+            background: #ffd700;
             border-radius: 50%;
-            box-shadow: 0 0 12px #ffb866, 0 0 24px rgba(255, 184, 102, 0.6);
+            box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255, 215, 0, 0.5);
             animation: fireflyFloat var(--dur) linear infinite;
             animation-delay: var(--delay);
         }
@@ -154,54 +108,46 @@
 
         .main-title {
             font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
-            font-size: clamp(48px, 9vw, 84px);
+            font-size: clamp(42px, 8vw, 72px);
             font-weight: 900;
-            color: #fff5e6;
+            color: #f0e6d3;
             letter-spacing: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             text-shadow:
-                0 0 30px rgba(255, 180, 100, 0.7),
-                0 0 60px rgba(255, 120, 60, 0.5),
-                0 0 90px rgba(255, 80, 40, 0.3),
-                0 4px 12px rgba(0, 0, 0, 0.6);
-            background: linear-gradient(180deg, #fff5e6 0%, #ffb060 50%, #ff7a30 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+                0 0 20px rgba(240, 230, 211, 0.5),
+                0 0 40px rgba(240, 230, 211, 0.3),
+                0 4px 12px rgba(0, 0, 0, 0.4);
             animation: titleFloat 3s ease-in-out infinite;
         }
 
         @keyframes titleFloat {
-            0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 20px rgba(255, 150, 80, 0.4)); }
-            50% { transform: translateY(-8px); filter: drop-shadow(0 8px 30px rgba(255, 150, 80, 0.6)); }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
 
         .subtitle {
             font-size: clamp(14px, 2vw, 18px);
-            color: #ffe5c0;
+            color: rgba(224, 236, 245, 0.85);
             letter-spacing: 8px;
             padding: 12px 32px;
             display: inline-block;
-            background: linear-gradient(135deg, rgba(120, 40, 20, 0.6) 0%, rgba(180, 80, 30, 0.5) 100%);
+            background: rgba(255, 255, 255, 0.06);
             backdrop-filter: blur(12px);
             border-radius: 32px;
-            border: 1px solid rgba(255, 180, 100, 0.35);
-            box-shadow: 
-                0 4px 20px rgba(0, 0, 0, 0.4),
-                0 0 30px rgba(255, 150, 80, 0.15) inset;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .card {
-            background: linear-gradient(135deg, rgba(60, 20, 10, 0.85) 0%, rgba(100, 40, 15, 0.75) 50%, rgba(50, 15, 8, 0.85) 100%);
+            background: linear-gradient(135deg, rgba(26, 51, 93, 0.85) 0%, rgba(45, 74, 111, 0.75) 100%);
             backdrop-filter: blur(20px);
             border-radius: 28px;
             padding: 48px;
-            border: 1px solid rgba(255, 180, 100, 0.25);
+            border: 1px solid rgba(135, 166, 196, 0.25);
             box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 80px rgba(255, 120, 60, 0.15),
-                0 0 0 1px rgba(255, 200, 130, 0.1) inset,
-                0 2px 0 rgba(255, 200, 130, 0.15) inset;
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+                0 2px 0 rgba(255, 255, 255, 0.1) inset;
             position: relative;
             overflow: hidden;
             margin-bottom: 32px;
@@ -247,11 +193,11 @@
         .form-title {
             font-family: 'Ma Shan Zheng', serif;
             font-size: 32px;
-            color: #ffd9a8;
+            color: #f0e6d3;
             margin-bottom: 36px;
             text-align: center;
             letter-spacing: 4px;
-            text-shadow: 0 2px 8px rgba(255, 120, 60, 0.3);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .form-group {
@@ -261,7 +207,7 @@
         .form-label {
             display: block;
             font-size: 15px;
-            color: #ffd9a8;
+            color: #c5dae8;
             margin-bottom: 10px;
             font-weight: 600;
             letter-spacing: 1px;
@@ -272,10 +218,10 @@
         .form-select {
             width: 100%;
             padding: 16px 20px;
-            background: rgba(30, 12, 6, 0.75);
-            border: 1px solid rgba(255, 180, 100, 0.3);
+            background: rgba(13, 27, 48, 0.75);
+            border: 1px solid rgba(135, 166, 196, 0.3);
             border-radius: 14px;
-            color: #fff5e6;
+            color: #e8f4f8;
             font-size: 16px;
             font-family: inherit;
             transition: all 0.3s ease;
@@ -285,14 +231,14 @@
         .form-input:focus,
         .form-textarea:focus,
         .form-select:focus {
-            border-color: rgba(255, 180, 100, 0.7);
-            background: rgba(40, 16, 8, 0.9);
-            box-shadow: 0 0 0 3px rgba(255, 150, 80, 0.18), 0 4px 16px rgba(255, 120, 60, 0.2);
+            border-color: rgba(135, 166, 196, 0.6);
+            background: rgba(13, 27, 48, 0.9);
+            box-shadow: 0 0 0 3px rgba(135, 166, 196, 0.15), 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         .form-input::placeholder,
         .form-textarea::placeholder {
-            color: rgba(255, 200, 140, 0.4);
+            color: rgba(197, 218, 232, 0.4);
         }
 
         .form-textarea {
@@ -305,46 +251,46 @@
             align-items: flex-start;
             gap: 12px;
             padding: 16px 20px;
-            background: rgba(30, 12, 6, 0.55);
-            border: 1px solid rgba(255, 180, 100, 0.25);
+            background: rgba(13, 27, 48, 0.55);
+            border: 1px solid rgba(135, 166, 196, 0.25);
             border-radius: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .checkbox-group:hover {
-            background: rgba(40, 16, 8, 0.75);
-            border-color: rgba(255, 180, 100, 0.45);
+            background: rgba(13, 27, 48, 0.75);
+            border-color: rgba(135, 166, 196, 0.4);
         }
 
         .checkbox-input {
             width: 22px;
             height: 22px;
             margin-top: 2px;
-            accent-color: #ff7a30;
+            accent-color: #87a6c4;
             cursor: pointer;
             flex-shrink: 0;
         }
 
         .checkbox-label {
             font-size: 15px;
-            color: #ffd9a8;
+            color: #c5dae8;
             line-height: 1.6;
             cursor: pointer;
         }
 
         .checkbox-desc {
             font-size: 13px;
-            color: rgba(255, 200, 140, 0.65);
+            color: rgba(197, 218, 232, 0.6);
             margin-top: 4px;
         }
 
         .submit-btn {
             width: 100%;
             padding: 18px 40px;
-            background: linear-gradient(135deg, #ff6a30 0%, #ff8c40 50%, #ffb060 100%);
-            color: #fff5e6;
-            border: 1px solid rgba(255, 200, 130, 0.5);
+            background: linear-gradient(135deg, #2d4a6f 0%, #3d5a7f 50%, #4a6a8f 100%);
+            color: #f0e6d3;
+            border: 1px solid rgba(135, 166, 196, 0.4);
             border-radius: 16px;
             font-size: 18px;
             font-weight: 700;
@@ -352,9 +298,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             letter-spacing: 3px;
-            box-shadow: 
-                0 6px 24px rgba(255, 100, 50, 0.4),
-                0 0 40px rgba(255, 150, 80, 0.2);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -388,7 +332,7 @@
         }
 
         .admin-link a {
-            color: rgba(255, 200, 140, 0.5);
+            color: rgba(197, 218, 232, 0.5);
             font-size: 13px;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -396,7 +340,7 @@
         }
 
         .admin-link a:hover {
-            color: rgba(255, 200, 140, 0.85);
+            color: rgba(197, 218, 232, 0.85);
         }
 
         .admin-link.hidden {
@@ -410,13 +354,13 @@
             align-items: center;
             margin-bottom: 32px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 180, 100, 0.25);
+            border-bottom: 1px solid rgba(135, 166, 196, 0.2);
         }
 
         .admin-title {
             font-family: 'Ma Shan Zheng', serif;
             font-size: 28px;
-            color: #ffd9a8;
+            color: #f0e6d3;
             letter-spacing: 3px;
         }
 
@@ -472,25 +416,25 @@
         }
 
         .btn-edit {
-            background: rgba(255, 180, 100, 0.15);
-            border-color: rgba(255, 180, 100, 0.4);
-            color: #ffd9a8;
+            background: rgba(13, 110, 253, 0.15);
+            border-color: rgba(13, 110, 253, 0.4);
+            color: #a8cfff;
         }
 
         .btn-edit:hover {
-            background: rgba(255, 180, 100, 0.3);
-            border-color: rgba(255, 180, 100, 0.6);
+            background: rgba(13, 110, 253, 0.3);
+            border-color: rgba(13, 110, 253, 0.6);
         }
 
         .btn-del {
-            background: rgba(220, 80, 50, 0.15);
-            border-color: rgba(220, 80, 50, 0.4);
-            color: #ffb89a;
+            background: rgba(220, 53, 69, 0.15);
+            border-color: rgba(220, 53, 69, 0.4);
+            color: #f8d7da;
         }
 
         .btn-del:hover {
-            background: rgba(220, 80, 50, 0.3);
-            border-color: rgba(220, 80, 50, 0.6);
+            background: rgba(220, 53, 69, 0.3);
+            border-color: rgba(220, 53, 69, 0.6);
         }
 
         .action-cell {
@@ -512,21 +456,20 @@
         }
 
         .modal-box {
-            background: linear-gradient(180deg, #1a0a05 0%, #2d1408 100%);
-            border: 1px solid rgba(255, 180, 100, 0.35);
+            background: linear-gradient(180deg, #1a2332 0%, #1e3a5f 100%);
+            border: 1px solid rgba(135, 166, 196, 0.3);
             border-radius: 16px;
             padding: 28px;
             width: 100%;
             max-width: 500px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 120, 60, 0.15);
         }
 
         .modal-title {
             font-family: 'Ma Shan Zheng', serif;
             font-size: 22px;
-            color: #ffd9a8;
+            color: #f0e6d3;
             margin-bottom: 20px;
             letter-spacing: 2px;
         }
@@ -618,25 +561,23 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, rgba(60, 20, 10, 0.7) 0%, rgba(100, 40, 15, 0.6) 100%);
-            border: 1px solid rgba(255, 180, 100, 0.25);
+            background: rgba(13, 27, 48, 0.6);
+            border: 1px solid rgba(135, 166, 196, 0.2);
             border-radius: 16px;
             padding: 24px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(255, 120, 60, 0.1);
         }
 
         .stat-number {
             font-size: 36px;
             font-weight: 900;
-            color: #ffb060;
+            color: #f0e6d3;
             margin-bottom: 8px;
-            text-shadow: 0 0 20px rgba(255, 150, 80, 0.4);
         }
 
         .stat-label {
             font-size: 14px;
-            color: rgba(255, 200, 140, 0.75);
+            color: rgba(197, 218, 232, 0.7);
             letter-spacing: 1px;
         }
 
@@ -650,24 +591,24 @@
         .registrations-table td {
             padding: 16px;
             text-align: left;
-            border-bottom: 1px solid rgba(255, 180, 100, 0.18);
+            border-bottom: 1px solid rgba(135, 166, 196, 0.15);
         }
 
         .registrations-table th {
-            background: linear-gradient(135deg, rgba(80, 30, 15, 0.6) 0%, rgba(120, 50, 20, 0.5) 100%);
-            color: #ffd9a8;
+            background: rgba(13, 27, 48, 0.5);
+            color: #c5dae8;
             font-weight: 700;
             font-size: 14px;
             letter-spacing: 1px;
         }
 
         .registrations-table td {
-            color: #ffe5c0;
+            color: #e8f4f8;
             font-size: 14px;
         }
 
         .registrations-table tr:hover td {
-            background: rgba(255, 150, 80, 0.08);
+            background: rgba(135, 166, 196, 0.08);
         }
 
         .badge {
@@ -679,21 +620,21 @@
         }
 
         .badge-yes {
-            background: rgba(255, 140, 60, 0.2);
-            color: #ffb060;
-            border: 1px solid rgba(255, 140, 60, 0.35);
+            background: rgba(40, 167, 69, 0.2);
+            color: #b8e994;
+            border: 1px solid rgba(40, 167, 69, 0.3);
         }
 
         .badge-no {
-            background: rgba(120, 60, 40, 0.3);
-            color: #d4a584;
-            border: 1px solid rgba(180, 100, 60, 0.3);
+            background: rgba(108, 117, 125, 0.2);
+            color: #adb5bd;
+            border: 1px solid rgba(108, 117, 125, 0.3);
         }
 
         .empty-state {
             text-align: center;
             padding: 60px 20px;
-            color: rgba(255, 200, 140, 0.6);
+            color: rgba(197, 218, 232, 0.6);
         }
 
         .empty-icon {
@@ -705,14 +646,14 @@
         .back-link {
             display: inline-block;
             margin-top: 24px;
-            color: rgba(255, 200, 140, 0.75);
+            color: rgba(197, 218, 232, 0.7);
             text-decoration: none;
             font-size: 14px;
             transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            color: #ffd9a8;
+            color: #f0e6d3;
         }
 
         /* 未登录提示 */
@@ -730,14 +671,14 @@
         .login-prompt-title {
             font-family: 'Ma Shan Zheng', serif;
             font-size: 28px;
-            color: #ffd9a8;
+            color: #f0e6d3;
             margin-bottom: 16px;
             letter-spacing: 3px;
         }
 
         .login-prompt-desc {
             font-size: 15px;
-            color: rgba(255, 200, 140, 0.75);
+            color: rgba(197, 218, 232, 0.7);
             margin-bottom: 32px;
             line-height: 1.8;
         }
@@ -745,9 +686,9 @@
         .login-prompt-btn {
             display: inline-block;
             padding: 14px 40px;
-            background: linear-gradient(135deg, #ff6a30 0%, #ff8c40 50%, #ffb060 100%);
-            color: #fff5e6;
-            border: 1px solid rgba(255, 200, 130, 0.5);
+            background: linear-gradient(135deg, #2d4a6f 0%, #3d5a7f 50%, #4a6a8f 100%);
+            color: #f0e6d3;
+            border: 1px solid rgba(135, 166, 196, 0.4);
             border-radius: 14px;
             font-size: 16px;
             font-weight: 600;
@@ -780,18 +721,18 @@
         }
 
         .toast-success {
-            background: linear-gradient(135deg, #c25a20, #e87830);
-            border: 1px solid rgba(255, 180, 100, 0.5);
+            background: linear-gradient(135deg, #155724, #1e7e34);
+            border: 1px solid rgba(40, 167, 69, 0.4);
         }
 
         .toast-error {
-            background: linear-gradient(135deg, #6b2010, #a53020);
-            border: 1px solid rgba(220, 80, 50, 0.5);
+            background: linear-gradient(135deg, #721c24, #a53434);
+            border: 1px solid rgba(220, 53, 69, 0.4);
         }
 
         .toast-warning {
-            background: linear-gradient(135deg, #a56020, #d88030);
-            border: 1px solid rgba(255, 200, 130, 0.5);
+            background: linear-gradient(135deg, #856404, #a88919);
+            border: 1px solid rgba(255, 193, 7, 0.4);
         }
 
         @keyframes toastSlideIn {
@@ -837,20 +778,14 @@
     <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
     <div class="night-sky" id="nightSky">
-        <div class="stage-lights">
-            <div class="light-beam light-1"></div>
-            <div class="light-beam light-2"></div>
-            <div class="light-beam light-3"></div>
-            <div class="light-beam light-4"></div>
-        </div>
         <div class="moon"></div>
     </div>
 
     <!-- 前台报名 -->
     <div id="registerPage" class="container">
         <header class="header">
-            <h1 class="main-title">夏日音乐节</h1>
-            <p class="subtitle">演 出 报 名 系 统</p>
+            <h1 class="main-title">粽夏夜之梦</h1>
+            <p class="subtitle">演出报名系统</p>
         </header>
 
         <div class="card">
@@ -906,8 +841,8 @@
     <!-- 后台管理 -->
     <div id="adminPage" class="container hidden">
         <header class="header">
-            <h1 class="main-title">夏日音乐节</h1>
-            <p class="subtitle">后 台 管 理 系 统</p>
+            <h1 class="main-title">粽夏夜之梦</h1>
+            <p class="subtitle">后台管理系统</p>
         </header>
 
         <div class="card">
