@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第十四期轻音会 · VRC轻音会社</title>
+<meta name="description" content="第十四期轻音会 · 获选选手风采展示 | 夜樱流萤 · 灯火映归心">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;600;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;600;700;900&display=swap" media="print" onload="this.media='all'">
+<style>
+
+/* ============ 设计变量：宣纸 / 木 / 朱印 / 灯 ============ */
+:root{
+  --paper:#faf5f0;      /* 米白宣纸底 */
+  --paper-deep:#f1e7d8; /* 深一层的纸（卷边 / 章节带） */
+  --card:#fffcf6;       /* 纸卡面 */
+  --wood:#b07a4a;       /* 木色 */
+  --wood-deep:#8a5a33;
+  --wood-light:#cfa06f;
+  --seal:#c9405e;       /* 朱印红（唯一强点缀） */
+  --seal-deep:#a92c48;
+  --ink:#3a2e26;        /* 暖墨 */
+  --ink-soft:#6b5a4c;
+  --ink-faint:#96836b;  /* 占位 / 弱字 */
+  --lantern:#ffd9a3;    /* 灯笼暖光 */
+  --line:rgba(138,90,51,.3);
+  --serif:"Noto Serif SC","Songti SC",serif;
+  --brush:"Ma Shan Zheng","KaiTi","STKaiti",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:84px}
+html,body{min-height:100%}
+body{
+  font-family:var(--serif);color:var(--ink);background:var(--paper);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  background-image:
+    radial-gradient(1100px 520px at 50% -90px, rgba(255,214,160,.5), rgba(255,214,160,0) 62%),
+    radial-gradient(860px 480px at 94% 26%, rgba(255,214,160,.26), rgba(255,214,160,0) 60%),
+    radial-gradient(640px 420px at 6% 58%, rgba(201,64,94,.05), rgba(201,64,94,0) 60%);
+}
+::selection{background:rgba(201,64,94,.28)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+main{position:relative}
+
+/* ============ 通用：朱印 / 日之丸 / 绳结线 / 竖排字 / 灯笼 ============ */
+.seal{
+  display:inline-grid;place-items:center;flex:none;
+  background:var(--seal);color:#fdf4ea;font-family:var(--brush);
+  font-size:14px;line-height:1;letter-spacing:.05em;padding:0 5px;min-width:30px;height:30px;
+  border-radius:3px;
+  box-shadow:0 0 0 1px var(--seal-deep), inset 0 0 0 2px rgba(255,244,234,.22);
+}
+.seal-lg{min-width:50px;height:50px;font-size:24px}
+.seal-sm{min-width:22px;height:22px;font-size:10px;border-radius:2px}
+.seal-xl{min-width:64px;height:64px;font-size:30px}
+.seal[data-rot]{transform:rotate(-3deg)}
+
+.sun{
+  position:absolute;border-radius:50%;pointer-events:none;
+  background:repeating-conic-gradient(from -8deg, rgba(201,64,94,.17) 0deg 9deg, transparent 9deg 30deg);
+  opacity:.42;
+}
+/* 中央实心樱花：与日之丸红球同款淡度（.92 × .42 ≈ .39） */
+.kamon-core{position:absolute;pointer-events:none;color:var(--seal);opacity:.39}
+.sun-sm{
+  display:inline-block;width:19px;height:19px;border-radius:50%;vertical-align:-3px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(201,64,94,.95) 0 32%, transparent 32.5%),
+    repeating-conic-gradient(from -8deg, rgba(201,64,94,.24) 0deg 9deg, transparent 9deg 30deg);
+}
+
+/* 绳结装饰线：一线 + 中央菱形结 */
+.cord{position:relative;height:20px}
+.cord::before{
+  content:"";position:absolute;left:0;right:0;top:50%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(176,122,74,.55) 14%,rgba(176,122,74,.55) 86%,transparent);
+}
+.cord::after{
+  content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background:var(--paper);border:1px solid var(--wood-deep);
+  outline:1px solid var(--seal);outline-offset:2px;
+}
+
+/* 竖排装饰句 */
+.vtext{
+  writing-mode:vertical-rl;letter-spacing:.5em;
+  font-size:13px;font-weight:600;color:var(--ink-soft);
+}
+
+/* 灯笼：绳 + 罩 + 流苏（纯 CSS） */
+.lantern{position:relative;width:26px;height:42px;flex:none}
+.lantern .cap{position:absolute;left:50%;top:-20px;width:1px;height:20px;background:var(--wood)}
+.lantern .body{
+  position:absolute;left:0;bottom:0;width:26px;height:34px;
+  background:linear-gradient(180deg,#e2a561,var(--lantern) 45%,#f0b266);
+  border:1px solid var(--wood-deep);border-radius:7px 7px 9px 9px / 13px 13px 12px 12px;
+  box-shadow:0 4px 16px rgba(224,162,95,.55);
+}
+.lantern .body::before,.lantern .body::after{
+  content:"";position:absolute;left:3px;right:3px;height:1px;background:rgba(138,90,51,.5);
+}
+.lantern .body::before{top:7px}
+.lantern .body::after{top:10px}
+.lantern .tassel{position:absolute;left:50%;bottom:-8px;width:1px;height:8px;background:var(--seal)}
+.lantern .tassel::after{content:"";position:absolute;left:-2px;top:4px;width:5px;height:5px;border-radius:50%;background:var(--seal)}
+
+/* 灯笼暖光晕（径向光斑） */
+.glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(34px);animation:breathe 5.5s ease-in-out infinite alternate}
+/* 获选者区：恢复原始状态（完整圆球，延伸出模块上缘/右缘） */
+.glow-a{width:430px;height:430px;background:radial-gradient(circle at 42% 38%, rgba(255,205,140,.6), rgba(255,205,140,0) 64%);top:-130px;right:-100px}
+/* 影绘区左下：保持原始位置 */
+.glow-b{width:360px;height:360px;background:radial-gradient(circle at 50% 50%, rgba(255,205,140,.38), rgba(255,205,140,0) 66%);left:-70px;bottom:-90px}
+/* 影绘区右上：完整圆球且收在模块内（摄影署名右边） */
+.glow-g{top:10px;right:6px;width:380px;height:380px}
+@keyframes breathe{from{opacity:.5;transform:scale(1)}to{opacity:.75;transform:scale(1.07)}}
+
+/* ============ 章节头 ============ */
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.sec-head h2{font-family:var(--brush);font-weight:400;font-size:clamp(26px,3.2vw,36px);letter-spacing:.14em}
+.sec-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),rgba(138,90,51,.06))}
+.sec-head .sec-meta{font-size:13px;letter-spacing:.28em;color:var(--ink-faint)}
+.sec{position:relative;padding:74px 0 84px}
+
+/* ============ 入场：障子纸门 ============ */
+#entry{position:fixed;inset:0;z-index:90;cursor:pointer}
+.door{
+  position:absolute;top:0;height:100%;width:50.4%;will-change:transform;
+  background-color:#f4ecdc;
+  background-image:
+    radial-gradient(46% 62% at 50% 40%, rgba(255,214,160,.5), rgba(255,214,160,0) 72%),
+    repeating-linear-gradient(90deg, rgba(138,90,51,.12) 0 1.5px, transparent 1.5px 62px),
+    repeating-linear-gradient(0deg,  rgba(138,90,51,.05) 0 1px,   transparent 1px 150px);
+}
+.door-l{left:0;transform:translateX(0);transition:transform 1.5s cubic-bezier(.77,0,.17,1) .06s;border-right:1px solid rgba(138,90,51,.28)}
+.door-r{right:0;transform:translateX(0);transition:transform 1.5s cubic-bezier(.77,0,.17,1) .18s;border-left:1px solid rgba(138,90,51,.28)}
+.door-l::after,.door-r::after{
+  content:"";position:absolute;top:0;bottom:0;width:26px;pointer-events:none;
+}
+.door-l::after{right:0;background:linear-gradient(90deg,rgba(138,90,51,0),rgba(138,90,51,.14))}
+.door-r::after{left:0;background:linear-gradient(270deg,rgba(138,90,51,0),rgba(138,90,51,.14))}
+body.open .door-l{transform:translateX(-102%)}
+body.open .door-r{transform:translateX(102%)}
+
+.entry-content{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  text-align:center;transition:opacity .34s ease .55s;
+}
+#entry.fade .entry-content{opacity:0}
+.entry-title{font-family:var(--brush);font-weight:400;font-size:clamp(46px,7.2vw,92px);letter-spacing:.12em;color:var(--ink)}
+.entry-theme{font-size:clamp(15px,2vw,22px);font-weight:700;letter-spacing:.55em;text-indent:.55em;color:var(--wood-deep)}
+.entry-cord{width:min(430px,74vw)}
+.entry-hint{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.42em;color:var(--ink-soft)}
+.entry-hint .sun-sm{animation:hintPulse 2s ease-out infinite}
+@keyframes hintPulse{0%{box-shadow:0 0 0 0 rgba(201,64,94,.34)}70%{box-shadow:0 0 0 11px rgba(201,64,94,0)}100%{box-shadow:0 0 0 0 rgba(201,64,94,0)}}
+
+/* ============ 页头 ============ */
+.masthead{
+  position:relative;overflow:hidden;padding:96px 0 40px;text-align:center;
+}
+.masthead .sun{width:520px;height:520px;left:50%;top:6px;transform:translateX(-50%)}
+.masthead .kamon-core{width:252px;height:252px;left:50%;top:140px;transform:translateX(-50%)}
+.masthead .lantern{position:absolute;top:34px;right:8.5vw}
+.mast-vertical{
+  position:absolute;left:34px;top:50%;transform:translateY(-50%);
+  writing-mode:vertical-rl;letter-spacing:.52em;font-size:14px;font-weight:600;color:var(--ink-faint);
+}
+.mast-inner{position:relative;z-index:1}
+.mast-inner>*{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+body.open .mast-inner>*{opacity:1;transform:none}
+#m0{transition-delay:.92s}
+#m1{transition-delay:1.02s}
+#m2{transition-delay:1.12s}
+#m3{transition-delay:1.22s}
+.mast-seal-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:22px}
+.mast-tag{font-size:12px;letter-spacing:.42em;color:var(--ink-soft)}
+.masthead h1{
+  font-family:var(--brush);font-weight:400;line-height:1.18;
+  font-size:clamp(42px,6.4vw,82px);letter-spacing:.08em;color:var(--ink);
+}
+.masthead .theme{
+  margin-top:18px;font-size:clamp(15px,1.9vw,21px);font-weight:700;
+  letter-spacing:.5em;text-indent:.5em;color:var(--wood-deep);
+}
+.masthead .mast-meta{
+  margin-top:14px;font-size:12px;font-weight:400;letter-spacing:.4em;color:var(--ink-faint);
+}
+
+/* ============ 融入式导航：顶部胶囊锚点条（非侧栏） ============ */
+.guide{
+  position:sticky;top:0;z-index:60;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:11px 16px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:rgba(250,245,240,.96);
+}
+@supports (backdrop-filter:blur(8px)){.guide{background:rgba(250,245,240,.86);backdrop-filter:blur(8px)}}
+.guide-label{font-size:11px;letter-spacing:.5em;color:var(--ink-faint);margin-right:8px}
+.guide a{
+  padding:7px 20px;font-size:14px;letter-spacing:.18em;color:var(--ink-soft);
+  border:1px solid rgba(138,90,51,.42);background:var(--card);
+  transition:color .25s,background .25s,border-color .25s,box-shadow .25s;
+}
+.guide a:hover{color:var(--seal-deep);border-color:var(--seal);background:#fff9ef;box-shadow:0 3px 10px rgba(138,90,51,.14)}
+
+/* ============ 图片展示区：黄昏横幅 + 夜樱札 ============ */
+/* 影绘：右上保持完整光球（与获选者区同规格，避免背景渐变被容器截断） */
+#gallery{}
+.scene-wrap{position:relative;margin-top:26px}
+.scene{
+  position:relative;background:var(--card);padding:10px;
+  border:1px solid rgba(138,90,51,.5);
+  box-shadow:0 22px 44px rgba(138,90,51,.2);
+}
+.scene::before{
+  content:"";position:absolute;inset:5px;border:1px solid rgba(138,90,51,.2);pointer-events:none;
+}
+.scene > img{width:100%;aspect-ratio:16/9;object-fit:cover;cursor:zoom-in}
+.scene .vtext{
+  position:absolute;right:24px;top:8px;bottom:8px;font-size:12px;
+  color:rgba(58,46,38,.42);pointer-events:none;
+}
+.scene figcaption{
+  position:absolute;left:22px;bottom:20px;font-size:12px;letter-spacing:.34em;color:var(--ink-soft);
+  background:rgba(250,245,240,.78);
+}
+/* 花札式卡片：细双框 + 角标 + 印章 */
+.hana{
+  position:absolute;right:-26px;bottom:-38px;width:238px;z-index:2;
+  background:#fffdf7;padding:9px;
+  border:1px solid rgba(138,90,51,.55);
+  box-shadow:0 16px 34px rgba(138,90,51,.3);
+  transform:rotate(2.4deg);
+}
+.hana::before{
+  content:"";position:absolute;inset:4px;border:1px solid rgba(201,64,94,.42);pointer-events:none;
+}
+.hana img{width:100%;aspect-ratio:9/16;object-fit:cover;cursor:zoom-in}
+.hana .hana-seal{position:absolute;top:16px;left:16px}
+.hana .hana-vtext{
+  position:absolute;right:16px;top:18px;
+  writing-mode:vertical-rl;letter-spacing:.34em;font-size:10px;color:rgba(58,46,38,.5);pointer-events:none;
+}
+.hana .hana-stamp{
+  position:absolute;right:14px;bottom:14px;transform:rotate(-5deg);
+  background:var(--seal);color:#fdf4ea;font-family:var(--brush);
+  font-size:12px;letter-spacing:.1em;padding:3px 7px;border-radius:2px;
+  box-shadow:0 0 0 1px var(--seal-deep);
+}
+.hana .v-hint{
+  position:absolute;left:16px;bottom:18px;font-size:10px;letter-spacing:.24em;color:var(--ink-faint);
+}
+
+/* ============ 歌曲信息区：四格札卡 ============ */
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px}
+.info-card{
+  position:relative;background:var(--card);padding:22px 20px 20px;
+  border:1px solid rgba(138,90,51,.42);
+  box-shadow:0 10px 22px rgba(138,90,51,.1);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.info-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(138,90,51,.16)}
+.info-card::before{content:"";position:absolute;inset:5px;border:1px solid rgba(201,64,94,.32);pointer-events:none}
+.ic-seal{
+  position:absolute;top:14px;left:14px;
+  display:grid;place-items:center;
+  width:26px;height:26px;background:var(--seal);color:#fdf4ea;
+  font-family:var(--brush);font-size:13px;border-radius:2px;
+  box-shadow:0 0 0 1px var(--seal-deep), inset 0 0 0 1.5px rgba(255,244,234,.2);
+}
+.ic-label{
+  margin:34px 0 10px;padding-bottom:9px;border-bottom:1px solid var(--line);
+  font-size:12px;letter-spacing:.34em;color:var(--ink-faint);
+}
+.ic-value{font-size:clamp(17px,1.6vw,20px);font-weight:600;letter-spacing:.05em}
+.ic-value.ph{color:var(--ink-faint);font-weight:400}
+.ic-note{margin-top:9px;font-size:11px;letter-spacing:.12em;color:var(--ink-faint)}
+.info-foot{margin-top:20px;font-size:13px;letter-spacing:.1em;color:var(--ink-faint)}
+
+/* ============ 获选者区：心路 ============ */
+.winner-sec{background:linear-gradient(180deg,var(--paper),var(--paper-deep))}
+.winner-sec::before,.winner-sec::after{
+  content:"";position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(138,90,51,.4),transparent);
+}
+.winner-sec::before{top:0}
+.winner-sec::after{bottom:0}
+.winner-grid{display:grid;grid-template-columns:330px 1fr;gap:38px;margin-top:26px;align-items:start}
+/* 左列：入选卡 + 竖图札（纵向叠放） */
+.name-col{display:flex;flex-direction:column;gap:28px}
+.hana-card{
+  position:relative;background:#fffdf7;padding:9px;
+  border:1px solid rgba(138,90,51,.55);
+  box-shadow:0 16px 34px rgba(138,90,51,.28);
+  transform:rotate(-1.2deg);
+}
+.hana-card::before{content:"";position:absolute;inset:4px;border:1px solid rgba(201,64,94,.42);pointer-events:none}
+.hana-card img{width:100%;aspect-ratio:9/16;object-fit:cover;cursor:zoom-in}
+.hana-card .hana-seal{position:absolute;top:16px;left:16px}
+.hana-card .hana-vtext{
+  position:absolute;right:16px;top:18px;
+  writing-mode:vertical-rl;letter-spacing:.34em;font-size:10px;color:rgba(58,46,38,.5);pointer-events:none;
+}
+.hana-card .hana-stamp{
+  position:absolute;right:14px;bottom:14px;transform:rotate(-5deg);
+  background:var(--seal);color:#fdf4ea;font-family:var(--brush);
+  font-size:12px;letter-spacing:.1em;padding:3px 7px;border-radius:2px;
+  box-shadow:0 0 0 1px var(--seal-deep);
+}
+.hana-card .v-hint{
+  position:absolute;left:16px;bottom:18px;font-size:10px;letter-spacing:.24em;color:var(--ink-faint);
+}
+.name-panel{position:relative;background:var(--card);padding:26px 24px 24px;border:1px solid rgba(138,90,51,.45);box-shadow:0 12px 26px rgba(138,90,51,.12)}
+.name-panel::before{content:"";position:absolute;inset:5px;border:1px solid rgba(201,64,94,.3);pointer-events:none}
+.name-panel .seal{position:absolute;top:-14px;right:18px}
+.np-label{font-size:12px;letter-spacing:.34em;color:var(--ink-faint)}
+.np-name{margin-top:12px;font-family:var(--brush);font-weight:400;font-size:clamp(26px,2.4vw,34px);letter-spacing:.1em}
+.np-name.ph{font-family:var(--serif);font-size:clamp(19px,1.8vw,23px);color:var(--ink-faint);font-weight:400}
+.np-foot{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.14em;color:var(--ink-faint)}
+
+.winner-right{display:flex;flex-direction:column;gap:34px}
+.quote{position:relative;padding:4px 0 2px 36px}
+.quote::before{
+  content:"「";position:absolute;left:0;top:-16px;
+  font-size:58px;line-height:1;color:var(--seal);opacity:.45;pointer-events:none;
+}
+.quote::after{
+  content:"」";position:absolute;right:0;bottom:-28px;
+  font-size:58px;line-height:1;color:var(--seal);opacity:.45;pointer-events:none;
+}
+.quote p{font-size:16px;line-height:2.05;letter-spacing:.06em;text-align:center}
+.quote .qp{color:var(--ink-faint)}
+.quote .from{display:block;margin-top:14px;font-size:12px;letter-spacing:.3em;color:var(--ink-faint);text-align:center}
+
+.journey-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+.journey-head h3{font-family:var(--brush);font-weight:400;font-size:22px;letter-spacing:.14em}
+.journey-head .cord{flex:1;height:14px}
+.journey-body{
+  position:relative;max-height:6.6em;overflow:hidden;
+  font-size:15px;line-height:2.1;letter-spacing:.05em;color:var(--ink-soft);
+  transition:max-height .5s ease;
+}
+.journey-body::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2.4em;
+  background:linear-gradient(180deg,transparent,var(--paper-deep));pointer-events:none;
+  transition:opacity .4s ease;
+}
+.journey-body.open{overflow:hidden} /* 展开高度由 JS 限制：与左列竖图卡底部平齐 */
+.journey-toggle{
+  display:flex;align-items:center;gap:8px;margin-top:12px;
+  font-size:14px;letter-spacing:.22em;color:var(--seal-deep);
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:5px;
+}
+.chev{display:inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--seal);transition:transform .3s ease}
+.journey-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+
+/* ============ 页脚 ============ */
+.foot{position:relative;padding:30px 0 40px}
+.foot .cord{margin-bottom:18px}
+.foot-inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.foot p{font-size:13px;letter-spacing:.18em;color:var(--ink-soft)}
+.foot .seal-sm{margin-left:4px}
+
+/* ============ BGM 播放器内核（复用站内内核 · 和风皮肤） ============ */
+.bgm-wrap{position:fixed;right:1.5rem;bottom:1.6rem;z-index:70;display:flex;flex-direction:column;align-items:flex-end}
+.bgm-ball{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  color:var(--seal-deep);
+  background:radial-gradient(circle at 34% 28%, #fff3df, var(--wood-light) 46%, var(--wood) 78%);
+  border:1px solid var(--wood-deep);
+  box-shadow:0 6px 18px rgba(138,90,51,.34), inset 0 0 0 3px rgba(255,250,240,.35);
+  transition:transform .25s,box-shadow .25s;
+}
+.bgm-ball:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(138,90,51,.42),0 0 30px rgba(255,205,140,.5),inset 0 0 0 3px rgba(255,250,240,.35)}
+.bgm-ball::after{
+  content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(201,64,94,.3);opacity:0;
+}
+.bgm-ball.is-playing::after{animation:ballPulse 2.6s ease-out infinite}
+@keyframes ballPulse{0%{opacity:0;transform:scale(.85)}40%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
+.ic{width:22px;height:22px;display:block;fill:currentColor}
+.ic-pause{display:none}
+.bgm-ball.is-playing .ic-play{display:none}
+.bgm-ball.is-playing .ic-pause{display:block}
+
+.bgm-panel{
+  position:absolute;bottom:calc(100% + 14px);right:0;width:244px;
+  background:linear-gradient(180deg,#fffdf8,#faf1e1);padding:14px 16px 13px;
+  border:1px solid rgba(138,90,51,.45);box-shadow:0 14px 30px rgba(138,90,51,.26);
+  opacity:0;transform:translateY(9px);pointer-events:none;
+  transition:opacity .28s ease,transform .28s ease;
+}
+.bgm-panel::before{content:"";position:absolute;inset:4px;border:1px solid rgba(201,64,94,.3);pointer-events:none}
+.bgm-panel.is-open,.bgm-wrap:hover .bgm-panel{opacity:1;transform:none;pointer-events:auto}
+.bgm-kicker{font-size:11px;letter-spacing:.4em;color:var(--seal)}
+.bgm-title{font-size:14px;line-height:1.8;letter-spacing:.04em;color:var(--ink);margin:8px 0 12px}
+.bgm-collapse{
+  font-size:12px;letter-spacing:.28em;color:var(--seal-deep);
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;
+}
+.bgm-collapse:hover{color:var(--ink)}
+@media (hover:none){
+  .bgm-wrap:hover .bgm-panel{opacity:0;transform:translateY(9px);pointer-events:none}
+}
+
+/* ============ Lightbox ============ */
+.lightbox{
+  position:fixed;inset:0;z-index:95;display:none;
+  background:radial-gradient(circle at 50% 42%, rgba(90,60,28,.55), rgba(24,16,9,.96) 72%);
+}
+.lightbox.is-open{display:block}
+.lb-stage{position:absolute;inset:0;display:grid;place-items:center;padding:50px;cursor:zoom-out}
+.lb-frame{background:#fdf9f0;padding:14px;border:1px solid rgba(138,90,51,.55);box-shadow:0 34px 90px rgba(0,0,0,.55);cursor:default}
+.lb-frame img{max-width:calc(92vw - 30px);max-height:calc(88vh - 30px);object-fit:contain}
+.lb-close{
+  position:absolute;top:20px;right:24px;width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(246,231,212,.45);color:#f6e7d4;background:rgba(255,244,234,.12);
+  font-size:26px;line-height:1;letter-spacing:0;
+}
+.lb-close:hover{background:rgba(201,64,94,.55);border-color:rgba(201,64,94,.8)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1080px){
+  .hana{right:-14px;width:210px}
+}
+@media (max-width:900px){
+  .info-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .winner-grid{grid-template-columns:1fr;gap:34px}
+  .hana-card{max-width:300px;margin:0 auto;transform:none}
+}
+@media (max-width:820px){
+  .hana{
+    position:static;transform:rotate(1.1deg);
+    width:198px;margin:34px auto 6px;
+  }
+  .scene-wrap{margin-top:22px}
+}
+@media (max-width:768px){
+  .mast-vertical,.masthead .lantern{display:none}
+  .masthead{padding-top:64px}
+  .guide{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:10px 14px}
+  .guide::-webkit-scrollbar{display:none}
+  .guide a{flex:none;padding:6px 15px;font-size:13px}
+  .sec{padding:56px 0 64px}
+  .scene figcaption{left:16px;bottom:14px;font-size:10px;letter-spacing:.24em}
+  .scene .vtext{display:none}
+  .bgm-wrap{right:1rem;bottom:1.1rem}
+  .bgm-ball{width:50px;height:50px}
+  .bgm-panel{width:min(244px,74vw)}
+  .masthead .sun{width:340px;height:340px}
+  .masthead .kamon-core{width:165px;height:165px;top:94px}
+  .glow-a{width:300px;height:300px}
+  .glow-b{width:260px;height:260px}
+}
+@media (max-width:420px){
+  .info-grid{gap:12px}
+  .info-card{padding:18px 15px 16px}
+  .lb-stage{padding:20px}
+}
+
+/* ============ 动效偏好 ============ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  /* 障子开门是内容的揭示过渡（非装饰动效）：保持可见 */
+  #entry .door,#entry .door::after{transition-duration:1.5s!important}
+  #entry .door-l{transition-delay:.06s!important}
+  #entry .door-r{transition-delay:.18s!important}
+  #entry .entry-content{transition-duration:.34s!important;transition-delay:.55s!important}
+}
+
+</style>
+<!-- 樱花实心纹章 symbol（五瓣樱 + 蕊 + 虚环） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="kamonShape" viewBox="0 0 200 200">
+<g fill="currentColor">
+<path d="M100 20 C104 46 128 58 130 82 C132 104 118 120 100 126 C82 120 68 104 70 82 C72 58 96 46 100 20 Z"/>
+<path d="M100 20 C104 46 128 58 130 82 C132 104 118 120 100 126 C82 120 68 104 70 82 C72 58 96 46 100 20 Z" transform="rotate(72 100 100)"/>
+<path d="M100 20 C104 46 128 58 130 82 C132 104 118 120 100 126 C82 120 68 104 70 82 C72 58 96 46 100 20 Z" transform="rotate(144 100 100)"/>
+<path d="M100 20 C104 46 128 58 130 82 C132 104 118 120 100 126 C82 120 68 104 70 82 C72 58 96 46 100 20 Z" transform="rotate(216 100 100)"/>
+<path d="M100 20 C104 46 128 58 130 82 C132 104 118 120 100 126 C82 120 68 104 70 82 C72 58 96 46 100 20 Z" transform="rotate(288 100 100)"/>
+<circle cx="100" cy="100" r="6.5" fill="#fdf4ea"/>
+<g opacity=".92">
+<circle cx="115.5" cy="100" r="2.5"/><circle cx="105" cy="113.5" r="2.5"/>
+<circle cx="95" cy="113.5" r="2.5"/><circle cx="84.5" cy="100" r="2.5"/>
+<circle cx="100" cy="87" r="2.5"/>
+</g>
+<circle cx="100" cy="100" r="58" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="3 8" opacity=".55"/>
+</g>
+</symbol>
+</svg>
+<!-- ==================== 入场遮罩：障子纸门 ==================== -->
+<div id="entry" role="button" tabindex="0" aria-label="点击进入第十四期轻音会页面">
+<div class="door door-l"></div>
+<div class="door door-r"></div>
+<div class="entry-content">
+<div class="lantern" aria-hidden="true"><span class="cap"></span><span class="body"></span><span class="tassel"></span></div>
+<span class="seal seal-lg" data-rot>軽音</span>
+<h1 class="entry-title">第十四期轻音会</h1>
+<p class="entry-theme">夜樱流萤 · 灯火映归心</p>
+<div class="cord entry-cord"></div>
+<p class="entry-hint"><span class="sun-sm"></span>轻触任意处 · 障子开启</p>
+</div>
+</div>
+<main>
+<div class="wrap">
+<!-- ==================== 页头 ==================== -->
+<header class="masthead">
+<span class="sun" aria-hidden="true"></span>
+<svg class="kamon-core" viewBox="0 0 200 200" aria-hidden="true"><use href="#kamonShape"/></svg>
+<div class="lantern" id="mastLantern" aria-hidden="true"><span class="cap"></span><span class="body"></span><span class="tassel"></span></div>
+<span class="mast-vertical" aria-hidden="true">夜樱流萤 · 灯火映归心</span>
+<div class="mast-inner">
+<div class="mast-seal-row" id="m0">
+<span class="seal seal-lg" data-rot>軽音</span>
+<span class="mast-tag">VRChat 音乐社团 · 每周歌会</span>
+</div>
+<h1 id="m1">第十四期轻音会</h1>
+<p class="theme" id="m2">夜樱流萤 · 灯火映归心</p>
+<p class="mast-meta" id="m3">第十五次正式活动 · 回顾</p>
+</div>
+</header>
+</div>
+<!-- 融入式导航：顶部胶囊锚点条（无独立侧栏） -->
+<nav class="guide" aria-label="站点导航">
+<span class="guide-label" aria-hidden="true">目 次</span>
+<a href="/about/">关于我们</a>
+<a href="/p/shiwud/">本期活动</a>
+<a href="/p/gd/">轻音歌单</a>
+<a href="/apps/vote/">投票系统</a>
+</nav>
+<div class="wrap">
+<!-- ==================== 图片展示区：黄昏横幅 + 夜樱札 ==================== -->
+<section class="sec" id="gallery" aria-labelledby="galleryTitle">
+<span class="glow glow-a glow-g" aria-hidden="true"></span>
+<span class="glow glow-b" aria-hidden="true"></span>
+<div class="sec-head">
+<span class="seal" aria-hidden="true">影</span>
+<h2 id="galleryTitle">本期影绘</h2>
+<span class="rule"></span>
+<span class="sec-meta">摄影：QutaiBai柒白</span>
+</div>
+<div class="scene-wrap">
+<figure class="scene">
+<img src="https://img.vrclmcl.asia/LMCL/2026/08/24/横图.jpg" alt="黄昏庭院 · 樱花树下的少女"
+data-lightbox="https://img.vrclmcl.asia/LMCL/2026/08/24/横图.jpg" title="点击放大">
+<span class="vtext" aria-hidden="true">第十四期 · 轻音会</span>
+<figcaption>黄昏庭院 · 樱下少女</figcaption>
+</figure>
+<!-- 花札式卡片：细双框·角标·印章；竖图为夜樱特写 -->
+<figure class="hana" aria-label="夜樱特写卡片">
+<img src="https://img.vrclmcl.asia/LMCL/2026/08/24/竖图.jpg" alt="夜樱特写 · 玫粉垂樱与少女"
+data-lightbox="https://img.vrclmcl.asia/LMCL/2026/08/24/竖图.jpg" title="点击放大">
+<span class="seal seal-sm hana-seal" aria-hidden="true">夜樱</span>
+<span class="hana-vtext" aria-hidden="true">夜樱 · 特写</span>
+<span class="hana-stamp" aria-hidden="true">軽音</span>
+<span class="v-hint" aria-hidden="true">竖札</span>
+</figure>
+</div>
+</section>
+<!-- ==================== 歌曲信息区：四格札卡 ==================== -->
+<section class="sec" id="song" aria-labelledby="songTitle">
+<div class="sec-head">
+<span class="seal" aria-hidden="true">音</span>
+<h2 id="songTitle">本次曲目</h2>
+<span class="rule"></span>
+</div>
+<div class="info-grid">
+<article class="info-card">
+<span class="ic-seal" aria-hidden="true">时</span>
+<div class="ic-label">活动时间</div>
+<div class="ic-value">第十五次正式活动</div>
+</article>
+<article class="info-card">
+<span class="ic-seal" aria-hidden="true">曲</span>
+<div class="ic-label">曲名</div>
+<div class="ic-value">黑兽卯 子路 战斗曲</div>
+</article>
+<article class="info-card">
+<span class="ic-seal" aria-hidden="true">作</span>
+<div class="ic-label">作者</div>
+<div class="ic-value">边狱巴士</div>
+</article>
+<article class="info-card">
+<span class="ic-seal" aria-hidden="true">人</span>
+<div class="ic-label">获选投稿人</div>
+<div class="ic-value">塑心</div>
+</article>
+</div>
+<p class="info-foot"><a href="https://music.163.com/#/program?id=3074497112" target="_blank" rel="noopener" style="text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px">网易云 · 节目链接（黑兽卯 子路 战斗曲）</a></p>
+</section>
+<!-- ==================== 获选者区：心路 ==================== -->
+<section class="sec winner-sec" id="winner" aria-labelledby="winnerTitle">
+<span class="glow glow-a" aria-hidden="true"></span>
+<div class="wrap">
+<div class="sec-head">
+<span class="seal" aria-hidden="true">人</span>
+<h2 id="winnerTitle">获选者 · 心路</h2>
+<span class="rule"></span>
+</div>
+<div class="winner-grid">
+<div class="name-col">
+<aside class="name-panel">
+<span class="seal" data-rot aria-hidden="true">入选</span>
+<div class="np-label">获选者 · 姓名</div>
+<div class="np-name">塑心</div>
+<p class="np-foot">第十五次正式活动 · 获选投稿人</p>
+</aside>
+<!-- 竖图 · 夜樱札（入选卡下方） -->
+<figure class="hana-card" aria-label="夜樱特写卡片">
+<img src="https://img.vrclmcl.asia/LMCL/2026/08/24/竖图.jpg" alt="夜樱特写 · 玫粉垂樱与少女"
+data-lightbox="https://img.vrclmcl.asia/LMCL/2026/08/24/竖图.jpg" title="点击放大">
+<span class="seal seal-sm hana-seal" aria-hidden="true">夜樱</span>
+<span class="hana-vtext" aria-hidden="true">夜樱 · 特写</span>
+<span class="hana-stamp" aria-hidden="true">軽音</span>
+<span class="v-hint" aria-hidden="true">竖札</span>
+</figure>
+</div>
+<div class="winner-right">
+<blockquote class="quote">
+<p class="qp">非常开心能获得这次奖项，感谢大家对我所选曲子的认可<br>也非常感谢Mili乐队带来非常顶级的作曲，作词还有歌唱<br>在以后我会继续为大家带来其它好听的曲作</p>
+<span class="from">—— 获选者 <em>塑心</em></span>
+</blockquote>
+<div class="journey">
+<div class="journey-head">
+<h3>投稿心路历程</h3>
+<span class="cord" aria-hidden="true"></span>
+</div>
+<div class="journey-body" id="journeyBody">
+作为五指为了制造出操纵天杀星刀『阿赖耶识』的良秀（Yoshihide）的童年在蜘蛛巢并不是幸福的，而她血缘上的生母盐见夜，也因为是被拐进来的而心情愈加变差。<br>
+但是盐见夜作为亲生母亲，血脉里的那份爱最终还是战胜了心情，她必须不能让良秀（Yoshihide）变得跟她一样在蜘蛛巢产生纠缠，所以她必须狠下心来········<br>
+然后在某一天，良秀（Yoshihide）接到了去剿灭某个地方的任务，在那里，她得到了改变一生的人——阿赖耶，她把阿赖耶带回了蜘蛛巢，阿赖耶的一句话让她在此后完成了化为良秀（Ryoshu）的转变<br>
+<strong>“长大之后…我想成为妈妈的妈妈…这样我就能给妈妈更多的爱了……”</strong><br>
+“And S is not for sayonara”字母S代表的不是永别，而是再会<br>
+良秀在这种生活环境下不懂普通的爱，只会极端的付出，从而让良秀默认为爱等于自我牺牲<br>
+可阿赖耶只想要良秀的陪伴<br>
+”I wanted the very best for you, believe me<br>
+Our threads in red can never be cut“红绳在日本象征着缘分<br>
+哪怕记忆磨灭、天人永隔，血缘与羁绊不会被斩断。呼应故事结尾，哪怕良秀遗忘很多过往，心底依旧残存对阿赖耶的牵挂<br>
+良秀一直在寻求外在对阿赖耶的保护，却忽视了阿赖耶内心情感的缺失<br>
+Cause S is not for sayonara<br>
+Let memories play back<br>
+Will you forgive me at last?<br>
+所以S不代表永别<br>
+愿回忆能够不断回放<br>
+到最终，你能否原谅我？<br>
+结尾歌词这里是良秀对女儿阿赖耶贯通全曲的忏悔<br>
+良秀她清楚自己作为母亲充满缺陷：冷漠、偏执、不懂沟通，把自己创伤投射在孩子身上。她最大的渴望，是获得女儿的谅解。<br>
+这首歌曲提出尖锐命题：<br>
+以自我毁灭为前提的牺牲，是爱，还是逃避？<br>
+良秀曾经以为牺牲就是最高奉献；最终认清：真正的联结，不是单方面流血守护，而是彼此共处、互相看见。<br>
+在故事的推进中不断面对失去、死亡、记忆剥离。<br>
+边狱所有角色都不断承受离别；而《SAIKAI》给出一种信念：<br>
+肉体的分开、时间的流逝、记忆的消失≠永久断绝。<br>
+羁绊独立于现实存在，永别（sayonara）不是终点，再会（saikai）才是永恒的期许。
+</div>
+<button class="journey-toggle" id="journeyToggle" type="button" aria-expanded="false" hidden>
+展开全文<span class="chev" aria-hidden="true"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- ==================== 页脚 ==================== -->
+<footer class="foot">
+<div class="wrap">
+<div class="cord" aria-hidden="true"></div>
+<div class="foot-inner">
+<span class="sun-sm" aria-hidden="true"></span>
+<p>© VRC轻音会社 · Q群 983271795 · author ltyytn</p>
+<span class="seal seal-sm" aria-hidden="true">軽音</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- ==================== BGM 播放器（内核功能照抄站内 · 和风皮肤） ==================== -->
+<div class="bgm-wrap" id="bgmWrap">
+<div class="bgm-panel" id="bgmPanel" aria-label="背景音乐播放面板">
+<p class="bgm-kicker">本回 BGM · 循环</p>
+<p class="bgm-title">黑兽卯 子路 战斗曲 · 边狱巴士</p>
+<button class="bgm-collapse" id="bgmCollapse" type="button">收起</button>
+</div>
+<button class="bgm-ball" id="bgmBall" aria-label="播放背景音乐">
+<svg class="ic ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5.5v13l11-6.5z"/></svg>
+<svg class="ic ic-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+</button>
+</div>
+<audio id="bgm" loop preload="none" src="https://music.163.com/song/media/outer/url?id=2688091026.mp3"></audio>
+<!-- ==================== Lightbox ==================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片放大查看">
+<div class="lb-stage" id="lbStage">
+<div class="lb-frame" id="lbFrame"><img id="lbImg" alt=""></div>
+</div>
+<button class="lb-close" id="lbClose" type="button" aria-label="关闭放大图片">×</button>
+</div>
+<script>
+/* ---------- 小工具 ---------- */
+function $(id){ return document.getElementById(id); }
+function $$(sel,el){ return Array.prototype.slice.call((el||document).querySelectorAll(sel)); }
+
+/* ---------- 入场：障子纸门 ---------- */
+var curtain = $('entry'), entered = false;
+function enterSite(){
+if(entered) return; entered = true;
+curtain.classList.add('fade');
+document.body.classList.add('open');
+document.body.classList.remove('gate');
+setTimeout(function(){ curtain.style.display = 'none'; }, 1800);
+setTimeout(tryPlay, 300); /* 进入后约 0.3s 尝试 BGM */
+}
+curtain.addEventListener('click', enterSite);
+curtain.addEventListener('keydown', function(e){
+if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); enterSite(); }
+});
+
+/* ---------- BGM 内核（复用站内内核：悬浮球 ▶/⏸ + 悬停面板 + 自动尝试） ---------- */
+var audio = $('bgm'), ball = $('bgmBall');
+if(audio){ try{ audio.volume = 0.75; }catch(e){} }
+function tryPlay(){
+if(!audio) return;
+var p = audio.play();
+if(p && p.catch) p.catch(function(){ /* 浏览器拦截或资源暂缺：静默 */ });
+}
+audio.addEventListener('playing', function(){ ball.classList.add('is-playing'); ball.setAttribute('aria-label','暂停背景音乐'); });
+audio.addEventListener('pause',     function(){ ball.classList.remove('is-playing'); ball.setAttribute('aria-label','播放背景音乐'); });
+audio.addEventListener('ended',     function(){ ball.classList.remove('is-playing'); });
+ball.addEventListener('click', function(){
+if(audio.paused){ tryPlay(); } else { audio.pause(); }
+});
+window.addEventListener('load', function(){ /* 音乐仅在入场动画点击后播放，不自动预播 */ });
+
+/* 面板：悬停展开（桌面）／点按切换（触屏） */
+var panel = $('bgmPanel');
+$('bgmCollapse').addEventListener('click', function(){ panel.classList.remove('is-open'); });
+if(window.matchMedia && !window.matchMedia('(hover: hover)').matches){
+ball.addEventListener('touchstart', function(){ panel.classList.toggle('is-open'); }, { passive:true });
+}
+
+/* ---------- 投稿心路历程：收起时截断到与左列竖图卡底部平齐；展开显示全文 ---------- */
+var jBody = $('journeyBody'), jToggle = $('journeyToggle');
+if(jBody && jToggle){
+function journeyCutoff(){
+var card = document.querySelector('.winner-grid .hana-card');
+if(!card) return 99999;
+var cb = card.getBoundingClientRect().bottom;
+var jt = jBody.getBoundingClientRect().top;
+return Math.max(cb - jt - 46, 120);
+}
+var initCut = Math.round(journeyCutoff());
+if(jBody.scrollHeight > initCut + 2){ jToggle.hidden = false; }
+jBody.style.maxHeight = initCut + 'px'; /* 初始：截断到与左图底部平齐 */
+jToggle.addEventListener('click', function(){
+var open = jBody.classList.toggle('open');
+if(open){
+jBody.style.maxHeight = jBody.scrollHeight + 'px'; /* 过渡动画到全文 */
+setTimeout(function(){ if(jBody.classList.contains('open')){ jBody.style.maxHeight = 'none'; } }, 560); /* 完全展开 */
+}else{
+jBody.style.maxHeight = journeyCutoff() + 'px'; /* 收回：与左图底部平齐 */
+}
+jToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+jToggle.firstChild.nodeValue = open ? '收起全文' : '展开全文';
+});
+addEventListener('resize', function(){
+if(!jBody.classList.contains('open')){ jBody.style.maxHeight = journeyCutoff() + 'px'; }
+});
+}
+
+/* ---------- Lightbox：点击全屏放大 ---------- */
+var lightbox = $('lightbox'), lbImg = $('lbImg');
+function openLightbox(src, alt){
+lbImg.src = src; lbImg.alt = alt || '';
+lightbox.classList.add('is-open');
+document.body.classList.add('gate');
+}
+function closeLightbox(){
+lightbox.classList.remove('is-open');
+document.body.classList.remove('gate');
+}
+$$('[data-lightbox]').forEach(function(img){
+img.addEventListener('click', function(){
+openLightbox(img.getAttribute('data-lightbox'), img.getAttribute('alt'));
+});
+});
+$('lbStage').addEventListener('click', function(e){ if(e.target === this){ closeLightbox(); } });
+$('lbFrame').addEventListener('click', function(e){ e.stopPropagation(); });
+$('lbClose').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape' && lightbox.classList.contains('is-open')){ closeLightbox(); }
+});
+</script>
+
+</body>
+</html>

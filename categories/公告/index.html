@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/'>
 
-<link rel="stylesheet" href="/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css"><meta property='og:title' content="Category: 公告 - VRC轻音会社">
+<link rel="stylesheet" href="/scss/style.min.81579ea678e30582aa60028bfe3192821d6c0fee666ee279be318fb5b558916b.css"><meta property='og:title' content="Category: 公告 - VRC轻音会社">
 <meta property='og:description' content="日常公告">
 <meta property='og:url' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/'>
 <meta property='og:site_name' content='VRC轻音会社'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-07-18T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-08-21T00:00:00&#43;00:00 '/><meta property='og:image' content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' />
 <meta name="twitter:title" content="Category: 公告 - VRC轻音会社">
 <meta name="twitter:description" content="日常公告"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/logo%E5%9B%BE%E6%A0%87.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://vrclmcl.asia/categories/%E5%85%AC%E5%91%8A/index.xml">
@@ -326,11 +326,11 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/categories/%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/" class="font_size_19">
+            <a href="/categories/%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/" class="font_size_20">
                 活动合照
             </a>
         
-            <a href="/categories/%E8%BD%BB%E9%9F%B3%E4%BC%9A/" class="font_size_13">
+            <a href="/categories/%E8%BD%BB%E9%9F%B3%E4%BC%9A/" class="font_size_14">
                 轻音会
             </a>
         
@@ -375,7 +375,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shisihd/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shiwud/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -386,7 +386,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十四次活动合照</div>
+        <div class="qyh-nav-item-desc">第十五次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -668,6 +668,15 @@
 <script>
 (function() {
   const themes = {
+    '14qyh': {
+      primary: '#7a2b4d',
+      secondary: '#b3406e',
+      accent: '#e8608a',
+      light: '#fdf2f6',
+      lighter: '#fbe0e9',
+      text: '#581f38',
+      shadow: 'rgba(232,96,138,0.18)'
+    },
     '9qyh': {
       primary: '#0369a1',
       secondary: '#0284c7',
@@ -717,6 +726,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/14qyh/') || path.includes('第十四期轻音会')) {
+      return themes['14qyh'];
+    }
 
     if (path.includes('/13qyh/') || path.includes('第十三期轻音会')) {
       return themes['13qyh'];

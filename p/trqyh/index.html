@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://vrclmcl.asia/p/trqyh/'>
 
-<link rel="stylesheet" href="/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css"><meta property='og:title' content="第三期轻音会">
+<link rel="stylesheet" href="/scss/style.min.81579ea678e30582aa60028bfe3192821d6c0fee666ee279be318fb5b558916b.css"><meta property='og:title' content="第三期轻音会">
 <meta property='og:description' content="第三期入选选手与歌曲堂堂展示！ ">
 <meta property='og:url' content='https://vrclmcl.asia/p/trqyh/'>
 <meta property='og:site_name' content='VRC轻音会社'>
@@ -345,7 +345,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shisihd/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shiwud/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -356,7 +356,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十四次活动合照</div>
+        <div class="qyh-nav-item-desc">第十五次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -638,6 +638,15 @@
 <script>
 (function() {
   const themes = {
+    '14qyh': {
+      primary: '#7a2b4d',
+      secondary: '#b3406e',
+      accent: '#e8608a',
+      light: '#fdf2f6',
+      lighter: '#fbe0e9',
+      text: '#581f38',
+      shadow: 'rgba(232,96,138,0.18)'
+    },
     '9qyh': {
       primary: '#0369a1',
       secondary: '#0284c7',
@@ -687,6 +696,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/14qyh/') || path.includes('第十四期轻音会')) {
+      return themes['14qyh'];
+    }
 
     if (path.includes('/13qyh/') || path.includes('第十三期轻音会')) {
       return themes['13qyh'];
@@ -1209,6 +1222,25 @@
             
                 
 <article class="has-image">
+    <a href="/p/14qyh/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.vrclmcl.asia/LMCL/2026/08/24/%e6%a8%aa%e5%9b%be.jpg" loading="lazy" data-key="14qyh" data-hash="https://img.vrclmcl.asia/LMCL/2026/08/24/横图.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第十四期轻音会</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/13qyh/">
         
         
@@ -1278,25 +1310,6 @@
 
         <div class="article-details">
             <h2 class="article-title">第十期轻音会</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/9qyh/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://img.vrclmcl.asia/LMCL/2026/05/12/bg.png" loading="lazy" data-key="9qyh" data-hash="https://img.vrclmcl.asia/LMCL/2026/05/12/bg.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第九期轻音会</h2>
         </div>
     </a>
 </article>
