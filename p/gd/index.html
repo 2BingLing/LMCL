@@ -344,7 +344,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shiwud/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shiliud/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -355,7 +355,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十五次活动合照</div>
+        <div class="qyh-nav-item-desc">第十六次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -637,6 +637,15 @@
 <script>
 (function() {
   const themes = {
+    '15qyh': {
+      primary: '#a63a7e',
+      secondary: '#d95fa8',
+      accent: '#ef8ac6',
+      light: '#fdf2f8',
+      lighter: '#fbd9ec',
+      text: '#4a2d4e',
+      shadow: 'rgba(217,95,168,0.18)'
+    },
     '14qyh': {
       primary: '#7a2b4d',
       secondary: '#b3406e',
@@ -695,6 +704,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/15qyh/') || path.includes('第十五期轻音会')) {
+      return themes['15qyh'];
+    }
 
     if (path.includes('/14qyh/') || path.includes('第十四期轻音会')) {
       return themes['14qyh'];
@@ -967,7 +980,100 @@
         counter-reset: song-counter; /* 初始化计数器 */
         background: #fafafa;
         min-height: 100px;
-    ">  
+    ">
+        <li class="ranking-item"
+            data-title="Sad Eyes"
+            data-artist="Enrique Iglesias"
+            style="
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                flex-wrap: wrap;
+            ">
+            <div style="
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #4a2d4e 0%, #a63a7e 50%, #ef8ac6 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            ">
+                <span style="position: relative; z-index: 1;">
+                    <span style="font-family: sans-serif;">#</span>
+                    <span style="font-weight: bold;"></span>
+                </span>
+            </div>
+            <div class="song-info" style="flex: 1;">
+                <div style="
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                ">Sad Eyes <span style="
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #a63a7e, #ef8ac6);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                ">✦ 第15期</span></div>
+                <div style="
+                    font-size: 14px;
+                    color: #666;
+                ">Enrique Iglesias · 投稿：云绒熊猫</div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="play-trigger-bili" style="
+                    background: linear-gradient(135deg, #a63a7e, #ef8ac6);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">B站播放</button>
+                <a href="https://www.bilibili.com/video/BV1E94y187dE/" target="_blank" style="
+                    background: transparent;
+                    color: #a63a7e;
+                    border: 1px solid #a63a7e;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                ">详情</a>
+            </div>
+            <div class="bili-row" data-bili="BV1E94y187dE" hidden style="
+                flex-basis: 100%;
+                padding: 14px 4px 6px;
+            ">
+                <div style="
+                    position: relative;
+                    width: 100%;
+                    max-width: 480px;
+                    aspect-ratio: 16 / 9;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1.5px dashed #a63a7e;
+                    background: #241726;
+                "></div>
+                <p style="text-align:center;font-size:12px;color:#999;margin:8px 0 0;">Bilibili 播放器 · Sad Eyes（Enrique Iglesias）· 第十五期轻音会获选曲</p>
+            </div>
+        </li>
         <li class="ranking-item"
             data-src="https://music.163.com/song/media/outer/url?id=2688091026.mp3"
             data-title="黑兽卯 子路 战斗曲"
@@ -1978,6 +2084,47 @@ document.addEventListener('DOMContentLoaded', function() {
             window.dispatchEvent(new CustomEvent('playSong', {
                 detail: { src, title, artist }
             }));
+        });
+    });
+});
+</script>
+<script>
+/* B站源条目（无 data-src）：点击展开内嵌 Bilibili 播放器，与通用 audio 播放器互不干扰 */
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.play-trigger-bili').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var item = this.closest('.ranking-item');
+            var row = item.querySelector('.bili-row');
+            if (!row) return;
+            var mount = row.querySelector('div');
+            if (!row.hidden) {
+                row.hidden = true;
+                this.textContent = 'B站播放';
+                if (mount) mount.innerHTML = '';
+                return;
+            }
+            document.querySelectorAll('.bili-row').forEach(function(r) {
+                if (r !== row) {
+                    r.hidden = true;
+                    var m = r.querySelector('div');
+                    if (m) m.innerHTML = '';
+                    var it = r.closest('.ranking-item');
+                    var b = it && it.querySelector('.play-trigger-bili');
+                    if (b) b.textContent = 'B站播放';
+                }
+            });
+            row.hidden = false;
+            this.textContent = '收起播放器';
+            if (mount && !mount.querySelector('iframe')) {
+                var f = document.createElement('iframe');
+                f.src = 'https://player.bilibili.com/player.html?bvid=' + row.getAttribute('data-bili') + '&page=1&high_quality=1&danmaku=0&autoplay=1';
+                f.title = 'Sad Eyes · Enrique Iglesias（Bilibili 播放器）';
+                f.setAttribute('allow', 'autoplay; fullscreen');
+                f.setAttribute('allowfullscreen', 'allowfullscreen');
+                f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;';
+                mount.appendChild(f);
+            }
         });
     });
 });

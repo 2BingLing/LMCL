@@ -63,7 +63,100 @@
         counter-reset: song-counter; /* 初始化计数器 */
         background: #fafafa;
         min-height: 100px;
-    &#34;&gt;  
+    &#34;&gt;
+        &lt;li class=&#34;ranking-item&#34;
+            data-title=&#34;Sad Eyes&#34;
+            data-artist=&#34;Enrique Iglesias&#34;
+            style=&#34;
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                flex-wrap: wrap;
+            &#34;&gt;
+            &lt;div style=&#34;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #4a2d4e 0%, #a63a7e 50%, #ef8ac6 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            &#34;&gt;
+                &lt;span style=&#34;position: relative; z-index: 1;&#34;&gt;
+                    &lt;span style=&#34;font-family: sans-serif;&#34;&gt;#&lt;/span&gt;
+                    &lt;span style=&#34;font-weight: bold;&#34;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;song-info&#34; style=&#34;flex: 1;&#34;&gt;
+                &lt;div style=&#34;
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                &#34;&gt;Sad Eyes &lt;span style=&#34;
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #a63a7e, #ef8ac6);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                &#34;&gt;✦ 第15期&lt;/span&gt;&lt;/div&gt;
+                &lt;div style=&#34;
+                    font-size: 14px;
+                    color: #666;
+                &#34;&gt;Enrique Iglesias · 投稿：云绒熊猫&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
+                &lt;button class=&#34;play-trigger-bili&#34; style=&#34;
+                    background: linear-gradient(135deg, #a63a7e, #ef8ac6);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;B站播放&lt;/button&gt;
+                &lt;a href=&#34;https://www.bilibili.com/video/BV1E94y187dE/&#34; target=&#34;_blank&#34; style=&#34;
+                    background: transparent;
+                    color: #a63a7e;
+                    border: 1px solid #a63a7e;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;详情&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;bili-row&#34; data-bili=&#34;BV1E94y187dE&#34; hidden style=&#34;
+                flex-basis: 100%;
+                padding: 14px 4px 6px;
+            &#34;&gt;
+                &lt;div style=&#34;
+                    position: relative;
+                    width: 100%;
+                    max-width: 480px;
+                    aspect-ratio: 16 / 9;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1.5px dashed #a63a7e;
+                    background: #241726;
+                &#34;&gt;&lt;/div&gt;
+                &lt;p style=&#34;text-align:center;font-size:12px;color:#999;margin:8px 0 0;&#34;&gt;Bilibili 播放器 · Sad Eyes（Enrique Iglesias）· 第十五期轻音会获选曲&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34;
             data-src=&#34;https://music.163.com/song/media/outer/url?id=2688091026.mp3&#34;
             data-title=&#34;黑兽卯 子路 战斗曲&#34;
@@ -1074,6 +1167,47 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
             window.dispatchEvent(new CustomEvent(&#39;playSong&#39;, {
                 detail: { src, title, artist }
             }));
+        });
+    });
+});
+&lt;/script&gt;
+&lt;script&gt;
+/* B站源条目（无 data-src）：点击展开内嵌 Bilibili 播放器，与通用 audio 播放器互不干扰 */
+document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+    document.querySelectorAll(&#39;.play-trigger-bili&#39;).forEach(function(button) {
+        button.addEventListener(&#39;click&#39;, function(e) {
+            e.stopPropagation();
+            var item = this.closest(&#39;.ranking-item&#39;);
+            var row = item.querySelector(&#39;.bili-row&#39;);
+            if (!row) return;
+            var mount = row.querySelector(&#39;div&#39;);
+            if (!row.hidden) {
+                row.hidden = true;
+                this.textContent = &#39;B站播放&#39;;
+                if (mount) mount.innerHTML = &#39;&#39;;
+                return;
+            }
+            document.querySelectorAll(&#39;.bili-row&#39;).forEach(function(r) {
+                if (r !== row) {
+                    r.hidden = true;
+                    var m = r.querySelector(&#39;div&#39;);
+                    if (m) m.innerHTML = &#39;&#39;;
+                    var it = r.closest(&#39;.ranking-item&#39;);
+                    var b = it &amp;&amp; it.querySelector(&#39;.play-trigger-bili&#39;);
+                    if (b) b.textContent = &#39;B站播放&#39;;
+                }
+            });
+            row.hidden = false;
+            this.textContent = &#39;收起播放器&#39;;
+            if (mount &amp;&amp; !mount.querySelector(&#39;iframe&#39;)) {
+                var f = document.createElement(&#39;iframe&#39;);
+                f.src = &#39;https://player.bilibili.com/player.html?bvid=&#39; + row.getAttribute(&#39;data-bili&#39;) + &#39;&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=1&#39;;
+                f.title = &#39;Sad Eyes · Enrique Iglesias（Bilibili 播放器）&#39;;
+                f.setAttribute(&#39;allow&#39;, &#39;autoplay; fullscreen&#39;);
+                f.setAttribute(&#39;allowfullscreen&#39;, &#39;allowfullscreen&#39;);
+                f.style.cssText = &#39;position:absolute;inset:0;width:100%;height:100%;border:0;&#39;;
+                mount.appendChild(f);
+            }
         });
     });
 });
