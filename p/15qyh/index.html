@@ -373,17 +373,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   footer{margin-top:64px;padding:28px 18px 32px}
 }
 
-/* ============ 减弱动效：直接显示正文 ============ */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .grain,.scan,.track,#dust,.mote,.bokeh{display:none}
-  html.js [data-rv]{opacity:1;transform:none;transition:none}
-  html.js [data-rv].print-hero,html.js [data-rv].polaroid,html.js [data-rv].winner-card,
-  html.js [data-rv].quote-card,html.js [data-rv].cassette,html.js [data-rv].program-card{transform:rotate(0)}
-  .rec-dot,.e-hint,.play-badge{animation:none}
-  .rgb::before,.rgb::after{animation:none}
-  #flash{display:none}
-}
+
 </style>
 <div class="wash" aria-hidden="true"></div>
 <!-- 持续氛围层 -->
@@ -612,8 +602,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   docEl.classList.add('js');
   docEl.classList.add('lock');
 
-  var reduceMq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-  var reduced = !!(reduceMq && reduceMq.matches);
+  /* 忽略系统减弱动效设置：入场动画与氛围特效对所有访客全量播放 */
+  var reduced = false;
   var entered = false;
   var timers = [];
   function later(fn, ms) { timers.push(window.setTimeout(fn, ms)); }

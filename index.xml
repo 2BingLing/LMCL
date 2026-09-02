@@ -377,17 +377,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   footer{margin-top:64px;padding:28px 18px 32px}
 }
 
-/* ============ 减弱动效：直接显示正文 ============ */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .grain,.scan,.track,#dust,.mote,.bokeh{display:none}
-  html.js [data-rv]{opacity:1;transform:none;transition:none}
-  html.js [data-rv].print-hero,html.js [data-rv].polaroid,html.js [data-rv].winner-card,
-  html.js [data-rv].quote-card,html.js [data-rv].cassette,html.js [data-rv].program-card{transform:rotate(0)}
-  .rec-dot,.e-hint,.play-badge{animation:none}
-  .rgb::before,.rgb::after{animation:none}
-  #flash{display:none}
-}
+
 &lt;/style&gt;
 &lt;div class=&#34;wash&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
 &lt;!-- 持续氛围层 --&gt;
@@ -616,8 +606,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   docEl.classList.add(&#39;js&#39;);
   docEl.classList.add(&#39;lock&#39;);
 
-  var reduceMq = window.matchMedia ? window.matchMedia(&#39;(prefers-reduced-motion: reduce)&#39;) : null;
-  var reduced = !!(reduceMq &amp;&amp; reduceMq.matches);
+  /* 忽略系统减弱动效设置：入场动画与氛围特效对所有访客全量播放 */
+  var reduced = false;
   var entered = false;
   var timers = [];
   function later(fn, ms) { timers.push(window.setTimeout(fn, ms)); }
