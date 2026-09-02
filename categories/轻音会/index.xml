@@ -386,7 +386,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   html.js [data-rv].quote-card,html.js [data-rv].cassette,html.js [data-rv].program-card{transform:rotate(0)}
   .rec-dot,.e-hint,.play-badge{animation:none}
   .rgb::before,.rgb::after{animation:none}
-  #entry,#flash{display:none}
+  #flash{display:none}
 }
 &lt;/style&gt;
 &lt;div class=&#34;wash&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
@@ -502,7 +502,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       &lt;span class=&#34;sec-no&#34;&gt;SCENE 02&lt;/span&gt;
       &lt;h2 class=&#34;rgb-sm&#34;&gt;相册 · 两张构图&lt;/h2&gt;
       &lt;span class=&#34;sec-line&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
-      &lt;span class=&#34;sec-sub&#34;&gt;PHOTO ALBUM&lt;/span&gt;
+      &lt;span class=&#34;sec-sub&#34;&gt;PHOTO ALBUM · 摄影：QutaiBai柒白&lt;/span&gt;
     &lt;/header&gt;
     &lt;div class=&#34;album-grid&#34;&gt;
       &lt;figure class=&#34;print polaroid&#34; data-rv&gt;
@@ -677,7 +677,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
     if (entered) return;
     entered = true;
     injectBGM();
-    if (reduced || !entry) { finishEnter(); return; }
+    if (reduced || !entry) { if (entry) entry.style.display = &#39;none&#39;; finishEnter(); return; }
     entry.classList.add(&#39;tearing&#39;);
     later(function () { if (flash) flash.classList.add(&#39;on&#39;); }, 400);
     later(function () {
@@ -696,20 +696,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
         enterPage();
       }
     });
-    if (reduced) {
-      entry.hidden = true;
-      finishEnter();
-      /* 无入场门时，在首次交互手势里注入 iframe 以争取自动播放 */
-      var kick = function () {
-        injectBGM();
-        document.removeEventListener(&#39;pointerdown&#39;, kick);
-        document.removeEventListener(&#39;keydown&#39;, kick);
-      };
-      document.addEventListener(&#39;pointerdown&#39;, kick);
-      document.addEventListener(&#39;keydown&#39;, kick);
-    } else {
-      try { entry.focus({ preventScroll: true }); } catch (e) { }
-    }
+    try { entry.focus({ preventScroll: true }); } catch (e) { }
   }
 
   /* ---------- VHS 时间码 ---------- */

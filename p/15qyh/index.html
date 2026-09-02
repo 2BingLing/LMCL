@@ -382,7 +382,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   html.js [data-rv].quote-card,html.js [data-rv].cassette,html.js [data-rv].program-card{transform:rotate(0)}
   .rec-dot,.e-hint,.play-badge{animation:none}
   .rgb::before,.rgb::after{animation:none}
-  #entry,#flash{display:none}
+  #flash{display:none}
 }
 </style>
 <div class="wash" aria-hidden="true"></div>
@@ -498,7 +498,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       <span class="sec-no">SCENE 02</span>
       <h2 class="rgb-sm">相册 · 两张构图</h2>
       <span class="sec-line" aria-hidden="true"></span>
-      <span class="sec-sub">PHOTO ALBUM</span>
+      <span class="sec-sub">PHOTO ALBUM · 摄影：QutaiBai柒白</span>
     </header>
     <div class="album-grid">
       <figure class="print polaroid" data-rv>
@@ -673,7 +673,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
     if (entered) return;
     entered = true;
     injectBGM();
-    if (reduced || !entry) { finishEnter(); return; }
+    if (reduced || !entry) { if (entry) entry.style.display = 'none'; finishEnter(); return; }
     entry.classList.add('tearing');
     later(function () { if (flash) flash.classList.add('on'); }, 400);
     later(function () {
@@ -692,20 +692,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
         enterPage();
       }
     });
-    if (reduced) {
-      entry.hidden = true;
-      finishEnter();
-      /* 无入场门时，在首次交互手势里注入 iframe 以争取自动播放 */
-      var kick = function () {
-        injectBGM();
-        document.removeEventListener('pointerdown', kick);
-        document.removeEventListener('keydown', kick);
-      };
-      document.addEventListener('pointerdown', kick);
-      document.addEventListener('keydown', kick);
-    } else {
-      try { entry.focus({ preventScroll: true }); } catch (e) { }
-    }
+    try { entry.focus({ preventScroll: true }); } catch (e) { }
   }
 
   /* ---------- VHS 时间码 ---------- */
