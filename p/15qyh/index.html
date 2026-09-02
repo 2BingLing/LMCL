@@ -99,13 +99,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px dashed
 
 /* ============ 入场遮罩：VHS ▶ PLAY ============ */
 #entry{position:fixed;inset:0;z-index:90;cursor:pointer;overflow:hidden;background:#160d1d;user-select:none;-webkit-user-select:none}
-.e-bg{position:absolute;inset:0;background:url("横图.jpg") center/cover no-repeat;background-attachment:fixed;transform:scale(1.02)}
+.e-bg{position:absolute;inset:0;background:url("https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg") center/cover no-repeat;background-attachment:fixed;transform:scale(1.02)}
 .e-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,13,29,.58),rgba(46,24,52,.55) 45%,rgba(22,13,29,.72)),rgba(74,45,78,.18)}
 .e-scan{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.09;background:repeating-linear-gradient(180deg,rgba(0,0,0,.9) 0 1px,transparent 1px 3px)}
 .e-grain{position:absolute;inset:-40%;width:180%;height:180%;z-index:4;pointer-events:none;opacity:.15;animation:grainShift .7s steps(1,end) infinite;will-change:transform}
 /* 撕裂条：与 e-bg 共用同一张图（fixed attachment 对齐视口） */
 .tear{position:absolute;left:0;width:100%;z-index:2;opacity:0;will-change:transform;
-  background:url("横图.jpg") center/cover;background-attachment:fixed}
+  background:url("https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg") center/cover;background-attachment:fixed}
 .tear::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(160,255,255,.85);box-shadow:0 0 14px rgba(255,80,170,.75)}
 .tear::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(18,10,24,.65)}
 .tb1{top:16%;height:8%}
@@ -301,8 +301,17 @@ footer{margin-top:88px;background:#3f2547;color:#f3e6ef;padding:36px 28px 40px;t
 .bp-head .bp-sub{display:block;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:rgba(253,246,238,.75)}
 .bp-close{margin-left:auto;width:28px;height:28px;flex:none;border-radius:50%;border:1.5px solid rgba(253,246,238,.5);background:none;color:#fdf6ee;font-size:15px;line-height:1;cursor:pointer}
 .bp-close:hover{background:rgba(253,246,238,.15)}
-.bp-screen{aspect-ratio:16/9;background:#241726}
-.bp-screen iframe{display:block;width:100%;height:100%;border:0}
+.bp-ctrl{display:flex;align-items:center;gap:10px;padding:12px 14px 14px;background:#fdf3f8}
+.bp-play{width:34px;height:34px;flex:none;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(160deg,#a63a7e,#d95fa8);color:#fdf6ee;font-size:12px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(166,58,126,.35);transition:transform .2s ease}
+.bp-play:hover{transform:scale(1.07)}
+.bp-prog-wrap{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
+.bp-seek{flex:1;min-width:0;height:5px;-webkit-appearance:none;appearance:none;background:rgba(74,45,78,.22);border-radius:99px;outline:none;cursor:pointer}
+.bp-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:12px;height:12px;border-radius:50%;background:#a63a7e;border:2px solid #fdf6ee;box-shadow:0 1px 4px rgba(74,45,78,.4)}
+.bp-seek::-moz-range-thumb{width:9px;height:9px;border-radius:50%;background:#a63a7e;border:2px solid #fdf6ee}
+.bp-time{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--ink-2);flex:none}
+.bp-vol{width:56px;flex:none;height:5px;-webkit-appearance:none;appearance:none;background:rgba(74,45,78,.22);border-radius:99px;outline:none;cursor:pointer}
+.bp-vol::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:11px;height:11px;border-radius:50%;background:#a63a7e;border:0}
+.bp-vol::-moz-range-thumb{width:9px;height:9px;border-radius:50%;background:#a63a7e;border:0}
 
 /* ============ Lightbox ============ */
 #lb{position:fixed;inset:0;z-index:58;background:rgba(26,14,30,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4vh 4vw;opacity:0;visibility:hidden;cursor:zoom-out;transition:opacity .25s ease,visibility 0s linear .25s}
@@ -432,8 +441,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       <span class="tape t-l" aria-hidden="true"></span>
       <span class="tape tape--gold t-r" aria-hidden="true"></span>
       <span class="sticker-round" aria-hidden="true">第15卷<br>已冲印</span>
-      <button class="photo-btn" type="button" data-full="横图.jpg" data-cap="FRAME 15-A ▸ 花野慢车" aria-label="放大查看：春日花野全景照片">
-        <img src="横图.jpg" alt="春日花野中，粉发猫耳少女站在开满雏菊的草地上比心，身后是爬满藤蔓的废弃列车车厢，车顶一株粉樱，蓝天积云，右侧暖阳金逆光" width="3840" height="2160">
+      <button class="photo-btn" type="button" data-full="https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg" data-cap="FRAME 15-A ▸ 花野慢车" aria-label="放大查看：春日花野全景照片">
+        <img src="https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg" alt="春日花野中，粉发猫耳少女站在开满雏菊的草地上比心，身后是爬满藤蔓的废弃列车车厢，车顶一株粉樱，蓝天积云，右侧暖阳金逆光" width="3840" height="2160">
       </button>
       <figcaption>
         <span class="fig-hand">雏菊花野 · 爬满藤蔓的旧列车 · 车顶一株粉樱</span>
@@ -494,8 +503,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       <figure class="print polaroid" data-rv>
         <span class="tape tape--blue t-l" aria-hidden="true"></span>
         <span class="tape t-r" aria-hidden="true"></span>
-        <button class="photo-btn" type="button" data-full="竖图.jpg" data-cap="FRAME 15-B ▸ 倚栏的午后" aria-label="放大查看：倚着木栏的竖构图照片">
-          <img src="竖图.jpg" alt="同一片春野的竖构图：少女倚着木栏，旁边是紫色野花与长椅，草原向深处延伸" width="2160" height="3840" loading="lazy">
+        <button class="photo-btn" type="button" data-full="https://img.vrclmcl.asia/LMCL/2026/09/03/竖图.jpg" data-cap="FRAME 15-B ▸ 倚栏的午后" aria-label="放大查看：倚着木栏的竖构图照片">
+          <img src="https://img.vrclmcl.asia/LMCL/2026/09/03/竖图.jpg" alt="同一片春野的竖构图：少女倚着木栏，旁边是紫色野花与长椅，草原向深处延伸" width="2160" height="3840" loading="lazy">
         </button>
         <figcaption>
           <span class="fig-hand">倚着木栏的午后 · 紫色野花与长椅</span>
@@ -504,12 +513,12 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       <div class="album-side">
         <p class="zhi-note" data-rv>同一片春野的两个构图——横的是全景阳光，竖的是倚栏近景。先暖，后静。</p>
         <div class="filmstrip" data-rv>
-          <button type="button" data-full="横图.jpg" data-cap="FRAME 15-A ▸ 花野慢车" aria-label="放大查看胶片格 15-A">
-            <img src="横图.jpg" alt="胶片格 15-A：花野与旧列车的全景" loading="lazy">
+          <button type="button" data-full="https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg" data-cap="FRAME 15-A ▸ 花野慢车" aria-label="放大查看胶片格 15-A">
+            <img src="https://img.vrclmcl.asia/LMCL/2026/09/03/横图.jpg" alt="胶片格 15-A：花野与旧列车的全景" loading="lazy">
             <span class="fr-no">15-A</span>
           </button>
-          <button type="button" data-full="竖图.jpg" data-cap="FRAME 15-B ▸ 倚栏的午后" aria-label="放大查看胶片格 15-B">
-            <img src="竖图.jpg" alt="胶片格 15-B：倚着木栏的午后近景" loading="lazy">
+          <button type="button" data-full="https://img.vrclmcl.asia/LMCL/2026/09/03/竖图.jpg" data-cap="FRAME 15-B ▸ 倚栏的午后" aria-label="放大查看胶片格 15-B">
+            <img src="https://img.vrclmcl.asia/LMCL/2026/09/03/竖图.jpg" alt="胶片格 15-B：倚着木栏的午后近景" loading="lazy">
             <span class="fr-no">15-B</span>
           </button>
         </div>
@@ -538,11 +547,11 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
             <figcaption class="mono-head">VOICE ▸ 获选感言</figcaption>
             <blockquote>很荣幸我的曲目能够被大家听见，希望这首曲子可以带给大家片刻的沉静，今后也会继续分享音乐，感谢轻音会社和各位听众。</blockquote>
           </figure>
-          <div class="journey" id="journey" data-rv>
+          <div class="journey open" id="journey" data-rv>
             <div class="jx-head">
               <p class="mono-head">MEMO ▸ 投稿心路历程</p>
-              <button class="jx-btn" id="jxBtn" type="button" aria-expanded="false" aria-controls="jxBody">
-                <span class="jx-label">展开全文</span><span class="caret" aria-hidden="true"></span>
+              <button class="jx-btn" id="jxBtn" type="button" aria-expanded="true" aria-controls="jxBody">
+                <span class="jx-label">收起</span><span class="caret" aria-hidden="true"></span>
               </button>
             </div>
             <div class="jx-body" id="jxBody">
@@ -567,11 +576,19 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
     <div class="bp-head">
       <div>
         <strong>Sad Eyes · Enrique Iglesias</strong>
-        <span class="bp-sub">Bilibili · 循环播放 · 无声就点画面播放</span>
+        <span class="bp-sub">第十五期轻音会 BGM · 循环播放</span>
       </div>
       <button class="bp-close" id="bgmClose" type="button" aria-label="收起播放器">&times;</button>
     </div>
-    <div class="bp-screen" id="bgmMount"></div>
+    <div class="bp-ctrl">
+      <button class="bp-play" id="bpPlay" type="button" aria-label="播放或暂停音乐">▶</button>
+      <div class="bp-prog-wrap">
+        <input class="bp-seek" id="bpSeek" type="range" min="0" max="100" step="0.1" value="0" aria-label="播放进度">
+        <span class="bp-time" id="bpTime">00:00</span>
+      </div>
+      <input class="bp-vol" id="bpVol" type="range" min="0" max="1" step="0.05" value="0.85" aria-label="音量">
+    </div>
+    <audio id="bgmAudio" src="https://img.vrclmcl.asia/LMCL/2026/09/03/bgm15.mp3" preload="auto" loop></audio>
   </div>
   <button class="bgm-ball" id="bgmBall" type="button" aria-expanded="false" aria-controls="bgmPanel" aria-label="打开或收起背景音乐播放器">
     <span class="bb-reel" aria-hidden="true"></span>
@@ -608,20 +625,19 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
   var timers = [];
   function later(fn, ms) { timers.push(window.setTimeout(fn, ms)); }
 
-  /* ---------- BGM：进入后才注入 iframe（争取自动播放） ---------- */
-  var bgmMount = $('bgmMount');
-  var bgmInjected = false;
+  /* ---------- BGM：入场点击手势内直接播放本站音频（与旧模板同内核，任何浏览器都允许出声） ---------- */
+  var bgmAudio = $('bgmAudio'), bpPlay = $('bpPlay'), bpSeek = $('bpSeek'), bpVol = $('bpVol'), bpTime = $('bpTime');
+  var seeking = false;
+  function fmtTime(s) {
+    if (!isFinite(s)) return '00:00';
+    s = Math.floor(s);
+    var m = Math.floor(s / 60), r = s % 60;
+    return (m < 10 ? '0' + m : m) + ':' + (r < 10 ? '0' + r : r);
+  }
   function injectBGM() {
-    if (bgmInjected || !bgmMount) return;
-    bgmInjected = true;
-    var f = document.createElement('iframe');
-    f.src = 'https://player.bilibili.com/player.html?bvid=BV1E94y187dE&page=1&high_quality=1&danmaku=0&autoplay=1';
-    f.title = 'Sad Eyes · Enrique Iglesias（Bilibili 播放器）';
-    f.setAttribute('allow', 'autoplay; fullscreen');
-    f.setAttribute('allowfullscreen', 'allowfullscreen');
-    bgmMount.appendChild(f);
-    var bgm = $('bgm');
-    if (bgm) bgm.classList.add('playing');
+    if (!bgmAudio) return;
+    var p = bgmAudio.play();
+    if (p && p.catch) p.catch(function () { /* 极少数环境拦截时，用户点播放键即可 */ });
   }
 
   /* ---------- 错落浮入 ---------- */
@@ -673,8 +689,6 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       finishEnter();
     }, 560);
     later(function () { entry.hidden = true; }, 1200);
-    /* 自动展开播放器面板：跨域 iframe 自动播放可能被浏览器拦截，让画面里的播放键直接可见 */
-    later(function () { setBGM(true); }, 1600);
   }
   if (entry) {
     entry.addEventListener('click', enterPage);
@@ -782,6 +796,37 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       setBGM(false);
       if (bgmBall) { try { bgmBall.focus({ preventScroll: true }); } catch (e) { } }
     });
+  }
+  if (bgmAudio) {
+    bgmAudio.addEventListener('playing', function () {
+      var b = $('bgm'); if (b) b.classList.add('playing');
+      if (bpPlay) bpPlay.textContent = '❚❚';
+    });
+    bgmAudio.addEventListener('pause', function () {
+      var b = $('bgm'); if (b) b.classList.remove('playing');
+      if (bpPlay) bpPlay.textContent = '▶';
+    });
+    if (bpPlay) bpPlay.addEventListener('click', function () {
+      if (bgmAudio.paused) { var p = bgmAudio.play(); if (p && p.catch) p.catch(function () {}); }
+      else bgmAudio.pause();
+    });
+    if (bpSeek) {
+      bgmAudio.addEventListener('timeupdate', function () {
+        if (!isFinite(bgmAudio.duration) || !bgmAudio.duration) return;
+        if (!seeking) bpSeek.value = (bgmAudio.currentTime / bgmAudio.duration) * 100;
+        if (bpTime) bpTime.textContent = fmtTime(bgmAudio.currentTime);
+      });
+      bpSeek.addEventListener('input', function () { seeking = true; });
+      bpSeek.addEventListener('change', function () {
+        if (isFinite(bgmAudio.duration) && bgmAudio.duration) bgmAudio.currentTime = bgmAudio.duration * (bpSeek.value / 100);
+        seeking = false;
+      });
+    }
+    if (bpVol) {
+      bgmAudio.volume = 0.85;
+      bpVol.value = 0.85;
+      bpVol.addEventListener('input', function () { bgmAudio.volume = this.value; });
+    }
   }
 })();
 </script>
