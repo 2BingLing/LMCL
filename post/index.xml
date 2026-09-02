@@ -571,7 +571,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
     &lt;div class=&#34;bp-head&#34;&gt;
       &lt;div&gt;
         &lt;strong&gt;Sad Eyes · Enrique Iglesias&lt;/strong&gt;
-        &lt;span class=&#34;bp-sub&#34;&gt;Bilibili · 循环播放&lt;/span&gt;
+        &lt;span class=&#34;bp-sub&#34;&gt;Bilibili · 循环播放 · 无声就点画面播放&lt;/span&gt;
       &lt;/div&gt;
       &lt;button class=&#34;bp-close&#34; id=&#34;bgmClose&#34; type=&#34;button&#34; aria-label=&#34;收起播放器&#34;&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
@@ -677,6 +677,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       finishEnter();
     }, 560);
     later(function () { entry.hidden = true; }, 1200);
+    /* 自动展开播放器面板：跨域 iframe 自动播放可能被浏览器拦截，让画面里的播放键直接可见 */
+    later(function () { setBGM(true); }, 1600);
   }
   if (entry) {
     entry.addEventListener(&#39;click&#39;, enterPage);
@@ -13281,7 +13283,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
                     border: 1.5px dashed #a63a7e;
                     background: #241726;
                 &#34;&gt;&lt;/div&gt;
-                &lt;p style=&#34;text-align:center;font-size:12px;color:#999;margin:8px 0 0;&#34;&gt;Bilibili 播放器 · Sad Eyes（Enrique Iglesias）· 第十五期轻音会获选曲&lt;/p&gt;
+                &lt;p style=&#34;text-align:center;font-size:12px;color:#999;margin:8px 0 0;&#34;&gt;Bilibili 播放器 · Sad Eyes（Enrique Iglesias）· 第十五期轻音会获选曲（无声就点画面播放）&lt;/p&gt;
             &lt;/div&gt;
         &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34;

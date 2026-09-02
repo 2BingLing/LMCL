@@ -567,7 +567,7 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
     <div class="bp-head">
       <div>
         <strong>Sad Eyes · Enrique Iglesias</strong>
-        <span class="bp-sub">Bilibili · 循环播放</span>
+        <span class="bp-sub">Bilibili · 循环播放 · 无声就点画面播放</span>
       </div>
       <button class="bp-close" id="bgmClose" type="button" aria-label="收起播放器">&times;</button>
     </div>
@@ -673,6 +673,8 @@ html.js [data-rv].program-card.in{transform:rotate(.7deg)}
       finishEnter();
     }, 560);
     later(function () { entry.hidden = true; }, 1200);
+    /* 自动展开播放器面板：跨域 iframe 自动播放可能被浏览器拦截，让画面里的播放键直接可见 */
+    later(function () { setBGM(true); }, 1600);
   }
   if (entry) {
     entry.addEventListener('click', enterPage);
