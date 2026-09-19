@@ -13,7 +13,7 @@
         <pubDate>Mon, 14 Sep 2026 01:00:00 +0800</pubDate>
         
         <guid>https://vrclmcl.asia/p/16qyh/</guid>
-        <description>&lt;img src="https://vrclmcl.asia/p/16qyh/%E6%A8%AA%E5%9B%BE.png" alt="Featured image of post 第十六期轻音会" /&gt;&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png" alt="Featured image of post 第十六期轻音会" /&gt;&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
 &lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.gstatic.com&#34; crossorigin&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;family=ZCOOL+XiaoWei&amp;display=swap&#34;&gt;
 &lt;style&gt;
@@ -354,7 +354,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
 &lt;div id=&#34;entry&#34; role=&#34;button&#34; tabindex=&#34;0&#34; aria-label=&#34;点击进入第十六期轻音会页面&#34;&gt;
   &lt;canvas id=&#34;cvStars&#34; class=&#34;pe&#34;&gt;&lt;/canvas&gt;
   &lt;div id=&#34;stage&#34; class=&#34;pe&#34;&gt;
-    &lt;div class=&#34;world&#34; id=&#34;worldE&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;横图.png&#34; alt=&#34;&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;world&#34; id=&#34;worldE&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png&#34; alt=&#34;&#34;&gt;&lt;/div&gt;
     &lt;div id=&#34;shadeE&#34;&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;canvas id=&#34;cvFx&#34; class=&#34;pe&#34;&gt;&lt;/canvas&gt;
@@ -385,7 +385,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
   &lt;/nav&gt;
   &lt;!-- 首屏：电影剧照 --&gt;
   &lt;section id=&#34;hero&#34;&gt;
-    &lt;div class=&#34;world world-hero&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;横图.png&#34; alt=&#34;黄昏金色旷野中的白发猫耳少女，竖起大拇指&#34; fetchpriority=&#34;high&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;world world-hero&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png&#34; alt=&#34;黄昏金色旷野中的白发猫耳少女，竖起大拇指&#34; fetchpriority=&#34;high&#34;&gt;&lt;/div&gt;
     &lt;div class=&#34;hero-shade&#34;&gt;&lt;/div&gt;
     &lt;canvas id=&#34;cvHero&#34;&gt;&lt;/canvas&gt;
     &lt;div class=&#34;hero-copy&#34;&gt;
@@ -462,12 +462,12 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
       &lt;/header&gt;
     &lt;/div&gt;
     &lt;button class=&#34;band figbtn&#34; id=&#34;band&#34; aria-label=&#34;查看大图：黄金旷野横构图&#34;&gt;
-      &lt;span class=&#34;band-in&#34; id=&#34;bandIn&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;横图.png&#34; alt=&#34;黄昏金色旷野：落日云霞、蓝紫群山与花田&#34; loading=&#34;lazy&#34;&gt;&lt;/span&gt;
+      &lt;span class=&#34;band-in&#34; id=&#34;bandIn&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png&#34; alt=&#34;黄昏金色旷野：落日云霞、蓝紫群山与花田&#34; loading=&#34;lazy&#34;&gt;&lt;/span&gt;
       &lt;span class=&#34;band-tag mono&#34;&gt;FIG.01 · 黄金旷野 · 营地上空&lt;/span&gt;
     &lt;/button&gt;
     &lt;div class=&#34;collage&#34; style=&#34;padding:0 7vw&#34;&gt;
       &lt;button class=&#34;pv figbtn rv&#34; id=&#34;pv&#34; aria-label=&#34;查看大图：星空将临的竖构图&#34;&gt;
-        &lt;img class=&#34;ph&#34; src=&#34;竖图.png&#34; alt=&#34;竖构图：少女比出 V 手势，天空辽阔，月牙散布&#34; loading=&#34;lazy&#34;&gt;
+        &lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/09/19/竖图.png&#34; alt=&#34;竖构图：少女比出 V 手势，天空辽阔，月牙散布&#34; loading=&#34;lazy&#34;&gt;
       &lt;/button&gt;
       &lt;aside class=&#34;sign glass rv&#34; style=&#34;transition-delay:.15s&#34;&gt;
         &lt;span class=&#34;tag mono&#34;&gt;FIELD NOTE · DUSK → NIGHT&lt;/span&gt;
@@ -560,7 +560,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
 &lt;/div&gt;
 &lt;!-- Lightbox --&gt;
 &lt;div id=&#34;lb&#34; role=&#34;dialog&#34; aria-modal=&#34;true&#34; aria-label=&#34;图片查看器&#34;&gt;
-  &lt;img id=&#34;lbImg&#34; src=&#34;横图.png&#34; alt=&#34;大图查看&#34;&gt;
+  &lt;img id=&#34;lbImg&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png&#34; alt=&#34;大图查看&#34;&gt;
   &lt;span id=&#34;lbCap&#34; class=&#34;mono&#34;&gt;&lt;/span&gt;
   &lt;button id=&#34;lbClose&#34; aria-label=&#34;关闭大图&#34;&gt;
     &lt;svg viewBox=&#34;0 0 14 14&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;M1 1 L13 13 M13 1 L1 13&#34; fill=&#34;none&#34;/&gt;&lt;/svg&gt;
@@ -823,8 +823,8 @@ function openLB(src,cap){
   lb.classList.add(&#39;open&#39;);lbClose.focus();
 }
 function closeLB(){lb.classList.remove(&#39;open&#39;);if(lastFocus&amp;&amp;lastFocus.focus)lastFocus.focus();}
-band.addEventListener(&#39;click&#39;,function(){openLB(&#39;横图.png&#39;,&#39;FIG.01 · 黄金旷野 —— 第十六期轻音会 · Travelers\&#39; Encore&#39;);});
-$(&#39;#pv&#39;).addEventListener(&#39;click&#39;,function(){openLB(&#39;竖图.png&#39;,&#39;FIG.02 · 星空将临 —— 同一片旷野的竖构图&#39;);});
+band.addEventListener(&#39;click&#39;,function(){openLB(&#39;https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png&#39;,&#39;FIG.01 · 黄金旷野 —— 第十六期轻音会 · Travelers\&#39; Encore&#39;);});
+$(&#39;#pv&#39;).addEventListener(&#39;click&#39;,function(){openLB(&#39;https://img.vrclmcl.asia/LMCL/2026/09/19/竖图.png&#39;,&#39;FIG.02 · 星空将临 —— 同一片旷野的竖构图&#39;);});
 lbClose.addEventListener(&#39;click&#39;,closeLB);
 lb.addEventListener(&#39;click&#39;,function(e){if(e.target===lb)closeLB();});
 addEventListener(&#39;keydown&#39;,function(e){

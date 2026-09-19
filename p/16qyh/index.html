@@ -350,7 +350,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
 <div id="entry" role="button" tabindex="0" aria-label="点击进入第十六期轻音会页面">
   <canvas id="cvStars" class="pe"></canvas>
   <div id="stage" class="pe">
-    <div class="world" id="worldE"><img class="ph" src="横图.png" alt=""></div>
+    <div class="world" id="worldE"><img class="ph" src="https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png" alt=""></div>
     <div id="shadeE"></div>
   </div>
   <canvas id="cvFx" class="pe"></canvas>
@@ -381,7 +381,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
   </nav>
   <!-- 首屏：电影剧照 -->
   <section id="hero">
-    <div class="world world-hero"><img class="ph" src="横图.png" alt="黄昏金色旷野中的白发猫耳少女，竖起大拇指" fetchpriority="high"></div>
+    <div class="world world-hero"><img class="ph" src="https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png" alt="黄昏金色旷野中的白发猫耳少女，竖起大拇指" fetchpriority="high"></div>
     <div class="hero-shade"></div>
     <canvas id="cvHero"></canvas>
     <div class="hero-copy">
@@ -458,12 +458,12 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
       </header>
     </div>
     <button class="band figbtn" id="band" aria-label="查看大图：黄金旷野横构图">
-      <span class="band-in" id="bandIn"><img class="ph" src="横图.png" alt="黄昏金色旷野：落日云霞、蓝紫群山与花田" loading="lazy"></span>
+      <span class="band-in" id="bandIn"><img class="ph" src="https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png" alt="黄昏金色旷野：落日云霞、蓝紫群山与花田" loading="lazy"></span>
       <span class="band-tag mono">FIG.01 · 黄金旷野 · 营地上空</span>
     </button>
     <div class="collage" style="padding:0 7vw">
       <button class="pv figbtn rv" id="pv" aria-label="查看大图：星空将临的竖构图">
-        <img class="ph" src="竖图.png" alt="竖构图：少女比出 V 手势，天空辽阔，月牙散布" loading="lazy">
+        <img class="ph" src="https://img.vrclmcl.asia/LMCL/2026/09/19/竖图.png" alt="竖构图：少女比出 V 手势，天空辽阔，月牙散布" loading="lazy">
       </button>
       <aside class="sign glass rv" style="transition-delay:.15s">
         <span class="tag mono">FIELD NOTE · DUSK → NIGHT</span>
@@ -556,7 +556,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
 </div>
 <!-- Lightbox -->
 <div id="lb" role="dialog" aria-modal="true" aria-label="图片查看器">
-  <img id="lbImg" src="横图.png" alt="大图查看">
+  <img id="lbImg" src="https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png" alt="大图查看">
   <span id="lbCap" class="mono"></span>
   <button id="lbClose" aria-label="关闭大图">
     <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1 L13 13 M13 1 L1 13" fill="none"/></svg>
@@ -819,8 +819,8 @@ function openLB(src,cap){
   lb.classList.add('open');lbClose.focus();
 }
 function closeLB(){lb.classList.remove('open');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
-band.addEventListener('click',function(){openLB('横图.png','FIG.01 · 黄金旷野 —— 第十六期轻音会 · Travelers\' Encore');});
-$('#pv').addEventListener('click',function(){openLB('竖图.png','FIG.02 · 星空将临 —— 同一片旷野的竖构图');});
+band.addEventListener('click',function(){openLB('https://img.vrclmcl.asia/LMCL/2026/09/19/横图.png','FIG.01 · 黄金旷野 —— 第十六期轻音会 · Travelers\' Encore');});
+$('#pv').addEventListener('click',function(){openLB('https://img.vrclmcl.asia/LMCL/2026/09/19/竖图.png','FIG.02 · 星空将临 —— 同一片旷野的竖构图');});
 lbClose.addEventListener('click',closeLB);
 lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
 addEventListener('keydown',function(e){
