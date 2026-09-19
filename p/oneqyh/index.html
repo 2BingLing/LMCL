@@ -59,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_881f0972fab6f8ab.png" width="300"
+                        <img src="/img/avatar_hu_6197964f3ec51f32.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -318,7 +318,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shiliud/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shiqid/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -329,7 +329,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十六次活动合照</div>
+        <div class="qyh-nav-item-desc">第十七次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -611,6 +611,15 @@
 <script>
 (function() {
   const themes = {
+    '16qyh': {
+      primary: '#1d1e3e',
+      secondary: '#ef9c66',
+      accent: '#f2b25c',
+      light: '#fdf3e3',
+      lighter: '#fbe8cc',
+      text: '#4a3a28',
+      shadow: 'rgba(242,178,92,0.18)'
+    },
     '15qyh': {
       primary: '#a63a7e',
       secondary: '#d95fa8',
@@ -678,6 +687,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/16qyh/') || path.includes('第十六期轻音会')) {
+      return themes['16qyh'];
+    }
 
     if (path.includes('/15qyh/') || path.includes('第十五期轻音会')) {
       return themes['15qyh'];
@@ -832,8 +845,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/p/oneqyh/">
-                <img src="/p/oneqyh/human_hu_fd4757947d2f7cda.png"
-                        srcset="/p/oneqyh/human_hu_fd4757947d2f7cda.png 800w, /p/oneqyh/human_hu_7159ada8ecd0d2b.png 1600w"
+                <img src="/p/oneqyh/human_hu_8adae4608e19761b.png"
+                        srcset="/p/oneqyh/human_hu_8adae4608e19761b.png 800w, /p/oneqyh/human_hu_809d03fbefb25a2b.png 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
@@ -939,7 +952,7 @@
 <p><img src="/p/oneqyh/human.png"
 	width="3840"
 	height="2160"
-	srcset="/p/oneqyh/human_hu_38a2abc9b43ac2c4.png 480w, /p/oneqyh/human_hu_42b734aa1cf1480f.png 1024w"
+	srcset="/p/oneqyh/human_hu_100420e1e34880ba.png 480w, /p/oneqyh/human_hu_c89e20e36e349766.png 1024w"
 	loading="lazy"
 	
 		alt="小韩"
@@ -971,6 +984,30 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/16qyh/">
+        
+        
+            <div class="article-image">
+                <img src="/p/16qyh/%E6%A8%AA%E5%9B%BE.51a65700fbad01f7e3de9f6966c6edb1_hu_6de53f30ee2b5c6a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 第十六期轻音会"
+                        data-key="16qyh" 
+                        data-hash="md5-UaZXAPutAffj3p9pZsbtsQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第十六期轻音会</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
@@ -1043,25 +1080,6 @@
 
         <div class="article-details">
             <h2 class="article-title">第十二期轻音会</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/11qyh/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://img.vrclmcl.asia/LMCL/2026/06/08/%e6%a8%aa%e5%9b%be.png" loading="lazy" data-key="11qyh" data-hash="https://img.vrclmcl.asia/LMCL/2026/06/08/横图.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第十一期轻音会</h2>
         </div>
     </a>
 </article>

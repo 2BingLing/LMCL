@@ -59,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_881f0972fab6f8ab.png" width="300"
+                        <img src="/img/avatar_hu_6197964f3ec51f32.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -349,7 +349,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shiliud/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shiqid/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -360,7 +360,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十六次活动合照</div>
+        <div class="qyh-nav-item-desc">第十七次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -642,6 +642,15 @@
 <script>
 (function() {
   const themes = {
+    '16qyh': {
+      primary: '#1d1e3e',
+      secondary: '#ef9c66',
+      accent: '#f2b25c',
+      light: '#fdf3e3',
+      lighter: '#fbe8cc',
+      text: '#4a3a28',
+      shadow: 'rgba(242,178,92,0.18)'
+    },
     '15qyh': {
       primary: '#a63a7e',
       secondary: '#d95fa8',
@@ -709,6 +718,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/16qyh/') || path.includes('第十六期轻音会')) {
+      return themes['16qyh'];
+    }
 
     if (path.includes('/15qyh/') || path.includes('第十五期轻音会')) {
       return themes['15qyh'];
@@ -997,7 +1010,7 @@
         
         
             <div class="article-image">
-                <img src="/p/qb/bjqb.95dec28d2b8c92e6f4060eef5e7ac3d8_hu_388cce62a7776c0.png" 
+                <img src="/p/qb/bjqb.95dec28d2b8c92e6f4060eef5e7ac3d8_hu_55c6a5b0406b30ff.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1021,7 +1034,7 @@
         
         
             <div class="article-image">
-                <img src="/p/xy/bj.8b94bdfdfc55d4f246050155c690ae6b_hu_aa52846b3ff2816d.png" 
+                <img src="/p/xy/bj.8b94bdfdfc55d4f246050155c690ae6b_hu_abcb5e0455be8584.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
