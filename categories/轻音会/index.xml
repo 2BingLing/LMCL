@@ -162,6 +162,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ch-name{font-family:var(--disp);font-weight:400;font-size:clamp(26px,2.6vw,36px);color:var(--paper);letter-spacing:.34em}
 .ch-en{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.3em;color:var(--gold-d);margin-top:8px}
 .ch-rule{flex:1;height:1px;background:linear-gradient(90deg,rgba(200,160,106,.4),rgba(200,160,106,0));align-self:center}
+.ch-credit{flex:none;font-size:12px;letter-spacing:.28em;color:var(--gold-d);white-space:nowrap}
 .glass{background:linear-gradient(160deg,rgba(24,26,44,.72),rgba(13,15,30,.55));
   border:1px solid rgba(200,160,106,.3);border-radius:4px;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 24px 60px rgba(4,5,12,.45);
@@ -459,6 +460,7 @@ input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radiu
         &lt;span class=&#34;ch-num&#34; aria-hidden=&#34;true&#34;&gt;02&lt;/span&gt;
         &lt;div&gt;&lt;h2 class=&#34;ch-name&#34;&gt;地表&lt;/h2&gt;&lt;span class=&#34;ch-en mono&#34;&gt;SURFACE ARCHIVE&lt;/span&gt;&lt;/div&gt;
         &lt;i class=&#34;ch-rule&#34;&gt;&lt;/i&gt;
+        &lt;span class=&#34;ch-credit mono&#34;&gt;摄影 · QutaiBai柒白&lt;/span&gt;
       &lt;/header&gt;
     &lt;/div&gt;
     &lt;button class=&#34;band figbtn&#34; id=&#34;band&#34; aria-label=&#34;查看大图：黄金旷野横构图&#34;&gt;
