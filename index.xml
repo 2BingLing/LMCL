@@ -7,7 +7,979 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>ltyytn</copyright>
-        <lastBuildDate>Mon, 14 Sep 2026 01:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 26 Sep 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第十八次活动合照</title>
+        <link>https://vrclmcl.asia/p/shibad/</link>
+        <pubDate>Sat, 26 Sep 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/shibad/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/10/17/活动合照.png" alt="Featured image of post 第十八次活动合照" /&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://vrclmcl.asia/p/17qyh&#34; style=&#34;
+    display: inline-block;
+    background: linear-gradient(135deg, #a838a0, #e858c8);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  &#34; onmouseover=&#34;this.style.transform=&#39;scale(1.05)&#39;;&#34;
+  onmouseout=&#34;this.style.transform=&#39;scale(1)&#39;;&#34;&gt;
+    前往第十七期轻音会
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;第十八次活动合照&#34;&gt;第十八次活动合照
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;点开更高清&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p style=&#34;text-align: center; color: #999; font-size: 13px; letter-spacing: 0.1em;&#34;&gt;摄影 · QutaiBai柒白&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style=&#34;display:flex;gap:12px;margin:16px 0;align-items:flex-start;max-width:800px;&#34;&gt;
+  &lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/03/03/ltyytn.png&#34; style=&#34;width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;&#34;&gt;
+  &lt;div style=&#34;position:relative;background:#f0f4f8;color:#444;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;word-break:break-word;&#34;&gt;
+    哦哦哈哈哈哈哈，真是不错的一期
+    &lt;div style=&#34;position:absolute;left:-8px;top:12px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #f0f4f8;&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div id=&#34;jump-float&#34; style=&#34;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #a838a0, #e858c8);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(168,56,160,0.3);
+  transition: transform 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+&#34;&gt;
+  轻音会🎵
+&lt;/div&gt;
+&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+  const floatBtn = document.getElementById(&#39;jump-float&#39;);
+  if (floatBtn) {
+    floatBtn.addEventListener(&#39;click&#39;, () =&gt; {
+      window.location.href = &#39;/p/17qyh&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1.05)&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1)&#39;;
+    });
+  }
+});
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
+        <title>第十七期轻音会</title>
+        <link>https://vrclmcl.asia/p/17qyh/</link>
+        <pubDate>Sat, 26 Sep 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/17qyh/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png" alt="Featured image of post 第十七期轻音会" /&gt;&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.gstatic.com&#34; crossorigin&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Noto+Sans+SC:wght@300;400;500;700;900&amp;display=swap&#34;&gt;
+&lt;style&gt;
+/* ============ 基础 ============ */
+:root{
+  --bg:#100e1a;--bg2:#0a0812;--ink:#050308;
+  --mag:#e858c8;--mag2:#f07fd6;--pur:#a855e0;--cyn:#4de3e0;--blu:#2e7de0;
+  --gold:#b8925a;--wht:#f4f0fa;--txt:#cdc9dd;--sub:#9b95b4;
+  --sans:&#39;Noto Sans SC&#39;,system-ui,-apple-system,&#39;Microsoft YaHei&#39;,sans-serif;
+  --mono:&#39;JetBrains Mono&#39;,ui-monospace,Consolas,&#39;Noto Sans SC&#39;,monospace;
+  --disp:&#39;Noto Sans SC&#39;,&#39;Microsoft YaHei&#39;,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto;scrollbar-color:#8a4bb0 #0a0812;scrollbar-width:thin}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#0a0812}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#a855e0,#7c3aad);border-radius:6px;border:2px solid #0a0812}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#e858c8,#a855e0)}
+::-webkit-scrollbar-corner{background:#0a0812}
+html.lock,html.lock body{overflow:hidden;height:100%}
+body{background:#0a0812;color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.9;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overscroll-behavior-y:none}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ol,ul{list-style:none}
+.mono{font-family:var(--mono)}
+::selection{background:rgba(244,240,250,.24);color:#0c0a15}
+:focus-visible{outline:1px solid rgba(244,240,250,.75);outline-offset:3px}
+.ph{width:100%;height:100%;object-fit:cover}
+/* 静态噪点纹理（SVG feTurbulence，2% 亮度，打破深黑色带） */
+body::after{content:&#34;&#34;;position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.022;
+  background:url(&#34;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;180&#39; height=&#39;180&#39;%3E%3Cfilter id=&#39;n&#39;%3E%3CfeTurbulence type=&#39;fractalNoise&#39; baseFrequency=&#39;0.9&#39; numOctaves=&#39;2&#39; stitchTiles=&#39;stitch&#39;/%3E%3CfeColorMatrix type=&#39;saturate&#39; values=&#39;0&#39;/%3E%3C/filter%3E%3Crect width=&#39;180&#39; height=&#39;180&#39; filter=&#39;url(%23n)&#39;/%3E%3C/svg%3E&#34;) repeat;background-size:180px 180px}
+
+/* 整行遮罩升起（标题唯一允许的动画形态） */
+.row{display:block;overflow:hidden}
+.row&gt;span{display:inline-block;transform:translateY(115%)}
+@keyframes riseRow{from{transform:translateY(115%)}to{transform:translateY(0)}}
+@keyframes breathe{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* 通用揭示（只动 transform/opacity） */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:translateY(0)}
+
+/* ============ 入场遮罩：漆黑场馆 ============ */
+#entry{position:fixed;inset:0;z-index:60;background:#060409;overflow:hidden;cursor:pointer;
+  user-select:none;-webkit-user-select:none;touch-action:manipulation;transition:opacity .85s ease}
+#entry.fade{opacity:0;pointer-events:none}
+.pe{pointer-events:none}
+/* 唯一光源逻辑：舞台方向（上方/屏幕侧）微亮，观众区更暗 */
+#entry::before{content:&#34;&#34;;position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(50% 26% at 50% 2%,rgba(196,178,232,.09),rgba(168,85,224,.035) 46%,transparent 72%)}
+.e-wash{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease;
+  background:radial-gradient(95% 52% at 50% -6%,rgba(244,240,250,.14),rgba(168,85,224,.07) 42%,transparent 70%),
+             linear-gradient(180deg,rgba(22,18,36,.42) 0%,rgba(10,8,16,0) 36%),
+             linear-gradient(0deg,rgba(4,3,8,.62) 0%,rgba(4,3,8,0) 32%)}
+#entry.lights2 .e-wash{opacity:1;transition:opacity .9s ease}
+.e-depth{position:absolute;left:0;right:0;bottom:0;height:24vh;
+  background:linear-gradient(0deg,rgba(3,2,6,.55) 0%,rgba(3,2,6,0) 100%)}
+/* 射灯：光束 */
+.beam{position:absolute;top:58px;left:var(--x);width:150px;height:125vh;opacity:0;
+  mix-blend-mode:screen;transform-origin:50% 0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(244,240,250,.8) 0%,var(--bc) 13%,var(--bc) 42%,transparent 86%);
+  clip-path:polygon(41% 0,59% 0,100% 100%,0 100%);
+  animation:sweep var(--sd,2.8s) ease-in-out var(--dl,0s) infinite alternate;animation-play-state:paused;
+  transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--dl,0s)}
+#entry.lights2 .beam{opacity:.88;animation-play-state:running}
+#entry.full .beam{opacity:.88}
+@keyframes sweep{from{transform:rotate(var(--sf))}to{transform:rotate(var(--st))}}
+/* 光束内灰尘微闪（透明度抖动） */
+.beam::after{content:&#34;&#34;;position:absolute;inset:0;clip-path:polygon(41% 0,59% 0,100% 100%,0 100%);
+  background:inherit;mix-blend-mode:screen;animation:dustF calc(var(--sd)/8) steps(2,end) infinite}
+@keyframes dustF{0%{opacity:.04}50%{opacity:.15}100%{opacity:.04}}
+.b1{--x:9%;--sf:-14deg;--st:9deg;--bc:rgba(77,227,224,.34);--sd:3.2s;--dl:0s}
+.b2{--x:30%;--sf:-8deg;--st:14deg;--bc:rgba(232,88,200,.4);--sd:2.7s;--dl:.22s}
+.b3{--x:53%;--sf:12deg;--st:-9deg;--bc:rgba(168,85,224,.36);--sd:3.0s;--dl:.44s}
+.b4{--x:75%;--sf:15deg;--st:-6deg;--bc:rgba(77,227,224,.28);--sd:2.5s;--dl:.6s}
+/* LED 大屏：熄屏残影（idle）→ 屏息段全黑 → 爆发全功率点亮 → 边缘溢光 */
+.scr-edge{position:absolute;left:50%;top:9%;width:min(60vw,900px);aspect-ratio:16/9;transform:translateX(-50%);
+  box-shadow:0 0 26px rgba(232,88,200,.5),0 0 80px 10px rgba(168,85,224,.26);opacity:0;transition:opacity .12s ease .05s}
+#entry.lights1 .scr-edge{opacity:.92}
+.e-screen{position:absolute;left:50%;top:9%;width:min(60vw,900px);aspect-ratio:16/9;transform:translateX(-50%);
+  overflow:hidden;border:1px solid rgba(244,240,250,.10);background:#05030a;
+  box-shadow:0 0 0 6px rgba(8,6,14,.92),0 30px 80px rgba(0,0,0,.55)}
+.e-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 44%;transform:scale(1.07)}
+.scr-grid{position:absolute;inset:0;z-index:3;opacity:.55;mix-blend-mode:overlay;
+  background:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1.3px);background-size:5px 5px}
+/* LED 逐列覆盖层：idle=熄屏残影(.965) / 屏息=全黑 / 爆发=按距中心距离依次熄灭（信号传播 600ms） */
+.led-col{position:absolute;top:0;bottom:0;z-index:2;opacity:.965;
+  background:linear-gradient(180deg,#0b0814 0%,#050308 82%)}
+#entry.breath:not(.lights1) .led-col{opacity:1;transition:opacity .12s ease}
+#entry.lights1 .led-col{animation:colOn .12s steps(2,end) var(--cd,0ms) both}
+@keyframes colOn{0%{opacity:1}100%{opacity:0}}
+.scr-stby{position:absolute;right:14px;bottom:11px;z-index:4;display:flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.3em;color:#ff8794;transition:opacity .35s ease .4s}
+.scr-stby::before{content:&#34;&#34;;width:7px;height:7px;border-radius:50%;background:#ff3b4e;box-shadow:0 0 10px rgba(255,59,78,.8)}
+#entry.lights1 .scr-stby{opacity:0;transition:none}
+#cvSticks{position:absolute;inset:0;width:100%;height:100%}
+/* ============ P0 屏息：全馆骤暗 · 体积光顶柱（flicker 三闪后稳固）· 倒计时 ============ */
+#entry.breath:not(.lights1) .e-head{opacity:0;transform:translateY(-14px);transition:opacity .3s ease,transform .3s ease}
+#entry.breath:not(.lights1) .e-exit{opacity:0;transition:opacity .15s ease}
+#entry.breath:not(.lights1) .e-tally{opacity:0;animation:none}
+/* 体积光三层：核心亮柱 + 中层柔光 + 外层雾光 + 落地光斑（clip 硬边全部被 blur 柔化为体积感） */
+.topspot{position:absolute;left:0;right:0;top:0;height:58%;opacity:0;pointer-events:none;mix-blend-mode:screen;
+  transition:opacity .18s ease}
+#entry.breath:not(.lights1) .topspot{opacity:1;animation:tsFlick 1.2s steps(1,end) 1 both}
+/* 不规则 flicker：亮90ms→灭60ms→亮50ms→灭90ms→亮40ms→稳固全亮 */
+@keyframes tsFlick{0%,7.5%{opacity:1}7.6%,12.4%{opacity:.04}12.5%,16.6%{opacity:.95}16.7%,24.1%{opacity:.03}24.2%,27.4%{opacity:.9}27.5%,100%{opacity:1}}
+.ts-core,.ts-mid,.ts-fog{position:absolute;top:0;bottom:0;left:0;right:0}
+.ts-core{filter:blur(6px);clip-path:polygon(49.4% 0,50.6% 0,56.5% 100%,43.5% 100%);
+  background:linear-gradient(180deg,rgba(244,240,250,.62) 0%,rgba(244,240,250,.22) 62%,transparent 96%)}
+.ts-mid{filter:blur(24px);opacity:.6;clip-path:polygon(48.6% 0,51.4% 0,62% 100%,38% 100%);
+  background:linear-gradient(180deg,rgba(244,240,250,.38) 0%,rgba(220,214,240,.12) 66%,transparent 94%)}
+.ts-fog{filter:blur(60px);opacity:.35;clip-path:polygon(47.2% 0,52.8% 0,74% 100%,26% 100%);
+  background:linear-gradient(180deg,rgba(214,206,236,.3) 0%,transparent 86%)}
+.ts-pool{position:absolute;left:32%;right:32%;bottom:-4%;height:12%;filter:blur(10px);opacity:.85;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(244,240,250,.5),transparent 72%)}
+/* flicker 稳住后，一道光晕从灯位沿光柱流淌而下（传播感） */
+.ts-flow{position:absolute;left:42%;right:42%;top:0;height:22%;filter:blur(8px);opacity:0;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(255,255,255,.85),transparent 70%)}
+#entry.breath:not(.lights1) .ts-flow{animation:flowDown .55s cubic-bezier(.16,1,.3,1) .34s 1 both}
+@keyframes flowDown{0%{transform:translateY(-30%);opacity:0}14%{opacity:.95}100%{transform:translateY(330%);opacity:0}}
+@keyframes stbyBlink{0%,14%{opacity:1}15%,29%{opacity:0}30%,44%{opacity:1}45%,59%{opacity:0}60%,74%{opacity:1}75%,100%{opacity:0}}
+#entry.breath:not(.lights1) .scr-stby{animation:stbyBlink .72s steps(1,end) 1 both}
+/* ============ P2 signature：LED 逐列点亮完成后的细 lens flare（唯一点缀，无白闪/震动） ============ */
+.flare{position:absolute;left:0;right:0;top:36%;height:60px;opacity:0;pointer-events:none;mix-blend-mode:screen;
+  transform:translateY(-50%) scaleX(.08);filter:blur(5px);
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.55) 50%,transparent)}
+#entry.lights1 .flare{animation:flareGo 1s cubic-bezier(.16,1,.3,1) .62s 1 both}
+@keyframes flareGo{0%{opacity:.6;transform:translateY(-50%) scaleX(.08)}55%{opacity:.34;transform:translateY(-50%) scaleX(1.06)}100%{opacity:0;transform:translateY(-50%) scaleX(1.2)}}
+/* 安全出口 / 台侧红光 */
+.e-exit{position:absolute;left:5vw;top:7.5vh;display:flex;align-items:center;gap:10px;padding:10px 16px;
+  border:1px solid rgba(63,224,129,.75);background:rgba(9,24,16,.55);opacity:.62;transition:opacity .8s ease}
+.e-exit svg{width:22px;height:22px;stroke:#3fe081;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.e-exit span{font-size:12px;letter-spacing:.26em;color:#7fe8ac;white-space:nowrap}
+.e-exit::after{content:&#34;&#34;;position:absolute;inset:-16px;z-index:-1;
+  background:radial-gradient(60% 90% at 50% 50%,rgba(63,224,129,.2),transparent 72%)}
+#entry.full .e-exit{opacity:1}
+.e-tally{position:absolute;right:6vw;top:33vh;width:10px;height:10px;border-radius:50%;background:#ff3b4e;
+  box-shadow:0 0 18px 5px rgba(255,59,78,.5);animation:tally 1.7s ease-in-out infinite}
+@keyframes tally{0%,100%{opacity:.5}50%{opacity:1}}
+.e-vig{position:absolute;inset:0;background:radial-gradient(120% 96% at 50% 30%,transparent 44%,rgba(2,1,5,.88) 100%)}
+.e-head{position:absolute;left:0;right:0;bottom:8.5vh;display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:1.1vh;padding:0 6vw;transition:opacity .5s ease,transform .5s ease}
+#entry.lights1 .e-head{opacity:0;transform:translateY(-22px)}
+.e-head .row&gt;span{animation:riseRow .95s cubic-bezier(.19,.8,.22,1) both}
+.e-k{font-family:var(--mono);font-size:13px;letter-spacing:.4em;color:var(--gold)}
+.e-k span{animation-delay:.1s !important}
+.e-title{font-family:var(--disp);font-weight:900;font-size:clamp(42px,7vw,96px);line-height:1.12;color:#f3ecdc;letter-spacing:.02em}
+.e-title span{animation-delay:.24s !important}
+.e-sub{font-size:clamp(16px,2vw,24px);font-weight:500;letter-spacing:.34em;text-indent:.34em;color:rgba(244,240,250,.92)}
+.e-sub span{animation-delay:.4s !important}
+.e-hint{margin-top:2.4vh;font-family:var(--mono);font-size:13px;letter-spacing:.42em;color:rgba(244,240,250,.78)}
+.e-hint span{animation:riseRow .95s cubic-bezier(.19,.8,.22,1) .58s both,breathe 2.4s ease-in-out 2.1s infinite}
+
+/* ============ 顶部导航 ============ */
+#topnav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;
+  padding:20px 4vw;opacity:0;transform:translateY(-14px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1) .45s,transform .7s cubic-bezier(.16,1,.3,1) .45s,background-color .45s ease,box-shadow .45s ease,padding .45s ease}
+.landed #topnav{opacity:1;transform:translateY(0)}
+#topnav.scrolled{background:rgba(10,8,18,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(255,255,255,.1);padding:12px 4vw}
+.brand{display:flex;flex-direction:column;gap:1px}
+.b-cn{font-weight:700;font-size:19px;color:#f3ecdc;letter-spacing:.34em;line-height:1.3}
+.b-en{font-size:12px;letter-spacing:.22em;color:var(--gold)}
+.links{display:flex;align-items:center;gap:26px}
+.links a{font-size:14px;font-weight:500;color:var(--txt);letter-spacing:.14em;position:relative;padding:4px 0;transition:color .3s}
+.links a::after{content:&#34;&#34;;position:absolute;left:0;bottom:0;width:100%;height:1px;background:rgba(244,240,250,.55);
+  transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.6,0,.2,1)}
+.links a:hover{color:#f3ecdc}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+.links a+a::before{content:&#34;·&#34;;position:absolute;left:-16px;color:rgba(244,240,250,.4);opacity:.7}
+
+/* ============ 首屏：LED 大屏全景 ============ */
+#hero{position:relative;height:100vh;min-height:560px;overflow:hidden;background:var(--ink)}
+.hero-media{position:absolute;inset:0;z-index:1}
+.hero-media img{transform:scale(1.07);object-position:50% 44%}
+.landed .hero-media img{animation:kb 38s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.07)}to{transform:scale(1.01)}}
+/* 现场灯光呼吸（背景亮度 2-3% 起伏，40s 周期） */
+.hero-breath{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.12;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));animation:lightBreath 40s ease-in-out infinite}
+@keyframes lightBreath{0%,100%{opacity:.12}50%{opacity:.8}}
+/* 落地照片快速收束（与爆发同步的 1.045→1） */
+.landed .hero-media{animation:heroPunch 1.1s cubic-bezier(.16,.84,.3,1) both}
+@keyframes heroPunch{from{transform:scale(1.045)}to{transform:scale(1)}}
+.hero-shade{position:absolute;inset:0;z-index:2;
+  background:linear-gradient(0deg,rgba(10,8,16,.88) 0%,rgba(10,8,16,.62) 20%,rgba(10,8,16,.24) 40%,rgba(10,8,16,0) 60%),
+             linear-gradient(180deg,rgba(10,8,16,.38) 0%,rgba(10,8,16,0) 15%)}
+#cvHero{position:absolute;inset:0;z-index:3;width:100%;height:100%}
+.hero-copy{position:absolute;z-index:4;left:7vw;bottom:10vh;max-width:820px}
+.hero-copy .row&gt;span{transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.h-meta{font-family:var(--mono);font-size:13px;letter-spacing:.3em;color:var(--gold);margin-bottom:2.2vh}
+.h-meta span{transition-delay:.12s}
+.h-title{font-family:var(--disp);font-weight:900;font-size:clamp(50px,7.2vw,106px);line-height:1.12;color:#f3ecdc;letter-spacing:.02em}
+.h-title span{transition-delay:.26s}
+.h-theme{margin-top:2.2vh;display:flex;align-items:center;gap:16px;
+  font-size:clamp(18px,1.9vw,25px);font-weight:500;letter-spacing:.3em;color:var(--mag2)}
+.h-theme span{transition-delay:.42s}
+.t-tick{display:inline-block;width:30px;height:3px;background:var(--mag);flex:none}
+.landed .hero-copy .row&gt;span{transform:translateY(0)}
+.hero-side{position:absolute;z-index:4;right:4vw;bottom:10vh;display:flex;flex-direction:column;align-items:flex-end;gap:12px;
+  opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .62s,transform .8s cubic-bezier(.16,1,.3,1) .62s}
+.landed .hero-side{opacity:1;transform:translateY(0)}
+.hs-chip{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(10,8,18,.62);padding:7px 13px;font-size:12px;letter-spacing:.26em;color:var(--wht)}
+.hs-chip .dot{width:7px;height:7px;border-radius:50%;background:#ff3b4e;box-shadow:0 0 9px rgba(255,59,78,.8);animation:tally 1.6s ease-in-out infinite}
+.hs-track{font-size:13px;letter-spacing:.14em;color:var(--txt)}
+.hs-scroll{font-size:12px;letter-spacing:.3em;color:var(--sub)}
+
+/* ============ 章节公共：拼贴大字 ============ */
+.ch{position:relative;padding:16vh 7vw 11vh;max-width:1500px;margin:0 auto}
+.ch-head{display:flex;align-items:center;gap:36px;margin-bottom:7vh}
+.ch-big{position:relative;line-height:1;flex:none}
+.ch-en{position:relative;z-index:2;display:block;font-family:var(--disp);font-weight:900;
+  font-size:clamp(54px,8vw,124px);color:#f3ecdc;letter-spacing:.01em;white-space:nowrap}
+.ch-ghost{position:absolute;z-index:1;left:12px;top:9px;font-family:var(--disp);font-weight:900;
+  font-size:clamp(54px,8vw,124px);letter-spacing:.01em;color:transparent;
+  -webkit-text-stroke:1px rgba(244,240,250,.2);transform:rotate(-1.2deg);white-space:nowrap}
+.ch-cn{position:absolute;z-index:3;right:-20px;bottom:-16px;font-weight:700;
+  font-size:clamp(15px,1.4vw,20px);letter-spacing:.34em;text-indent:.34em;color:var(--gold);
+  border:1px solid rgba(255,255,255,.16);background:rgba(10,8,18,.88);padding:8px 14px;transform:rotate(1.2deg)}
+.ch-rule{flex:1;height:1px;background:linear-gradient(90deg,rgba(244,240,250,.28),rgba(244,240,250,0))}
+.ch-k{flex:none;font-size:12px;letter-spacing:.3em;color:var(--gold);white-space:nowrap}
+
+/* ============ OPENING · 场记 ============ */
+.op-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:6vw;align-items:start}
+.op-lede{font-size:17px;line-height:2.15;color:var(--txt);text-align:justify}
+.op-lede em{font-style:normal;color:var(--gold);font-weight:500}
+.op-lede strong{color:var(--wht);font-weight:500}
+.cue{border:1px solid rgba(255,255,255,.14);padding:26px 30px 22px;
+  background:linear-gradient(160deg,rgba(26,21,42,.74),rgba(10,8,18,.6));
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.cue-t{display:block;font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:12px}
+.cue-list li{font-size:13px;letter-spacing:.1em;line-height:2.4;color:var(--txt);
+  border-bottom:1px dashed rgba(244,240,250,.09);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cue-list li:last-child{border-bottom:0}
+.cue-list b{color:var(--gold);font-weight:500;margin-right:10px}
+
+/* ============ SET LIST · 歌卡 ============ */
+.sl-grid{display:grid;grid-template-columns:1fr 480px;gap:6vw;align-items:start}
+.sl-chip{display:inline-block;font-size:12px;letter-spacing:.28em;color:rgba(244,240,250,.85);
+  border:1px solid rgba(255,255,255,.16);padding:6px 13px;margin-bottom:3vh}
+.sl-title{font-family:var(--disp);font-weight:900;font-size:clamp(50px,6vw,90px);line-height:1.1;color:#f3ecdc;letter-spacing:.04em}
+.sl-live{font-size:14px;letter-spacing:.06em;color:var(--sub);margin-top:12px}
+.sl-artist{font-size:16px;color:var(--txt);margin-top:18px}
+.sl-artist b{color:var(--wht);font-weight:500}
+.sl-link{display:inline-block;font-size:13px;letter-spacing:.14em;color:rgba(244,240,250,.9);
+  border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:3px;margin-top:26px;transition:color .3s,border-color .3s}
+.sl-link:hover{color:var(--gold);border-color:var(--gold)}
+.meter{display:flex;gap:3px;align-items:flex-end;height:44px;margin-top:5vh}
+.meter i{width:4px;height:100%;background:linear-gradient(180deg,rgba(244,240,250,.85),rgba(244,240,250,.06));
+  transform:scaleY(.18);transform-origin:bottom;animation:eq 1s ease-in-out infinite alternate}
+@keyframes eq{from{transform:scaleY(.14)}to{transform:scaleY(1)}}
+.glass{position:relative;background:linear-gradient(160deg,rgba(26,21,42,.78),rgba(12,9,22,.62));
+  border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 26px 70px rgba(3,2,8,.5)}
+.sl-card{padding:30px 34px 24px;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+.slc-tag{display:block;font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:8px}
+.slc-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 0;
+  border-bottom:1px dashed rgba(244,240,250,.1)}
+.slc-row:last-of-type{border-bottom:0}
+.slc-row .k{font-size:12px;letter-spacing:.28em;color:var(--gold);white-space:nowrap}
+.slc-row .v{font-size:16px;line-height:1.75;color:#f3ecdc;text-align:right}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-left:8px;vertical-align:-.5px}
+.sw-m{background:var(--mag)}
+.sw-c{background:var(--cyn)}
+.sw-p{background:var(--pur)}
+.slc-note{padding-top:12px;font-size:12px;letter-spacing:.14em;color:var(--sub)}
+
+/* ============ 官方 REPO 机位 ============ */
+.cam-head{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin:11vh 0 4vh}
+.cam-head h3{font-family:var(--disp);font-weight:700;font-size:clamp(24px,2.4vw,30px);color:#f3ecdc;letter-spacing:.18em}
+.cam-en{font-size:12px;letter-spacing:.28em;color:var(--sub)}
+.cam-credit{margin-left:auto;font-size:12px;letter-spacing:.28em;color:var(--gold)}
+.cam-fig{position:relative;display:block;width:100%;padding:0;text-align:left;cursor:pointer;
+  border:1px solid rgba(244,240,250,.14);background:#0a0812;overflow:hidden}
+.figA .cf-media{display:block;height:82vh;overflow:hidden}
+.cam-fig .ph{transform:scale(1.06);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.cam-fig:hover .ph{transform:scale(1.1)}
+.figA .ph{object-position:50% 42%}
+.ck{position:absolute;z-index:3;width:26px;height:26px;border:0 solid rgba(244,240,250,.9)}
+.ck.tl{top:14px;left:14px;border-top-width:2px;border-left-width:2px}
+.ck.tr{top:14px;right:14px;border-top-width:2px;border-right-width:2px}
+.ck.bl{bottom:14px;left:14px;border-bottom-width:2px;border-left-width:2px}
+.ck.br{bottom:14px;right:14px;border-bottom-width:2px;border-right-width:2px}
+.cf-tag{position:absolute;z-index:3;left:22px;bottom:20px;display:inline-block;font-size:12px;letter-spacing:.22em;
+  color:var(--wht);background:rgba(8,6,14,.74);border:1px solid rgba(255,255,255,.16);padding:8px 14px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.cf-no{position:absolute;z-index:3;right:22px;bottom:22px;font-size:12px;letter-spacing:.26em;color:var(--gold)}
+.truss{display:flex;gap:26px;justify-content:center;align-items:center;height:36px;
+  background:repeating-linear-gradient(45deg,#0b0913 0 9px,#140f20 9px 18px);border-bottom:1px solid rgba(184,146,90,.4)}
+.truss i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.truss i:nth-child(2){background:var(--cyn)}
+.truss i:nth-child(3){background:var(--mag)}
+.cam-row{display:grid;grid-template-columns:minmax(300px,440px) 1fr;gap:4.5vw;align-items:start;margin-top:6vh}
+.figB .cf-media{display:block;aspect-ratio:3/4.35;overflow:hidden}
+.figB .ph{object-position:50% 60%}
+.figB .cf-no{top:54px;bottom:auto}
+.note{padding:30px 32px 26px}
+.note .tag{display:block;font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.note h4{font-weight:700;font-size:24px;color:#f3ecdc;letter-spacing:.16em;margin:12px 0 8px}
+.note p{font-size:15px;line-height:2.1;color:var(--txt);text-align:justify}
+.note .meta{display:block;margin-top:12px;font-size:12px;letter-spacing:.2em;color:var(--sub)}
+
+/* ============ ENCORE · 获选者 ============ */
+#encore{overflow:hidden}
+#encore::before{content:&#34;&#34;;position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(46% 30% at 74% 0%,rgba(168,85,224,.06),transparent 72%)}
+.win{margin:1vh 0 6.5vh;position:relative}
+.w-chip{display:inline-block;font-size:12px;letter-spacing:.3em;color:rgba(244,240,250,.85);
+  border:1px solid rgba(255,255,255,.16);padding:6px 13px;margin-bottom:2.6vh}
+.w-name{font-family:var(--disp);font-weight:900;font-size:clamp(44px,5.6vw,80px);line-height:1.2;color:#f3ecdc;letter-spacing:.02em}
+.w-name .w-alt{font-family:var(--mono);font-weight:500;color:var(--gold);font-size:.4em;margin-left:.3em;letter-spacing:.06em}
+.quote{position:relative;max-width:960px;padding:46px 48px 36px}
+.qmark{position:absolute;top:-30px;left:16px;font-family:var(--sans);font-weight:900;font-size:88px;line-height:1;color:var(--gold)}
+.quote p{font-size:17px;line-height:2.15;color:#dcd8ea;text-align:justify}
+.quote footer{margin-top:20px;font-size:12px;letter-spacing:.24em;color:var(--sub)}
+.journey{margin-top:6.5vh;max-width:960px}
+.journey header{display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:22px 32px;border-bottom:1px solid rgba(255,255,255,.12)}
+.journey h4{font-weight:700;font-size:20px;color:#f3ecdc;letter-spacing:.22em}
+.j-en{display:block;font-size:12px;letter-spacing:.26em;color:var(--gold);margin-top:4px}
+#jBtn{flex-shrink:0;font-size:13px;letter-spacing:.26em;color:rgba(244,240,250,.9);
+  border:1px solid rgba(255,255,255,.2);padding:8px 20px;transition:background-color .3s,color .3s}
+#jBtn:hover{background:rgba(255,255,255,.08)}
+.jbody{padding:26px 32px 30px;transition:opacity .24s ease,transform .24s ease}
+.jbody.closed{opacity:0;transform:translateY(-8px)}
+.jbody p{font-size:16px;line-height:2.15;color:var(--txt);text-align:justify}
+.jbody p+p{margin-top:1.1em}
+
+/* ============ 页脚 ============ */
+#foot{background:var(--bg2);border-top:1px solid rgba(255,255,255,.1);padding:8vh 7vw 6vh}
+.foot-row{display:flex;justify-content:space-between;align-items:baseline;gap:30px;flex-wrap:wrap}
+.f-ns{font-weight:700;font-size:clamp(17px,1.8vw,21px);letter-spacing:.3em;color:#f3ecdc}
+.f-cr{font-size:12px;letter-spacing:.2em;color:var(--sub)}
+.f-rule{height:1px;margin:30px 0 18px;background:linear-gradient(90deg,rgba(244,240,250,.22),rgba(244,240,250,0))}
+.f-live{font-size:12px;letter-spacing:.3em;color:var(--gold)}
+
+/* ============ BGM 播放器 ============ */
+#bgm{position:fixed;right:22px;bottom:22px;z-index:70;opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .6s ease 1s,transform .6s ease 1s,visibility 0s linear 1s}
+html.landed #bgm{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .6s ease 1s,transform .6s ease 1s}
+#bgmBall{position:relative;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(12,9,22,.6);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);
+  box-shadow:0 10px 30px rgba(3,2,8,.55);transition:border-color .3s}
+#bgmBall:hover{border-color:rgba(244,240,250,.6)}
+#bgmBall .eq{display:flex;gap:3px;align-items:flex-end;height:20px}
+#bgmBall .eq i{width:3px;height:100%;background:#f3ecdc;transform:scaleY(.22);transform-origin:bottom}
+#bgmBall.on .eq i{animation:eq .9s ease-in-out infinite alternate}
+#bgmBall.on .eq i:nth-child(1){animation-delay:0s}
+#bgmBall.on .eq i:nth-child(2){animation-delay:.18s}
+#bgmBall.on .eq i:nth-child(3){animation-delay:.34s}
+.bgm-panel{position:absolute;right:0;bottom:68px;width:302px;padding:20px 22px 18px;
+  opacity:0;visibility:hidden;transform:translateY(12px) scale(.97);
+  transition:opacity .3s ease,transform .3s ease,visibility .3s;
+  clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%)}
+#bgm.open .bgm-panel{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.bp-head{display:flex;flex-direction:column;align-items:flex-start;gap:2px;
+  border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:12px;margin-bottom:14px}
+.bp-t{font-weight:700;font-size:16px;color:#f3ecdc;letter-spacing:.06em}
+.bp-a{font-size:12px;letter-spacing:.08em;color:var(--gold);line-height:1.5}
+.bp-row{display:flex;align-items:center;gap:12px}
+.bp-row+.bp-row{margin-top:10px}
+#bpPlay{width:34px;height:34px;flex-shrink:0;border:1px solid rgba(255,255,255,.22);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;transition:background-color .3s}
+#bpPlay:hover{background:rgba(255,255,255,.08)}
+#bpPlay svg{width:13px;height:13px;fill:#f3ecdc}
+.bp-prog{flex:1}
+#bpTime{font-size:12px;color:var(--sub);letter-spacing:.06em;white-space:nowrap}
+.vol-ic{width:15px;height:15px;flex-shrink:0}
+#bpVol{width:86px}
+input[type=range]{-webkit-appearance:none;appearance:none;height:20px;background:transparent}
+.bp-prog input{width:100%}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:rgba(255,255,255,.2);border-radius:1px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;
+  background:var(--mag2);margin-top:-4px;box-shadow:0 0 0 3px rgba(232,88,200,.18)}
+input[type=range]::-moz-range-track{height:2px;background:rgba(255,255,255,.2);border-radius:1px}
+input[type=range]::-moz-range-thumb{width:10px;height:10px;border:0;border-radius:50%;background:var(--mag2)}
+
+/* ============ Lightbox ============ */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(6,4,9,.94);backdrop-filter:blur(10px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+#lb.open{opacity:1;visibility:visible}
+#lbImg{max-width:92vw;max-height:82vh;transform:scale(.97);transition:transform .35s cubic-bezier(.2,.7,.2,1);
+  box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.14)}
+#lb.open #lbImg{transform:scale(1)}
+#lbCap{font-size:12px;letter-spacing:.22em;color:rgba(244,240,250,.85);text-align:center;padding:0 5vw}
+#lbClose{position:absolute;top:22px;right:26px;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background-color .3s}
+#lbClose:hover{background:rgba(255,255,255,.1)}
+#lbClose svg{width:15px;height:15px;stroke:#f3ecdc;stroke-width:1.6}
+
+/* ============ 响应式 ≤768px ============ */
+@media (max-width:768px){
+  .ch{padding:12vh 6vw 9vh}
+  .ch-head{gap:16px;margin-bottom:5vh}
+  .ch-en,.ch-ghost{font-size:clamp(42px,12.5vw,80px)}
+  .ch-ghost{left:8px;top:7px}
+  .ch-cn{right:-8px;bottom:-14px;padding:6px 10px}
+  .ch-k{letter-spacing:.14em}
+  .links{gap:10px}
+  .links a{font-size:12px;letter-spacing:0}
+  .links a+a::before{left:-6px}
+  .b-cn{font-size:18px}
+  .b-en{display:none}
+  .e-screen{width:86vw;top:7%}
+  .scr-edge{width:86vw}
+  .beam{width:86px;top:44px}
+  .b3,.b4{display:none}
+  .e-exit{left:6vw;top:6vh;padding:8px 12px}
+  .e-tally{right:8vw;top:38vh}
+  .e-head{bottom:6.5vh}
+  .e-k{font-size:12px;letter-spacing:.16em}
+  .e-sub{letter-spacing:.2em;text-indent:.2em}
+  .e-hint{letter-spacing:.24em}
+  .hero-copy{left:6vw;right:6vw;bottom:12vh}
+  .h-title{font-size:clamp(44px,11.4vw,92px)}
+  .h-theme{letter-spacing:.18em}
+  .hero-side{display:none}
+  .op-grid{grid-template-columns:1fr;gap:4.5vh}
+  .cue{padding:20px 18px 16px}
+  .cue-list li{white-space:normal;line-height:2.1;padding:6px 0}
+  .sl-grid{grid-template-columns:1fr;gap:5vh}
+  .sl-title{font-size:clamp(44px,11vw,72px)}
+  .sl-card{padding:22px 18px 18px}
+  .slc-row{flex-direction:column;gap:4px;align-items:flex-start}
+  .slc-row .v{text-align:left;font-size:15px}
+  .cam-head{margin-top:8vh}
+  .cam-credit{margin-left:0;width:100%}
+  .figA .cf-media{height:52vh}
+  .cf-tag{left:12px;bottom:12px;letter-spacing:.12em}
+  .cf-no{right:12px;bottom:14px}
+  .cam-row{grid-template-columns:1fr;gap:4.5vh;margin-top:5vh}
+  .note{padding:22px 18px 20px}
+  .quote{padding:34px 20px 26px}
+  .qmark{font-size:76px;top:-24px;left:10px}
+  .quote p{font-size:15px}
+  .journey header{padding:16px 18px}
+  .jbody{padding:20px 18px 22px}
+  .jbody p{font-size:15px}
+  #bgm{right:14px;bottom:14px}
+  #bgmBall{width:46px;height:46px}
+  .bgm-panel{width:min(302px,calc(100vw - 84px))}
+  .foot-row{flex-direction:column;gap:12px}
+}
+&lt;/style&gt;
+&lt;p&gt;&lt;audio id=&#34;bgmAudio&#34; src=&#34;https://music.163.com/song/media/outer/url?id=3413774229.mp3&#34; preload=&#34;auto&#34; loop&gt;&lt;/audio&gt;&lt;/p&gt;
+&lt;!-- ================= 入场遮罩：漆黑场馆 · 开演 ================= --&gt;
+&lt;div id=&#34;entry&#34; role=&#34;button&#34; tabindex=&#34;0&#34; aria-label=&#34;点击进入第十七期轻音会页面&#34;&gt;
+&lt;div class=&#34;e-wash pe&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;e-depth pe&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;beam b1 pe&#34;&gt;&lt;/div&gt;&lt;div class=&#34;beam b2 pe&#34;&gt;&lt;/div&gt;&lt;div class=&#34;beam b3 pe&#34;&gt;&lt;/div&gt;&lt;div class=&#34;beam b4 pe&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;scr-edge pe&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;e-screen pe&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png&#34; alt=&#34;&#34;&gt;
+&lt;i class=&#34;scr-grid&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;scr-stby mono&#34;&gt;STANDBY&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topspot pe&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;i class=&#34;ts-core&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ts-mid&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ts-fog&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ts-pool&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ts-flow&#34;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&#34;flare pe&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;canvas id=&#34;cvSticks&#34; class=&#34;pe&#34;&gt;&lt;/canvas&gt;
+&lt;div class=&#34;e-exit pe&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;svg viewBox=&#34;0 0 24 24&#34;&gt;&lt;circle cx=&#34;14.5&#34; cy=&#34;4.5&#34; r=&#34;2&#34;/&gt;&lt;path d=&#34;M13 8 L10 12 L12.5 15 L11 21 M10 12 L6.5 13.5 M13 8 L17 10.5 L20 10 M12.5 15 L16 17.5 L17 21&#34;/&gt;&lt;/svg&gt;
+&lt;span class=&#34;mono&#34;&gt;安全出口 EXIT&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&#34;e-tally pe&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;div class=&#34;e-vig pe&#34;&gt;&lt;/div&gt;
+&lt;header class=&#34;e-head pe&#34;&gt;
+&lt;p class=&#34;row e-k mono&#34;&gt;&lt;span&gt;VOL.17 · LIVE OPENING · 开演灯牌&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;row e-title&#34;&gt;&lt;span&gt;第十七期轻音会&lt;/span&gt;&lt;/div&gt;
+&lt;p class=&#34;row e-sub&#34;&gt;&lt;span&gt;揭下面具 · 全场开麦&lt;/span&gt;&lt;/p&gt;
+&lt;p class=&#34;row e-hint&#34;&gt;&lt;span&gt;点击任意处 · 开演&lt;/span&gt;&lt;/p&gt;
+&lt;/header&gt;
+&lt;/div&gt;
+&lt;main id=&#34;page&#34;&gt;
+&lt;!-- 导航 --&gt;
+&lt;nav id=&#34;topnav&#34;&gt;
+&lt;a class=&#34;brand&#34; href=&#34;https://vrclmcl.asia/&#34;&gt;
+&lt;span class=&#34;b-cn&#34;&gt;轻音会社&lt;/span&gt;
+&lt;span class=&#34;b-en mono&#34;&gt;VRChat 音乐社团 · 每周歌会&lt;/span&gt;
+&lt;/a&gt;
+&lt;div class=&#34;links&#34;&gt;
+&lt;a href=&#34;https://vrclmcl.asia/about/&#34;&gt;关于我们&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/shibad/&#34;&gt;本期活动&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/gd/&#34;&gt;轻音歌单&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/apps/vote/&#34;&gt;投票系统&lt;/a&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- 首屏：LED 大屏全景 + 编辑式标题组 --&gt;
+&lt;section id=&#34;hero&#34;&gt;
+&lt;div class=&#34;hero-media&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png&#34; alt=&#34;粉紫霓虹 LED 巨屏前的白发机械风少女，蓝手套比出 V&#34; fetchpriority=&#34;high&#34;&gt;&lt;i class=&#34;hero-breath&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&#34;hero-shade&#34;&gt;&lt;/div&gt;
+&lt;canvas id=&#34;cvHero&#34; aria-hidden=&#34;true&#34;&gt;&lt;/canvas&gt;
+&lt;div class=&#34;hero-copy&#34;&gt;
+&lt;p class=&#34;row h-meta&#34;&gt;&lt;span&gt;VOL.17 · 第十八次正式活动 · 回顾 · VRChat 音乐社团 · 每周歌会&lt;/span&gt;&lt;/p&gt;
+&lt;h1 class=&#34;row h-title&#34;&gt;&lt;span&gt;第十七期轻音会&lt;/span&gt;&lt;/h1&gt;
+&lt;p class=&#34;row h-theme&#34;&gt;&lt;span&gt;&lt;i class=&#34;t-tick&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;揭下面具 · 全场开麦&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hero-side mono&#34;&gt;
+&lt;span class=&#34;hs-chip&#34;&gt;&lt;i class=&#34;dot&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;NOW SHOWING&lt;/span&gt;
+&lt;span class=&#34;hs-track&#34;&gt;TRACK 01 · うっせぇわ — Ado&lt;/span&gt;
+&lt;span class=&#34;hs-scroll&#34;&gt;SCROLL · 进入 SET LIST ↓&lt;/span&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- OPENING · 场记 --&gt;
+&lt;section id=&#34;opening&#34; class=&#34;ch&#34;&gt;
+&lt;header class=&#34;ch-head rv&#34;&gt;
+&lt;div class=&#34;ch-big&#34;&gt;
+&lt;span class=&#34;ch-ghost&#34; aria-hidden=&#34;true&#34;&gt;OPENING&lt;/span&gt;
+&lt;span class=&#34;ch-en&#34;&gt;OPENING&lt;/span&gt;
+&lt;span class=&#34;ch-cn&#34;&gt;开演&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&#34;ch-rule&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;ch-k mono&#34;&gt;RUN OF SHOW · 场记&lt;/span&gt;
+&lt;/header&gt;
+&lt;div class=&#34;op-grid&#34;&gt;
+&lt;p class=&#34;op-lede rv&#34;&gt;点击开演的瞬间，全馆先被压进彻底的黑——安全出口的绿光熄灭，台侧红点熄灭，只剩一柱体积光从桁架上打下来，灯管闪了三下才稳住，尘埃在光柱里悬浮明灭。然后 LED 大屏自中心向两侧逐列点亮，像信号沿着巨屏传播；一道细长的镜头光晕扫过，荧光棒由近及远荡成海洋。&lt;em&gt;揭下面具，全场开麦&lt;/em&gt;：第十八次正式活动，正式开始。这一页，是那场开演的&lt;strong&gt;演出台本&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class=&#34;cue rv&#34; style=&#34;transition-delay:.12s&#34;&gt;
+&lt;span class=&#34;cue-t mono&#34;&gt;CUE SHEET · 开演流程&lt;/span&gt;
+&lt;ol class=&#34;cue-list mono&#34;&gt;
+&lt;li&gt;&lt;b&gt;[CUE 00]&lt;/b&gt;场灯全暗 · 观众席静场&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;[CUE 01]&lt;/b&gt;全馆骤暗 · 体积光顶柱 flicker 三闪 · 倒计时&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;[CUE 02]&lt;/b&gt;LED 大屏自中心逐列点亮 · 信号传播&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;[CUE 03]&lt;/b&gt;荧光棒由近及远荡开 · 全场灯光渐起&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;[CUE 04]&lt;/b&gt;开麦 —— 第十七期轻音会 正式开始&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- SET LIST · 歌单 --&gt;
+&lt;section id=&#34;setlist&#34; class=&#34;ch&#34;&gt;
+&lt;header class=&#34;ch-head rv&#34;&gt;
+&lt;div class=&#34;ch-big&#34;&gt;
+&lt;span class=&#34;ch-ghost&#34; aria-hidden=&#34;true&#34;&gt;SET LIST&lt;/span&gt;
+&lt;span class=&#34;ch-en&#34;&gt;SET LIST&lt;/span&gt;
+&lt;span class=&#34;ch-cn&#34;&gt;歌单&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&#34;ch-rule&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;ch-k mono&#34;&gt;TRACK 01 · 本期获选&lt;/span&gt;
+&lt;/header&gt;
+&lt;div class=&#34;sl-grid&#34;&gt;
+&lt;div class=&#34;sl-left rv&#34;&gt;
+&lt;span class=&#34;sl-chip mono&#34;&gt;TRACK 01 · WINNER&lt;/span&gt;
+&lt;h3 class=&#34;sl-title&#34;&gt;うっせぇわ&lt;/h3&gt;
+&lt;p class=&#34;sl-live mono&#34;&gt;(Live At さいたまスーパーアリーナ, 2025)&lt;/p&gt;
+&lt;p class=&#34;sl-artist&#34;&gt;作者 —— &lt;b&gt;Ado&lt;/b&gt;&lt;/p&gt;
+&lt;a class=&#34;sl-link mono&#34; href=&#34;https://music.163.com/#/song?id=3413774229&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;网易云 · 歌曲链接（うっせぇわ）↗&lt;/a&gt;
+&lt;div class=&#34;meter&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;glass sl-card rv&#34; style=&#34;transition-delay:.12s&#34;&gt;
+&lt;span class=&#34;slc-tag mono&#34;&gt;SET LIST · 场记字段&lt;/span&gt;
+&lt;div class=&#34;slc-row&#34;&gt;&lt;span class=&#34;k mono&#34;&gt;活动时间&lt;/span&gt;&lt;span class=&#34;v&#34;&gt;第十八次正式活动&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;slc-row&#34;&gt;&lt;span class=&#34;k mono&#34;&gt;曲名&lt;/span&gt;&lt;span class=&#34;v&#34;&gt;うっせぇわ (Live At さいたまスーパーアリーナ, 2025)&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;slc-row&#34;&gt;&lt;span class=&#34;k mono&#34;&gt;作者&lt;/span&gt;&lt;span class=&#34;v&#34;&gt;Ado&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;slc-row&#34;&gt;&lt;span class=&#34;k mono&#34;&gt;获选投稿人&lt;/span&gt;&lt;span class=&#34;v&#34;&gt;阿斯莫德almost&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;slc-row&#34;&gt;&lt;span class=&#34;k mono&#34;&gt;应援色&lt;/span&gt;&lt;span class=&#34;v&#34;&gt;&lt;i class=&#34;sw sw-m&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;sw sw-c&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;sw sw-p&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;霓虹洋红 × 荧光青 · 双色应援&lt;/span&gt;&lt;/div&gt;
+&lt;p class=&#34;slc-note mono&#34;&gt;NOTE · 应援色即全场荧光棒海洋的两种光。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 官方 REPO 机位 --&gt;
+&lt;div class=&#34;cam-head rv&#34;&gt;
+&lt;h3&gt;官方 REPO 机位&lt;/h3&gt;
+&lt;span class=&#34;cam-en mono&#34;&gt;LIVE VISUAL · CAM A / CAM B&lt;/span&gt;
+&lt;span class=&#34;cam-credit mono&#34;&gt;摄影 · QutaiBai柒白&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&#34;cam-fig figA rv&#34; id=&#34;figA&#34; aria-label=&#34;查看大图：LED 巨屏前主视觉横构图&#34;&gt;
+&lt;span class=&#34;cf-media&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png&#34; alt=&#34;粉紫霓虹 LED 巨屏前的白发机械风少女，蓝手套比出 V&#34; loading=&#34;lazy&#34;&gt;&lt;/span&gt;
+&lt;i class=&#34;ck tl&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck tr&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck bl&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck br&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;cf-tag mono&#34;&gt;CAM A · 大屏正面机位 —— 巨屏前的定格&lt;/span&gt;
+&lt;span class=&#34;cf-no mono&#34;&gt;REPO · 17TH&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class=&#34;cam-row&#34;&gt;
+&lt;button class=&#34;cam-fig figB rv&#34; id=&#34;figB&#34; aria-label=&#34;查看大图：Live House 舞台竖构图&#34;&gt;
+&lt;span class=&#34;truss&#34; aria-hidden=&#34;true&#34;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span class=&#34;cf-media&#34;&gt;&lt;img class=&#34;ph&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/竖图.png&#34; alt=&#34;Live House 舞台全身照：黑色桁架射灯下，少女立于粉色巨屏前&#34; loading=&#34;lazy&#34;&gt;&lt;/span&gt;
+&lt;i class=&#34;ck tl&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck tr&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck bl&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;i class=&#34;ck br&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;cf-tag mono&#34;&gt;CAM B · 侧台机位 —— 桁架射灯之下&lt;/span&gt;
+&lt;span class=&#34;cf-no mono&#34;&gt;REPO · 17TH&lt;/span&gt;
+&lt;/button&gt;
+&lt;aside class=&#34;glass note rv&#34; style=&#34;transition-delay:.14s&#34;&gt;
+&lt;span class=&#34;tag mono&#34;&gt;FIELD NOTE · AFTER POWER-ON&lt;/span&gt;
+&lt;h4&gt;大屏亮起之后&lt;/h4&gt;
+&lt;p&gt;顶部桁架打出绿白光束，粉色巨屏铺满整个视野——Live House 的正中央，全场灯光为这一刻亮起。曝光交给大屏，人物留在光里：张扬、直白、不加修饰，正是开麦之后该有的样子。&lt;/p&gt;
+&lt;span class=&#34;meta mono&#34;&gt;FIG.B · 竖构图 · LIVE HOUSE 全景&lt;/span&gt;
+&lt;span class=&#34;meta mono&#34;&gt;CREDIT · 摄影 QutaiBai柒白&lt;/span&gt;
+&lt;/aside&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- ENCORE · 获选者 --&gt;
+&lt;section id=&#34;encore&#34; class=&#34;ch&#34;&gt;
+&lt;header class=&#34;ch-head rv&#34;&gt;
+&lt;div class=&#34;ch-big&#34;&gt;
+&lt;span class=&#34;ch-ghost&#34; aria-hidden=&#34;true&#34;&gt;ENCORE&lt;/span&gt;
+&lt;span class=&#34;ch-en&#34;&gt;ENCORE&lt;/span&gt;
+&lt;span class=&#34;ch-cn&#34;&gt;安可&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&#34;ch-rule&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+&lt;span class=&#34;ch-k mono&#34;&gt;WINNER STAGE · 获选舞台&lt;/span&gt;
+&lt;/header&gt;
+&lt;div class=&#34;win rv&#34;&gt;
+&lt;span class=&#34;w-chip mono&#34;&gt;ENCORE · 获选投稿人&lt;/span&gt;
+&lt;h3 class=&#34;w-name&#34;&gt;阿斯莫德&lt;span class=&#34;w-alt&#34;&gt;almost&lt;/span&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;blockquote class=&#34;quote glass rv&#34; style=&#34;transition-delay:.1s&#34;&gt;
+&lt;span class=&#34;qmark&#34; aria-hidden=&#34;true&#34;&gt;“&lt;/span&gt;
+&lt;p&gt;「关注轻音喵，关注轻音谢谢喵，请加入轻音会社，谢谢喵，好了好了，不开玩笑了，说实话，这回我选的曲子能胜出，完全超乎我的预料，不过话又说回来如果各位不嫌弃的话，我会继续为各位带来其他的曲子那么各位，ciao～」&lt;/p&gt;
+&lt;footer class=&#34;mono&#34;&gt;—— 阿斯莫德almost · 获选感言&lt;/footer&gt;
+&lt;/blockquote&gt;
+&lt;article class=&#34;journey glass rv open&#34; id=&#34;journey&#34; style=&#34;transition-delay:.18s&#34;&gt;
+&lt;header&gt;
+&lt;div&gt;&lt;h4&gt;投稿心路历程&lt;/h4&gt;&lt;span class=&#34;j-en mono&#34;&gt;JOURNEY · FULL TEXT&lt;/span&gt;&lt;/div&gt;
+&lt;button id=&#34;jBtn&#34; aria-expanded=&#34;true&#34; aria-controls=&#34;jBody&#34;&gt;收起&lt;/button&gt;
+&lt;/header&gt;
+&lt;div id=&#34;jBody&#34; class=&#34;jbody&#34;&gt;
+&lt;p&gt;放弃思考，享受音乐，然后漫步群星，这里是阿斯莫德。从小我们就被教着要守规矩：这不行，那不许。生活与职场里的条条框框，把人压得透不过气，连情绪都慢慢变得失真。我们或主动、或被迫戴上了名为&#34;虚伪&#34;的面具，戴得久了，连自己真正的想法都看不清。&lt;/p&gt;
+&lt;p&gt;世俗早已摆好一套又一套&#34;人生本该如此&#34;的模板，可照着模板活的日子，未免太过无趣干瘪。更让人无力的是那些张口就来的大道理，轻飘飘一句话，就想抹杀掉普通人所有的痛苦与挣扎，仿佛那些情绪全都不值一提。但就像我们说的，这样一板一眼、循环往复的生活，实在太无聊了。看到这里的你，不妨问问自己：你的真实，是不是已经被压在了虚伪的面具之下？如果没有，那再好不过。如果有，不如试着揭下那层面具，去见见真实的自己。&lt;/p&gt;
+&lt;p&gt;毕竟来回都是按部就班，每天重复着一模一样的生活，太乏味了，不是吗？多笑一笑，ciao～&lt;/p&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;/section&gt;
+&lt;!-- 页脚 --&gt;
+&lt;footer id=&#34;foot&#34;&gt;
+&lt;div class=&#34;foot-row&#34;&gt;
+&lt;span class=&#34;f-ns&#34;&gt;VRC轻音会社 · 每周歌会&lt;/span&gt;
+&lt;span class=&#34;f-cr mono&#34;&gt;© VRC轻音会社 · Q群 983271795 · author ltyytn&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;f-rule&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;p class=&#34;f-live mono&#34;&gt;LIVE OPENING · VOL.17 —— 揭下面具 · 全场开麦&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/main&gt;
+&lt;!-- BGM 播放器（悬浮球 + 面板） --&gt;
+&lt;div id=&#34;bgm&#34;&gt;
+&lt;div class=&#34;bgm-panel glass&#34; role=&#34;region&#34; aria-label=&#34;背景音乐播放器&#34;&gt;
+&lt;div class=&#34;bp-head&#34;&gt;&lt;span class=&#34;bp-t&#34;&gt;うっせぇわ&lt;/span&gt;&lt;span class=&#34;bp-a mono&#34;&gt;Ado · Live At さいたまスーパーアリーナ, 2025&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;bp-row&#34;&gt;
+&lt;button id=&#34;bpPlay&#34; aria-label=&#34;播放或暂停&#34;&gt;
+&lt;svg viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path id=&#34;bpIcon&#34; d=&#34;M3 1.5 L14 8 L3 14.5 Z&#34;/&gt;&lt;/svg&gt;
+&lt;/button&gt;
+&lt;span class=&#34;bp-prog&#34;&gt;&lt;input id=&#34;bpSeek&#34; type=&#34;range&#34; min=&#34;0&#34; max=&#34;1000&#34; value=&#34;0&#34; aria-label=&#34;播放进度&#34; step=&#34;1&#34;&gt;&lt;/span&gt;
+&lt;span id=&#34;bpTime&#34; class=&#34;mono&#34;&gt;0:00 / 0:00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;bp-row&#34;&gt;
+&lt;svg class=&#34;vol-ic&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path d=&#34;M2 6 L5 6 L9 2.5 L9 13.5 L5 10 L2 10 Z&#34; fill=&#34;rgba(244,240,250,.85)&#34;/&gt;
+&lt;path d=&#34;M11 4.8 A4.4 4.4 0 0 1 11 11.2&#34; fill=&#34;none&#34; stroke=&#34;rgba(244,240,250,.85)&#34; stroke-width=&#34;1.3&#34; stroke-linecap=&#34;round&#34;/&gt;
+&lt;/svg&gt;
+&lt;input id=&#34;bpVol&#34; type=&#34;range&#34; min=&#34;0&#34; max=&#34;100&#34; value=&#34;80&#34; aria-label=&#34;音量&#34;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button id=&#34;bgmBall&#34; aria-label=&#34;打开或收起背景音乐播放器&#34; aria-expanded=&#34;false&#34;&gt;
+&lt;span class=&#34;eq&#34; aria-hidden=&#34;true&#34;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- Lightbox --&gt;
+&lt;div id=&#34;lb&#34; role=&#34;dialog&#34; aria-modal=&#34;true&#34; aria-label=&#34;图片查看器&#34;&gt;
+&lt;img id=&#34;lbImg&#34; src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png&#34; alt=&#34;大图查看&#34;&gt;
+&lt;span id=&#34;lbCap&#34; class=&#34;mono&#34;&gt;&lt;/span&gt;
+&lt;button id=&#34;lbClose&#34; aria-label=&#34;关闭大图&#34;&gt;
+&lt;svg viewBox=&#34;0 0 14 14&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;M1 1 L13 13 M13 1 L1 13&#34; fill=&#34;none&#34;/&gt;&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+&#39;use strict&#39;;
+document.documentElement.classList.add(&#39;lock&#39;);var docEl=document.documentElement;
+history.scrollRestoration=&#39;manual&#39;;scrollTo(0,0);
+var body=document.body,W=innerWidth,H=innerHeight,
+    clampN=function(v,a,b){return v&lt;a?a:(v&gt;b?b:v)},
+    eio=function(t){return t&lt;.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2},
+    rnd=Math.random,DPR=Math.min(devicePixelRatio||1,2);
+var $=function(s){return document.querySelector(s)};
+var state=&#39;idle&#39;,motesOn=false;
+
+/* ---------- LED 电平表条（装饰） ---------- */
+var mt=document.querySelector(&#39;.meter&#39;);
+if(mt){for(var i=0;i&lt;18;i++){var b=document.createElement(&#39;i&#39;);
+  b.style.animationDelay=(i*87%720)+&#39;ms&#39;;b.style.animationDuration=(680+(i*137)%430)+&#39;ms&#39;;mt.appendChild(b);}}
+
+/* ---------- 入场编舞「屏息(flicker蓄力)→LED逐列点亮→定场」：JS 只切类与计时 ---------- */
+var entry=$(&#39;#entry&#39;),bgm=$(&#39;#bgmAudio&#39;),
+    isFull=false,isFade=false,tFull=0,tFade=0,tClick=0;
+function enter(){
+  if(state!==&#39;idle&#39;)return;
+  state=&#39;run&#39;;tClick=performance.now();
+  entry.classList.add(&#39;breath&#39;);           /* P0 屏息 0-1.2s：骤暗 + 体积光顶柱 flicker 三闪后稳固 + 倒计时 */
+  try{var p=bgm.play();if(p&amp;&amp;p.catch)p.catch(function(){});}catch(e){}
+  setTimeout(function(){tFull=performance.now();isFull=true;entry.classList.add(&#39;lights1&#39;);},1200); /* P2 signature 1.2-1.8s：LED 逐列点亮 */
+  setTimeout(function(){entry.classList.add(&#39;lights2&#39;);},2200);  /* P3 定场：光柱退场 · 射灯接管 · 灯光渐起（爆发后留 400ms 呼吸空隙） */
+  setTimeout(function(){entry.classList.add(&#39;full&#39;);},2900);     /* 全场灯稳定 · 出口牌/红点归位 */
+  setTimeout(function(){tFade=performance.now();isFade=true;entry.classList.add(&#39;fade&#39;);docEl.classList.add(&#39;landed&#39;);},3500);
+  setTimeout(function(){
+    if(entry.parentNode)entry.remove();
+    docEl.classList.remove(&#39;lock&#39;);state=&#39;page&#39;;
+    initMotes();motesOn=true;
+  },4350);
+}
+entry.addEventListener(&#39;click&#39;,enter);
+entry.addEventListener(&#39;keydown&#39;,function(e){if(e.key===&#39;Enter&#39;||e.key===&#39; &#39;){e.preventDefault();enter();}});
+
+/* ---------- canvas：荧光棒海洋（≤40）+ 顶光尘埃（≤26）+ 首屏光尘（≤30） ---------- */
+function fitCv(cv){
+  cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);
+  cv.style.width=W+&#39;px&#39;;cv.style.height=H+&#39;px&#39;;
+  var c=cv.getContext(&#39;2d&#39;);c.setTransform(DPR,0,0,DPR,0,0);return c;
+}
+var cvS=$(&#39;#cvSticks&#39;),sctx=fitCv(cvS),sticks=[];
+var COLORS=[&#39;232,88,200&#39;,&#39;77,227,224&#39;];
+for(var j=0;j&lt;40;j++){
+  var yy=rnd();
+  sticks.push({x:rnd(),y:yy,z:j&lt;16?rnd()*.45:(.45+rnd()*.55),
+    c:rnd()&lt;.62?0:1,lit:rnd()&lt;.28?.2+rnd()*.2:.8+rnd()*.2,
+    ph:rnd()*6.283,sp:.6+rnd()*1.1,wd:(2-Math.floor(yy*3))*130+rnd()*45});
+}
+var dust=[];
+for(var d=0;d&lt;26;d++)dust.push({u:rnd()*2-1,y:.05+rnd()*.38,ph:rnd()*6.283,sp:.5+rnd()*1.2,r:.6+rnd()*1.1});
+/* LED 大屏逐列覆盖层：14 列，按距中心距离依次熄灭（信号传播 ~600ms，列间 82ms 前沿） */
+var eScr=document.querySelector(&#39;.e-screen&#39;),NC=14;
+for(var ci=0;ci&lt;NC;ci++){
+  var lc=document.createElement(&#39;i&#39;);lc.className=&#39;led-col&#39;;
+  lc.style.left=(ci/NC*100).toFixed(3)+&#39;%&#39;;
+  lc.style.width=(100/NC+.15).toFixed(3)+&#39;%&#39;;
+  lc.style.setProperty(&#39;--cd&#39;,Math.round(Math.abs(ci-(NC-1)/2)*82)+&#39;ms&#39;);
+  eScr.appendChild(lc);
+}
+var cvH=$(&#39;#cvHero&#39;),hctx=null,motes=[];
+function initMotes(){
+  hctx=fitCv(cvH);motes=[];
+  for(var k=0;k&lt;30;k++)motes.push({x:rnd(),y:.5+rnd()*.5,r:.8+rnd()*1.8,
+    sp:.5+rnd()*.9,ph:rnd()*6.283,c:rnd()&lt;.55?0:1});
+}
+function drawSticks(now){
+  var breathOn=entry.classList.contains(&#39;breath&#39;)&amp;&amp;!isFull;
+  var fadeK=isFade?clampN(1-(now-tFade)/650,0,1):1;
+  var a0,tt=isFull?(now-tFull)/1000:-1;
+  if(isFull){ /* 荧光棒由近及远荡开：3 行波次 400ms，整体亮度 0.6→1.2 过冲→回 1 */
+    var gain=tt&lt;.4?.6+.6*(1-Math.pow(1-tt/.4,2)):1+.2*Math.exp(-(tt-.4)*4);
+    a0=gain*fadeK;
+  }else a0=breathOn?0:.05*(.8+.2*Math.sin(now*.0008))*fadeK;
+  sctx.clearRect(0,0,W,H);
+  if(a0&gt;.01){
+    for(var k=0;k&lt;sticks.length;k++){
+      var s=sticks[k],
+          rw=eio(clampN((tt*1000-s.wd)/170,0,1));
+      if(rw&lt;=0)continue;
+      var y=H*(.80+s.y*.14)+Math.sin(now*.0011*s.sp+s.ph)*4*(1+s.z),
+          x=s.x*W+Math.sin(now*.0006*s.sp+s.ph)*11*(.4+s.z),
+          a=a0*rw*s.lit*(.5+.5*s.z)*(.55+.45*Math.sin(now*.002*s.sp+s.ph*2)),col=COLORS[s.c];
+      sctx.fillStyle=&#39;rgba(&#39;+col+&#39;,&#39;+(.15*a).toFixed(3)+&#39;)&#39;;
+      sctx.beginPath();sctx.arc(x,y,7+10*s.z,0,6.283);sctx.fill();
+      sctx.fillStyle=&#39;rgba(&#39;+col+&#39;,&#39;+(.85*a).toFixed(3)+&#39;)&#39;;
+      sctx.beginPath();sctx.arc(x,y,1.1+1.6*s.z,0,6.283);sctx.fill();
+    }
+  }
+  if(breathOn)drawDust(now);
+}
+/* 顶光光柱里的悬浮尘埃（屏息段）：亮度跟随灯管 flicker 同步明灭 */
+function flickGain(t){t|=0;return t&lt;90?1:t&lt;150?.05:t&lt;200?.92:t&lt;290?.04:t&lt;330?.88:1;}
+function drawDust(now){
+  var fg=flickGain(now-tClick);
+  for(var k=0;k&lt;dust.length;k++){
+    var d=dust[k],yn=clampN(d.y+Math.sin(now*.00022*d.sp+d.ph)*.02,.02,.48),
+        x=(.5+d.u*.126*(yn/.58))*W+Math.sin(now*.0004*d.sp+d.ph)*5,
+        a=(.2+.5*(.5+.5*Math.sin(now*.0016*d.sp+d.ph)))*(.6+.4*(1-yn/.5))*fg;
+    sctx.fillStyle=&#39;rgba(244,240,250,&#39;+a.toFixed(3)+&#39;)&#39;;
+    sctx.beginPath();sctx.arc(x,yn*H,d.r,0,6.283);sctx.fill();
+    sctx.fillStyle=&#39;rgba(244,240,250,&#39;+(a*.25).toFixed(3)+&#39;)&#39;;
+    sctx.beginPath();sctx.arc(x,yn*H,d.r*3,0,6.283);sctx.fill();
+  }
+}
+function drawMotes(now,dt){
+  if(!hctx||scrollY&gt;H*1.35)return;
+  hctx.clearRect(0,0,W,H);
+  for(var k=0;k&lt;motes.length;k++){
+    var m=motes[k];
+    m.y-=(.012+m.sp*.02)*dt*3.4;if(m.y&lt;.42)m.y=1.02;
+    var x=m.x*W+Math.sin(now*.0007*m.sp+m.ph)*14,y=m.y*H,
+        a=.16*(.5+.5*Math.sin(now*.0013*m.sp+m.ph));
+    hctx.fillStyle=&#39;rgba(&#39;+COLORS[m.c]+&#39;,&#39;+a.toFixed(3)+&#39;)&#39;;
+    hctx.beginPath();hctx.arc(x,y,m.r,0,6.283);hctx.fill();
+    hctx.fillStyle=&#39;rgba(&#39;+COLORS[m.c]+&#39;,&#39;+(a*.3).toFixed(3)+&#39;)&#39;;
+    hctx.beginPath();hctx.arc(x,y,m.r*3.4,0,6.283);hctx.fill();
+  }
+}
+
+/* ---------- 滚动驱动：导航玻璃化 ---------- */
+var nav=$(&#39;#topnav&#39;),navScrolled=false;
+function tickScrollFx(){
+  var ns=scrollY&gt;50;
+  if(ns!==navScrolled){navScrolled=ns;nav.classList.toggle(&#39;scrolled&#39;,ns);}
+}
+
+/* ---------- 揭示 ---------- */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(en){if(en.isIntersecting){en.target.classList.add(&#39;on&#39;);io.unobserve(en.target);}});
+},{threshold:.15,rootMargin:&#39;0px 0px -6% 0px&#39;});
+document.querySelectorAll(&#39;.rv&#39;).forEach(function(el){io.observe(el)});
+
+/* ---------- 心路历程（默认展开） ---------- */
+var jBtn=$(&#39;#jBtn&#39;),jBody=$(&#39;#jBody&#39;),jOpen=true;
+jBtn.addEventListener(&#39;click&#39;,function(){
+  jOpen=!jOpen;
+  jBtn.setAttribute(&#39;aria-expanded&#39;,String(jOpen));
+  jBtn.textContent=jOpen?&#39;收起&#39;:&#39;展开&#39;;
+  if(jOpen){jBody.hidden=false;requestAnimationFrame(function(){requestAnimationFrame(function(){jBody.classList.remove(&#39;closed&#39;);});});}
+  else{jBody.classList.add(&#39;closed&#39;);setTimeout(function(){if(!jOpen)jBody.hidden=true;},240);}
+});
+
+/* ---------- Lightbox ---------- */
+var lb=$(&#39;#lb&#39;),lbImg=$(&#39;#lbImg&#39;),lbCap=$(&#39;#lbCap&#39;),lbClose=$(&#39;#lbClose&#39;),lastFocus=null;
+function openLB(src,cap){
+  lastFocus=document.activeElement;
+  lbImg.src=src;lbCap.textContent=cap;
+  lb.classList.add(&#39;open&#39;);lbClose.focus();
+}
+function closeLB(){lb.classList.remove(&#39;open&#39;);if(lastFocus&amp;&amp;lastFocus.focus)lastFocus.focus();}
+$(&#39;#figA&#39;).addEventListener(&#39;click&#39;,function(){openLB(&#39;https://img.vrclmcl.asia/LMCL/2026/10/17/横图.png&#39;,&#39;CAM A · 大屏正面 —— 第十七期轻音会 · うっせぇわ (Live At さいたまスーパーアリーナ, 2025) · 摄影 QutaiBai柒白&#39;);});
+$(&#39;#figB&#39;).addEventListener(&#39;click&#39;,function(){openLB(&#39;https://img.vrclmcl.asia/LMCL/2026/10/17/竖图.png&#39;,&#39;CAM B · 侧台 —— Live House 舞台全景 · 摄影 QutaiBai柒白&#39;);});
+lbClose.addEventListener(&#39;click&#39;,closeLB);
+lb.addEventListener(&#39;click&#39;,function(e){if(e.target===lb)closeLB();});
+addEventListener(&#39;keydown&#39;,function(e){if(e.key===&#39;Escape&#39;&amp;&amp;lb.classList.contains(&#39;open&#39;))closeLB();});
+
+/* ---------- BGM 播放器 ---------- */
+var ball=$(&#39;#bgmBall&#39;),bgmBox=$(&#39;#bgm&#39;),bpPlay=$(&#39;#bpPlay&#39;),bpIcon=$(&#39;#bpIcon&#39;),
+    bpSeek=$(&#39;#bpSeek&#39;),bpVol=$(&#39;#bpVol&#39;),bpTime=$(&#39;#bpTime&#39;),seeking=false;
+function fmt(s){if(!isFinite(s)||s&lt;0)s=0;s=Math.floor(s);return Math.floor(s/60)+&#39;:&#39;+String(s%60).padStart(2,&#39;0&#39;);}
+ball.addEventListener(&#39;click&#39;,function(){
+  var open=bgmBox.classList.toggle(&#39;open&#39;);
+  ball.setAttribute(&#39;aria-expanded&#39;,String(open));
+});
+function setIcon(playing){bpIcon.setAttribute(&#39;d&#39;,playing?&#39;M2.5 2 H6 V14 H2.5 Z M10 2 H13.5 V14 H10 Z&#39;:&#39;M3 1.5 L14 8 L3 14.5 Z&#39;);}
+bgm.addEventListener(&#39;playing&#39;,function(){ball.classList.add(&#39;on&#39;);setIcon(true);});
+bgm.addEventListener(&#39;pause&#39;,function(){ball.classList.remove(&#39;on&#39;);setIcon(false);});
+bgm.addEventListener(&#39;loadedmetadata&#39;,function(){bpTime.textContent=fmt(bgm.currentTime)+&#39; / &#39;+fmt(bgm.duration);});
+bgm.addEventListener(&#39;timeupdate&#39;,function(){
+  if(!seeking&amp;&amp;isFinite(bgm.duration)&amp;&amp;bgm.duration&gt;0)
+    bpSeek.value=Math.round(bgm.currentTime/bgm.duration*1000);
+  bpTime.textContent=fmt(bgm.currentTime)+&#39; / &#39;+fmt(bgm.duration);
+});
+bpPlay.addEventListener(&#39;click&#39;,function(){
+  if(bgm.paused){var pr=bgm.play();if(pr&amp;&amp;pr.catch)pr.catch(function(){});}
+  else bgm.pause();
+});
+bpSeek.addEventListener(&#39;pointerdown&#39;,function(){seeking=true;});
+addEventListener(&#39;pointerup&#39;,function(){seeking=false;});
+bpSeek.addEventListener(&#39;input&#39;,function(){
+  if(isFinite(bgm.duration)&amp;&amp;bgm.duration&gt;0)
+    bgm.currentTime=bpSeek.value/1000*bgm.duration;
+});
+bpVol.addEventListener(&#39;input&#39;,function(){bgm.volume=bpVol.value/100;});
+bgm.volume=.8;
+bgm.addEventListener(&#39;error&#39;,function(){});
+
+/* ---------- 主循环 ---------- */
+var last=performance.now();
+function frame(now){
+  requestAnimationFrame(frame);
+  var dt=Math.min(.05,(now-last)/1000);last=now;
+  if(entry.parentNode)drawSticks(now);
+  if(motesOn)drawMotes(now,dt);
+  tickScrollFx();
+}
+requestAnimationFrame(frame);
+
+/* ---------- resize ---------- */
+var rto=null;
+addEventListener(&#39;resize&#39;,function(){
+  clearTimeout(rto);
+  rto=setTimeout(function(){
+    W=innerWidth;H=innerHeight;
+    if(entry.parentNode)sctx=fitCv(cvS);
+    if(motesOn){hctx=fitCv(cvH);}
+  },160);
+});
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
         <title>第十六期轻音会</title>
         <link>https://vrclmcl.asia/p/16qyh/</link>
         <pubDate>Mon, 14 Sep 2026 01:00:00 +0800</pubDate>
@@ -12352,7 +13324,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fivto/ld2.png&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
-	srcset=&#34;https://vrclmcl.asia/p/fivto/ld2_hu_d2d948b8a6127232.png 480w, https://vrclmcl.asia/p/fivto/ld2_hu_442802ec72dba0d4.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/fivto/ld2_hu_a4fa603527163fb2.png 480w, https://vrclmcl.asia/p/fivto/ld2_hu_b6cce1c3e29dd276.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;联合海报&#34;
@@ -12371,7 +13343,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fivto/ld4.png&#34;
 	width=&#34;2048&#34;
 	height=&#34;1152&#34;
-	srcset=&#34;https://vrclmcl.asia/p/fivto/ld4_hu_1a84f4b0057eb893.png 480w, https://vrclmcl.asia/p/fivto/ld4_hu_befcae5d7bcf2c2b.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/fivto/ld4_hu_6a4c658d21aacc73.png 480w, https://vrclmcl.asia/p/fivto/ld4_hu_90fa303c252a980e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;负责人合照&#34;
@@ -12578,7 +13550,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fiqyh/qyh5.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/fiqyh/qyh5_hu_299bd2f787b8e932.png 480w, https://vrclmcl.asia/p/fiqyh/qyh5_hu_2ea489e25b82f82c.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/fiqyh/qyh5_hu_5aaa09adcb47e3b1.png 480w, https://vrclmcl.asia/p/fiqyh/qyh5_hu_c10e14afc1e6d1ea.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;琳琅&#34;
@@ -12743,7 +13715,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/sihd/human6.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/sihd/human6_hu_7b3b4698d2556add.png 480w, https://vrclmcl.asia/p/sihd/human6_hu_39b3c7e2c2f6fdc9.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/sihd/human6_hu_cbd91903347e72d4.png 480w, https://vrclmcl.asia/p/sihd/human6_hu_93e1e932709edb6e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清，摄影师：柒白&#34;
@@ -12948,7 +13920,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/foqyh/qyh4.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/foqyh/qyh4_hu_c786c6e322493f00.png 480w, https://vrclmcl.asia/p/foqyh/qyh4_hu_533f787b286f1bcc.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/foqyh/qyh4_hu_613738e667ae762d.png 480w, https://vrclmcl.asia/p/foqyh/qyh4_hu_4a526c55ac437e46.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;ltyytn&#34;
@@ -13768,7 +14740,7 @@ cards.forEach(card =&gt; observer.observe(card));
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fihd/human5.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/fihd/human5_hu_434d7a812a2b1a5a.png 480w, https://vrclmcl.asia/p/fihd/human5_hu_a7184d91f7d2c409.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/fihd/human5_hu_db1d239a7dec3a91.png 480w, https://vrclmcl.asia/p/fihd/human5_hu_b6543e41295ce747.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清，摄影师：柒白&#34;
@@ -13965,7 +14937,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/trqyh/human.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/trqyh/human_hu_74f3741be60037b9.png 480w, https://vrclmcl.asia/p/trqyh/human_hu_d2aee4ba20a825de.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/trqyh/human_hu_f67bed83e7850056.png 480w, https://vrclmcl.asia/p/trqyh/human_hu_9c9f775e67ac3508.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;咲夜不困啊&#34;
@@ -14130,7 +15102,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/fohd/human1.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/fohd/human1_hu_5c60edc7f214cfad.png 480w, https://vrclmcl.asia/p/fohd/human1_hu_2512819022ba6450.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/fohd/human1_hu_1c3480204d1e6f77.png 480w, https://vrclmcl.asia/p/fohd/human1_hu_3d7b98ecc795976b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清，摄影师：柒白&#34;
@@ -14241,6 +15213,82 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
         background: #fafafa;
         min-height: 100px;
     &#34;&gt;
+        &lt;li class=&#34;ranking-item&#34;
+            data-src=&#34;https://music.163.com/song/media/outer/url?id=3413774229.mp3&#34;
+            data-title=&#34;うっせぇわ (Live At さいたまスーパーアリーナ, 2025)&#34;
+            data-artist=&#34;Ado&#34;
+            style=&#34;
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            &#34;&gt;
+            &lt;div style=&#34;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #12101c 0%, #a855e0 55%, #e858c8 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            &#34;&gt;
+                &lt;span style=&#34;position: relative; z-index: 1;&#34;&gt;
+                    &lt;span style=&#34;font-family: sans-serif;&#34;&gt;#&lt;/span&gt;
+                    &lt;span style=&#34;font-weight: bold;&#34;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;song-info&#34; style=&#34;flex: 1;&#34;&gt;
+                &lt;div style=&#34;
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                &#34;&gt;うっせぇわ (Live At さいたまスーパーアリーナ, 2025) &lt;span style=&#34;
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #a838a0, #e858c8);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                &#34;&gt;✦ 第17期&lt;/span&gt;&lt;/div&gt;
+                &lt;div style=&#34;
+                    font-size: 14px;
+                    color: #666;
+                &#34;&gt;Ado · 投稿：阿斯莫德almost&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
+                &lt;button class=&#34;play-trigger&#34; style=&#34;
+                    background: linear-gradient(135deg, #a838a0, #e858c8);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;播放&lt;/button&gt;
+                &lt;a href=&#34;https://music.163.com/#/song?id=3413774229&#34; target=&#34;_blank&#34; style=&#34;
+                    background: transparent;
+                    color: #9a3a95;
+                    border: 1px solid #9a3a95;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;详情&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34;
             data-src=&#34;https://music.163.com/song/media/outer/url?id=3396716249.mp3&#34;
             data-title=&#34;Travelers&#39; Encore&#34;
@@ -15955,7 +17003,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/twoqyh/human.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/twoqyh/human_hu_66a6549d065309b.png 480w, https://vrclmcl.asia/p/twoqyh/human_hu_dfc6d6d0381db.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/twoqyh/human_hu_1e658c746c9152c2.png 480w, https://vrclmcl.asia/p/twoqyh/human_hu_4070270d2f0be245.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鬼鬼&#34;
@@ -16053,7 +17101,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/trhd/human1.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/trhd/human1_hu_eef2fb6abd02f702.png 480w, https://vrclmcl.asia/p/trhd/human1_hu_6d09a8fec831a5d0.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/trhd/human1_hu_84a6843836279a35.png 480w, https://vrclmcl.asia/p/trhd/human1_hu_f4ca80837dabead6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清&#34;
@@ -16085,7 +17133,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
 	width=&#34;972&#34;
 	height=&#34;547&#34;
-	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_c19b0b264aa2115e.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_1074f50f6aadb494.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_6286585890fae977.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_2670bbaf7c717763.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;合照&#34;
@@ -16099,7 +17147,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_6db655c7f0f4ca07.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_bfc9dafaa1f31f97.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_8941a0cb37a0daad.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human2_hu_16fdcf33d2d502b6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清&#34;
@@ -16154,7 +17202,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/oneqyh/human.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/oneqyh/human_hu_100420e1e34880ba.png 480w, https://vrclmcl.asia/p/oneqyh/human_hu_c89e20e36e349766.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/oneqyh/human_hu_38a2abc9b43ac2c4.png 480w, https://vrclmcl.asia/p/oneqyh/human_hu_42b734aa1cf1480f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;小韩&#34;
@@ -16178,7 +17226,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_1161af906f49fd55.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_b8578599d1adf45.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_693373abe3fc9b25.png 480w, https://vrclmcl.asia/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B4%BB%E5%8A%A8%E5%90%88%E7%85%A7/human1_hu_e40bff414bbafa73.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;合照&#34;
@@ -16206,7 +17254,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/zehd/human1.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/p/zehd/human1_hu_be484d4a9a2e8e19.png 480w, https://vrclmcl.asia/p/zehd/human1_hu_c88ee9b04fe977c3.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/zehd/human1_hu_f88804ad1813e480.png 480w, https://vrclmcl.asia/p/zehd/human1_hu_e5a69713063a1d81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;点开更高清&#34;
@@ -16321,7 +17369,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/wslt/le.png&#34;
 	width=&#34;970&#34;
 	height=&#34;1297&#34;
-	srcset=&#34;https://vrclmcl.asia/p/wslt/le_hu_e40126195d668058.png 480w, https://vrclmcl.asia/p/wslt/le_hu_f9334b20efdae30c.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/wslt/le_hu_ceb2079fee05d6c4.png 480w, https://vrclmcl.asia/p/wslt/le_hu_8d707a20f868722a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;海报展示&#34;
@@ -16428,7 +17476,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/p/xdhc/red.png&#34;
 	width=&#34;1280&#34;
 	height=&#34;1707&#34;
-	srcset=&#34;https://vrclmcl.asia/p/xdhc/red_hu_1fb7e24cdaf2f5a7.png 480w, https://vrclmcl.asia/p/xdhc/red_hu_5755edab2084ba48.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/p/xdhc/red_hu_ef4e16b7ae8c7c5c.png 480w, https://vrclmcl.asia/p/xdhc/red_hu_eab77203a6290d83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;海报展示&#34;
@@ -16450,7 +17498,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
         <description>&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/human/logo.png&#34;
 	width=&#34;862&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://vrclmcl.asia/human/logo_hu_30af4d4f0f29d2cc.png 480w, https://vrclmcl.asia/human/logo_hu_829220aa0da3d8dd.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/human/logo_hu_350e07c9facabb82.png 480w, https://vrclmcl.asia/human/logo_hu_32d247b51dafcef0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;以后替换成合照&#34;
@@ -16493,7 +17541,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/human/ltyytn.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/human/ltyytn_hu_5f4c913fb981f2a5.png 480w, https://vrclmcl.asia/human/ltyytn_hu_1a03f38e6fea5da3.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/human/ltyytn_hu_c442a3293fe40691.png 480w, https://vrclmcl.asia/human/ltyytn_hu_d9465044a78aaec9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鸭照&#34;
@@ -16535,7 +17583,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/human/plg4.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/human/plg4_hu_190fc0aed27c91d8.png 480w, https://vrclmcl.asia/human/plg4_hu_8025f1bb519fab07.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/human/plg4_hu_1b612edeed79409a.png 480w, https://vrclmcl.asia/human/plg4_hu_b4c4da8531863b94.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;外星人照&#34;
@@ -16572,7 +17620,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/human/Origami.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/human/Origami_hu_bf1147ac194305d5.png 480w, https://vrclmcl.asia/human/Origami_hu_b49150a2d2bc9eee.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/human/Origami_hu_7fcdf60b0386f1fe.png 480w, https://vrclmcl.asia/human/Origami_hu_74d189ae8141c6da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;人照&#34;
@@ -16609,7 +17657,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/human/rb.png&#34;
 	width=&#34;3840&#34;
 	height=&#34;2160&#34;
-	srcset=&#34;https://vrclmcl.asia/human/rb_hu_1ba68f926fdf050a.png 480w, https://vrclmcl.asia/human/rb_hu_bcd1efbf53bfd071.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/human/rb_hu_b95b381fc52a80e.png 480w, https://vrclmcl.asia/human/rb_hu_b8c7d76d2c9502a2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;人照&#34;
@@ -16639,7 +17687,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
         <description>&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/about/logo.png&#34;
 	width=&#34;862&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://vrclmcl.asia/about/logo_hu_30af4d4f0f29d2cc.png 480w, https://vrclmcl.asia/about/logo_hu_829220aa0da3d8dd.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/about/logo_hu_350e07c9facabb82.png 480w, https://vrclmcl.asia/about/logo_hu_32d247b51dafcef0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16775,7 +17823,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://vrclmcl.asia/about/hb.png&#34;
 	width=&#34;896&#34;
 	height=&#34;1184&#34;
-	srcset=&#34;https://vrclmcl.asia/about/hb_hu_de9ad00dcfd7c441.png 480w, https://vrclmcl.asia/about/hb_hu_a340b9c8963ea037.png 1024w&#34;
+	srcset=&#34;https://vrclmcl.asia/about/hb_hu_135db54f8f4f5778.png 480w, https://vrclmcl.asia/about/hb_hu_c47d6bf59e64df5a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;宣传海报&#34;
