@@ -48,14 +48,14 @@ a{color:var(--green-d)}
 .beam.b1{left:15%;width:118px}
 .beam.b2{left:51%;width:168px;background:linear-gradient(180deg,rgba(143,188,110,0) 0%,rgba(143,188,110,.13) 26%,rgba(242,192,94,.08) 58%,rgba(143,188,110,0) 92%)}
 .beam.b3{left:79%;width:88px}
-body.entered .beam{opacity:1;transition:opacity 1.9s ease 2.5s;animation:beamDrift 12s ease-in-out infinite alternate}
+body.entered .beam{opacity:1;transition:opacity 1.9s ease .35s;animation:beamDrift 12s ease-in-out infinite alternate}
 .beam.b2{animation-delay:-4s}.beam.b3{animation-delay:-8s}
 @keyframes beamDrift{from{transform:rotate(21deg) translateX(0)}to{transform:rotate(21deg) translateX(30px)}}
 .spot{position:absolute;border-radius:50%;filter:blur(20px);opacity:0}
 .spot.s1{width:240px;height:240px;left:58%;top:10%;background:radial-gradient(circle,rgba(242,192,94,.28),rgba(242,192,94,0) 70%)}
 .spot.s2{width:180px;height:180px;left:20%;top:52%;background:radial-gradient(circle,rgba(143,188,110,.24),rgba(143,188,110,0) 70%)}
 .spot.s3{width:150px;height:150px;left:74%;top:74%;background:radial-gradient(circle,rgba(242,192,94,.20),rgba(242,192,94,0) 70%)}
-body.entered .spot{opacity:.85;transition:opacity 2s ease 2.8s;animation:spotDrift 17s ease-in-out infinite alternate}
+body.entered .spot{opacity:.85;transition:opacity 2s ease .55s;animation:spotDrift 17s ease-in-out infinite alternate}
 .spot.s2{animation-delay:-6s}.spot.s3{animation-delay:-11s}
 @keyframes spotDrift{from{transform:translate(0,0)}to{transform:translate(36px,-26px)}}
 #dust span{
@@ -74,10 +74,10 @@ body.entered #dust span{opacity:.5;animation:rise var(--d) ease-in-out var(--dl)
 .edge.r{animation-delay:-4.5s}
 .edge svg{width:100%;height:100%}
 .edge path.v{fill:none;stroke:rgba(94,140,74,.5);stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1}
-body.entered .edge path.v{stroke-dashoffset:0;transition:stroke-dashoffset 2.1s ease-out 2.7s}
+body.entered .edge path.v{stroke-dashoffset:0;transition:stroke-dashoffset 2.1s ease-out .4s}
 @keyframes edgeSway{from{transform:rotate(-.5deg)}to{transform:rotate(.5deg)}}
 .leafy{position:absolute;opacity:0;transform-origin:bottom left}
-body.entered .leafy{opacity:.5;transition:opacity 1.2s ease 3.2s;animation:sway 6.5s ease-in-out infinite alternate}
+body.entered .leafy{opacity:.5;transition:opacity 1.2s ease .9s;animation:sway 6.5s ease-in-out infinite alternate}
 .leafy path{fill:var(--green-l)}
 @keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(4deg)}}
 /* ---------- 顶部融入导航 ---------- */
@@ -87,7 +87,7 @@ body.entered .leafy{opacity:.5;transition:opacity 1.2s ease 3.2s;animation:sway 
   min-height:54px;padding:8px clamp(16px,3vw,44px);
   background:rgba(251,248,238,.84);backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(94,140,74,.22);
-  transform:translateY(-100%);transition:transform .7s cubic-bezier(.2,.8,.25,1) 2.4s;
+  transform:translateY(-100%);transition:transform .7s cubic-bezier(.2,.8,.25,1) .55s;
 }
 body.entered #topnav{transform:none}
 .brand{display:flex;align-items:center;gap:8px;font-family:'Zen Maru Gothic';font-weight:700;font-size:15px;color:var(--green-d);text-decoration:none}
@@ -123,16 +123,16 @@ body.entered #topnav{transform:none}
 }
 .meta{margin-top:20px;font-size:13px;letter-spacing:2px;color:var(--ink2)}
 .note{margin-top:10px;font-family:'Long Cang';font-size:clamp(22px,2.2vw,28px);color:var(--green);line-height:1.4}
-/* 入场：照片淡入（用户拍板：旋转完后照片淡入首屏）+ 文字整行升起（html.js 门控） */
-html.js .ph{opacity:0;transform:translateY(26px) scale(.975);transition:opacity 1.15s ease 1.85s,transform 1.35s cubic-bezier(.22,.85,.3,1) 1.85s}
-html.js body.entered .ph{opacity:1;transform:none}
+/* 入场：圆形照片飞抵落位后真实照片显现 + 文字整行升起（html.js 门控） */
+html.js .ph{opacity:0;transition:opacity .5s ease}
+html.js .ph.reveal{opacity:1}
 html.js .ln{display:block;overflow:hidden}
 html.js .ln>i{display:inline-block;font-style:normal;transform:translateY(115%);transition:transform .8s cubic-bezier(.2,.8,.25,1)}
-html.js .ln.d1>i{transition-delay:2.05s}
-html.js .ln.d2>i{transition-delay:2.2s}
-html.js .ln.d3>i{transition-delay:2.36s}
-html.js .ln.d4>i{transition-delay:2.5s}
-html.js .ln.d5>i{transition-delay:2.7s}
+html.js .ln.d1>i{transition-delay:.12s}
+html.js .ln.d2>i{transition-delay:.26s}
+html.js .ln.d3>i{transition-delay:.4s}
+html.js .ln.d4>i{transition-delay:.54s}
+html.js .ln.d5>i{transition-delay:.72s}
 html.js body.entered .ln>i{transform:none}
 html.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.25,1)}
 html.js .rv.on{opacity:1;transform:none}
@@ -220,12 +220,12 @@ html.js .rv.on{opacity:1;transform:none}
   box-shadow:0 10px 24px rgba(47,42,26,.35),inset 0 2px 3px rgba(255,255,255,.25);
   display:grid;place-items:center;
   opacity:0;transform:translateY(16px);
-  transition:opacity .6s ease 3.1s,transform .6s ease 3.1s,box-shadow .25s;
+  transition:opacity .6s ease 1.2s,transform .6s ease 1.2s,box-shadow .25s;
 }
 body.entered #pBall{opacity:1;transform:none}
 #pBall:hover{box-shadow:0 14px 30px rgba(47,42,26,.45),inset 0 2px 3px rgba(255,255,255,.25)}
 #pBall::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1.5px solid rgba(242,192,94,.55);opacity:0}
-body.entered #pBall::after{animation:pulse 2.6s ease-out 3.4s infinite}
+body.entered #pBall::after{animation:pulse 2.6s ease-out 1.5s infinite}
 @keyframes pulse{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.28);opacity:0}}
 #pBall svg.sun{width:26px;height:26px;transition:transform .4s}
 body.entered #pBall svg.sun{animation:spin 16s linear infinite}
@@ -290,14 +290,6 @@ body.entered #pBall svg.sun{animation:spin 16s linear infinite}
   width:4.5%;height:4.5%;transform:translate(-50%,-50%);
   border-radius:50%;background:#3d5a42;z-index:2;
 }
-#gate .ghole{
-  position:absolute;left:50%;top:50%;z-index:5;
-  width:88px;height:88px;margin:-44px 0 0 -44px;
-  border-radius:50%;background:var(--paper);
-  transform:scale(.001);
-  transition:transform 1.5s cubic-bezier(.7,0,.25,1) .55s;
-  pointer-events:none;
-}
 #gate .ghint{
   position:absolute;left:0;right:0;bottom:9vh;text-align:center;
   color:#faf6ea;transition:opacity .4s ease;
@@ -311,13 +303,36 @@ body.entered #pBall svg.sun{animation:spin 16s linear infinite}
   animation:breathe 2.4s ease-in-out infinite;
 }
 @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
-/* 点击后：涟漪收拢 · 唱片慢速加速旋转放大 · 唱孔奶油漫开盖屏 */
-#gate.go{opacity:0;transition:opacity .5s ease 2.05s;pointer-events:none}
-#gate.go .grings{transform:scale(.05);opacity:0;transition:transform .8s cubic-bezier(.6,-.05,.35,1),opacity .6s ease}
-#gate.go .gdisc{transform:scale(1.9) rotate(160deg)}
-#gate.go .gspin{animation-duration:2.6s}
-#gate.go .ghole{transform:scale(90)}
+/* 点击后：涟漪收拢 · 唱片慢速旋转 · 圆形照片从盘心旋出（fly 层） · 门缓缓隐去 */
+#gate.go{pointer-events:none}
+#gate.go .grings{transform:scale(.05);opacity:0;transition:transform .9s cubic-bezier(.6,-.05,.35,1),opacity .7s ease}
+#gate.go .gdisc{transform:scale(1.12) rotate(120deg);transition:transform 2.3s cubic-bezier(.45,0,.2,1)}
+#gate.go .gspin{animation-duration:3.2s}
 #gate.go .ghint{opacity:0}
+#gate.bye{opacity:0;transition:opacity .7s ease}
+/* 飞行照片层：盘心旋出 → 飞向首屏照片位 → 展开成矩形（JS 驱动落点） */
+#fly{
+  position:fixed;left:50%;top:50%;z-index:110;
+  width:min(58vmin,430px);height:min(58vmin,430px);
+  transform:translate(-50%,-50%) scale(.14) rotate(-330deg);
+  border-radius:50%;overflow:hidden;pointer-events:none;opacity:0;
+  box-shadow:0 30px 80px rgba(30,45,28,.5),0 0 0 6px rgba(250,246,234,.92);
+  transition:opacity .25s ease;
+}
+#fly img{width:100%;height:100%;object-fit:cover;display:block}
+#fly.out{
+  opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0deg);
+  transition:transform 1.9s cubic-bezier(.45,.05,.22,1) .35s,opacity .25s ease .35s;
+}
+#fly.fly{
+  transition:
+    left 1.1s cubic-bezier(.62,.02,.16,1),
+    top 1.1s cubic-bezier(.62,.02,.16,1),
+    width 1.1s cubic-bezier(.62,.02,.16,1),
+    height 1.1s cubic-bezier(.62,.02,.16,1),
+    border-radius 1.1s cubic-bezier(.62,.02,.16,1),
+    transform 1.1s ease;
+}
 /* ---------- 响应式 ---------- */
 @media (max-width:960px){
   .hero{flex-direction:column;gap:30px}
@@ -503,12 +518,12 @@ body.entered #pBall svg.sun{animation:spin 16s linear infinite}
 <span class="gd" style="left:78%;top:56%;width:2px;height:2px;--d:11s;--dl:-7s"></span>
 <div class="grings" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div class="gdisc" aria-hidden="true"><div class="gspin"></div></div>
-<div class="ghole" aria-hidden="true"></div>
 <div class="ghint">
 <p class="g1">VRC 轻音会社 · 第十八期轻音会</p>
 <p class="g2">轻触任意处 · 推开中庭的门</p>
 </div>
 </div>
+<div id="fly" aria-hidden="true"><img src="https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png" alt=""></div>
 <script>
 (function(){
 var d=document;
@@ -524,6 +539,7 @@ var mind=d.getElementById('mind');
 var lb=d.getElementById('lb');
 var lbImg=d.getElementById('lbImg');
 var lbCap=d.getElementById('lbCap');
+var fly=d.getElementById('fly');
 
 /* 尘埃粒子：上限 40，光束带内更亮（金） */
 var beams=[[10,26],[46,64],[72,84]];
@@ -541,16 +557,36 @@ for(var i=0;i<34;i++){
   dustLayer.appendChild(s);
 }
 
-/* 入场：同一手势内注入 iframe src → 涟漪收拢 → 唱片慢速旋转放大 → 唱孔奶油漫开 → 首屏照片淡入 */
+/* 入场编排：同一手势注入 iframe src → 唱片慢转、圆形照片旋转着从盘心出现
+   → 门隐去、圆形照片飞向首屏照片位 → 落位展开成矩形大图 → 文字升起 */
 var entered=false;
 gate.addEventListener('click',function(){
   if(entered)return;
   entered=true;
+  var phFig=d.querySelector('.hero-ph .ph');
   bgm.src='https://player.bilibili.com/player.html?isOutside=true&bvid=BV1hz4y1p7xG&autoplay=1&danmaku=0&high_quality=1';
   gate.classList.add('go');
-  d.body.classList.add('entered');
-  d.documentElement.classList.remove('lock');
-  setTimeout(function(){gate.style.visibility='hidden';},2700);
+  fly.classList.add('out');
+  setTimeout(function(){gate.classList.add('bye');},2150);
+  setTimeout(function(){
+    var r=phFig.getBoundingClientRect();
+    var im=phFig.querySelector('img').getBoundingClientRect();
+    fly.classList.add('fly');
+    requestAnimationFrame(function(){
+      fly.style.left=(im.left+im.width/2)+'px';
+      fly.style.top=(im.top+im.height/2)+'px';
+      fly.style.width=im.width+'px';
+      fly.style.height=im.height+'px';
+      fly.style.borderRadius='14px';
+    });
+    setTimeout(function(){
+      phFig.classList.add('reveal');
+      d.body.classList.add('entered');
+      d.documentElement.classList.remove('lock');
+      setTimeout(function(){if(fly.parentNode)fly.parentNode.removeChild(fly);},500);
+      setTimeout(function(){gate.style.display='none';},300);
+    },1150);
+  },2450);
 },{once:true});
 
 /* 滚动浮入 + 藤蔓描线生长 */
