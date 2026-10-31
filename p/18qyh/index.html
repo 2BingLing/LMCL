@@ -303,26 +303,45 @@ body.entered #pBall svg.sun{animation:spin 16s linear infinite}
   animation:breathe 2.4s ease-in-out infinite;
 }
 @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
-/* 点击后：涟漪收拢 · 唱片慢速旋转 · 圆形照片从盘心旋出（fly 层） · 门缓缓隐去 */
+/* 点击后：唱片快速边转边放大 → 白屏展开的同时圆形照片从最小旋出（并行） */
 #gate.go{pointer-events:none}
-#gate.go .grings{transform:scale(.05);opacity:0;transition:transform .9s cubic-bezier(.6,-.05,.35,1),opacity .7s ease}
-#gate.go .gdisc{transform:scale(1.12) rotate(120deg);transition:transform 2.3s cubic-bezier(.45,0,.2,1)}
-#gate.go .gspin{animation-duration:3.2s}
+#gate.go .grings{transform:scale(.05);opacity:0;transition:transform .7s cubic-bezier(.6,-.05,.35,1),opacity .55s ease}
+#gate.go .gdisc{transform:scale(1.5) rotate(160deg);transition:transform 1.4s cubic-bezier(.4,.05,.25,1)}
+#gate.go .gspin{animation-duration:2s}
 #gate.go .ghint{opacity:0}
-#gate.bye{opacity:0;transition:opacity .7s ease}
-/* 飞行照片层：盘心旋出 → 飞向首屏照片位 → 展开成矩形（JS 驱动落点） */
+#gate .ghole{
+  position:absolute;left:50%;top:50%;z-index:6;
+  width:88px;height:88px;margin:-44px 0 0 -44px;
+  border-radius:50%;background:var(--paper);
+  transform:scale(.001);pointer-events:none;
+}
+#gate.go .ghole{transform:scale(90);transition:transform 1.4s cubic-bezier(.7,0,.25,1) 1s}
+#gate .ghint{
+  position:absolute;left:0;right:0;bottom:9vh;text-align:center;
+  color:#faf6ea;transition:opacity .4s ease;
+}
+#gate .ghint .g1{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.42em;color:#ffe9b3;
+}
+#gate .ghint .g2{
+  margin-top:14px;font-size:15px;letter-spacing:.2em;
+  animation:breathe 2.4s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+/* 飞行照片层：白屏上旋转出现 → 飞向首屏照片位 → 展开成矩形（JS 驱动落点） */
 #fly{
   position:fixed;left:50%;top:50%;z-index:110;
   width:min(58vmin,430px);height:min(58vmin,430px);
   transform:translate(-50%,-50%) scale(.14) rotate(-330deg);
   border-radius:50%;overflow:hidden;pointer-events:none;opacity:0;
-  box-shadow:0 30px 80px rgba(30,45,28,.5),0 0 0 6px rgba(250,246,234,.92);
+  box-shadow:0 30px 80px rgba(30,45,28,.45),0 0 0 6px rgba(250,246,234,.92);
   transition:opacity .25s ease;
 }
 #fly img{width:100%;height:100%;object-fit:cover;display:block}
 #fly.out{
   opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0deg);
-  transition:transform 1.9s cubic-bezier(.45,.05,.22,1) .35s,opacity .25s ease .35s;
+  transition:transform 1.9s cubic-bezier(.45,.05,.22,1),opacity .25s ease;
 }
 #fly.fly{
   transition:
@@ -518,6 +537,7 @@ body.entered #pBall svg.sun{animation:spin 16s linear infinite}
 <span class="gd" style="left:78%;top:56%;width:2px;height:2px;--d:11s;--dl:-7s"></span>
 <div class="grings" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div class="gdisc" aria-hidden="true"><div class="gspin"></div></div>
+<div class="ghole" aria-hidden="true"></div>
 <div class="ghint">
 <p class="g1">VRC 轻音会社 · 第十八期轻音会</p>
 <p class="g2">轻触任意处 · 推开中庭的门</p>
@@ -557,8 +577,8 @@ for(var i=0;i<34;i++){
   dustLayer.appendChild(s);
 }
 
-/* 入场编排：同一手势注入 iframe src → 唱片慢转、圆形照片旋转着从盘心出现
-   → 门隐去、圆形照片飞向首屏照片位 → 落位展开成矩形大图 → 文字升起 */
+/* 入场编排：同一手势注入 iframe src → 唱片快速边转边放大 → 白屏展开与圆形照片从最小旋出同时进行
+   → 照片飞向首屏照片位展开成矩形 → 文字升起 */
 var entered=false;
 gate.addEventListener('click',function(){
   if(entered)return;
@@ -566,10 +586,9 @@ gate.addEventListener('click',function(){
   var phFig=d.querySelector('.hero-ph .ph');
   bgm.src='https://player.bilibili.com/player.html?isOutside=true&bvid=BV1hz4y1p7xG&autoplay=1&danmaku=0&high_quality=1';
   gate.classList.add('go');
-  fly.classList.add('out');
-  setTimeout(function(){gate.classList.add('bye');},2150);
+  setTimeout(function(){fly.classList.add('out');},1000);
+  setTimeout(function(){gate.style.display='none';},2500);
   setTimeout(function(){
-    var r=phFig.getBoundingClientRect();
     var im=phFig.querySelector('img').getBoundingClientRect();
     fly.classList.add('fly');
     requestAnimationFrame(function(){
@@ -584,9 +603,8 @@ gate.addEventListener('click',function(){
       d.body.classList.add('entered');
       d.documentElement.classList.remove('lock');
       setTimeout(function(){if(fly.parentNode)fly.parentNode.removeChild(fly);},500);
-      setTimeout(function(){gate.style.display='none';},300);
     },1150);
-  },2450);
+  },3000);
 },{once:true});
 
 /* 滚动浮入 + 藤蔓描线生长 */
