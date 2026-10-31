@@ -7,7 +7,686 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>ltyytn</copyright>
-        <lastBuildDate>Sat, 26 Sep 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 31 Oct 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第十八期轻音会</title>
+        <link>https://vrclmcl.asia/p/18qyh/</link>
+        <pubDate>Sat, 31 Oct 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/18qyh/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png" alt="Featured image of post 第十八期轻音会" /&gt;&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+&lt;link rel=&#34;preload&#34; as=&#34;style&#34; href=&#34;https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&amp;family=Long+Cang&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&amp;family=Long+Cang&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34;&gt;
+&lt;script&gt;document.documentElement.classList.add(&#39;js&#39;);&lt;/script&gt;
+&lt;style&gt;
+:root{
+  --paper:#fbf8ee;
+  --paper2:#f1ead9;
+  --ink:#2e3a26;
+  --ink2:#4a6b3f;
+  --green:#5e8c4a;
+  --green-l:#8fbc6e;
+  --green-d:#2f4a33;
+  --gold:#f2c05e;
+  --gold-ink:#9a6b1f;
+  --shadow:rgba(64,102,52,.2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.lock{overflow:hidden}
+body{
+  font-family:&#39;Noto Sans SC&#39;,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:var(--green-d)}
+/* ---------- 持续氛围层：光束 / 光斑 / 尘埃 / 边缘藤蔓 ---------- */
+#amb{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.beam{
+  position:absolute;top:-25vh;height:160vh;
+  background:linear-gradient(180deg,rgba(242,192,94,0) 0%,rgba(242,192,94,.15) 20%,rgba(248,238,206,.10) 55%,rgba(242,192,94,0) 90%);
+  filter:blur(11px);opacity:0;transform:rotate(21deg);
+}
+.beam.b1{left:15%;width:118px}
+.beam.b2{left:51%;width:168px;background:linear-gradient(180deg,rgba(143,188,110,0) 0%,rgba(143,188,110,.13) 26%,rgba(242,192,94,.08) 58%,rgba(143,188,110,0) 92%)}
+.beam.b3{left:79%;width:88px}
+body.entered .beam{opacity:1;transition:opacity 1.9s ease 2.5s;animation:beamDrift 12s ease-in-out infinite alternate}
+.beam.b2{animation-delay:-4s}.beam.b3{animation-delay:-8s}
+@keyframes beamDrift{from{transform:rotate(21deg) translateX(0)}to{transform:rotate(21deg) translateX(30px)}}
+.spot{position:absolute;border-radius:50%;filter:blur(20px);opacity:0}
+.spot.s1{width:240px;height:240px;left:58%;top:10%;background:radial-gradient(circle,rgba(242,192,94,.28),rgba(242,192,94,0) 70%)}
+.spot.s2{width:180px;height:180px;left:20%;top:52%;background:radial-gradient(circle,rgba(143,188,110,.24),rgba(143,188,110,0) 70%)}
+.spot.s3{width:150px;height:150px;left:74%;top:74%;background:radial-gradient(circle,rgba(242,192,94,.20),rgba(242,192,94,0) 70%)}
+body.entered .spot{opacity:.85;transition:opacity 2s ease 2.8s;animation:spotDrift 17s ease-in-out infinite alternate}
+.spot.s2{animation-delay:-6s}.spot.s3{animation-delay:-11s}
+@keyframes spotDrift{from{transform:translate(0,0)}to{transform:translate(36px,-26px)}}
+#dust span{
+  position:absolute;border-radius:50%;opacity:0;
+  width:var(--s);height:var(--s);left:var(--x);top:var(--y);
+  background:rgba(94,140,74,.5);
+}
+body.entered #dust span{opacity:.5;animation:rise var(--d) ease-in-out var(--dl) infinite alternate}
+#dust span.bright{background:rgba(242,192,94,.9);box-shadow:0 0 6px rgba(242,192,94,.5)}
+@keyframes rise{
+  from{transform:translate3d(0,0,0);opacity:.28}
+  to{transform:translate3d(var(--dx),-72px,0);opacity:.72}
+}
+.edge{position:absolute;top:0;height:100%;width:60px;animation:edgeSway 9s ease-in-out infinite alternate}
+.edge.l{left:0}.edge.r{right:0}
+.edge.r{animation-delay:-4.5s}
+.edge svg{width:100%;height:100%}
+.edge path.v{fill:none;stroke:rgba(94,140,74,.5);stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1}
+body.entered .edge path.v{stroke-dashoffset:0;transition:stroke-dashoffset 2.1s ease-out 2.7s}
+@keyframes edgeSway{from{transform:rotate(-.5deg)}to{transform:rotate(.5deg)}}
+.leafy{position:absolute;opacity:0;transform-origin:bottom left}
+body.entered .leafy{opacity:.5;transition:opacity 1.2s ease 3.2s;animation:sway 6.5s ease-in-out infinite alternate}
+.leafy path{fill:var(--green-l)}
+@keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(4deg)}}
+/* ---------- 顶部融入导航 ---------- */
+#topnav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);
+  min-height:54px;padding:8px clamp(16px,3vw,44px);
+  background:rgba(251,248,238,.84);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(94,140,74,.22);
+  transform:translateY(-100%);transition:transform .7s cubic-bezier(.2,.8,.25,1) 2.4s;
+}
+body.entered #topnav{transform:none}
+.brand{display:flex;align-items:center;gap:8px;font-family:&#39;Zen Maru Gothic&#39;;font-weight:700;font-size:15px;color:var(--green-d);text-decoration:none}
+.brand svg{width:16px;height:16px;fill:var(--green)}
+#topnav nav{display:flex;gap:clamp(12px,2vw,26px);margin-left:auto;flex-wrap:wrap}
+#topnav nav a{font-size:13px;color:var(--ink2);text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:color .25s}
+#topnav nav a::before{content:&#34;&#34;;width:6px;height:6px;background:var(--green-l);border-radius:0 50% 50% 50%;transform:rotate(45deg);flex:none}
+#topnav nav a:hover{color:var(--green-d)}
+/* ---------- 布局基骨 ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px);position:relative;z-index:2}
+.hero{display:flex;gap:clamp(28px,4vw,64px);align-items:flex-start;padding-top:108px}
+.hero-ph{flex:0 1 620px;min-width:0;position:relative;z-index:2}
+.ph{
+  margin:0;background:#fff;padding:10px;
+  border:1px solid var(--paper2);
+  box-shadow:0 34px 70px -18px var(--shadow),0 6px 18px rgba(64,102,52,.12);
+}
+.ph img{display:block;width:100%;height:auto;cursor:zoom-in}
+.ph-cap{margin-top:12px;font-size:12px;letter-spacing:1px;color:var(--ink2);display:flex;gap:14px;align-items:center}
+.ph-cap::before{content:&#34;&#34;;width:26px;height:1px;background:var(--green-l)}
+.hero-tx{flex:1 1 420px;min-width:0;margin-top:clamp(24px,6vh,72px);position:relative;z-index:3}
+.kicker{font-size:12px;letter-spacing:3px;color:var(--ink2);display:flex;align-items:center;gap:10px}
+.kicker::before{content:&#34;&#34;;width:9px;height:9px;background:var(--gold);border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+/* 大标题（参考B版字级）：绿主标 + 金手写副标 */
+.hero-tx h1{margin:20px 0 6px;line-height:1.12;font-weight:400}
+.hero-tx h1 .t1{
+  display:block;font-family:&#39;Zen Maru Gothic&#39;;font-weight:900;
+  font-size:clamp(44px,5.4vw,74px);letter-spacing:.05em;color:var(--green-d);
+}
+.hero-tx h1 .t2{
+  display:block;font-family:&#39;Long Cang&#39;;font-weight:400;
+  font-size:clamp(40px,4.8vw,64px);color:var(--gold-ink);margin:.18em 0 0 1.1em;
+}
+.meta{margin-top:20px;font-size:13px;letter-spacing:2px;color:var(--ink2)}
+.note{margin-top:10px;font-family:&#39;Long Cang&#39;;font-size:clamp(22px,2.2vw,28px);color:var(--green);line-height:1.4}
+/* 入场：照片淡入（用户拍板：旋转完后照片淡入首屏）+ 文字整行升起（html.js 门控） */
+html.js .ph{opacity:0;transform:translateY(26px) scale(.975);transition:opacity 1.15s ease 1.85s,transform 1.35s cubic-bezier(.22,.85,.3,1) 1.85s}
+html.js body.entered .ph{opacity:1;transform:none}
+html.js .ln{display:block;overflow:hidden}
+html.js .ln&gt;i{display:inline-block;font-style:normal;transform:translateY(115%);transition:transform .8s cubic-bezier(.2,.8,.25,1)}
+html.js .ln.d1&gt;i{transition-delay:2.05s}
+html.js .ln.d2&gt;i{transition-delay:2.2s}
+html.js .ln.d3&gt;i{transition-delay:2.36s}
+html.js .ln.d4&gt;i{transition-delay:2.5s}
+html.js .ln.d5&gt;i{transition-delay:2.7s}
+html.js body.entered .ln&gt;i{transform:none}
+html.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.25,1)}
+html.js .rv.on{opacity:1;transform:none}
+/* ---------- 光路藤蔓连接线 ---------- */
+.flow{display:block;height:150px;margin:6px 0}
+.flow svg{width:100%;height:100%;overflow:visible}
+.vp{fill:none;stroke:var(--green);stroke-width:2;stroke-linecap:round;opacity:.7;stroke-dasharray:1;stroke-dashoffset:1}
+.flow.on .vp{stroke-dashoffset:0;transition:stroke-dashoffset 1.5s cubic-bezier(.4,0,.3,1)}
+.lf{fill:var(--green-l);opacity:0}
+.flow.on .lf{opacity:.85;transition:opacity .6s ease 1s}
+.f1{margin-left:46%;width:42%}
+.f2{margin-left:4%;width:44%}
+.f3{margin-left:30%;width:52%}
+.f4{margin-left:6%;width:44%}
+/* ---------- 节标题 ---------- */
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.sec-head h2{font-family:&#39;Zen Maru Gothic&#39;;font-weight:700;font-size:clamp(22px,2.2vw,30px);color:var(--ink);white-space:nowrap}
+.sec-head .credit{font-family:&#39;Noto Sans SC&#39;;font-weight:400;font-size:13px;color:var(--ink2);letter-spacing:1px}
+.sec-head::after{content:&#34;&#34;;flex:1;height:1px;background:linear-gradient(90deg,rgba(143,188,110,.6),rgba(143,188,110,0))}
+/* ---------- 歌曲信息 ---------- */
+.song-card{
+  margin-left:32%;max-width:680px;position:relative;
+  background:rgba(255,255,255,.75);border:1px solid rgba(94,140,74,.28);
+  padding:36px 40px;box-shadow:0 18px 44px -14px var(--shadow);
+}
+.song-card::before,.song-card::after{content:&#34;&#34;;position:absolute;width:46px;height:46px;pointer-events:none}
+.song-card::before{top:8px;left:8px;border-top:2px solid rgba(143,188,110,.65);border-left:2px solid rgba(143,188,110,.65);border-radius:2px 0 0 0}
+.song-card::after{bottom:8px;right:8px;border-bottom:2px solid rgba(143,188,110,.65);border-right:2px solid rgba(143,188,110,.65);border-radius:0 0 2px 0}
+.song-meta{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin:0 0 28px}
+.song-meta&gt;div:first-child{grid-column:1/-1}
+.song-meta dt{font-size:12px;letter-spacing:3px;color:var(--ink2);margin-bottom:7px}
+.song-meta dd{font-size:15px;font-weight:500}
+.song-title{font-family:&#39;Zen Maru Gothic&#39;;font-weight:700;font-size:clamp(21px,2vw,27px);color:var(--green-d);line-height:1.35}
+.song-title .sub{font-size:.72em;font-weight:500;color:var(--ink2)}
+.btn-leaf{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  background:var(--green-d);color:#faf6ea;font-size:14px;letter-spacing:1px;
+  padding:12px 24px;border-radius:2px 18px 2px 18px;
+  box-shadow:0 8px 20px -6px var(--shadow);
+  transition:background .25s,transform .25s,box-shadow .25s;
+}
+.btn-leaf:hover{background:var(--green);transform:translateY(-2px);box-shadow:0 14px 26px -6px var(--shadow)}
+.btn-leaf svg{width:14px;height:14px;fill:none;stroke:#faf6ea;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* ---------- 获选者 ---------- */
+.win-card{margin-left:2%;max-width:780px}
+.quote{
+  font-family:&#39;Long Cang&#39;;font-size:clamp(26px,2.6vw,36px);line-height:1.55;
+  color:var(--ink);padding-left:24px;border-left:2px solid rgba(143,188,110,.65);
+}
+.quote-src{margin-top:12px;padding-left:26px;font-size:13px;color:var(--ink2)}
+.mind{margin-top:34px;background:rgba(255,255,255,.62);border:1px solid rgba(94,140,74,.25);padding:28px 32px;position:relative}
+.mind-bar{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.mind-bar h3{font-size:12px;letter-spacing:4px;font-weight:500;color:var(--ink2)}
+.mind-bar h3::before{content:&#34;&#34;;display:inline-block;width:8px;height:8px;margin-right:9px;background:var(--green-l);border-radius:0 50% 50% 50%;transform:rotate(45deg)}
+#fold{
+  margin-left:auto;font-family:inherit;font-size:12px;letter-spacing:2px;cursor:pointer;
+  color:var(--green-d);background:transparent;border:1px solid var(--green);
+  padding:6px 18px;border-radius:2px 14px 2px 14px;transition:background .25s,color .25s;
+}
+#fold:hover{background:var(--green);color:#faf6ea}
+.mind-tx{font-size:15px;line-height:2.1;color:var(--ink);max-height:620px;overflow:hidden;transition:max-height .55s cubic-bezier(.4,0,.3,1)}
+.mind.fold .mind-tx{max-height:68px;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent);mask-image:linear-gradient(180deg,#000 30%,transparent)}
+/* ---------- 相册 ---------- */
+.duo{display:flex;align-items:center;justify-content:center;gap:clamp(24px,3.5vw,58px);margin:6px 0 48px}
+.portrait{
+  width:min(390px,78vw);flex:none;margin:0;background:#fff;padding:10px;
+  border:1px solid var(--paper2);box-shadow:0 26px 54px -16px var(--shadow);
+}
+.portrait img{display:block;width:100%;height:auto;cursor:zoom-in}
+.cap-card{max-width:272px;font-size:14px;line-height:1.95;color:var(--ink2);padding-left:18px;border-left:2px solid rgba(143,188,110,.55)}
+.cap-card strong{display:block;font-family:&#39;Zen Maru Gothic&#39;;font-weight:700;font-size:16px;color:var(--green-d);margin-bottom:10px;line-height:1.5}
+.wide{margin:0;background:#fff;padding:10px;border:1px solid var(--paper2);box-shadow:0 26px 54px -16px var(--shadow)}
+.wide img{display:block;width:100%;height:auto;cursor:zoom-in}
+.wide-cap{margin-top:12px;font-size:13px;color:var(--ink2);letter-spacing:.5px}
+/* ---------- 页脚 ---------- */
+.foot{margin-top:80px;padding:30px 20px 46px;text-align:center;font-size:13px;color:var(--ink2);position:relative;z-index:2}
+.foot svg{width:150px;height:26px;display:block;margin:0 auto 16px}
+.foot path{fill:none;stroke:rgba(94,140,74,.55);stroke-width:1.6;stroke-linecap:round}
+.foot .fl{fill:var(--green-l);opacity:.8}
+/* ---------- 播放器：阳光木牌 ---------- */
+#pBall{
+  position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;
+  border-radius:50%;border:3px solid #4a3419;cursor:pointer;
+  background:linear-gradient(160deg,#8a6a42,#5f4527);
+  box-shadow:0 10px 24px rgba(47,42,26,.35),inset 0 2px 3px rgba(255,255,255,.25);
+  display:grid;place-items:center;
+  opacity:0;transform:translateY(16px);
+  transition:opacity .6s ease 3.1s,transform .6s ease 3.1s,box-shadow .25s;
+}
+body.entered #pBall{opacity:1;transform:none}
+#pBall:hover{box-shadow:0 14px 30px rgba(47,42,26,.45),inset 0 2px 3px rgba(255,255,255,.25)}
+#pBall::after{content:&#34;&#34;;position:absolute;inset:-7px;border-radius:50%;border:1.5px solid rgba(242,192,94,.55);opacity:0}
+body.entered #pBall::after{animation:pulse 2.6s ease-out 3.4s infinite}
+@keyframes pulse{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.28);opacity:0}}
+#pBall svg.sun{width:26px;height:26px;transition:transform .4s}
+body.entered #pBall svg.sun{animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#pBall .bl{position:absolute;top:-11px;left:50%;width:22px;height:16px;margin-left:-11px;fill:var(--green);transform:rotate(-24deg)}
+#pPanel{
+  position:fixed;right:22px;bottom:96px;z-index:59;width:min(560px,calc(100vw - 32px));
+  background:#faf6ea;border:2px solid #6b4f30;border-radius:6px 28px 6px 6px;
+  box-shadow:0 24px 60px -12px rgba(40,50,30,.45);overflow:hidden;
+  opacity:0;visibility:hidden;transform:translateY(14px) scale(.97);transform-origin:bottom right;
+  transition:opacity .35s ease,transform .35s cubic-bezier(.2,.8,.3,1),visibility 0s linear .35s;
+}
+#pPanel.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.8,.3,1)}
+.p-head{display:flex;align-items:center;gap:10px;padding:10px 14px;background:linear-gradient(160deg,#7a5b38,#5f4527);color:#faf6ea;font-size:12px;letter-spacing:1px}
+.p-head .pl{width:15px;height:13px;fill:var(--green-l);flex:none}
+.p-head strong{font-family:&#39;Zen Maru Gothic&#39;;font-weight:500;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pClose{margin-left:auto;flex:none;background:none;border:none;color:#faf6ea;cursor:pointer;font-size:16px;line-height:1;padding:2px 6px;opacity:.8}
+#pClose:hover{opacity:1}
+.p-frame{position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#efe8d5 0 12px,#e7dfc8 12px 24px)}
+.p-hint{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;letter-spacing:2px;color:var(--ink2)}
+.p-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* ---------- Lightbox ---------- */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(12,20,11,.92);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s;cursor:zoom-out}
+#lb.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+#lbImg{max-width:94vw;max-height:88vh;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+#lbCap{position:fixed;bottom:20px;left:0;right:0;text-align:center;color:#cfd8c2;font-size:13px;letter-spacing:1px}
+/* ---------- 入场门：淡绿年轮 · 慢速唱片（B版机制 + 用户调参） ---------- */
+#gate{
+  position:fixed;inset:0;z-index:100;
+  background:radial-gradient(120% 100% at 50% 42%,#7d9a70 0%,#64805a 52%,#4d6544 100%);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;overflow:hidden;
+}
+#gate .grings{position:absolute;left:50%;top:50%;width:0;height:0}
+#gate .grings i{
+  position:absolute;left:50%;top:50%;
+  width:52vmin;height:52vmin;margin:-26vmin 0 0 -26vmin;
+  border-radius:50%;border:1.5px solid rgba(250,246,234,.5);
+  animation:rip 3.4s cubic-bezier(.2,.55,.3,1) infinite;
+}
+#gate .grings i:nth-child(2){animation-delay:.55s;border-color:rgba(242,192,94,.55)}
+#gate .grings i:nth-child(3){animation-delay:1.1s}
+#gate .grings i:nth-child(4){animation-delay:1.65s;border-color:rgba(242,192,94,.45)}
+#gate .grings i:nth-child(5){animation-delay:2.2s;border-width:1px}
+#gate .grings i:nth-child(6){animation-delay:2.75s;border-color:rgba(250,246,234,.3)}
+@keyframes rip{0%{transform:scale(.14);opacity:0}12%{opacity:.9}100%{transform:scale(1.9);opacity:0}}
+#gate .gdisc{position:relative;width:216px;height:216px;transition:transform 2s cubic-bezier(.45,0,.2,1)}
+#gate .gspin{
+  width:100%;height:100%;border-radius:50%;
+  background:repeating-radial-gradient(circle at 50% 50%,#2c4432 0 2px,#38543d 2px 5px,#2f4a35 5px 7px);
+  box-shadow:0 0 0 1px rgba(250,246,234,.35),0 24px 70px rgba(30,45,28,.45);
+  animation:spin 12s linear infinite;
+  position:relative;
+}
+#gate .gspin::after{
+  content:&#34;&#34;;position:absolute;left:50%;top:50%;
+  width:37%;height:37%;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--gold);
+}
+#gate .gspin::before{
+  content:&#34;&#34;;position:absolute;left:50%;top:50%;
+  width:4.5%;height:4.5%;transform:translate(-50%,-50%);
+  border-radius:50%;background:#3d5a42;z-index:2;
+}
+#gate .ghole{
+  position:absolute;left:50%;top:50%;z-index:5;
+  width:88px;height:88px;margin:-44px 0 0 -44px;
+  border-radius:50%;background:var(--paper);
+  transform:scale(.001);
+  transition:transform 1.5s cubic-bezier(.7,0,.25,1) .55s;
+  pointer-events:none;
+}
+#gate .ghint{
+  position:absolute;left:0;right:0;bottom:9vh;text-align:center;
+  color:#faf6ea;transition:opacity .4s ease;
+}
+#gate .ghint .g1{
+  font-family:&#39;Zen Maru Gothic&#39;,sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.42em;color:#ffe9b3;
+}
+#gate .ghint .g2{
+  margin-top:14px;font-size:15px;letter-spacing:.2em;
+  animation:breathe 2.4s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+/* 点击后：涟漪收拢 · 唱片慢速加速旋转放大 · 唱孔奶油漫开盖屏 */
+#gate.go{opacity:0;transition:opacity .5s ease 2.05s;pointer-events:none}
+#gate.go .grings{transform:scale(.05);opacity:0;transition:transform .8s cubic-bezier(.6,-.05,.35,1),opacity .6s ease}
+#gate.go .gdisc{transform:scale(1.9) rotate(160deg)}
+#gate.go .gspin{animation-duration:2.6s}
+#gate.go .ghole{transform:scale(90)}
+#gate.go .ghint{opacity:0}
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero{flex-direction:column;gap:30px}
+  .hero-ph,.hero-tx{flex:0 0 auto}
+  .hero-tx{margin-top:0}
+  .hero-tx h1 .t2{margin-left:.6em}
+  .song-card{margin-left:12%}
+}
+@media (max-width:768px){
+  .hero{padding-top:92px;gap:22px}
+  .f1,.f2,.f3,.f4{margin-left:0;width:100%;height:88px}
+  .song-card,.win-card{margin-left:0;max-width:100%;padding:26px 22px}
+  .song-meta{grid-template-columns:1fr}
+  .duo{flex-direction:column}
+  .cap-card{max-width:390px;padding-left:0;border-left:none;border-top:2px solid rgba(143,188,110,.55);padding-top:16px}
+  .beam.b3{display:none}
+  .beam.b1{width:80px}.beam.b2{width:110px}
+  #topnav{flex-wrap:wrap;row-gap:4px}
+  .quote{padding-left:16px}
+  .mind{padding:22px 18px}
+  #pBall{width:54px;height:54px;right:16px;bottom:16px}
+  #pPanel{right:12px;bottom:84px}
+  .leafy{display:none}
+  .hero-tx h1 .t1{font-size:clamp(38px,10.5vw,52px)}
+  .hero-tx h1 .t2{font-size:clamp(34px,9.5vw,46px)}
+}
+&lt;/style&gt;
+&lt;p&gt;&lt;noscript&gt;&lt;style&gt;#gate{display:none}html.lock{overflow:auto}&lt;/style&gt;&lt;/noscript&gt;&lt;/p&gt;
+&lt;div id=&#34;amb&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;div class=&#34;beam b1&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;beam b2&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;beam b3&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;spot s1&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;spot s2&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;spot s3&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;dust&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;edge l&#34;&gt;
+&lt;svg viewBox=&#34;0 0 60 1000&#34; preserveAspectRatio=&#34;none&#34;&gt;&lt;path class=&#34;v&#34; pathLength=&#34;1&#34; d=&#34;M8 -10 C46 130 -14 260 30 400 C62 520 -18 650 24 780 C44 850 28 930 34 1010&#34;/&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&#34;edge r&#34;&gt;
+&lt;svg viewBox=&#34;0 0 60 1000&#34; preserveAspectRatio=&#34;none&#34;&gt;&lt;path class=&#34;v&#34; pathLength=&#34;1&#34; d=&#34;M52 -10 C14 130 74 260 30 400 C-2 520 78 650 36 780 C16 850 32 930 26 1010&#34;/&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;span class=&#34;leafy&#34; style=&#34;left:16px;top:26%&#34;&gt;&lt;svg width=&#34;26&#34; height=&#34;18&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class=&#34;leafy&#34; style=&#34;left:22px;top:58%;transform-origin:top left&#34;&gt;&lt;svg width=&#34;22&#34; height=&#34;15&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class=&#34;leafy&#34; style=&#34;right:14px;top:40%;transform-origin:bottom right&#34;&gt;&lt;svg width=&#34;24&#34; height=&#34;17&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class=&#34;leafy&#34; style=&#34;right:20px;top:76%;transform-origin:top right&#34;&gt;&lt;svg width=&#34;20&#34; height=&#34;14&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;header id=&#34;topnav&#34;&gt;
+&lt;a class=&#34;brand&#34; href=&#34;https://vrclmcl.asia/about/&#34;&gt;&lt;svg viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;轻音会社&lt;/a&gt;
+&lt;nav&gt;
+&lt;a href=&#34;https://vrclmcl.asia/about/&#34;&gt;关于我们&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/shijiud/&#34;&gt;本期活动&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/gd/&#34;&gt;轻音歌单&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/apps/vote/&#34;&gt;投票系统&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+&lt;header class=&#34;wrap hero&#34;&gt;
+&lt;div class=&#34;hero-ph&#34;&gt;
+&lt;figure class=&#34;ph&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png&#34; alt=&#34;中庭树影：阳光穿过树冠洒在木地板上&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png&#34;&gt;
+&lt;/figure&gt;
+&lt;p class=&#34;ph-cap ln d5&#34;&gt;&lt;i&gt;中庭 · 树荫与光斑 ｜ 摄影 · QutaiBai柒白&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hero-tx&#34;&gt;
+&lt;p class=&#34;kicker ln d1&#34;&gt;&lt;i&gt;VRChat 音乐社团 · 每周歌会&lt;/i&gt;&lt;/p&gt;
+&lt;h1 class=&#34;ln d2&#34;&gt;&lt;i&gt;&lt;span class=&#34;t1&#34;&gt;光落中庭&lt;/span&gt;&lt;span class=&#34;t2&#34;&gt;欢迎回家&lt;/span&gt;&lt;/i&gt;&lt;/h1&gt;
+&lt;p class=&#34;meta ln d3&#34;&gt;&lt;i&gt;第十八期轻音会 · 第十九次正式活动 · 回顾&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&#34;note ln d4&#34;&gt;&lt;i&gt;想看看短短的未来。&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+&lt;div class=&#34;wrap&#34;&gt;
+&lt;svg class=&#34;flow f1 rv&#34; viewBox=&#34;0 0 640 170&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path class=&#34;vp&#34; pathLength=&#34;1&#34; d=&#34;M30 6 C150 20 300 46 430 86 C510 110 580 136 618 164&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(296 38) rotate(24)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(436 88) rotate(52) scale(.8)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;section class=&#34;wrap&#34; id=&#34;song&#34;&gt;
+&lt;div class=&#34;song-card rv&#34;&gt;
+&lt;div class=&#34;sec-head&#34;&gt;&lt;h2&gt;本期获选 · 歌曲信息&lt;/h2&gt;&lt;/div&gt;
+&lt;dl class=&#34;song-meta&#34;&gt;
+&lt;div&gt;&lt;dt&gt;活动时间&lt;/dt&gt;&lt;dd&gt;第十九次正式活动&lt;/dd&gt;&lt;/div&gt;
+&lt;div&gt;&lt;dt&gt;获选投稿人&lt;/dt&gt;&lt;dd&gt;Sky5801&lt;/dd&gt;&lt;/div&gt;
+&lt;div style=&#34;grid-column:1/-1&#34;&gt;&lt;dt&gt;曲名&lt;/dt&gt;&lt;dd class=&#34;song-title&#34;&gt;短い未来を見たい &lt;span class=&#34;sub&#34;&gt;(お帰りなさい)&lt;/span&gt;&lt;/dd&gt;&lt;/div&gt;
+&lt;div&gt;&lt;dt&gt;作者&lt;/dt&gt;&lt;dd&gt;Sweet Dove&lt;/dd&gt;&lt;/div&gt;
+&lt;/dl&gt;
+&lt;a class=&#34;btn-leaf&#34; href=&#34;https://www.bilibili.com/video/BV1hz4y1p7xG/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;B站 · 视频链接（短い未来を見たい）
+&lt;svg viewBox=&#34;0 0 24 24&#34;&gt;&lt;path d=&#34;M5 12h14M13 6l6 6-6 6&#34;/&gt;&lt;/svg&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;div class=&#34;wrap&#34;&gt;
+&lt;svg class=&#34;flow f2 rv&#34; viewBox=&#34;0 0 640 170&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path class=&#34;vp&#34; pathLength=&#34;1&#34; d=&#34;M610 6 C470 30 330 60 210 96 C130 120 70 142 22 164&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(322 62) rotate(204)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(120 118) rotate(232) scale(.8)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;section class=&#34;wrap&#34; id=&#34;winner&#34;&gt;
+&lt;div class=&#34;win-card rv&#34;&gt;
+&lt;div class=&#34;sec-head&#34;&gt;&lt;h2&gt;获选者 · Sky5801&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote class=&#34;quote&#34;&gt;外网有很多好听的音乐之后都会吧好听的投稿给大家听听&lt;/blockquote&gt;
+&lt;p class=&#34;quote-src&#34;&gt;—— Sky5801 · 获选感言&lt;/p&gt;
+&lt;div class=&#34;mind&#34; id=&#34;mind&#34;&gt;
+&lt;div class=&#34;mind-bar&#34;&gt;
+&lt;h3&gt;投稿心路历程&lt;/h3&gt;
+&lt;button id=&#34;fold&#34; type=&#34;button&#34;&gt;收起&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&#34;mind-tx&#34;&gt;这首音乐给我的感受是,音乐有一种特别的力量,能够触动内心深处的情绪。随着旋律的流动,仿佛能感受到其中蕴含的情感,让人不自觉地沉浸其中,也有机会静下心来感受自己的内心。对我来说,音乐最动人的地方,不只是旋律本身,而是它能让人产生共鸣,感受到那些难以用言语表达的心情。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;div class=&#34;wrap&#34;&gt;
+&lt;svg class=&#34;flow f3 rv&#34; viewBox=&#34;0 0 640 170&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path class=&#34;vp&#34; pathLength=&#34;1&#34; d=&#34;M30 6 C170 26 320 54 450 90 C530 112 590 138 626 164&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(330 58) rotate(22)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(470 96) rotate(46) scale(.8)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;section class=&#34;wrap&#34; id=&#34;album&#34;&gt;
+&lt;div class=&#34;sec-head rv&#34;&gt;&lt;h2&gt;中庭相册 &lt;span class=&#34;credit&#34;&gt;摄影 · QutaiBai柒白&lt;/span&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&#34;duo rv&#34;&gt;
+&lt;figure class=&#34;portrait&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/竖图.png&#34; alt=&#34;竖构图：更多树冠与天空，叶隙光斑更密&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/竖图.png&#34;&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;cap-card&#34;&gt;
+&lt;strong&gt;叶隙光斑，更密一些&lt;/strong&gt;
+同一段午后的竖构图里，树冠与天空占得更多，光斑落在叶隙之间——光合作用正在安静地进行。
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;wide rv&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png&#34; alt=&#34;中庭树影横幅大图&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/横图.png&#34;&gt;
+&lt;figcaption class=&#34;wide-cap&#34;&gt;水泥高墙爬满绿藤，中央一棵大树，树冠缝隙洒下阳光；树荫下，是被阳光找到的午后。点击图片可全屏观看。&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
+&lt;div class=&#34;wrap&#34;&gt;
+&lt;svg class=&#34;flow f4 rv&#34; viewBox=&#34;0 0 640 170&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path class=&#34;vp&#34; pathLength=&#34;1&#34; d=&#34;M620 6 C480 28 340 56 220 92 C140 116 80 140 30 164&#34;/&gt;
+&lt;path class=&#34;lf&#34; transform=&#34;translate(330 60) rotate(200)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class=&#34;foot&#34;&gt;
+&lt;svg viewBox=&#34;0 0 150 26&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;path d=&#34;M6 18 C40 6 60 24 90 12 C112 4 132 14 144 10&#34;/&gt;
+&lt;path class=&#34;fl&#34; transform=&#34;translate(56 14) rotate(-16) scale(.55)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;path class=&#34;fl&#34; transform=&#34;translate(104 8) rotate(18) scale(.5)&#34; d=&#34;M0 0Q12 -10 26 -6Q22 8 0 0Z&#34;/&gt;
+&lt;/svg&gt;
+© VRC轻音会社 · Q群 983271795 · author ltyytn
+&lt;/footer&gt;
+&lt;div id=&#34;pPanel&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;div class=&#34;p-head&#34;&gt;
+&lt;svg class=&#34;pl&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;
+&lt;span&gt;现在播放&lt;/span&gt;&lt;strong&gt;短い未来を見たい (お帰りなさい)&lt;/strong&gt;
+&lt;button id=&#34;pClose&#34; type=&#34;button&#34; aria-label=&#34;收起播放器&#34;&gt;×&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&#34;p-frame&#34;&gt;
+&lt;span class=&#34;p-hint&#34;&gt;正在唤醒中庭的阳光…&lt;/span&gt;
+&lt;iframe id=&#34;bgm&#34; title=&#34;B站播放器 · 短い未来を見たい (お帰りなさい)&#34; allow=&#34;autoplay; fullscreen&#34; referrerpolicy=&#34;no-referrer&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button id=&#34;pBall&#34; type=&#34;button&#34; aria-label=&#34;展开播放器&#34;&gt;
+&lt;svg class=&#34;bl&#34; viewBox=&#34;0 0 26 18&#34;&gt;&lt;path d=&#34;M0 16Q3 2 24 0Q22 14 0 16Z&#34;/&gt;&lt;/svg&gt;
+&lt;svg class=&#34;sun&#34; viewBox=&#34;0 0 24 24&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;5&#34; fill=&#34;#f2c05e&#34;/&gt;
+&lt;g stroke=&#34;#f2c05e&#34; stroke-width=&#34;1.6&#34; stroke-linecap=&#34;round&#34;&gt;
+&lt;line x1=&#34;12&#34; y1=&#34;2.5&#34; x2=&#34;12&#34; y2=&#34;5&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;19&#34; x2=&#34;12&#34; y2=&#34;21.5&#34;/&gt;
+&lt;line x1=&#34;2.5&#34; y1=&#34;12&#34; x2=&#34;5&#34; y2=&#34;12&#34;/&gt;&lt;line x1=&#34;19&#34; y1=&#34;12&#34; x2=&#34;21.5&#34; y2=&#34;12&#34;/&gt;
+&lt;line x1=&#34;5.3&#34; y1=&#34;5.3&#34; x2=&#34;7&#34; y2=&#34;7&#34;/&gt;&lt;line x1=&#34;17&#34; y1=&#34;17&#34; x2=&#34;18.7&#34; y2=&#34;18.7&#34;/&gt;
+&lt;line x1=&#34;5.3&#34; y1=&#34;18.7&#34; x2=&#34;7&#34; y2=&#34;17&#34;/&gt;&lt;line x1=&#34;17&#34; y1=&#34;7&#34; x2=&#34;18.7&#34; y2=&#34;5.3&#34;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;div id=&#34;lb&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;img id=&#34;lbImg&#34; src=&#34;&#34; alt=&#34;&#34;&gt;
+&lt;p id=&#34;lbCap&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gate&#34;&gt;
+&lt;span class=&#34;gd&#34; style=&#34;left:22%;top:30%;width:3px;height:3px;--d:7s;--dl:-2s&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gd&#34; style=&#34;left:64%;top:22%;width:2px;height:2px;--d:9s;--dl:-5s&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gd&#34; style=&#34;left:48%;top:64%;width:3px;height:3px;--d:8s;--dl:-1s&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gd&#34; style=&#34;left:78%;top:56%;width:2px;height:2px;--d:11s;--dl:-7s&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;grings&#34; aria-hidden=&#34;true&#34;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&#34;gdisc&#34; aria-hidden=&#34;true&#34;&gt;&lt;div class=&#34;gspin&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;ghole&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;ghint&#34;&gt;
+&lt;p class=&#34;g1&#34;&gt;VRC 轻音会社 · 第十八期轻音会&lt;/p&gt;
+&lt;p class=&#34;g2&#34;&gt;轻触任意处 · 推开中庭的门&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function(){
+var d=document;
+d.documentElement.classList.add(&#39;lock&#39;);
+var gate=d.getElementById(&#39;gate&#39;);
+var bgm=d.getElementById(&#39;bgm&#39;);
+var dustLayer=d.getElementById(&#39;dust&#39;);
+var ball=d.getElementById(&#39;pBall&#39;);
+var panel=d.getElementById(&#39;pPanel&#39;);
+var pClose=d.getElementById(&#39;pClose&#39;);
+var foldBtn=d.getElementById(&#39;fold&#39;);
+var mind=d.getElementById(&#39;mind&#39;);
+var lb=d.getElementById(&#39;lb&#39;);
+var lbImg=d.getElementById(&#39;lbImg&#39;);
+var lbCap=d.getElementById(&#39;lbCap&#39;);
+
+/* 尘埃粒子：上限 40，光束带内更亮（金） */
+var beams=[[10,26],[46,64],[72,84]];
+for(var i=0;i&lt;34;i++){
+  var s=d.createElement(&#39;span&#39;);
+  var x=2+Math.random()*96;
+  var inBeam=beams.some(function(b){return x&gt;=b[0]&amp;&amp;x&lt;=b[1];});
+  s.style.setProperty(&#39;--s&#39;,(inBeam?2.6:2)+Math.random()*2+&#39;px&#39;);
+  s.style.setProperty(&#39;--x&#39;,x+&#39;%&#39;);
+  s.style.setProperty(&#39;--y&#39;,8+Math.random()*86+&#39;%&#39;);
+  s.style.setProperty(&#39;--d&#39;,(6+Math.random()*7)+&#39;s&#39;);
+  s.style.setProperty(&#39;--dl&#39;,(-Math.random()*13)+&#39;s&#39;);
+  s.style.setProperty(&#39;--dx&#39;,(Math.random()*80-40)+&#39;px&#39;);
+  if(inBeam)s.className=&#39;bright&#39;;
+  dustLayer.appendChild(s);
+}
+
+/* 入场：同一手势内注入 iframe src → 涟漪收拢 → 唱片慢速旋转放大 → 唱孔奶油漫开 → 首屏照片淡入 */
+var entered=false;
+gate.addEventListener(&#39;click&#39;,function(){
+  if(entered)return;
+  entered=true;
+  bgm.src=&#39;https://player.bilibili.com/player.html?isOutside=true&amp;bvid=BV1hz4y1p7xG&amp;autoplay=1&amp;danmaku=0&amp;high_quality=1&#39;;
+  gate.classList.add(&#39;go&#39;);
+  d.body.classList.add(&#39;entered&#39;);
+  d.documentElement.classList.remove(&#39;lock&#39;);
+  setTimeout(function(){gate.style.visibility=&#39;hidden&#39;;},2700);
+},{once:true});
+
+/* 滚动浮入 + 藤蔓描线生长 */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add(&#39;on&#39;);io.unobserve(e.target);}
+  });
+},{threshold:.16});
+d.querySelectorAll(&#39;.rv&#39;).forEach(function(el){io.observe(el);});
+
+/* 播放器悬浮球 / 面板（收起仅视觉隐藏，iframe 留在 DOM 继续出声） */
+function setPanel(open){
+  panel.classList.toggle(&#39;open&#39;,open);
+  panel.setAttribute(&#39;aria-hidden&#39;,open?&#39;false&#39;:&#39;true&#39;);
+  ball.setAttribute(&#39;aria-label&#39;,open?&#39;收起播放器&#39;:&#39;展开播放器&#39;);
+}
+ball.addEventListener(&#39;click&#39;,function(){setPanel(!panel.classList.contains(&#39;open&#39;));});
+pClose.addEventListener(&#39;click&#39;,function(){setPanel(false);});
+
+/* 心路历程：默认展开，可折叠 */
+foldBtn.addEventListener(&#39;click&#39;,function(){
+  var folded=mind.classList.toggle(&#39;fold&#39;);
+  foldBtn.textContent=folded?&#39;展开&#39;:&#39;收起&#39;;
+});
+
+/* Lightbox */
+function openLb(src,cap){
+  lbImg.src=src;lbCap.textContent=cap||&#39;&#39;;
+  lb.classList.add(&#39;open&#39;);lb.setAttribute(&#39;aria-hidden&#39;,&#39;false&#39;);
+}
+function closeLb(){
+  lb.classList.remove(&#39;open&#39;);lb.setAttribute(&#39;aria-hidden&#39;,&#39;true&#39;);
+}
+d.addEventListener(&#39;click&#39;,function(e){
+  var t=e.target.closest?e.target.closest(&#39;[data-full]&#39;):null;
+  if(!t)return;
+  if(lb.contains(t)){closeLb();return;}
+  openLb(t.getAttribute(&#39;data-full&#39;),t.alt);
+});
+d.addEventListener(&#39;keydown&#39;,function(e){
+  if(e.key===&#39;Escape&#39;&amp;&amp;lb.classList.contains(&#39;open&#39;))closeLb();
+});
+lb.addEventListener(&#39;click&#39;,closeLb);
+})();
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
+        <title>第十九次活动合照</title>
+        <link>https://vrclmcl.asia/p/shijiud/</link>
+        <pubDate>Sat, 31 Oct 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/shijiud/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/10/31/活动合照.png" alt="Featured image of post 第十九次活动合照" /&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://vrclmcl.asia/p/18qyh&#34; style=&#34;
+    display: inline-block;
+    background: linear-gradient(135deg, #2f4a33, #8fbc6e);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  &#34; onmouseover=&#34;this.style.transform=&#39;scale(1.05)&#39;;&#34;
+  onmouseout=&#34;this.style.transform=&#39;scale(1)&#39;;&#34;&gt;
+    前往第十八期轻音会
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;第十九次活动合照&#34;&gt;第十九次活动合照
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/10/31/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;点开更高清&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style=&#34;display:flex;gap:12px;margin:16px 0;align-items:flex-start;max-width:800px;&#34;&gt;
+  &lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/03/03/ltyytn.png&#34; style=&#34;width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;&#34;&gt;
+  &lt;div style=&#34;position:relative;background:#f0f4f8;color:#444;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;word-break:break-word;&#34;&gt;
+    嘎嘎嘎嘎真是喜欢的一期
+    &lt;div style=&#34;position:absolute;left:-8px;top:12px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #f0f4f8;&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div id=&#34;jump-float&#34; style=&#34;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #2f4a33, #8fbc6e);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(47,74,51,0.3);
+  transition: transform 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+&#34;&gt;
+  轻音会🎵
+&lt;/div&gt;
+&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+  const floatBtn = document.getElementById(&#39;jump-float&#39;);
+  if (floatBtn) {
+    floatBtn.addEventListener(&#39;click&#39;, () =&gt; {
+      window.location.href = &#39;/p/18qyh&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1.05)&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1)&#39;;
+    });
+  }
+});
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
         <title>第十八次活动合照</title>
         <link>https://vrclmcl.asia/p/shibad/</link>
         <pubDate>Sat, 26 Sep 2026 10:00:00 +0800</pubDate>
@@ -15197,6 +15876,99 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
         background: #fafafa;
         min-height: 100px;
     &#34;&gt;
+        &lt;li class=&#34;ranking-item&#34;
+            data-title=&#34;短い未来を見たい (お帰りなさい)&#34;
+            data-artist=&#34;Sweet Dove&#34;
+            style=&#34;
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                flex-wrap: wrap;
+            &#34;&gt;
+            &lt;div style=&#34;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #2f4a33 0%, #5e8c4a 55%, #8fbc6e 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            &#34;&gt;
+                &lt;span style=&#34;position: relative; z-index: 1;&#34;&gt;
+                    &lt;span style=&#34;font-family: sans-serif;&#34;&gt;#&lt;/span&gt;
+                    &lt;span style=&#34;font-weight: bold;&#34;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;song-info&#34; style=&#34;flex: 1;&#34;&gt;
+                &lt;div style=&#34;
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                &#34;&gt;短い未来を見たい (お帰りなさい) &lt;span style=&#34;
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #2f4a33, #8fbc6e);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                &#34;&gt;✦ 第18期&lt;/span&gt;&lt;/div&gt;
+                &lt;div style=&#34;
+                    font-size: 14px;
+                    color: #666;
+                &#34;&gt;Sweet Dove · 投稿：Sky5801&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
+                &lt;button class=&#34;play-trigger-bili&#34; style=&#34;
+                    background: linear-gradient(135deg, #2f4a33, #8fbc6e);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;B站播放&lt;/button&gt;
+                &lt;a href=&#34;https://www.bilibili.com/video/BV1hz4y1p7xG/&#34; target=&#34;_blank&#34; style=&#34;
+                    background: transparent;
+                    color: #2f4a33;
+                    border: 1px solid #2f4a33;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;详情&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;bili-row&#34; data-bili=&#34;BV1hz4y1p7xG&#34; hidden style=&#34;
+                flex-basis: 100%;
+                padding: 14px 4px 6px;
+            &#34;&gt;
+                &lt;div style=&#34;
+                    position: relative;
+                    width: 100%;
+                    max-width: 480px;
+                    aspect-ratio: 16 / 9;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1.5px dashed #2f4a33;
+                    background: #eef2e4;
+                &#34;&gt;&lt;/div&gt;
+                &lt;p style=&#34;text-align:center;font-size:12px;color:#999;margin:8px 0 0;&#34;&gt;Bilibili 播放器 · 短い未来を見たい (お帰りなさい)（Sweet Dove）· 第十八期轻音会获选曲（无声就点画面播放）&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34;
             data-src=&#34;https://music.163.com/song/media/outer/url?id=3413774229.mp3&#34;
             data-title=&#34;うっせぇわ (Live At さいたまスーパーアリーナ, 2025)&#34;

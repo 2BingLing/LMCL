@@ -344,7 +344,7 @@
       <div class="qyh-nav-arrow">→</div>
     </a>
 
-    <a href="/p/shibad/" class="qyh-nav-item qyh-nav-item-secondary">
+    <a href="/p/shijiud/" class="qyh-nav-item qyh-nav-item-secondary">
       <div class="qyh-nav-item-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -355,7 +355,7 @@
       </div>
       <div class="qyh-nav-item-content">
         <div class="qyh-nav-item-title">本期活动</div>
-        <div class="qyh-nav-item-desc">第十八次活动合照</div>
+        <div class="qyh-nav-item-desc">第十九次活动合照</div>
       </div>
       <div class="qyh-nav-arrow">→</div>
     </a>
@@ -637,6 +637,15 @@
 <script>
 (function() {
   const themes = {
+    '18qyh': {
+      primary: '#2f4a33',
+      secondary: '#5e8c4a',
+      accent: '#f2c05e',
+      light: '#fbf8ee',
+      lighter: '#e9f0dd',
+      text: '#2e3a26',
+      shadow: 'rgba(94,140,74,0.18)'
+    },
     '17qyh': {
       primary: '#12101c',
       secondary: '#a855e0',
@@ -722,6 +731,10 @@
 
   function detectCurrentTheme() {
     const path = window.location.pathname;
+
+    if (path.includes('/18qyh/') || path.includes('第十八期轻音会')) {
+      return themes['18qyh'];
+    }
 
     if (path.includes('/17qyh/') || path.includes('第十七期轻音会')) {
       return themes['17qyh'];
@@ -1128,6 +1141,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 
 <article class="has-image">
+    <a href="/p/shijiud/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.vrclmcl.asia/LMCL/2026/10/31/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png" loading="lazy" data-key="shijiud" data-hash="https://img.vrclmcl.asia/LMCL/2026/10/31/活动合照.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第十九次活动合照</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/shibad/">
         
         
@@ -1140,25 +1172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="article-details">
             <h2 class="article-title">第十八次活动合照</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/shiqid/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://img.vrclmcl.asia/LMCL/2026/09/19/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png" loading="lazy" data-key="shiqid" data-hash="https://img.vrclmcl.asia/LMCL/2026/09/19/活动合照.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">第十七次活动合照</h2>
         </div>
     </a>
 </article>
