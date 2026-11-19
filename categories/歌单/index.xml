@@ -67,7 +67,7 @@
         &lt;li class=&#34;ranking-item&#34;
             data-src=&#34;https://music.163.com/song/media/outer/url?id=2012854567.mp3&#34;
             data-title=&#34;【洛天依AI原创】恍惚&#34;
-            data-artist=&#34;洛天依 AI&#34;
+            data-artist=&#34;COUTA / 洛天依&#34;
             style=&#34;
                 display: flex;
                 align-items: center;
@@ -115,7 +115,7 @@
                 &lt;div style=&#34;
                     font-size: 14px;
                     color: #666;
-                &#34;&gt;洛天依 AI · 投稿：祝空&lt;/div&gt;
+                &#34;&gt;COUTA / 洛天依 · 投稿：祝空&lt;/div&gt;
             &lt;/div&gt;
             &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
                 &lt;button class=&#34;play-trigger&#34; style=&#34;
