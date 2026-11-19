@@ -8,90 +8,6 @@
         <language>en-us</language>
         <copyright>ltyytn</copyright>
         <lastBuildDate>Thu, 19 Nov 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>第二十次活动合照</title>
-        <link>https://vrclmcl.asia/p/ershierd/</link>
-        <pubDate>Thu, 19 Nov 2026 10:00:00 +0800</pubDate>
-        
-        <guid>https://vrclmcl.asia/p/ershierd/</guid>
-        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/11/19/活动合照.png" alt="Featured image of post 第二十次活动合照" /&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;a href=&#34;https://vrclmcl.asia/p/19qyh&#34; style=&#34;
-    display: inline-block;
-    background: linear-gradient(135deg, #5c3420, #a8401f);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  &#34; onmouseover=&#34;this.style.transform=&#39;scale(1.05)&#39;;&#34;
-  onmouseout=&#34;this.style.transform=&#39;scale(1)&#39;;&#34;&gt;
-    前往第十九期轻音会
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;第二十次活动合照&#34;&gt;第二十次活动合照
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;点开更高清&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div style=&#34;display:flex;gap:12px;margin:16px 0;align-items:flex-start;max-width:800px;&#34;&gt;
-  &lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/03/03/ltyytn.png&#34; style=&#34;width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;&#34;&gt;
-  &lt;div style=&#34;position:relative;background:#f0f4f8;color:#444;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;word-break:break-word;&#34;&gt;
-    嘎嘎嘎消失的一期
-    &lt;div style=&#34;position:absolute;left:-8px;top:12px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #f0f4f8;&#34;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div id=&#34;jump-float&#34; style=&#34;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: linear-gradient(135deg, #5c3420, #a8401f);
-  color: white;
-  width: 100px;
-  height: 40px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(92,52,32,0.3);
-  transition: transform 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
-&#34;&gt;
-  轻音会🎵
-&lt;/div&gt;
-&lt;script&gt;
-document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
-  const floatBtn = document.getElementById(&#39;jump-float&#39;);
-  if (floatBtn) {
-    floatBtn.addEventListener(&#39;click&#39;, () =&gt; {
-      window.location.href = &#39;/p/19qyh&#39;;
-    });
-    floatBtn.addEventListener(&#39;mouseenter&#39;, () =&gt; {
-      floatBtn.style.transform = &#39;scale(1.05)&#39;;
-    });
-    floatBtn.addEventListener(&#39;mouseleave&#39;, () =&gt; {
-      floatBtn.style.transform = &#39;scale(1)&#39;;
-    });
-  }
-});
-&lt;/script&gt;
-</description>
-        </item>
-        <item>
         <title>第十九期轻音会</title>
         <link>https://vrclmcl.asia/p/19qyh/</link>
         <pubDate>Thu, 19 Nov 2026 10:00:00 +0800</pubDate>
@@ -514,6 +430,90 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border:0;background:v
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;script&gt;eval(new TextDecoder().decode(Uint8Array.from(atob(&#39;CihmdW5jdGlvbigpewp2YXIgZD1kb2N1bWVudDsKZC5kb2N1bWVudEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnbG9jaycpOwp2YXIgZ2F0ZT1kLmdldEVsZW1lbnRCeUlkKCdnYXRlJyk7CnZhciBhdWRpbz1kLmdldEVsZW1lbnRCeUlkKCdiZ21BdWRpbycpOwp2YXIgYmFsbD1kLmdldEVsZW1lbnRCeUlkKCdwQmFsbCcpOwp2YXIgcGFuZWw9ZC5nZXRFbGVtZW50QnlJZCgncFBhbmVsJyk7CnZhciBwQ2xvc2U9ZC5nZXRFbGVtZW50QnlJZCgncENsb3NlJyk7CnZhciBwUGxheT1kLmdldEVsZW1lbnRCeUlkKCdwUGxheScpOwp2YXIgc2Vlaz1kLmdldEVsZW1lbnRCeUlkKCdzZWVrJyk7CnZhciB2b2w9ZC5nZXRFbGVtZW50QnlJZCgndm9sJyk7CnZhciBwQ3VyPWQuZ2V0RWxlbWVudEJ5SWQoJ3BDdXInKTsKdmFyIHBEdXI9ZC5nZXRFbGVtZW50QnlJZCgncER1cicpOwp2YXIgZm9sZEJ0bj1kLmdldEVsZW1lbnRCeUlkKCdmb2xkJyk7CnZhciBtaW5kPWQuZ2V0RWxlbWVudEJ5SWQoJ21pbmQnKTsKdmFyIGxiPWQuZ2V0RWxlbWVudEJ5SWQoJ2xiJyk7CnZhciBsYkltZz1kLmdldEVsZW1lbnRCeUlkKCdsYkltZycpOwp2YXIgbGJDYXA9ZC5nZXRFbGVtZW50QnlJZCgnbGJDYXAnKTsKCmZ1bmN0aW9uIGZtdCh0KXsKaWYoIWlzRmluaXRlKHQpfHx0PDApcmV0dXJuICcwOjAwJzsKdmFyIG09TWF0aC5mbG9vcih0LzYwKSxzPU1hdGguZmxvb3IodCU2MCk7CnJldHVybiBtKyc6JysoJzAnK3MpLnNsaWNlKC0yKTsKfQpmdW5jdGlvbiBzeW5jTWV0YSgpewpwRHVyLnRleHRDb250ZW50PWZtdChhdWRpby5kdXJhdGlvbik7CmlmKGF1ZGlvLmR1cmF0aW9uKXNlZWsudmFsdWU9TWF0aC5yb3VuZChhdWRpby5jdXJyZW50VGltZS9hdWRpby5kdXJhdGlvbioxMDAwKTsKfQppZihhdWRpby5yZWFkeVN0YXRlPj0xKXN5bmNNZXRhKCk7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWRlZG1ldGFkYXRhJyxzeW5jTWV0YSk7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ2R1cmF0aW9uY2hhbmdlJyxzeW5jTWV0YSk7CmF1ZGlvLnZvbHVtZT0uODsKdm9sLnZhbHVlPTgwOwp2YXIgc2Vla2luZz1mYWxzZTsKYXVkaW8uYWRkRXZlbnRMaXN0ZW5lcigndGltZXVwZGF0ZScsZnVuY3Rpb24oKXsKcEN1ci50ZXh0Q29udGVudD1mbXQoYXVkaW8uY3VycmVudFRpbWUpOwppZighc2Vla2luZyYmYXVkaW8uZHVyYXRpb24pc2Vlay52YWx1ZT1NYXRoLnJvdW5kKGF1ZGlvLmN1cnJlbnRUaW1lL2F1ZGlvLmR1cmF0aW9uKjEwMDApOwp9KTsKYXVkaW8uYWRkRXZlbnRMaXN0ZW5lcigncGxheWluZycsZnVuY3Rpb24oKXtkLmJvZHkuY2xhc3NMaXN0LmFkZCgncGxheWluZycpO30pOwphdWRpby5hZGRFdmVudExpc3RlbmVyKCdwYXVzZScsZnVuY3Rpb24oKXtkLmJvZHkuY2xhc3NMaXN0LnJlbW92ZSgncGxheWluZycpO30pOwphdWRpby5hZGRFdmVudExpc3RlbmVyKCdlbmRlZCcsZnVuY3Rpb24oKXtkLmJvZHkuY2xhc3NMaXN0LnJlbW92ZSgncGxheWluZycpO30pOwpzZWVrLmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JyxmdW5jdGlvbigpewpzZWVraW5nPXRydWU7CmlmKGF1ZGlvLmR1cmF0aW9uKWF1ZGlvLmN1cnJlbnRUaW1lPXNlZWsudmFsdWUvMTAwMCphdWRpby5kdXJhdGlvbjsKcEN1ci50ZXh0Q29udGVudD1mbXQoYXVkaW8uY3VycmVudFRpbWUpOwp9KTsKc2Vlay5hZGRFdmVudExpc3RlbmVyKCdjaGFuZ2UnLGZ1bmN0aW9uKCl7c2Vla2luZz1mYWxzZTt9KTsKdm9sLmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JyxmdW5jdGlvbigpe2F1ZGlvLnZvbHVtZT12b2wudmFsdWUvMTAwO30pOwovKiDmkq3mlL7vvJrmsr/nlKgxN+acn+agh+WHhuWGmeazleKAlOKAlOWkluWxgiB0cnkvY2F0Y2gg5YyF6KO5IHBsYXkoKSAqLwpmdW5jdGlvbiB0cnlQbGF5KCl7CnRyeXt2YXIgcD1hdWRpby5wbGF5KCk7aWYocCYmcC5jYXRjaClwLmNhdGNoKGZ1bmN0aW9uKCl7fSk7fWNhdGNoKGUpe30KfQpwUGxheS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsZnVuY3Rpb24oKXsKaWYoYXVkaW8ucGF1c2VkKXRyeVBsYXkoKTtlbHNlIGF1ZGlvLnBhdXNlKCk7Cn0pOwoKLyog5YWl5Zy677ya5ZCM5LiA5omL5Yq/5YaFIHBsYXkoKSDihpIg5bmV5biD5ouJ5byAICsg6IGa5YWJ54Gv5omp5byAICsg54Wn54mH6KKrIuaUvuaYoCIgKyDmloflrZfmlbTooYzljYfotbcgKi8KdmFyIGVudGVyZWQ9ZmFsc2U7CmdhdGUuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7CmlmKGVudGVyZWQpcmV0dXJuOwplbnRlcmVkPXRydWU7Ci8qIDE35pyf5qCH5YeG77ya5YWl5Zy654K55Ye75ZCM5LiA5omL5Yq/5YaF55u05o6lIHBsYXkgKi8KdHJ5e3ZhciBwPWF1ZGlvLnBsYXkoKTtpZihwJiZwLmNhdGNoKXAuY2F0Y2goZnVuY3Rpb24oKXt9KTt9Y2F0Y2goZSl7fQpnYXRlLmNsYXNzTGlzdC5hZGQoJ2dvJyk7CmQuYm9keS5jbGFzc0xpc3QuYWRkKCdlbnRlcmVkJyk7CnNldFRpbWVvdXQoZnVuY3Rpb24oKXtkLmRvY3VtZW50RWxlbWVudC5jbGFzc0xpc3QucmVtb3ZlKCdsb2NrJyk7fSwyMTAwKTsKc2V0VGltZW91dChmdW5jdGlvbigpe2lmKGdhdGUucGFyZW50Tm9kZSlnYXRlLnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQoZ2F0ZSk7fSwyMzUwKTsKfSx7b25jZTp0cnVlfSk7CgovKiDmu5rliqjmta7lhaUgKi8KdmFyIGlvPW5ldyBJbnRlcnNlY3Rpb25PYnNlcnZlcihmdW5jdGlvbihlcyl7CmVzLmZvckVhY2goZnVuY3Rpb24oZSl7CmlmKGUuaXNJbnRlcnNlY3Rpbmcpe2UudGFyZ2V0LmNsYXNzTGlzdC5hZGQoJ29uJyk7aW8udW5vYnNlcnZlKGUudGFyZ2V0KTt9Cn0pOwp9LHt0aHJlc2hvbGQ6LjE2fSk7CmQucXVlcnlTZWxlY3RvckFsbCgnLnJ2JykuZm9yRWFjaChmdW5jdGlvbihlbCl7aW8ub2JzZXJ2ZShlbCk7fSk7CgovKiDmkq3mlL7lmajpnaLmnb/vvJrpu5jorqTmlLbotbfvvIzkuI3oh6rliqjlvLnlh7ogKi8KZnVuY3Rpb24gc2V0UGFuZWwob3Blbil7CnBhbmVsLmNsYXNzTGlzdC50b2dnbGUoJ29wZW4nLG9wZW4pOwpwYW5lbC5zZXRBdHRyaWJ1dGUoJ2FyaWEtaGlkZGVuJyxvcGVuPydmYWxzZSc6J3RydWUnKTsKYmFsbC5zZXRBdHRyaWJ1dGUoJ2FyaWEtbGFiZWwnLG9wZW4/J+aUtui1t+aSreaUvuWZqCc6J+WxleW8gOaSreaUvuWZqCcpOwp9CmJhbGwuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7c2V0UGFuZWwoIXBhbmVsLmNsYXNzTGlzdC5jb250YWlucygnb3BlbicpKTt9KTsKcENsb3NlLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJyxmdW5jdGlvbigpe3NldFBhbmVsKGZhbHNlKTt9KTsKCi8qIOW/g+i3r+WOhueoi++8mum7mOiupOWxleW8gO+8jOWPr+aKmOWPoCAqLwpmb2xkQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJyxmdW5jdGlvbigpewp2YXIgZm9sZGVkPW1pbmQuY2xhc3NMaXN0LnRvZ2dsZSgnZm9sZCcpOwpmb2xkQnRuLnRleHRDb250ZW50PWZvbGRlZD8n5bGV5byAJzon5pS26LW3JzsKfSk7CgovKiBMaWdodGJveCAqLwpmdW5jdGlvbiBvcGVuTGIoc3JjLGNhcCl7CmxiSW1nLnNyYz1zcmM7bGJDYXAudGV4dENvbnRlbnQ9Y2FwfHwnJzsKbGIuY2xhc3NMaXN0LmFkZCgnb3BlbicpO2xiLnNldEF0dHJpYnV0ZSgnYXJpYS1oaWRkZW4nLCdmYWxzZScpOwp9CmZ1bmN0aW9uIGNsb3NlTGIoKXsKbGIuY2xhc3NMaXN0LnJlbW92ZSgnb3BlbicpO2xiLnNldEF0dHJpYnV0ZSgnYXJpYS1oaWRkZW4nLCd0cnVlJyk7Cn0KZC5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsZnVuY3Rpb24oZSl7CnZhciB0PWUudGFyZ2V0LmNsb3Nlc3Q/ZS50YXJnZXQuY2xvc2VzdCgnW2RhdGEtZnVsbF0nKTpudWxsOwppZighdClyZXR1cm47Cm9wZW5MYih0LmdldEF0dHJpYnV0ZSgnZGF0YS1mdWxsJyksdC5nZXRBdHRyaWJ1dGUoJ2FsdCcpfHwnJyk7Cn0pOwpsYi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsY2xvc2VMYik7CmQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsZnVuY3Rpb24oZSl7CmlmKGUua2V5PT09J0VzY2FwZScmJmxiLmNsYXNzTGlzdC5jb250YWlucygnb3BlbicpKWNsb3NlTGIoKTsKfSk7Cn0pKCk7Cg==&#39;),function(c){return c.charCodeAt(0)})))&lt;/script&gt;
+</description>
+        </item>
+        <item>
+        <title>第二十次活动合照</title>
+        <link>https://vrclmcl.asia/p/ershierd/</link>
+        <pubDate>Wed, 18 Nov 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/ershierd/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/11/19/活动合照.png" alt="Featured image of post 第二十次活动合照" /&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://vrclmcl.asia/p/19qyh&#34; style=&#34;
+    display: inline-block;
+    background: linear-gradient(135deg, #5c3420, #a8401f);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  &#34; onmouseover=&#34;this.style.transform=&#39;scale(1.05)&#39;;&#34;
+  onmouseout=&#34;this.style.transform=&#39;scale(1)&#39;;&#34;&gt;
+    前往第十九期轻音会
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;第二十次活动合照&#34;&gt;第二十次活动合照
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;点开更高清&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style=&#34;display:flex;gap:12px;margin:16px 0;align-items:flex-start;max-width:800px;&#34;&gt;
+  &lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/03/03/ltyytn.png&#34; style=&#34;width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;&#34;&gt;
+  &lt;div style=&#34;position:relative;background:#f0f4f8;color:#444;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;word-break:break-word;&#34;&gt;
+    嘎嘎嘎消失的一期
+    &lt;div style=&#34;position:absolute;left:-8px;top:12px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #f0f4f8;&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div id=&#34;jump-float&#34; style=&#34;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #5c3420, #a8401f);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(92,52,32,0.3);
+  transition: transform 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+&#34;&gt;
+  轻音会🎵
+&lt;/div&gt;
+&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+  const floatBtn = document.getElementById(&#39;jump-float&#39;);
+  if (floatBtn) {
+    floatBtn.addEventListener(&#39;click&#39;, () =&gt; {
+      window.location.href = &#39;/p/19qyh&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1.05)&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1)&#39;;
+    });
+  }
+});
+&lt;/script&gt;
 </description>
         </item>
         <item>
