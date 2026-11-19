@@ -7,7 +7,521 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>ltyytn</copyright>
-        <lastBuildDate>Sat, 31 Oct 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Nov 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://vrclmcl.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第二十次活动合照</title>
+        <link>https://vrclmcl.asia/p/ershierd/</link>
+        <pubDate>Thu, 19 Nov 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/ershierd/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/11/19/活动合照.png" alt="Featured image of post 第二十次活动合照" /&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://vrclmcl.asia/p/19qyh&#34; style=&#34;
+    display: inline-block;
+    background: linear-gradient(135deg, #5c3420, #a8401f);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  &#34; onmouseover=&#34;this.style.transform=&#39;scale(1.05)&#39;;&#34;
+  onmouseout=&#34;this.style.transform=&#39;scale(1)&#39;;&#34;&gt;
+    前往第十九期轻音会
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;第二十次活动合照&#34;&gt;第二十次活动合照
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/%e6%b4%bb%e5%8a%a8%e5%90%88%e7%85%a7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;点开更高清&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style=&#34;display:flex;gap:12px;margin:16px 0;align-items:flex-start;max-width:800px;&#34;&gt;
+  &lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/03/03/ltyytn.png&#34; style=&#34;width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;&#34;&gt;
+  &lt;div style=&#34;position:relative;background:#f0f4f8;color:#444;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;word-break:break-word;&#34;&gt;
+    嘎嘎嘎消失的一期
+    &lt;div style=&#34;position:absolute;left:-8px;top:12px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #f0f4f8;&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div id=&#34;jump-float&#34; style=&#34;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #5c3420, #a8401f);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(92,52,32,0.3);
+  transition: transform 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+&#34;&gt;
+  轻音会🎵
+&lt;/div&gt;
+&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+  const floatBtn = document.getElementById(&#39;jump-float&#39;);
+  if (floatBtn) {
+    floatBtn.addEventListener(&#39;click&#39;, () =&gt; {
+      window.location.href = &#39;/p/19qyh&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseenter&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1.05)&#39;;
+    });
+    floatBtn.addEventListener(&#39;mouseleave&#39;, () =&gt; {
+      floatBtn.style.transform = &#39;scale(1)&#39;;
+    });
+  }
+});
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
+        <title>第十九期轻音会</title>
+        <link>https://vrclmcl.asia/p/19qyh/</link>
+        <pubDate>Thu, 19 Nov 2026 10:00:00 +0800</pubDate>
+        
+        <guid>https://vrclmcl.asia/p/19qyh/</guid>
+        <description>&lt;img src="https://img.vrclmcl.asia/LMCL/2026/11/19/横图.png" alt="Featured image of post 第十九期轻音会" /&gt;&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+&lt;link rel=&#34;preload&#34; as=&#34;style&#34; href=&#34;https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34;&gt;
+&lt;script&gt;document.documentElement.classList.add(&#39;js&#39;);&lt;/script&gt;
+&lt;style&gt;
+:root{
+  --sans:&#39;Noto Sans SC&#39;,&#39;PingFang SC&#39;,&#39;Microsoft YaHei&#39;,sans-serif;
+  --disp:&#39;Space Grotesk&#39;,sans-serif;
+  --hall:#150e0a;
+  --hall2:#0e0907;
+  --char:#211d1a;
+  --leather:#a8401f;
+  --caramel:#c4662c;
+  --gold:#d9a04a;
+  --cream:#f2e2cc;
+  --ink:#2e1c14;
+  --ice:#5aa9d6;
+  --blood:#c8454e;
+  --hole:#0e0907;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--hall2)}
+html.lock{overflow:hidden}
+body{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--cream);background:var(--hall);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+/* 持续氛围：极淡皮质沙发纹理（只占一角，不贴满）+ 放映机光斑 */
+#amb{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.leather{
+  position:absolute;left:-10%;bottom:-18%;width:64vw;height:78vh;opacity:.075;
+  transform:rotate(-9deg);
+  background:
+    radial-gradient(circle at 50% 50%,rgba(168,64,31,.85) 0 2px,transparent 3px) 0 0/86px 86px,
+    radial-gradient(circle at 50% 50%,rgba(46,28,20,.9) 0 4px,transparent 5px) 43px 43px/86px 86px,
+    radial-gradient(ellipse at 42% 42%,rgba(196,102,44,.35),transparent 64%);
+  -webkit-mask-image:radial-gradient(ellipse at 34% 68%,#000 0%,transparent 70%);
+  mask-image:radial-gradient(ellipse at 34% 68%,#000 0%,transparent 70%);
+}
+.g-spot{position:absolute;border-radius:50%;filter:blur(24px);opacity:0;transition:opacity 1.7s ease .35s}
+.g-spot.s1{width:250px;height:250px;left:8%;top:16%;background:radial-gradient(circle,rgba(217,160,74,.42),rgba(217,160,74,0) 70%)}
+.g-spot.s2{width:190px;height:190px;right:10%;top:54%;background:radial-gradient(circle,rgba(196,102,44,.36),rgba(196,102,44,0) 70%)}
+.g-spot.s3{width:160px;height:160px;left:54%;bottom:8%;background:radial-gradient(circle,rgba(217,160,74,.3),rgba(217,160,74,0) 70%)}
+body.entered .g-spot{opacity:.62}
+body.entered.playing .g-spot{animation:gFloat 10s ease-in-out infinite alternate}
+body.entered.playing .g-spot.s2{animation-delay:-4s}
+body.entered.playing .g-spot.s3{animation-delay:-7s}
+@keyframes gFloat{from{transform:translate(0,0) scale(1)}to{transform:translate(30px,-22px) scale(1.14)}}
+/* 融入式导航：放映厅横楣 */
+#topnav{
+  position:fixed;top:0;left:0;right:0;z-index:40;
+  display:flex;align-items:center;gap:clamp(14px,2.6vw,36px);
+  min-height:58px;padding:10px clamp(18px,4vw,54px);
+  background:linear-gradient(180deg,rgba(14,9,7,.96),rgba(14,9,7,.74));
+  border-bottom:1px solid rgba(217,160,74,.2);backdrop-filter:blur(8px);
+  transform:translateY(-100%);transition:transform .8s cubic-bezier(.2,.8,.2,1) .8s;
+}
+body.entered #topnav{transform:none}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--cream);text-decoration:none}
+.brand i{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);flex:none}
+#topnav nav{display:flex;gap:clamp(14px,2.2vw,30px);margin-left:auto;flex-wrap:wrap}
+#topnav nav a{font-size:14px;letter-spacing:.04em;color:rgba(242,226,204,.72);text-decoration:none;transition:color .25s}
+#topnav nav a:hover{color:var(--gold)}
+/* 首屏：一块银幕被聚光灯照亮，两侧深 */
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,4vw,48px);position:relative;z-index:2}
+.hero{padding-top:112px;text-align:center}
+.kicker{font-family:var(--disp);font-size:12px;letter-spacing:.34em;color:var(--gold);margin-bottom:22px}
+.stage{position:relative;display:flex;align-items:center;justify-content:center}
+.rail{font-family:var(--disp);font-size:12px;letter-spacing:.32em;color:rgba(217,160,74,.5);writing-mode:vertical-rl;white-space:nowrap;position:absolute;top:50%;transform:translateY(-50%)}
+.rail.l{left:-4px;transform:translateY(-50%) rotate(180deg)}
+.rail.r{right:-4px}
+.spotlight{
+  position:absolute;left:50%;top:-10%;width:360px;height:126%;z-index:1;pointer-events:none;
+  transform:translateX(-50%) scale(.36,0);transform-origin:top center;opacity:0;
+  background:linear-gradient(180deg,rgba(242,226,204,.24) 0%,rgba(217,160,74,.11) 36%,rgba(242,226,204,0) 93%);
+  clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);filter:blur(14px);
+}
+body.entered .spotlight{transform:translateX(-50%) scale(1,1);opacity:1;transition:transform 1.85s cubic-bezier(.2,.7,.2,1) .05s,opacity 1.2s ease .05s}
+.screen{position:relative;width:min(740px,82vw);z-index:3;margin:0 auto}
+.screen-inner{position:relative;padding:9px;background:#0b0705;border:1px solid rgba(217,160,74,0);box-shadow:0 34px 74px -22px rgba(0,0,0,.85);transition:border-color 1.1s ease .4s}
+body.entered .screen-inner{border-color:rgba(217,160,74,.5)}
+.screen-inner img{width:100%;height:auto;filter:brightness(.12) contrast(1.7) saturate(.65);transform:scale(.9);transition:filter 2.05s cubic-bezier(.2,.7,.2,1) .12s,transform 2.05s cubic-bezier(.2,.7,.2,1) .12s;cursor:zoom-in}
+body.entered .screen-inner img{filter:brightness(1) contrast(1) saturate(1);transform:scale(1)}
+.screen-tag{display:flex;justify-content:space-between;gap:12px;margin-top:12px;padding-top:10px;border-top:1px dashed rgba(217,160,74,.32);font-family:var(--disp);font-size:12px;letter-spacing:.16em;color:rgba(242,226,204,.6)}
+.hero-title{margin:30px auto 0}
+.hero-title h1{font-weight:400;line-height:1.16}
+.hero-title .ln.d2{font-size:clamp(34px,5.1vw,66px);font-weight:700;letter-spacing:.06em;color:var(--cream)}
+.hero-title .ice{color:var(--ice)}
+.hero-title .blood{color:var(--blood)}
+.hero-title .ln.d3{font-size:clamp(21px,2.8vw,36px);font-weight:400;letter-spacing:.18em;color:rgba(242,226,204,.78);margin-top:10px}
+.hero-title .ln.d3 i::before{content:&#34;&#34;;display:inline-block;width:34px;height:1px;background:var(--gold);vertical-align:middle;margin:0 18px 5px 0}
+.meta{margin-top:20px;font-family:var(--disp);font-size:12px;letter-spacing:.24em;color:var(--gold)}
+.note{margin-top:12px;font-size:15px;letter-spacing:.1em;color:rgba(242,226,204,.62)}
+/* 整行升起（禁止逐字）：js 门控 */
+html.js .ln{display:block;overflow:hidden}
+html.js .ln&gt;i{display:inline-block;font-style:normal;transform:translateY(120%);transition:transform .82s cubic-bezier(.2,.8,.2,1)}
+html.js .ln.d1&gt;i{transition-delay:.5s}
+html.js .ln.d2&gt;i{transition-delay:.66s}
+html.js .ln.d3&gt;i{transition-delay:.82s}
+html.js .ln.d4&gt;i{transition-delay:.98s}
+html.js .ln.d5&gt;i{transition-delay:1.16s}
+html.js body.entered .ln&gt;i{transform:none}
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .85s ease,transform .95s cubic-bezier(.2,.8,.2,1)}
+html.js .rv.on{opacity:1;transform:none}
+/* 幕布褶皱线：节间过渡 */
+.foldline{height:76px;display:flex;align-items:center;justify-content:center}
+.foldline svg{width:min(1100px,92%);height:100%;overflow:visible}
+.foldline .fmain{fill:none;stroke:rgba(217,160,74,.45);stroke-width:1.2;stroke-linecap:round}
+.foldline .ffold{fill:none;stroke:rgba(168,64,31,.55);stroke-width:1;stroke-dasharray:2 7}
+/* 垂直时间轴 + 票根/场记卡错落排布 */
+.time{position:relative;margin:56px 0 30px;display:flex;flex-direction:column;align-items:center;gap:44px}
+.time::before{content:&#34;&#34;;position:absolute;left:50%;top:-30px;bottom:-30px;width:1px;background:linear-gradient(180deg,transparent,rgba(217,160,74,.35) 12%,rgba(217,160,74,.35) 88%,transparent)}
+.stop{position:relative;width:100%;padding:0;margin:0}
+.stop.r{margin-left:0;padding:0}
+.stop .stub,.stop .clapcard{width:min(100%,720px);margin:0 auto}
+.stop .node{position:absolute;top:28px;left:max(calc(50% - 380px),0px);width:11px;height:11px;border:1px solid var(--gold);background:var(--hall);transform:rotate(45deg);z-index:2}
+.stop.r .node{left:auto;right:max(calc(50% - 380px),0px)}
+/* 票根 */
+.stub{position:relative;background:var(--cream);color:var(--ink);padding:30px 36px;box-shadow:0 26px 62px -18px rgba(0,0,0,.72)}
+.stub::before,.stub::after{content:&#34;&#34;;position:absolute;top:12px;bottom:12px;width:9px;background:radial-gradient(circle at 50% 50%,var(--hole) 0 3.5px,transparent 3.6px) 0 0/9px 17px repeat-y}
+.stub::before{left:-4px}
+.stub::after{right:-4px}
+.stub-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--disp);font-size:12px;letter-spacing:.2em;color:#7a5a3a;border-bottom:1px dashed rgba(168,64,31,.35);padding-bottom:12px;margin-bottom:20px}
+.stub-top .no{color:var(--leather);font-weight:700}
+.dl{display:grid;grid-template-columns:98px 1fr;gap:14px 18px;font-size:15px}
+.dl dt{font-size:12px;letter-spacing:.12em;color:#8a6a4a;padding-top:3px}
+.dl dd{font-weight:500;line-height:1.55}
+.dl dd.big{font-size:clamp(19px,2vw,25px);font-weight:700;line-height:1.4}
+.tagx{display:inline-block;margin-left:8px;font-family:var(--disp);font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--leather);border:1px solid rgba(168,64,31,.4);padding:1px 8px;vertical-align:middle}
+.stub-link{display:inline-flex;align-items:center;gap:9px;margin-top:24px;font-size:14px;letter-spacing:.03em;color:var(--cream);background:var(--leather);padding:11px 18px;text-decoration:none;transition:background .25s,transform .25s}
+.stub-link:hover{background:var(--caramel);transform:translateY(-2px)}
+.stub-link svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
+/* 场记卡 */
+.clapcard{position:relative;background:rgba(46,28,20,.6);border:1px solid rgba(217,160,74,.28);padding-bottom:28px;box-shadow:0 26px 62px -18px rgba(0,0,0,.72)}
+.claphead{display:flex;align-items:center;gap:14px;padding:12px 18px;background:var(--char);border-bottom:1px solid rgba(217,160,74,.3)}
+.clapstick{width:78px;height:22px;flex:none;background:repeating-linear-gradient(112deg,#efe4cd 0 9px,#1a1410 9px 18px);transform:skewY(-7deg);box-shadow:0 2px 0 rgba(0,0,0,.5)}
+.claphead .scene{font-family:var(--disp);font-size:12px;letter-spacing:.16em;color:var(--gold)}
+.claphead .name{font-size:15px;font-weight:700;color:var(--cream);margin-left:auto}
+.clapbody{padding:24px 30px 0}
+.quote{font-size:clamp(17px,1.7vw,21px);line-height:1.85;color:var(--cream)}
+.quote-src{margin-top:12px;font-family:var(--disp);font-size:12px;letter-spacing:.14em;color:var(--gold)}
+.mind{margin-top:26px;border-top:1px dashed rgba(217,160,74,.3);padding-top:20px}
+.mind-bar{display:flex;align-items:center;gap:12px}
+.mind-bar h3{font-size:12px;letter-spacing:.22em;font-weight:500;color:var(--gold)}
+.mind-bar h3::before{content:&#34;&#34;;display:inline-block;width:8px;height:8px;margin-right:10px;background:var(--blood);transform:rotate(45deg)}
+#fold{margin-left:auto;font-family:inherit;font-size:12px;letter-spacing:.12em;cursor:pointer;color:var(--gold);background:transparent;border:1px solid rgba(217,160,74,.5);padding:6px 16px;transition:background .25s,color .25s}
+#fold:hover{background:var(--gold);color:var(--char)}
+.mind-tx{margin-top:14px;font-size:15px;line-height:2.05;color:rgba(242,226,204,.84);max-height:760px;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.3,1)}
+.mind.fold .mind-tx{max-height:64px;-webkit-mask-image:linear-gradient(180deg,#000 35%,transparent);mask-image:linear-gradient(180deg,#000 35%,transparent)}
+/* 相册：竖图 + 右侧说明卡垂直居中，整组水平居中 */
+.sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px}
+.sec-head h2{font-size:clamp(22px,2.4vw,30px);font-weight:700;color:var(--cream);letter-spacing:.04em;white-space:nowrap}
+.sec-head .credit{font-size:12px;letter-spacing:.12em;color:var(--gold);font-weight:400}
+.sec-head::after{content:&#34;&#34;;flex:1;height:1px;background:linear-gradient(90deg,rgba(217,160,74,.4),transparent)}
+.album{padding-top:10px}
+.duo{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,64px);margin:0 auto 46px}
+.portrait{width:min(390px,80vw);flex:0 0 auto;margin:0;padding:9px;background:#0b0705;border:1px solid rgba(217,160,74,.4);box-shadow:0 26px 60px -18px rgba(0,0,0,.8)}
+.portrait img{width:100%;height:auto;cursor:zoom-in}
+.cap-card{flex:0 1 300px;max-width:300px;font-size:15px;line-height:1.95;color:rgba(242,226,204,.8);padding-left:20px;border-left:1px solid rgba(217,160,74,.45)}
+.cap-card strong{display:block;font-size:17px;color:var(--gold);margin-bottom:12px;line-height:1.5}
+.wide{max-width:880px;margin:0 auto;padding:9px;background:#0b0705;border:1px solid rgba(217,160,74,.35);box-shadow:0 26px 60px -18px rgba(0,0,0,.8)}
+.wide img{width:100%;height:auto;cursor:zoom-in}
+.wide-cap{margin-top:12px;font-size:14px;letter-spacing:.04em;color:rgba(242,226,204,.66);text-align:center}
+/* 页脚 */
+.foot{margin-top:80px;padding:34px 20px 48px;text-align:center;font-size:14px;letter-spacing:.08em;color:rgba(242,226,204,.62);border-top:1px solid rgba(217,160,74,.18);position:relative;z-index:2}
+.foot::before{content:&#34;&#34;;display:block;width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin:0 auto 20px}
+/* 放映机悬浮球 + 面板（动效绑定 playing/pause） */
+#pBall{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;border:1px solid rgba(217,160,74,.6);cursor:pointer;background:#1a110c;box-shadow:0 12px 30px rgba(0,0,0,.6),inset 0 0 0 4px rgba(217,160,74,.08);display:grid;place-items:center;opacity:0;transform:translateY(16px);transition:opacity .7s ease 1.3s,transform .7s ease 1.3s,box-shadow .25s}
+body.entered #pBall{opacity:1;transform:none}
+#pBall:hover{box-shadow:0 16px 38px rgba(0,0,0,.7),inset 0 0 0 4px rgba(217,160,74,.14)}
+#pBall::after{content:&#34;&#34;;position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(217,160,74,.5);opacity:0}
+body.playing #pBall::after{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.92);opacity:.75}100%{transform:scale(1.26);opacity:0}}
+#pBall .reel{width:30px;height:30px;transform-origin:50% 50%}
+body.playing #pBall .reel{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#pPanel{position:fixed;right:24px;bottom:98px;z-index:59;width:min(520px,calc(100vw - 32px));background:#1c120d;border:1px solid rgba(217,160,74,.4);box-shadow:0 24px 60px -12px rgba(0,0,0,.82);opacity:0;visibility:hidden;transform:translateY(14px) scale(.97);transform-origin:bottom right;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.8,.3,1),visibility 0s linear .35s}
+#pPanel.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.8,.3,1)}
+.p-head{display:flex;align-items:center;gap:10px;padding:12px 16px;background:#140d09;border-bottom:1px solid rgba(217,160,74,.25);font-size:12px;letter-spacing:.1em;color:var(--gold)}
+.p-head strong{font-size:14px;color:var(--cream);letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eq{display:flex;gap:2px;align-items:flex-end;height:13px;flex:none}
+.eq i{width:2px;height:3px;background:var(--gold)}
+body.playing .eq i{animation:eq .9s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:-.25s}
+.eq i:nth-child(3){animation-delay:-.5s}
+.eq i:nth-child(4){animation-delay:-.7s}
+@keyframes eq{from{height:3px}to{height:13px}}
+#pClose{margin-left:auto;flex:none;background:none;border:0;color:var(--gold);font-size:18px;line-height:1;cursor:pointer;padding:2px 6px;opacity:.8}
+#pClose:hover{opacity:1}
+.p-body{padding:18px}
+.p-row{display:flex;align-items:center;gap:12px}
+.p-row+.p-row{margin-top:16px}
+.p-play{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(217,160,74,.6);background:var(--leather);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .25s}
+.p-play:hover{background:var(--caramel)}
+.p-play svg{width:15px;height:15px}
+.p-play .ic-pause{display:none}
+body.playing .p-play .ic-play{display:none}
+body.playing .p-play .ic-pause{display:block}
+.p-time{font-family:var(--disp);font-size:12px;color:rgba(242,226,204,.66);min-width:36px;text-align:center}
+.vlab{font-size:12px;letter-spacing:.1em;color:var(--gold)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:3px;background:rgba(217,160,74,.25);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 3px rgba(217,160,74,.16)}
+input[type=range]::-moz-range-thumb{width:11px;height:11px;border:0;background:var(--gold);border-radius:50%}
+#seek{flex:1;min-width:0}
+#vol{width:96px}
+.p-sign{margin-left:auto;font-family:var(--disp);font-size:12px;color:rgba(242,226,204,.5)}
+#playHint{position:fixed;left:50%;bottom:26px;z-index:70;transform:translateX(-50%) translateY(10px);background:var(--gold);color:var(--char);font-family:inherit;font-size:14px;letter-spacing:.06em;padding:10px 18px;border:0;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .35s ease,transform .35s ease,visibility 0s linear .35s}
+#playHint.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition:opacity .35s ease,transform .35s ease}
+/* Lightbox */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(8,5,4,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s;cursor:zoom-out}
+#lb.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+#lbImg{max-width:94vw;max-height:86vh;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+#lbCap{position:fixed;bottom:22px;left:0;right:0;text-align:center;color:rgba(242,226,204,.8);font-size:14px;letter-spacing:.06em}
+/* 入场门：放映厅全暗，只有一粒放映机光点；点击后幕布向两侧拉开 */
+#gate{position:fixed;inset:0;z-index:100;background:var(--hall2);overflow:hidden;cursor:pointer}
+#gate .curtain{position:absolute;top:0;height:100%;width:50.3%;will-change:transform;background:linear-gradient(90deg,rgba(0,0,0,.66),transparent 16%,rgba(255,214,160,.05) 44%,transparent 72%,rgba(0,0,0,.62)),repeating-linear-gradient(90deg,#1b0f0b 0 34px,#2b1510 34px 70px,#160b08 70px 104px),linear-gradient(180deg,#2a1510,#120a07)}
+#gate .curtain.l{left:0}
+#gate .curtain.r{right:0}
+#gate .curtain::after{content:&#34;&#34;;position:absolute;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,rgba(217,160,74,.75),transparent)}
+#gate .curtain.l::after{right:0}
+#gate .curtain.r::after{left:0}
+#gate .pdot{position:absolute;left:50%;top:48%;z-index:6;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:#ffe9bd;box-shadow:0 0 12px 3px rgba(217,160,74,.6),0 0 50px 14px rgba(217,160,74,.2);animation:dotBreath 2.2s ease-in-out infinite}
+@keyframes dotBreath{0%,100%{transform:scale(.85);opacity:.8}50%{transform:scale(1.25);opacity:1}}
+#gate .ghint{position:absolute;left:0;right:0;z-index:6;text-align:center;transition:opacity .4s ease}
+#gate .ghint .g1{position:absolute;left:0;right:0;top:calc(48vh - 92px);font-family:var(--disp);font-size:12px;letter-spacing:.4em;color:var(--gold)}
+#gate .ghint .g2{position:absolute;left:0;right:0;top:calc(48vh + 34px);font-size:14px;letter-spacing:.22em;color:rgba(242,226,204,.72);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+#gate .curtain{transition:transform 1.7s cubic-bezier(.72,0,.2,1)}
+#gate.go{pointer-events:none;background-color:transparent;transition:background-color 1.5s ease .05s}
+#gate.go .curtain.l{transform:translateX(-101%)}
+#gate.go .curtain.r{transform:translateX(101%)}
+#gate.go .pdot,#gate.go .ghint{opacity:0}
+/* 响应式 */
+@media(max-width:960px){
+  .stop,.stop.r{width:100%;padding:0}
+  .time::before{left:50%}
+  .stop .node{left:0;right:auto}
+  .stop.r .node{left:auto;right:0}
+  .rail{display:none}
+}
+@media(max-width:768px){
+  body{font-size:15px}
+  .hero{padding-top:94px}
+  .hero-title .ln.d2{font-size:clamp(32px,10vw,48px)}
+  .hero-title .ln.d3{font-size:19px;letter-spacing:.1em}
+  .hero-title .ln.d3 i::before{width:20px;margin-right:10px}
+  .kicker{font-size:12px;letter-spacing:.2em}
+  .meta,.note{font-size:12px;letter-spacing:.1em}
+  .screen{width:92vw}
+  .screen-tag{font-size:12px;letter-spacing:.06em}
+  .dl{grid-template-columns:1fr;gap:4px}
+  .dl dt{padding-top:6px}
+  .stub{padding:24px 22px}
+  .clapbody{padding:20px 18px 0}
+  .duo{flex-direction:column;gap:22px}
+  .portrait,.cap-card{flex:0 0 auto}
+  .cap-card{max-width:390px;padding-left:0;border-left:0;border-top:1px solid rgba(217,160,74,.45);padding-top:16px}
+  #topnav{flex-wrap:wrap;row-gap:2px}
+  #topnav nav{gap:12px 18px}
+  #topnav nav a{font-size:14px}
+  .sec-head{flex-wrap:wrap;gap:6px 16px}
+  .sec-head::after{display:none}
+  #pBall{width:54px;height:54px;right:16px;bottom:16px}
+  #pPanel{right:12px;bottom:80px}
+  #vol{width:72px}
+  .p-sign{display:none}
+  .foldline{height:56px}
+}
+&lt;/style&gt;
+&lt;p&gt;&lt;noscript&gt;&lt;style&gt;#gate{display:none}html.lock{overflow:auto}&lt;/style&gt;&lt;/noscript&gt;&lt;/p&gt;
+&lt;div id=&#34;amb&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;div class=&#34;leather&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;g-spot s1&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;g-spot s2&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;g-spot s3&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;header id=&#34;topnav&#34;&gt;
+&lt;a class=&#34;brand&#34; href=&#34;https://vrclmcl.asia/about/&#34;&gt;&lt;i&gt;&lt;/i&gt;轻音会社&lt;/a&gt;
+&lt;nav&gt;
+&lt;a href=&#34;https://vrclmcl.asia/about/&#34;&gt;关于我们&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/ershierd/&#34;&gt;本期活动&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/p/gd/&#34;&gt;轻音歌单&lt;/a&gt;
+&lt;a href=&#34;https://vrclmcl.asia/apps/vote/&#34;&gt;投票系统&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+&lt;header class=&#34;wrap hero&#34; id=&#34;top&#34;&gt;
+&lt;p class=&#34;kicker ln d1&#34;&gt;&lt;i&gt;VRChat 音乐社团 · 每周歌会&lt;/i&gt;&lt;/p&gt;
+&lt;div class=&#34;stage&#34;&gt;
+&lt;span class=&#34;rail l&#34; aria-hidden=&#34;true&#34;&gt;REEL · 019&lt;/span&gt;
+&lt;div class=&#34;spotlight&#34; aria-hidden=&#34;true&#34;&gt;&lt;/div&gt;
+&lt;figure class=&#34;screen&#34;&gt;
+&lt;div class=&#34;screen-inner&#34;&gt;&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/横图.png&#34; alt=&#34;暖光房间：异色瞳少女坐在红棕皮沙发上比 V 手势&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/横图.png&#34;&gt;&lt;/div&gt;
+&lt;figcaption class=&#34;screen-tag&#34;&gt;&lt;span&gt;银幕 · 第十九期轻音会&lt;/span&gt;&lt;span&gt;PHOTO / QutaiBai柒白&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;span class=&#34;rail r&#34; aria-hidden=&#34;true&#34;&gt;PRIVATE SCREENING&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hero-title&#34;&gt;
+&lt;h1&gt;
+&lt;span class=&#34;ln d2&#34;&gt;&lt;i&gt;一眼&lt;span class=&#34;ice&#34;&gt;蓝&lt;/span&gt;，一眼&lt;span class=&#34;blood&#34;&gt;红&lt;/span&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span class=&#34;ln d3&#34;&gt;&lt;i&gt;在恍惚之间&lt;/i&gt;&lt;/span&gt;
+&lt;/h1&gt;
+&lt;p class=&#34;meta ln d4&#34;&gt;&lt;i&gt;第二十次正式活动 · 回顾&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&#34;note ln d5&#34;&gt;&lt;i&gt;带着笑意，走入下一个故事&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+&lt;div class=&#34;wrap foldline rv&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;svg viewBox=&#34;0 0 1100 76&#34; preserveAspectRatio=&#34;none&#34;&gt;
+&lt;path class=&#34;ffold&#34; d=&#34;M0 42 Q55 24 110 42 T220 42 T330 42 T440 42 T550 42 T660 42 T770 42 T880 42 T990 42 T1100 42&#34;/&gt;
+&lt;path class=&#34;fmain&#34; d=&#34;M0 42 Q55 24 110 42 T220 42 T330 42 T440 42 T550 42 T660 42 T770 42 T880 42 T990 42 T1100 42&#34;/&gt;
+&lt;path class=&#34;ffold&#34; d=&#34;M180 42 L175 70 M420 42 L425 68 M660 42 L655 70 M900 42 L905 68&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&#34;wrap time&#34;&gt;
+&lt;div class=&#34;stop l rv&#34;&gt;
+&lt;span class=&#34;node&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+&lt;article class=&#34;stub&#34;&gt;
+&lt;div class=&#34;stub-top&#34;&gt;&lt;span&gt;ADMIT ONE&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;NO.019&lt;/span&gt;&lt;/div&gt;
+&lt;dl class=&#34;dl&#34;&gt;
+&lt;dt&gt;活动时间&lt;/dt&gt;&lt;dd&gt;第二十次正式活动&lt;/dd&gt;
+&lt;dt&gt;曲名&lt;/dt&gt;&lt;dd class=&#34;big&#34;&gt;【洛天依AI原创】恍惚&lt;/dd&gt;
+&lt;dt&gt;作者&lt;/dt&gt;&lt;dd&gt;洛天依 AI &lt;span class=&#34;tagx&#34;&gt;洛天依AI原创&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;获选投稿人&lt;/dt&gt;&lt;dd&gt;祝空&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;a class=&#34;stub-link&#34; href=&#34;https://music.163.com/#/song?id=2012854567&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;网易云 · 歌曲链接（恍惚）
+&lt;svg viewBox=&#34;0 0 24 24&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;M5 12h14M13 6l6 6-6 6&#34;/&gt;&lt;/svg&gt;
+&lt;/a&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stop r rv&#34;&gt;
+&lt;span class=&#34;node&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+&lt;article class=&#34;clapcard&#34;&gt;
+&lt;div class=&#34;claphead&#34;&gt;
+&lt;span class=&#34;clapstick&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;scene&#34;&gt;SCENE 019 / TAKE 01&lt;/span&gt;
+&lt;span class=&#34;name&#34;&gt;祝空&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;clapbody&#34;&gt;
+&lt;blockquote class=&#34;quote&#34;&gt;诶～初投稿就获选力，是完全没有想到的事情。当然还是要感谢轻音社举办的活动和大家的投票，以后也会继续把好听的带给大家。&lt;/blockquote&gt;
+&lt;p class=&#34;quote-src&#34;&gt;—— 祝空 · 获选感言&lt;/p&gt;
+&lt;div class=&#34;mind&#34; id=&#34;mind&#34;&gt;
+&lt;div class=&#34;mind-bar&#34;&gt;
+&lt;h3&gt;投稿心路历程&lt;/h3&gt;
+&lt;button id=&#34;fold&#34; type=&#34;button&#34;&gt;收起&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&#34;mind-tx&#34;&gt;一段又一段共赴明日的旅程里 一个又一个寻找自我的过程中 该怎样表达，该如何接受 似乎仅有再见的话语不是答案 锚定心绪，重归寂静 在恍惚之间，在停留之时 无法归零的过往，早已远去 弥留心间的记忆，不曾言语 愿大家都能在这首歌找到自己某一刻的心境 带着笑意，走入下一个故事之中&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;wrap foldline rv&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;svg viewBox=&#34;0 0 1100 76&#34; preserveAspectRatio=&#34;none&#34;&gt;
+&lt;path class=&#34;ffold&#34; d=&#34;M0 42 Q55 24 110 42 T220 42 T330 42 T440 42 T550 42 T660 42 T770 42 T880 42 T990 42 T1100 42&#34;/&gt;
+&lt;path class=&#34;fmain&#34; d=&#34;M0 42 Q55 24 110 42 T220 42 T330 42 T440 42 T550 42 T660 42 T770 42 T880 42 T990 42 T1100 42&#34;/&gt;
+&lt;path class=&#34;ffold&#34; d=&#34;M180 42 L175 70 M420 42 L425 68 M660 42 L655 70 M900 42 L905 68&#34;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;section class=&#34;wrap album&#34;&gt;
+&lt;div class=&#34;sec-head rv&#34;&gt;&lt;h2&gt;银幕回放 &lt;span class=&#34;credit&#34;&gt;摄影 · QutaiBai柒白&lt;/span&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&#34;duo rv&#34;&gt;
+&lt;figure class=&#34;portrait&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/竖图.png&#34; alt=&#34;竖构图：异色瞳与 V 手势更清晰，红棕皮沙发与姜黄抱枕占比更大&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/竖图.png&#34;&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;cap-card&#34;&gt;
+&lt;strong&gt;异色瞳，被聚光照亮的一帧&lt;/strong&gt;
+竖构图里，人物上半身与异色瞳更清晰：左眼冰蓝、右眼血红，V 手势完整。红棕皮质沙发与姜黄抱枕占据更多画面——像放映室里被光留住的瞬间。
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;wide rv&#34;&gt;
+&lt;img src=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/横图.png&#34; alt=&#34;横幅大图：暖光房间、红棕皮沙发与异色瞳少女&#34; data-full=&#34;https://img.vrclmcl.asia/LMCL/2026/11/19/横图.png&#34;&gt;
+&lt;figcaption class=&#34;wide-cap&#34;&gt;暖棕木墙、皮质沙发、姜黄抱枕与身后的暖色台灯——点击图片可全屏观看。&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer class=&#34;foot&#34;&gt;© VRC轻音会社 · Q群 983271795 · author ltyytn&lt;/footer&gt;
+&lt;audio id=&#34;bgmAudio&#34; src=&#34;https://music.163.com/song/media/outer/url?id=2012854567.mp3&#34; preload=&#34;auto&#34; loop&gt;&lt;/audio&gt;
+&lt;div id=&#34;pPanel&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;div class=&#34;p-head&#34;&gt;
+&lt;span class=&#34;eq&#34; aria-hidden=&#34;true&#34;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;span&gt;现在放映&lt;/span&gt;&lt;strong&gt;【洛天依AI原创】恍惚&lt;/strong&gt;
+&lt;button id=&#34;pClose&#34; type=&#34;button&#34; aria-label=&#34;收起播放器&#34;&gt;×&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&#34;p-body&#34;&gt;
+&lt;div class=&#34;p-row&#34;&gt;
+&lt;button id=&#34;pPlay&#34; class=&#34;p-play&#34; type=&#34;button&#34; aria-label=&#34;播放或暂停&#34;&gt;
+&lt;svg class=&#34;ic-play&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;M4 2.5v11l9-5.5z&#34; fill=&#34;currentColor&#34;/&gt;&lt;/svg&gt;
+&lt;svg class=&#34;ic-pause&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;M4 2.5h3v11H4zM9 2.5h3v11H9z&#34; fill=&#34;currentColor&#34;/&gt;&lt;/svg&gt;
+&lt;/button&gt;
+&lt;span class=&#34;p-time&#34; id=&#34;pCur&#34;&gt;0:00&lt;/span&gt;
+&lt;input id=&#34;seek&#34; type=&#34;range&#34; min=&#34;0&#34; max=&#34;1000&#34; value=&#34;0&#34; step=&#34;1&#34; aria-label=&#34;播放进度&#34;&gt;
+&lt;span class=&#34;p-time&#34; id=&#34;pDur&#34;&gt;0:00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;p-row&#34;&gt;
+&lt;span class=&#34;vlab&#34;&gt;音量&lt;/span&gt;
+&lt;input id=&#34;vol&#34; type=&#34;range&#34; min=&#34;0&#34; max=&#34;100&#34; value=&#34;80&#34; aria-label=&#34;音量&#34;&gt;
+&lt;span class=&#34;p-sign&#34;&gt;洛天依 AI&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button id=&#34;pBall&#34; type=&#34;button&#34; aria-label=&#34;展开播放器&#34;&gt;
+&lt;svg class=&#34;reel&#34; viewBox=&#34;0 0 40 40&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;circle cx=&#34;20&#34; cy=&#34;20&#34; r=&#34;17&#34; fill=&#34;none&#34; stroke=&#34;#d9a04a&#34; stroke-width=&#34;1.4&#34;/&gt;
+&lt;circle cx=&#34;20&#34; cy=&#34;8.5&#34; r=&#34;3.2&#34; fill=&#34;#d9a04a&#34;/&gt;&lt;circle cx=&#34;30.7&#34; cy=&#34;16&#34; r=&#34;3.2&#34; fill=&#34;#d9a04a&#34;/&gt;
+&lt;circle cx=&#34;27&#34; cy=&#34;28.5&#34; r=&#34;3.2&#34; fill=&#34;#d9a04a&#34;/&gt;&lt;circle cx=&#34;13&#34; cy=&#34;28.5&#34; r=&#34;3.2&#34; fill=&#34;#d9a04a&#34;/&gt;
+&lt;circle cx=&#34;9.3&#34; cy=&#34;16&#34; r=&#34;3.2&#34; fill=&#34;#d9a04a&#34;/&gt;&lt;circle cx=&#34;20&#34; cy=&#34;20&#34; r=&#34;3.6&#34; fill=&#34;#a8401f&#34;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;button id=&#34;playHint&#34; type=&#34;button&#34;&gt;声音未启 · 点击这里播放&lt;/button&gt;
+&lt;div id=&#34;lb&#34; aria-hidden=&#34;true&#34;&gt;
+&lt;img id=&#34;lbImg&#34; src=&#34;&#34; alt=&#34;&#34;&gt;
+&lt;p id=&#34;lbCap&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gate&#34;&gt;
+&lt;div class=&#34;curtain l&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;curtain r&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;pdot&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;ghint&#34;&gt;
+&lt;p class=&#34;g1&#34;&gt;VRC 轻音会社 · 第十九期轻音会&lt;/p&gt;
+&lt;p class=&#34;g2&#34;&gt;轻触任意处 · 拉开银幕前的幕布&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;eval(new TextDecoder().decode(Uint8Array.from(atob(&#39;CihmdW5jdGlvbigpewp2YXIgZD1kb2N1bWVudDsKZC5kb2N1bWVudEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnbG9jaycpOwp2YXIgZ2F0ZT1kLmdldEVsZW1lbnRCeUlkKCdnYXRlJyk7CnZhciBhdWRpbz1kLmdldEVsZW1lbnRCeUlkKCdiZ21BdWRpbycpOwp2YXIgYmFsbD1kLmdldEVsZW1lbnRCeUlkKCdwQmFsbCcpOwp2YXIgcGFuZWw9ZC5nZXRFbGVtZW50QnlJZCgncFBhbmVsJyk7CnZhciBwQ2xvc2U9ZC5nZXRFbGVtZW50QnlJZCgncENsb3NlJyk7CnZhciBwUGxheT1kLmdldEVsZW1lbnRCeUlkKCdwUGxheScpOwp2YXIgc2Vlaz1kLmdldEVsZW1lbnRCeUlkKCdzZWVrJyk7CnZhciB2b2w9ZC5nZXRFbGVtZW50QnlJZCgndm9sJyk7CnZhciBwQ3VyPWQuZ2V0RWxlbWVudEJ5SWQoJ3BDdXInKTsKdmFyIHBEdXI9ZC5nZXRFbGVtZW50QnlJZCgncER1cicpOwp2YXIgcGxheUhpbnQ9ZC5nZXRFbGVtZW50QnlJZCgncGxheUhpbnQnKTsKdmFyIGZvbGRCdG49ZC5nZXRFbGVtZW50QnlJZCgnZm9sZCcpOwp2YXIgbWluZD1kLmdldEVsZW1lbnRCeUlkKCdtaW5kJyk7CnZhciBsYj1kLmdldEVsZW1lbnRCeUlkKCdsYicpOwp2YXIgbGJJbWc9ZC5nZXRFbGVtZW50QnlJZCgnbGJJbWcnKTsKdmFyIGxiQ2FwPWQuZ2V0RWxlbWVudEJ5SWQoJ2xiQ2FwJyk7CgpmdW5jdGlvbiBmbXQodCl7CmlmKCFpc0Zpbml0ZSh0KXx8dDwwKXJldHVybiAnMDowMCc7CnZhciBtPU1hdGguZmxvb3IodC82MCkscz1NYXRoLmZsb29yKHQlNjApOwpyZXR1cm4gbSsnOicrKCcwJytzKS5zbGljZSgtMik7Cn0KZnVuY3Rpb24gc3luY01ldGEoKXsKcER1ci50ZXh0Q29udGVudD1mbXQoYXVkaW8uZHVyYXRpb24pOwppZihhdWRpby5kdXJhdGlvbilzZWVrLnZhbHVlPU1hdGgucm91bmQoYXVkaW8uY3VycmVudFRpbWUvYXVkaW8uZHVyYXRpb24qMTAwMCk7Cn0KaWYoYXVkaW8ucmVhZHlTdGF0ZT49MSlzeW5jTWV0YSgpOwphdWRpby5hZGRFdmVudExpc3RlbmVyKCdsb2FkZWRtZXRhZGF0YScsc3luY01ldGEpOwphdWRpby5hZGRFdmVudExpc3RlbmVyKCdkdXJhdGlvbmNoYW5nZScsc3luY01ldGEpOwphdWRpby52b2x1bWU9Ljg7CnZvbC52YWx1ZT04MDsKdmFyIHNlZWtpbmc9ZmFsc2U7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ3RpbWV1cGRhdGUnLGZ1bmN0aW9uKCl7CnBDdXIudGV4dENvbnRlbnQ9Zm10KGF1ZGlvLmN1cnJlbnRUaW1lKTsKaWYoIXNlZWtpbmcmJmF1ZGlvLmR1cmF0aW9uKXNlZWsudmFsdWU9TWF0aC5yb3VuZChhdWRpby5jdXJyZW50VGltZS9hdWRpby5kdXJhdGlvbioxMDAwKTsKfSk7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ3BsYXlpbmcnLGZ1bmN0aW9uKCl7ZC5ib2R5LmNsYXNzTGlzdC5hZGQoJ3BsYXlpbmcnKTtwbGF5SGludC5jbGFzc0xpc3QucmVtb3ZlKCdzaG93Jyk7fSk7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ3BhdXNlJyxmdW5jdGlvbigpe2QuYm9keS5jbGFzc0xpc3QucmVtb3ZlKCdwbGF5aW5nJyk7fSk7CmF1ZGlvLmFkZEV2ZW50TGlzdGVuZXIoJ2VuZGVkJyxmdW5jdGlvbigpe2QuYm9keS5jbGFzc0xpc3QucmVtb3ZlKCdwbGF5aW5nJyk7fSk7CnNlZWsuYWRkRXZlbnRMaXN0ZW5lcignaW5wdXQnLGZ1bmN0aW9uKCl7CnNlZWtpbmc9dHJ1ZTsKaWYoYXVkaW8uZHVyYXRpb24pYXVkaW8uY3VycmVudFRpbWU9c2Vlay52YWx1ZS8xMDAwKmF1ZGlvLmR1cmF0aW9uOwpwQ3VyLnRleHRDb250ZW50PWZtdChhdWRpby5jdXJyZW50VGltZSk7Cn0pOwpzZWVrLmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsZnVuY3Rpb24oKXtzZWVraW5nPWZhbHNlO30pOwp2b2wuYWRkRXZlbnRMaXN0ZW5lcignaW5wdXQnLGZ1bmN0aW9uKCl7YXVkaW8udm9sdW1lPXZvbC52YWx1ZS8xMDA7fSk7CmZ1bmN0aW9uIHRyeVBsYXkoKXsKdmFyIHA9YXVkaW8ucGxheSgpOwppZihwJiZwLmNhdGNoKXAuY2F0Y2goZnVuY3Rpb24oKXtwbGF5SGludC5jbGFzc0xpc3QuYWRkKCdzaG93Jyk7fSk7Cn0KcFBsYXkuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7CmlmKGF1ZGlvLnBhdXNlZCl0cnlQbGF5KCk7ZWxzZSBhdWRpby5wYXVzZSgpOwp9KTsKcGxheUhpbnQuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7cGxheUhpbnQuY2xhc3NMaXN0LnJlbW92ZSgnc2hvdycpO3RyeVBsYXkoKTt9KTsKCi8qIOWFpeWcuu+8muWQjOS4gOaJi+WKv+WGhSBwbGF5KCkg4oaSIOW5leW4g+aLieW8gCArIOiBmuWFieeBr+aJqeW8gCArIOeFp+eJh+iiqyLmlL7mmKAiICsg5paH5a2X5pW06KGM5Y2H6LW3ICovCnZhciBlbnRlcmVkPWZhbHNlOwpnYXRlLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJyxmdW5jdGlvbigpewppZihlbnRlcmVkKXJldHVybjsKZW50ZXJlZD10cnVlOwp0cnl7YXVkaW8uY3VycmVudFRpbWU9MDt9Y2F0Y2goZSl7fQp0cnlQbGF5KCk7CmdhdGUuY2xhc3NMaXN0LmFkZCgnZ28nKTsKZC5ib2R5LmNsYXNzTGlzdC5hZGQoJ2VudGVyZWQnKTsKc2V0VGltZW91dChmdW5jdGlvbigpe2QuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5yZW1vdmUoJ2xvY2snKTt9LDIxMDApOwpzZXRUaW1lb3V0KGZ1bmN0aW9uKCl7aWYoZ2F0ZS5wYXJlbnROb2RlKWdhdGUucGFyZW50Tm9kZS5yZW1vdmVDaGlsZChnYXRlKTt9LDIzNTApOwp9LHtvbmNlOnRydWV9KTsKCi8qIOa7muWKqOa1ruWFpSAqLwp2YXIgaW89bmV3IEludGVyc2VjdGlvbk9ic2VydmVyKGZ1bmN0aW9uKGVzKXsKZXMuZm9yRWFjaChmdW5jdGlvbihlKXsKaWYoZS5pc0ludGVyc2VjdGluZyl7ZS50YXJnZXQuY2xhc3NMaXN0LmFkZCgnb24nKTtpby51bm9ic2VydmUoZS50YXJnZXQpO30KfSk7Cn0se3RocmVzaG9sZDouMTZ9KTsKZC5xdWVyeVNlbGVjdG9yQWxsKCcucnYnKS5mb3JFYWNoKGZ1bmN0aW9uKGVsKXtpby5vYnNlcnZlKGVsKTt9KTsKCi8qIOaSreaUvuWZqOmdouadv++8mum7mOiupOaUtui1t++8jOS4jeiHquWKqOW8ueWHuiAqLwpmdW5jdGlvbiBzZXRQYW5lbChvcGVuKXsKcGFuZWwuY2xhc3NMaXN0LnRvZ2dsZSgnb3Blbicsb3Blbik7CnBhbmVsLnNldEF0dHJpYnV0ZSgnYXJpYS1oaWRkZW4nLG9wZW4/J2ZhbHNlJzondHJ1ZScpOwpiYWxsLnNldEF0dHJpYnV0ZSgnYXJpYS1sYWJlbCcsb3Blbj8n5pS26LW35pKt5pS+5ZmoJzon5bGV5byA5pKt5pS+5ZmoJyk7Cn0KYmFsbC5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsZnVuY3Rpb24oKXtzZXRQYW5lbCghcGFuZWwuY2xhc3NMaXN0LmNvbnRhaW5zKCdvcGVuJykpO30pOwpwQ2xvc2UuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7c2V0UGFuZWwoZmFsc2UpO30pOwoKLyog5b+D6Lev5Y6G56iL77ya6buY6K6k5bGV5byA77yM5Y+v5oqY5Y+gICovCmZvbGRCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLGZ1bmN0aW9uKCl7CnZhciBmb2xkZWQ9bWluZC5jbGFzc0xpc3QudG9nZ2xlKCdmb2xkJyk7CmZvbGRCdG4udGV4dENvbnRlbnQ9Zm9sZGVkPyflsZXlvIAnOifmlLbotbcnOwp9KTsKCi8qIExpZ2h0Ym94ICovCmZ1bmN0aW9uIG9wZW5MYihzcmMsY2FwKXsKbGJJbWcuc3JjPXNyYztsYkNhcC50ZXh0Q29udGVudD1jYXB8fCcnOwpsYi5jbGFzc0xpc3QuYWRkKCdvcGVuJyk7bGIuc2V0QXR0cmlidXRlKCdhcmlhLWhpZGRlbicsJ2ZhbHNlJyk7Cn0KZnVuY3Rpb24gY2xvc2VMYigpewpsYi5jbGFzc0xpc3QucmVtb3ZlKCdvcGVuJyk7bGIuc2V0QXR0cmlidXRlKCdhcmlhLWhpZGRlbicsJ3RydWUnKTsKfQpkLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJyxmdW5jdGlvbihlKXsKdmFyIHQ9ZS50YXJnZXQuY2xvc2VzdD9lLnRhcmdldC5jbG9zZXN0KCdbZGF0YS1mdWxsXScpOm51bGw7CmlmKCF0KXJldHVybjsKb3BlbkxiKHQuZ2V0QXR0cmlidXRlKCdkYXRhLWZ1bGwnKSx0LmdldEF0dHJpYnV0ZSgnYWx0Jyl8fCcnKTsKfSk7CmxiLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJyxjbG9zZUxiKTsKZC5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJyxmdW5jdGlvbihlKXsKaWYoZS5rZXk9PT0nRXNjYXBlJyYmbGIuY2xhc3NMaXN0LmNvbnRhaW5zKCdvcGVuJykpY2xvc2VMYigpOwp9KTsKfSkoKTsK&#39;),function(c){return c.charCodeAt(0)})))&lt;/script&gt;
+</description>
+        </item>
+        <item>
         <title>第十八期轻音会</title>
         <link>https://vrclmcl.asia/p/18qyh/</link>
         <pubDate>Sat, 31 Oct 2026 10:00:00 +0800</pubDate>
@@ -15930,6 +16444,82 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
         background: #fafafa;
         min-height: 100px;
     &#34;&gt;
+        &lt;li class=&#34;ranking-item&#34;
+            data-src=&#34;https://music.163.com/song/media/outer/url?id=2012854567.mp3&#34;
+            data-title=&#34;【洛天依AI原创】恍惚&#34;
+            data-artist=&#34;洛天依 AI&#34;
+            style=&#34;
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 1px dashed #eee;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            &#34;&gt;
+            &lt;div style=&#34;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin-right: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #2e1c14 0%, #a8401f 55%, #d9a04a 100%);
+                color: white;
+                flex-shrink: 0;
+                counter-increment: song-counter;
+            &#34;&gt;
+                &lt;span style=&#34;position: relative; z-index: 1;&#34;&gt;
+                    &lt;span style=&#34;font-family: sans-serif;&#34;&gt;#&lt;/span&gt;
+                    &lt;span style=&#34;font-weight: bold;&#34;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;song-info&#34; style=&#34;flex: 1;&#34;&gt;
+                &lt;div style=&#34;
+                    font-size: 18px;
+                    color: #1a1a1a;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                &#34;&gt;【洛天依AI原创】恍惚 &lt;span style=&#34;
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    background: linear-gradient(135deg, #5c3420, #d9a04a);
+                    color: white;
+                    border-radius: 12px;
+                    margin-left: 8px;
+                    vertical-align: middle;
+                &#34;&gt;✦ 第19期&lt;/span&gt;&lt;/div&gt;
+                &lt;div style=&#34;
+                    font-size: 14px;
+                    color: #666;
+                &#34;&gt;洛天依 AI · 投稿：祝空&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&#34;display: flex; gap: 10px;&#34;&gt;
+                &lt;button class=&#34;play-trigger&#34; style=&#34;
+                    background: linear-gradient(135deg, #5c3420, #a8401f);
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;播放&lt;/button&gt;
+                &lt;a href=&#34;https://music.163.com/#/song?id=2012854567&#34; target=&#34;_blank&#34; style=&#34;
+                    background: transparent;
+                    color: #8a3217;
+                    border: 1px solid #8a3217;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                &#34;&gt;详情&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li class=&#34;ranking-item&#34;
             data-title=&#34;短い未来を見たい (お帰りなさい)&#34;
             data-artist=&#34;Sweet Dove&#34;
